@@ -1,0 +1,89 @@
+[
+ {"id":"Q01","category":"regulation_b","difficulty":"easy","clause_ids":["RB-3"],
+  "question":"We received a personal loan application on 3 March but it was missing proof of income, which arrived on 20 March. By when must Cardinal Trust notify the applicant of the decision?",
+  "answer":"Within 30 days of 20 March, because the 30-day clock runs from the date the application became complete, not from the date it was first received."},
+
+ {"id":"Q02","category":"regulation_b","difficulty":"easy","clause_ids":["RB-4"],
+  "question":"An application is still incomplete after three weeks. What are our options, and what must a notice of incompleteness say?",
+  "answer":"Within 30 days we must either send a notice of incompleteness or send an adverse action notice. A notice of incompleteness must specify the information still needed, give a reasonable period to provide it, and state that failure to supply the information will mean no further consideration is given to the application."},
+
+ {"id":"Q03","category":"regulation_b","difficulty":"easy","clause_ids":["RB-11","CT-8"],
+  "question":"How long do we have to keep a copy of a consumer adverse-action notice, and from what date?",
+  "answer":"25 months, running from the date the applicant was notified."},
+
+ {"id":"Q04","category":"regulation_b","difficulty":"medium","clause_ids":["RB-8"],
+  "question":"The decision came from our credit scoring system. Is it enough to tell the applicant they did not achieve a qualifying score?",
+  "answer":"No. Stating that the applicant failed to achieve a qualifying score is not sufficient on its own; the notice must disclose the principal factors that contributed to the score. We do not have to explain how or why a factor was weighted, and we need not list more than four principal reasons."},
+
+ {"id":"Q05","category":"regulation_b","difficulty":"medium","clause_ids":["RB-5"],
+  "question":"We made a counteroffer and the applicant has not responded. What do we have to send, and when?",
+  "answer":"The counteroffer itself must be notified within 30 days. If the applicant does not expressly accept or use the credit offered within 90 days of the counteroffer, we must then send an adverse action notice."},
+
+ {"id":"Q06","category":"regulation_b","difficulty":"medium","clause_ids":["RB-9"],
+  "question":"There are two joint applicants on a declined application. Do both need to receive the notice?",
+  "answer":"No. The notice need only be given to one applicant, but it must go to the primary applicant where one is readily apparent."},
+
+ {"id":"Q07","category":"regulation_b","difficulty":"medium","clause_ids":["RB-2"],
+  "question":"A customer agreed to a change in the terms of their account. Does that count as adverse action requiring a notice?",
+  "answer":"No. A change in the terms of an account expressly agreed to by the applicant is not adverse action."},
+
+ {"id":"Q08","category":"regulation_b","difficulty":"hard","clause_ids":["RB-2"],
+  "question":"Someone applied for a product line we simply do not offer, so we turned them down. Adverse action notice required?",
+  "answer":"No. A refusal because the creditor does not offer the type of credit or credit plan requested is not adverse action."},
+
+ {"id":"Q09","category":"regulation_b","difficulty":"hard","clause_ids":["RB-1"],
+  "question":"We approved the loan but at a much smaller amount than requested, and the applicant used the funds. Is that adverse action?",
+  "answer":"No. Where the creditor makes a counteroffer and the applicant uses or expressly accepts the credit offered, the refusal to grant credit in the amount requested is not adverse action."},
+
+ {"id":"Q10","category":"fcra","difficulty":"easy","clause_ids":["FC-2"],
+  "question":"Which details of the credit bureau must appear on the notice?",
+  "answer":"The name, address and telephone number of the consumer reporting agency that furnished the report. For a nationwide agency the number given must be a toll-free number established by that agency."},
+
+ {"id":"Q11","category":"fcra","difficulty":"easy","clause_ids":["FC-3"],
+  "question":"What must the notice say about the credit bureau's role in the decision?",
+  "answer":"That the consumer reporting agency did not make the decision to take the adverse action and is unable to provide the specific reasons for it."},
+
+ {"id":"Q12","category":"fcra","difficulty":"easy","clause_ids":["FC-4","FC-5"],
+  "question":"What two rights relating to the consumer report itself must we tell the applicant about?",
+  "answer":"The right to obtain a free copy of the consumer report from the agency, requested within 60 days of receiving the adverse action notice; and the right to dispute directly with the agency the accuracy or completeness of any information in the report."},
+
+ {"id":"Q13","category":"fcra","difficulty":"hard","clause_ids":["FC-6"],
+  "question":"A numerical credit score was used in the decision. What extra items must the notice disclose, and how many key factors?",
+  "answer":"The score itself, the range of possible scores under the model used, the key factors that adversely affected the score listed in order of importance, the date the score was created, and the name of the person or entity that provided it. Up to four key factors, or up to five where the number of enquiries on the file was one of the key factors."},
+
+ {"id":"Q14","category":"fcra","difficulty":"hard","clause_ids":["FC-7"],
+  "question":"We declined partly on information from the applicant's employer, who is not a credit bureau. What do we owe the applicant, and must we name the employer?",
+  "answer":"The applicant must be told of their right to learn the nature of that information, and the request must be made within 60 days of learning of the adverse action. We are not required to disclose the source of the information, so the employer need not be named."},
+
+ {"id":"Q15","category":"internal_policy","difficulty":"medium","clause_ids":["CT-3"],
+  "question":"Can our automated drafting system write the ECOA and FCRA disclosure paragraphs itself, so the wording reads more naturally in each letter?",
+  "answer":"No. The statutory disclosure paragraphs, elements E2 through E7, are fixed template text and are never drafted, paraphrased or regenerated per letter, by a person or by an automated system. Only the reason statement E1 and the applicant's details vary between letters."},
+
+ {"id":"Q16","category":"internal_policy","difficulty":"medium","clause_ids":["CT-5"],
+  "question":"The applicant told us in their application that they are on maternity leave. Should the letter acknowledge that sympathetically?",
+  "answer":"No. A notice must not refer to pregnancy or parental leave, or any other listed protected characteristic, anywhere outside the standard ECOA notice paragraph — even where the applicant raised the matter themselves."},
+
+ {"id":"Q17","category":"internal_policy","difficulty":"easy","clause_ids":["CT-6"],
+  "question":"Which federal agency do we name in element E3, and at what address?",
+  "answer":"The Bureau of Consumer Financial Protection, 1700 G Street NW, Washington, DC 20552."},
+
+ {"id":"Q18","category":"internal_policy","difficulty":"medium","clause_ids":["CT-7"],
+  "question":"An automatically drafted notice fails the deterministic element check. What happens to it, and what human review applies?",
+  "answer":"It is never sent; it is returned for regeneration. Separately, a credit officer must read a sample of at least 5% of notices each week."},
+
+ {"id":"Q19","category":"edge_case","difficulty":"hard","clause_ids":["CT-4"],
+  "question":"A reviewer is confident the applicant's recent job change contributed to the decline, but it is not among the recorded principal reasons. Can it go in the letter?",
+  "answer":"No. Reasons must be taken from the principal reasons recorded by the underwriting engine. No other reason may be added, including one a reviewer believes to be true, and including information the applicant volunteered in free text on their application."},
+
+ {"id":"Q20","category":"edge_case","difficulty":"hard","clause_ids":["RB-10","CT-1"],
+  "question":"A business applicant with $4 million of gross revenues last year was declined. Same written notice and statement of reasons as a consumer?",
+  "answer":"No. Where the applicant's gross revenues exceeded $1 million in the preceding fiscal year, notification may be oral or in writing, and the statement of reasons need only be provided on the applicant's written request. Business credit is also outside the scope of the consumer credit notice policy."},
+
+ {"id":"Q21","category":"edge_case","difficulty":"medium","clause_ids":["CT-9","RB-3"],
+  "question":"Our internal target is 10 business days. If we miss it and take 20 days, have we breached the regulation?",
+  "answer":"No. The 10-business-day turnaround is an internal service target only and does not displace the 30-day regulatory deadline, which is still met at 20 days."},
+
+ {"id":"Q22","category":"edge_case","difficulty":"medium","clause_ids":["RB-7"],
+  "question":"Must every adverse action notice spell out the specific reasons for the decision?",
+  "answer":"Not necessarily. The notice must contain either a statement of the specific principal reasons, or a disclosure of the applicant's right to obtain those reasons within 30 days of requesting them together with the name, address and telephone number of the person who can provide them."}
+]

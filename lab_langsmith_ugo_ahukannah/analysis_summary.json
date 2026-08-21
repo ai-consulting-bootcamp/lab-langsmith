@@ -1,0 +1,387 @@
+{
+  "dataset_name": "cardinal-trust-adverse-action-qa",
+  "dataset_id": "9f32b481-0b9d-4199-8cc9-25a4bb7a35c0",
+  "project": "cardinal-trust-compliance-qa",
+  "endpoint": "https://eu.api.smith.langchain.com",
+  "evaluators": [
+    "correctness",
+    "citation_validity",
+    "citation_wellformed",
+    "citation_fabricated_free",
+    "groundedness"
+  ],
+  "headline": [
+    {
+      "target": "mini",
+      "label": "gpt-4o-mini + grounded prompt",
+      "model": "gpt-4o-mini",
+      "prompt_variant": "full",
+      "experiment_name": "cardinal-mini-43432275",
+      "n": 22,
+      "errors": 0,
+      "scores": {
+        "correctness": 0.818,
+        "citation_validity": 0.909,
+        "citation_wellformed": 1.0,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 0.955
+      },
+      "cost_usd_total": 0.007391,
+      "cost_usd_per_query": 0.00033595,
+      "cost_per_1k_queries": 0.3359,
+      "monthly_cost_usd": 6.72,
+      "latency_mean_s": 1.42,
+      "wall_seconds": 28.31
+    },
+    {
+      "target": "gpt4o",
+      "label": "gpt-4o + grounded prompt",
+      "model": "gpt-4o",
+      "prompt_variant": "full",
+      "experiment_name": "cardinal-gpt4o-55d81686",
+      "n": 22,
+      "errors": 0,
+      "scores": {
+        "correctness": 0.955,
+        "citation_validity": 0.955,
+        "citation_wellformed": 1.0,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 0.955
+      },
+      "cost_usd_total": 0.12336,
+      "cost_usd_per_query": 0.00560727,
+      "cost_per_1k_queries": 5.6073,
+      "monthly_cost_usd": 112.15,
+      "latency_mean_s": 1.13,
+      "wall_seconds": 28.09
+    },
+    {
+      "target": "terse",
+      "label": "gpt-4o-mini + terse prompt",
+      "model": "gpt-4o-mini",
+      "prompt_variant": "terse",
+      "experiment_name": "cardinal-terse-86b10069",
+      "n": 22,
+      "errors": 0,
+      "scores": {
+        "correctness": 0.909,
+        "citation_validity": 0.318,
+        "citation_wellformed": 0.364,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 0.318
+      },
+      "cost_usd_total": 0.007075,
+      "cost_usd_per_query": 0.0003216,
+      "cost_per_1k_queries": 0.3216,
+      "monthly_cost_usd": 6.43,
+      "latency_mean_s": 1.38,
+      "wall_seconds": 29.15
+    }
+  ],
+  "by_category": {
+    "mini": {
+      "edge_case": {
+        "n": 4,
+        "correctness": 0.75,
+        "citation_validity": 0.75,
+        "citation_wellformed": 1.0,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 0.75
+      },
+      "fcra": {
+        "n": 5,
+        "correctness": 1,
+        "citation_validity": 1.0,
+        "citation_wellformed": 1.0,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 1
+      },
+      "internal_policy": {
+        "n": 4,
+        "correctness": 1,
+        "citation_validity": 1.0,
+        "citation_wellformed": 1.0,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 1
+      },
+      "regulation_b": {
+        "n": 9,
+        "correctness": 0.667,
+        "citation_validity": 0.889,
+        "citation_wellformed": 1.0,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 1
+      }
+    },
+    "gpt4o": {
+      "edge_case": {
+        "n": 4,
+        "correctness": 1,
+        "citation_validity": 0.75,
+        "citation_wellformed": 1.0,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 0.75
+      },
+      "fcra": {
+        "n": 5,
+        "correctness": 1,
+        "citation_validity": 1.0,
+        "citation_wellformed": 1.0,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 1
+      },
+      "internal_policy": {
+        "n": 4,
+        "correctness": 1,
+        "citation_validity": 1.0,
+        "citation_wellformed": 1.0,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 1
+      },
+      "regulation_b": {
+        "n": 9,
+        "correctness": 0.889,
+        "citation_validity": 1.0,
+        "citation_wellformed": 1.0,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 1
+      }
+    },
+    "terse": {
+      "edge_case": {
+        "n": 4,
+        "correctness": 0.75,
+        "citation_validity": 0.0,
+        "citation_wellformed": 0.25,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 0
+      },
+      "fcra": {
+        "n": 5,
+        "correctness": 1,
+        "citation_validity": 0.4,
+        "citation_wellformed": 0.4,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 0.4
+      },
+      "internal_policy": {
+        "n": 4,
+        "correctness": 1,
+        "citation_validity": 0.0,
+        "citation_wellformed": 0.0,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 0
+      },
+      "regulation_b": {
+        "n": 9,
+        "correctness": 0.889,
+        "citation_validity": 0.556,
+        "citation_wellformed": 0.556,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 0.556
+      }
+    }
+  },
+  "by_difficulty": {
+    "mini": {
+      "easy": {
+        "n": 7,
+        "correctness": 0.857,
+        "citation_validity": 1.0,
+        "citation_wellformed": 1.0,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 1
+      },
+      "hard": {
+        "n": 6,
+        "correctness": 1,
+        "citation_validity": 0.667,
+        "citation_wellformed": 1.0,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 1
+      },
+      "medium": {
+        "n": 9,
+        "correctness": 0.667,
+        "citation_validity": 1.0,
+        "citation_wellformed": 1.0,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 0.889
+      }
+    },
+    "gpt4o": {
+      "easy": {
+        "n": 7,
+        "correctness": 1,
+        "citation_validity": 1.0,
+        "citation_wellformed": 1.0,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 1
+      },
+      "hard": {
+        "n": 6,
+        "correctness": 1,
+        "citation_validity": 0.833,
+        "citation_wellformed": 1.0,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 1
+      },
+      "medium": {
+        "n": 9,
+        "correctness": 0.889,
+        "citation_validity": 1.0,
+        "citation_wellformed": 1.0,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 0.889
+      }
+    },
+    "terse": {
+      "easy": {
+        "n": 7,
+        "correctness": 0.857,
+        "citation_validity": 0.286,
+        "citation_wellformed": 0.286,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 0.286
+      },
+      "hard": {
+        "n": 6,
+        "correctness": 1,
+        "citation_validity": 0.667,
+        "citation_wellformed": 0.833,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 0.667
+      },
+      "medium": {
+        "n": 9,
+        "correctness": 0.889,
+        "citation_validity": 0.111,
+        "citation_wellformed": 0.111,
+        "citation_fabricated_free": 1.0,
+        "groundedness": 0.111
+      }
+    }
+  },
+  "errors": {
+    "mini": {
+      "counts": {
+        "wrong_or_missing_clause": 2,
+        "incorrect_answer": 4,
+        "ungrounded_claim": 1
+      },
+      "examples": {
+        "wrong_or_missing_clause": [
+          "Q09",
+          "Q20"
+        ],
+        "incorrect_answer": [
+          "Q02",
+          "Q05",
+          "Q06",
+          "Q22"
+        ],
+        "ungrounded_claim": [
+          "Q22"
+        ]
+      }
+    },
+    "gpt4o": {
+      "counts": {
+        "wrong_or_missing_clause": 1,
+        "incorrect_answer": 1,
+        "ungrounded_claim": 1
+      },
+      "examples": {
+        "wrong_or_missing_clause": [
+          "Q20"
+        ],
+        "incorrect_answer": [
+          "Q05"
+        ],
+        "ungrounded_claim": [
+          "Q21"
+        ]
+      }
+    },
+    "terse": {
+      "counts": {
+        "wrong_or_missing_clause": 15,
+        "ungrounded_claim": 15,
+        "unverifiable_citation": 14,
+        "incorrect_answer": 2
+      },
+      "examples": {
+        "wrong_or_missing_clause": [
+          "Q03",
+          "Q04",
+          "Q05",
+          "Q06",
+          "Q10",
+          "Q11",
+          "Q12",
+          "Q15",
+          "Q16",
+          "Q17",
+          "Q18",
+          "Q19",
+          "Q20",
+          "Q21",
+          "Q22"
+        ],
+        "ungrounded_claim": [
+          "Q03",
+          "Q04",
+          "Q05",
+          "Q06",
+          "Q10",
+          "Q11",
+          "Q12",
+          "Q15",
+          "Q16",
+          "Q17",
+          "Q18",
+          "Q19",
+          "Q20",
+          "Q21",
+          "Q22"
+        ],
+        "unverifiable_citation": [
+          "Q03",
+          "Q04",
+          "Q05",
+          "Q06",
+          "Q10",
+          "Q11",
+          "Q12",
+          "Q15",
+          "Q16",
+          "Q17",
+          "Q18",
+          "Q19",
+          "Q21",
+          "Q22"
+        ],
+        "incorrect_answer": [
+          "Q02",
+          "Q22"
+        ]
+      }
+    }
+  },
+  "judge_audit": {
+    "correctness": {
+      "judgements": 66,
+      "parseable": 65,
+      "mismatches": 0,
+      "examples": [],
+      "mismatch_rate": 0.0
+    },
+    "groundedness": {
+      "judgements": 66,
+      "parseable": 65,
+      "mismatches": 0,
+      "examples": [],
+      "mismatch_rate": 0.0
+    }
+  }
+}
