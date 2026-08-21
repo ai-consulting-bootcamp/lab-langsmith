@@ -1,0 +1,2255 @@
+{
+  "run_utc": "2026-08-21T13:32:36.091064+00:00",
+  "dataset_name": "cardinal-trust-adverse-action-qa",
+  "dataset_id": "9f32b481-0b9d-4199-8cc9-25a4bb7a35c0",
+  "project": "cardinal-trust-compliance-qa",
+  "endpoint": "https://eu.api.smith.langchain.com",
+  "evaluators": [
+    "correctness",
+    "citation_validity",
+    "citation_wellformed",
+    "citation_fabricated_free",
+    "groundedness"
+  ],
+  "experiments": [
+    {
+      "target": "mini",
+      "label": "gpt-4o-mini + grounded prompt",
+      "model": "gpt-4o-mini",
+      "prompt_variant": "full",
+      "experiment_name": "cardinal-mini-43432275",
+      "wall_seconds": 28.31,
+      "rows": [
+        {
+          "example_id": "Q07",
+          "category": "regulation_b",
+          "difficulty": "medium",
+          "question": "A customer agreed to a change in the terms of their account. Does that count as adverse action requiring a notice?",
+          "reference_answer": "No. A change in the terms of an account expressly agreed to by the applicant is not adverse action.",
+          "reference_clause_ids": [
+            "RB-2"
+          ],
+          "answer": "No, a change in the terms of an account expressly agreed to by the applicant is not considered adverse action and does not require a notice.",
+          "clause_ids": [
+            "RB-2"
+          ],
+          "prompt_tokens": 2027,
+          "completion_tokens": 43,
+          "cost_usd": 0.00032985,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output provides accurate and complete information regarding whether a change in the terms of an account that the customer has agreed to counts as adverse action. It correctly states that such a change is not considered adverse action and thus does not require a notice. The answer is factually accurate, addresses the question fully, uses precise terminology, and maintains logical consistency. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['RB-2']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer claims that a customer agreeing to a change in the terms of their account does not classify as adverse action and does not require notice. This is a direct paraphrase of the cited clause which states: \"A change in the terms of an account expressly agreed to by the applicant is not adverse action.\" Since this claim is fully supported by the provided text, the answer is grounded. Thus, the score should be: true."
+          },
+          "latency_s": 1.535313
+        },
+        {
+          "example_id": "Q20",
+          "category": "edge_case",
+          "difficulty": "hard",
+          "question": "A business applicant with $4 million of gross revenues last year was declined. Same written notice and statement of reasons as a consumer?",
+          "reference_answer": "No. Where the applicant's gross revenues exceeded $1 million in the preceding fiscal year, notification may be oral or in writing, and the statement of reasons need only be provided on the applicant's written request. Business credit is also outside the scope of the consumer credit notice policy.",
+          "reference_clause_ids": [
+            "RB-10",
+            "CT-1"
+          ],
+          "answer": "No, different notification rules apply to business credit. The creditor may notify orally or in writing and need only provide the statement of reasons on the applicant's written request.",
+          "clause_ids": [
+            "RB-10"
+          ],
+          "prompt_tokens": 2030,
+          "completion_tokens": 48,
+          "cost_usd": 0.0003333,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 0.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The response correctly indicates that different notification rules apply to business credit compared to consumer credit. It accurately states that the creditor can notify orally or in writing and only needs to provide a statement of reasons upon the applicant's written request. This aligns with the factual information provided in the reference output, which addresses the rules regarding business credit notifications for applicants with gross revenues exceeding $1 million. Thus, the score should be: true.",
+            "citation_validity": "missing ['CT-1']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer correctly states that different notification rules apply to business credit and specifies that in this case, the creditor may notify orally or in writing. This claim connects directly to the cited clause which indicates that where the applicant's gross revenues exceeded $1 million, such notification methods are permissible. Furthermore, the answer mentions that the statement of reasons can be provided only upon the applicant's written request, which corresponds to the wording in the clause. Thus, each claim made in the answer is indeed supported by the cited text. Thus, the score should be: true."
+          },
+          "latency_s": 1.566249
+        },
+        {
+          "example_id": "Q13",
+          "category": "fcra",
+          "difficulty": "hard",
+          "question": "A numerical credit score was used in the decision. What extra items must the notice disclose, and how many key factors?",
+          "reference_answer": "The score itself, the range of possible scores under the model used, the key factors that adversely affected the score listed in order of importance, the date the score was created, and the name of the person or entity that provided it. Up to four key factors, or up to five where the number of enquiries on the file was one of the key factors.",
+          "reference_clause_ids": [
+            "FC-6"
+          ],
+          "answer": "The notice must disclose the numerical credit score, the range of possible scores under the model used, the key factors that adversely affected the score (up to four, or up to five if the number of inquiries was one of the key factors), the date the score was created, and the name of the person or entity that provided the score.",
+          "clause_ids": [
+            "FC-6"
+          ],
+          "prompt_tokens": 2028,
+          "completion_tokens": 83,
+          "cost_usd": 0.000354,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output correctly identifies the items that must be disclosed in relation to a numerical credit score, including the score itself, the range of possible scores, and the key factors adversely affecting the score (with the correct limitation on the number of factors). Additionally, it lists the date the score was created and the name of the entity that provided it, all of which are necessary elements. There are no factual errors, and the information presented is complete and logically consistent. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['FC-6']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "1. The first claim states that 'the notice must disclose the numerical credit score,' which is directly supported by the clause text stating that the notice must disclose 'the score itself.' 2. The second claim 'the range of possible scores under the model used' is also supported, as it matches the phrase 'the range of possible scores under the model used' in the clause. 3. The third claim about 'the key factors that adversely affected the score (up to four, or up to five if the number of inquiries was one of the key factors)' is supported by the clause stating 'the key factors that adversely affected the score, listed in order of importance, up to four — or up to five where the number of enquiries on the file was one of the key factors.' 4. The fourth claim regarding 'the date the score was created' is supported since the clause includes 'the date the score was created.' 5. Finally, the claim about 'the name of the person or entity that provided the score' is supported as it is directly stated in the clause. All claims made in the answer are supported by the cited text. Thus, the score should be: true."
+          },
+          "latency_s": 2.062764
+        },
+        {
+          "example_id": "Q14",
+          "category": "fcra",
+          "difficulty": "hard",
+          "question": "We declined partly on information from the applicant's employer, who is not a credit bureau. What do we owe the applicant, and must we name the employer?",
+          "reference_answer": "The applicant must be told of their right to learn the nature of that information, and the request must be made within 60 days of learning of the adverse action. We are not required to disclose the source of the information, so the employer need not be named.",
+          "reference_clause_ids": [
+            "FC-7"
+          ],
+          "answer": "You must inform the applicant of their right to learn the nature of the information obtained from the employer, and this request must be made within 60 days of learning of the adverse action. However, you are not required to disclose the name of the employer.",
+          "clause_ids": [
+            "FC-7"
+          ],
+          "prompt_tokens": 2036,
+          "completion_tokens": 66,
+          "cost_usd": 0.000345,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output accurately describes the applicant's rights regarding the information obtained from the employer, including the timeframe for their request. It correctly states that the employer's name does not need to be disclosed. The terminology used is precise and correct, with no logical inconsistencies or factual errors present. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['FC-7']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer correctly states that the applicant must be informed of their right to learn the nature of the information obtained from the employer, and that such a request must be made within 60 days of the adverse action. Both of these claims are supported by the clause text, specifically addressing the requirement to inform the applicant and the 60-day period. Additionally, it states correctly that the creditor is not required to disclose the name of the employer, which is also supported by the cited text. Since all claims made in the answer are explicitly supported by the clause text, the score should be: true."
+          },
+          "latency_s": 1.459934
+        },
+        {
+          "example_id": "Q18",
+          "category": "internal_policy",
+          "difficulty": "medium",
+          "question": "An automatically drafted notice fails the deterministic element check. What happens to it, and what human review applies?",
+          "reference_answer": "It is never sent; it is returned for regeneration. Separately, a credit officer must read a sample of at least 5% of notices each week.",
+          "reference_clause_ids": [
+            "CT-7"
+          ],
+          "answer": "A notice that fails the deterministic element check is never sent; it is returned for regeneration. Additionally, a sample of at least 5% of notices generated by the automated drafting system must be read by a credit officer each week.",
+          "clause_ids": [
+            "CT-7"
+          ],
+          "prompt_tokens": 2025,
+          "completion_tokens": 61,
+          "cost_usd": 0.00034035,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output accurately describes what happens to an automatically drafted notice that fails the deterministic element check, stating that it is returned for regeneration. It also correctly mentions the requirement for human review, specifically noting that at least 5% of notices must be read by a credit officer each week. There are no factual errors, and it addresses all parts of the question clearly and logically. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['CT-7']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The claims in the answer can be broken down as follows: 1) A notice that fails the deterministic element check is never sent; it is returned for regeneration. - This claim is directly supported by the clause: \"A notice that fails the element check is never sent; it is returned for regeneration.\" 2) A sample of at least 5% of notices generated by the automated drafting system must be read by a credit officer each week. - This claim is also supported by the clause: \"a sample of at least 5% must be read by a credit officer each week.\" Since both claims made in the answer are supported by the cited text, there are no unsupported claims. Thus, the score should be: true."
+          },
+          "latency_s": 1.189068
+        },
+        {
+          "example_id": "Q06",
+          "category": "regulation_b",
+          "difficulty": "medium",
+          "question": "There are two joint applicants on a declined application. Do both need to receive the notice?",
+          "reference_answer": "No. The notice need only be given to one applicant, but it must go to the primary applicant where one is readily apparent.",
+          "reference_clause_ids": [
+            "RB-9"
+          ],
+          "answer": "Only one notice needs to be given, and it must go to the primary applicant where one is readily apparent.",
+          "clause_ids": [
+            "RB-9"
+          ],
+          "prompt_tokens": 2022,
+          "completion_tokens": 37,
+          "cost_usd": 0.0003255,
+          "error": null,
+          "scores": {
+            "correctness": false,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The response inaccurately states that only one notice needs to be given to the primary applicant. In the context of joint applicants, both applicants are entitled to receive notification of the application denial. Thus, the conclusion reached in the output contradicts the established understanding of the requirement for joint applicants. Therefore, there is a factual error. Additionally, there is a lack of clarity regarding the notification process for both applicants. Thus, the score should be: false.",
+            "citation_validity": "resolved exactly to ['RB-9']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer correctly states, 'Only one notice needs to be given,' which aligns with the clause's statement that 'the notice need only be given to one of them.' The assertion that 'it must go to the primary applicant where one is readily apparent' is also directly supported by the clause text. Since all claims in the answer are supported by the cited clause, the score should be: true."
+          },
+          "latency_s": 1.376971
+        },
+        {
+          "example_id": "Q09",
+          "category": "regulation_b",
+          "difficulty": "hard",
+          "question": "We approved the loan but at a much smaller amount than requested, and the applicant used the funds. Is that adverse action?",
+          "reference_answer": "No. Where the creditor makes a counteroffer and the applicant uses or expressly accepts the credit offered, the refusal to grant credit in the amount requested is not adverse action.",
+          "reference_clause_ids": [
+            "RB-1"
+          ],
+          "answer": "No, this is not considered adverse action because a change in the terms of an account that is expressly agreed to by the applicant is not adverse action.",
+          "clause_ids": [
+            "RB-2"
+          ],
+          "prompt_tokens": 2029,
+          "completion_tokens": 45,
+          "cost_usd": 0.00033135,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 0.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output correctly explains that the approval of a loan at a smaller amount than requested, combined with the acceptance of that smaller amount by the applicant, does not constitute adverse action. This aligns with the reference output, which states that a counteroffer and subsequent acceptance negates the classification of adverse action. The terminology is precise and accurate, and the explanation is logically consistent with the definition of adverse action. Thus, the score should be: true.",
+            "citation_validity": "missing ['RB-1']; extra (valid) ['RB-2']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer claims that the loan was approved at a smaller amount than requested and concludes that this is not considered adverse action, citing that a change in the terms expressly agreed to by the applicant is not adverse action. This aligns with the clause stating that 'A change in the terms of an account expressly agreed to by the applicant is not adverse action.' There are no unsupported claims in the answer. Thus, the score should be: true."
+          },
+          "latency_s": 1.220138
+        },
+        {
+          "example_id": "Q04",
+          "category": "regulation_b",
+          "difficulty": "medium",
+          "question": "The decision came from our credit scoring system. Is it enough to tell the applicant they did not achieve a qualifying score?",
+          "reference_answer": "No. Stating that the applicant failed to achieve a qualifying score is not sufficient on its own; the notice must disclose the principal factors that contributed to the score. We do not have to explain how or why a factor was weighted, and we need not list more than four principal reasons.",
+          "reference_clause_ids": [
+            "RB-8"
+          ],
+          "answer": "No, it is not enough to simply state that the applicant failed to achieve a qualifying score. The notice must disclose the principal factors that contributed to the score, as well as provide specific reasons for the adverse action.",
+          "clause_ids": [
+            "RB-8"
+          ],
+          "prompt_tokens": 2028,
+          "completion_tokens": 58,
+          "cost_usd": 0.000339,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output correctly evaluates that informing the applicant about merely failing to achieve a qualifying score is insufficient. It logically states that the notice must include principal factors contributing to the score and specific reasons for the adverse action, aligning with legal standards for such disclosures. The terminology used is precise and accurate, consistent with the context of credit scoring systems. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['RB-8']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The claims in the answer are as follows: 1) \"it is not enough to simply state that the applicant failed to achieve a qualifying score\" is supported by the cited text which states that such a statement is not sufficient on its own. 2) \"the notice must disclose the principal factors that contributed to the score\" is also directly supported by the phrase in the clause indicating that the notice must disclose the principal reasons for the adverse action. 3) \"provide specific reasons for the adverse action\" is again in line with the requirement from the cited text that reasons must be specific. Therefore, all claims made in the answer are supported by the cited clause text. Thus, the score should be: true."
+          },
+          "latency_s": 1.516618
+        },
+        {
+          "example_id": "Q12",
+          "category": "fcra",
+          "difficulty": "easy",
+          "question": "What two rights relating to the consumer report itself must we tell the applicant about?",
+          "reference_answer": "The right to obtain a free copy of the consumer report from the agency, requested within 60 days of receiving the adverse action notice; and the right to dispute directly with the agency the accuracy or completeness of any information in the report.",
+          "reference_clause_ids": [
+            "FC-4",
+            "FC-5"
+          ],
+          "answer": "The applicant must be informed of their right to obtain a free copy of the consumer report from the agency within 60 days of receiving the adverse action notice, and their right to dispute directly with the consumer reporting agency the accuracy or completeness of any information in the report.",
+          "clause_ids": [
+            "FC-4",
+            "FC-5"
+          ],
+          "prompt_tokens": 2020,
+          "completion_tokens": 73,
+          "cost_usd": 0.0003468,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output accurately addresses the two rights related to the consumer report that must be communicated to the applicant. It clearly states the right to obtain a free copy within 60 days of an adverse action notice and the right to dispute any inaccuracies in the report. There are no factual errors, and all parts of the question are addressed with precise and accurate terminology. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['FC-4', 'FC-5']",
+            "citation_wellformed": "all 2 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (2 cited)",
+            "groundedness": "The answer correctly identifies two rights that the applicant must be informed of regarding the consumer report: the right to obtain a free copy of the report within 60 days of receiving an adverse action notice (supported by FC-4), and the right to dispute the accuracy or completeness of the information in the report with the consumer reporting agency (supported by FC-5). Both claims made in the answer correspond to the specific provisions in the cited clauses. Thus, the score should be: true."
+          },
+          "latency_s": 1.506054
+        },
+        {
+          "example_id": "Q22",
+          "category": "edge_case",
+          "difficulty": "medium",
+          "question": "Must every adverse action notice spell out the specific reasons for the decision?",
+          "reference_answer": "Not necessarily. The notice must contain either a statement of the specific principal reasons, or a disclosure of the applicant's right to obtain those reasons within 30 days of requesting them together with the name, address and telephone number of the person who can provide them.",
+          "reference_clause_ids": [
+            "RB-7"
+          ],
+          "answer": "Yes, every adverse action notice must contain a statement of the specific principal reasons for the action, or a disclosure of the applicant's right to obtain those reasons within 30 days of requesting them.",
+          "clause_ids": [
+            "RB-7",
+            "RB-8"
+          ],
+          "prompt_tokens": 2018,
+          "completion_tokens": 59,
+          "cost_usd": 0.0003381,
+          "error": null,
+          "scores": {
+            "correctness": false,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": false
+          },
+          "comments": {
+            "correctness": "The output states that every adverse action notice must contain a statement of the specific principal reasons for the action. However, according to the reference outputs, it is not necessary to provide specific reasons but rather to disclose either the reasons or the applicant's right to obtain those reasons. Therefore, the output contains a factual error and does not fully address the nuances of the question. Thus, the score should be: false.",
+            "citation_validity": "extra (valid) ['RB-8']",
+            "citation_wellformed": "all 2 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (2 cited)",
+            "groundedness": "The answer claims that 'every adverse action notice must contain a statement of the specific principal reasons for the action.' However, while the reference text states that an adverse action notice must contain either a statement of the specific principal reasons or a disclosure of the applicant's right to obtain those reasons, the phrase 'either ... or ...' indicates that it is not mandatory for every notice to include a statement of specific reasons as a standalone requirement. This means the assertion in the answer is unsupported because the requirement does not necessarily mandate the presence of specific reasons in every case; it allows for alternatives. Thus, the score should be: false."
+          },
+          "latency_s": 1.327644
+        },
+        {
+          "example_id": "Q19",
+          "category": "edge_case",
+          "difficulty": "hard",
+          "question": "A reviewer is confident the applicant's recent job change contributed to the decline, but it is not among the recorded principal reasons. Can it go in the letter?",
+          "reference_answer": "No. Reasons must be taken from the principal reasons recorded by the underwriting engine. No other reason may be added, including one a reviewer believes to be true, and including information the applicant volunteered in free text on their application.",
+          "reference_clause_ids": [
+            "CT-4"
+          ],
+          "answer": "No, the reason cannot be included in the letter as it is not among the recorded principal reasons. Only the reasons stated in the decision record may be used in the notice.",
+          "clause_ids": [
+            "CT-4"
+          ],
+          "prompt_tokens": 2036,
+          "completion_tokens": 50,
+          "cost_usd": 0.0003354,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output correctly states that the reason cannot be included in the letter because it is not among the recorded principal reasons. It aligns with the reference output, which emphasizes that only the reasons recorded can be used. There are no factual errors, and the terminology is precise and accurate. Additionally, the logical consistency is maintained throughout. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['CT-4']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer correctly states that the reason for the job change cannot be included in the letter because it is not among the recorded principal reasons. This aligns with the clause text, which specifies that reasons in a notice must come from the principal reasons recorded and that no other reasons may be added. The claim made in the answer directly reflects the stipulation in the cited text, making it fully supported. Thus, the score should be: true."
+          },
+          "latency_s": 1.428266
+        },
+        {
+          "example_id": "Q11",
+          "category": "fcra",
+          "difficulty": "easy",
+          "question": "What must the notice say about the credit bureau's role in the decision?",
+          "reference_answer": "That the consumer reporting agency did not make the decision to take the adverse action and is unable to provide the specific reasons for it.",
+          "reference_clause_ids": [
+            "FC-3"
+          ],
+          "answer": "The notice must state that the consumer reporting agency did not make the decision to take the adverse action and is unable to provide the specific reasons for it.",
+          "clause_ids": [
+            "FC-3"
+          ],
+          "prompt_tokens": 2019,
+          "completion_tokens": 45,
+          "cost_usd": 0.00032985,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output accurately states the requirements for the notice regarding the credit bureau's role in the decision-making process. It correctly indicates that the credit bureau did not make the decision and cannot provide specific reasons for the adverse action, which follows the expectation set by the input query. Since it addresses the question completely and contains no factual errors, the score should be: true.",
+            "citation_validity": "resolved exactly to ['FC-3']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The claim made in the answer is that 'the notice must state that the consumer reporting agency did not make the decision to take the adverse action and is unable to provide the specific reasons for it.' This claim is directly supported by the clause text: 'The notice must state that the consumer reporting agency did not make the decision to take the adverse action and is unable to provide the specific reasons for it.' Since there are no contradictions or unsupported elements in the claim, and it accurately reflects the clause cited, the score should be: true."
+          },
+          "latency_s": 1.47677
+        },
+        {
+          "example_id": "Q10",
+          "category": "fcra",
+          "difficulty": "easy",
+          "question": "Which details of the credit bureau must appear on the notice?",
+          "reference_answer": "The name, address and telephone number of the consumer reporting agency that furnished the report. For a nationwide agency the number given must be a toll-free number established by that agency.",
+          "reference_clause_ids": [
+            "FC-2"
+          ],
+          "answer": "The notice must include the name, address, and toll-free telephone number of the consumer reporting agency that furnished the report.",
+          "clause_ids": [
+            "FC-2"
+          ],
+          "prompt_tokens": 2016,
+          "completion_tokens": 39,
+          "cost_usd": 0.0003258,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output provided accurately lists the essential details that must appear on the notice from the credit bureau, which are the name, address, and toll-free telephone number of the agency that furnished the report. The information matches the requirements outlined in the reference outputs. Additionally, it correctly specifies that the number must be toll-free, applicable to nationwide agencies. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['FC-2']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer states that the notice must include the name, address, and toll-free telephone number of the consumer reporting agency that furnished the report. This claim is directly supported by the cited clause text, which specifies that the notice must indeed contain the name, address, and telephone number (and emphasizes that it must be a toll-free number for nationwide agencies). Since all claims made in the answer are backed by the cited text without contradictions or unsupported assertions, the score should be: true."
+          },
+          "latency_s": 1.652013
+        },
+        {
+          "example_id": "Q21",
+          "category": "edge_case",
+          "difficulty": "medium",
+          "question": "Our internal target is 10 business days. If we miss it and take 20 days, have we breached the regulation?",
+          "reference_answer": "No. The 10-business-day turnaround is an internal service target only and does not displace the 30-day regulatory deadline, which is still met at 20 days.",
+          "reference_clause_ids": [
+            "CT-9",
+            "RB-3"
+          ],
+          "answer": "No, missing the internal target of 10 business days does not constitute a breach of regulation, as the regulatory deadline is 30 days. The internal target is not legally binding.",
+          "clause_ids": [
+            "CT-9",
+            "RB-3"
+          ],
+          "prompt_tokens": 2029,
+          "completion_tokens": 56,
+          "cost_usd": 0.00033795,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output accurately explains that the internal target of 10 business days is not a regulatory requirement and that the actual regulatory deadline is 30 days. It correctly states that breaching the internal target does not equate to breaching the regulation, as the longer timeline still complies with the regulation. The terminology is precise and logically consistent with the provided information. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['CT-9', 'RB-3']",
+            "citation_wellformed": "all 2 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (2 cited)",
+            "groundedness": "1. The claim that 'missing the internal target of 10 business days does not constitute a breach of regulation' is supported by CT-9, which states that the internal target is not legally binding. 2. Additionally, the statement that 'the regulatory deadline is 30 days' is directly supported by RB-3.\n\nAll claims made in the answer are supported by the cited clauses. Thus, the score should be: true."
+          },
+          "latency_s": 1.251074
+        },
+        {
+          "example_id": "Q05",
+          "category": "regulation_b",
+          "difficulty": "medium",
+          "question": "We made a counteroffer and the applicant has not responded. What do we have to send, and when?",
+          "reference_answer": "The counteroffer itself must be notified within 30 days. If the applicant does not expressly accept or use the credit offered within 90 days of the counteroffer, we must then send an adverse action notice.",
+          "reference_clause_ids": [
+            "RB-5"
+          ],
+          "answer": "If the applicant does not expressly accept or use the credit offered within 90 days of the counteroffer, you must send an adverse action notice.",
+          "clause_ids": [
+            "RB-5"
+          ],
+          "prompt_tokens": 2026,
+          "completion_tokens": 44,
+          "cost_usd": 0.0003303,
+          "error": null,
+          "scores": {
+            "correctness": false,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output provided contains some factual inaccuracies regarding the timing for notifying the counteroffer. The reference states that the counteroffer must be notified within 30 days, which is not mentioned in the output. Additionally, the output does correctly mention that an adverse action notice needs to be sent if the applicant does not respond within 90 days of the counteroffer. However, since the answer is incomplete due to the omission of the 30-day notification requirement, it does not fulfill the rubric's criteria for an accurate and complete response. Thus, the score should be: false.",
+            "citation_validity": "resolved exactly to ['RB-5']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer's claims can be evaluated as follows:\n1. **Claim:** If the applicant does not respond to the counteroffer, an adverse action notice must be sent. \n   - **Supporting Sentence:** \"If the applicant does not expressly accept or use the credit offered within 90 days of the counteroffer, the creditor must then send an adverse action notice.\"\n\n2. **Claim:** The timeframe for sending the adverse action notice is after 90 days following the counteroffer. \n   - **Supporting Sentence:** \"...within 90 days of the counteroffer, the creditor must then send an adverse action notice.\"\n\nAll claims made in the answer are supported by the cited text. The answer correctly states the need to send an adverse action notice and the relevant time frame without introducing unsupported claims or contradictions. Thus, the score should be: true."
+          },
+          "latency_s": 1.323524
+        },
+        {
+          "example_id": "Q16",
+          "category": "internal_policy",
+          "difficulty": "medium",
+          "question": "The applicant told us in their application that they are on maternity leave. Should the letter acknowledge that sympathetically?",
+          "reference_answer": "No. A notice must not refer to pregnancy or parental leave, or any other listed protected characteristic, anywhere outside the standard ECOA notice paragraph — even where the applicant raised the matter themselves.",
+          "reference_clause_ids": [
+            "CT-5"
+          ],
+          "answer": "No, the notice must not refer to an applicant's pregnancy or parental leave outside the standard ECOA notice paragraph.",
+          "clause_ids": [
+            "CT-5"
+          ],
+          "prompt_tokens": 2026,
+          "completion_tokens": 38,
+          "cost_usd": 0.0003267,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The response accurately conveys that the notice should not refer to an applicant's pregnancy or parental leave outside the specified ECOA notice paragraph, aligning with legal considerations regarding protected characteristics. It addresses the question completely by reinforcing the importance of adhering to the guidelines regarding such topics. The terminology used is precise, and the logic is consistent with regulatory standards. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['CT-5']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer makes the claim that the notice must not refer to an applicant's pregnancy or parental leave outside the standard ECOA notice paragraph. This is explicitly supported by the cited clause, which states that a notice must not refer to pregnancy or parental leave under these conditions. Since the statement made in the answer is a direct reflection of the information provided in the clause, the claim is grounded. Thus, the score should be: true."
+          },
+          "latency_s": 1.053832
+        },
+        {
+          "example_id": "Q03",
+          "category": "regulation_b",
+          "difficulty": "easy",
+          "question": "How long do we have to keep a copy of a consumer adverse-action notice, and from what date?",
+          "reference_answer": "25 months, running from the date the applicant was notified.",
+          "reference_clause_ids": [
+            "RB-11",
+            "CT-8"
+          ],
+          "answer": "Copies of consumer adverse-action notices are retained for 25 months from the date of notification.",
+          "clause_ids": [
+            "CT-8",
+            "RB-11"
+          ],
+          "prompt_tokens": 2025,
+          "completion_tokens": 38,
+          "cost_usd": 0.00032655,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The response correctly states that consumer adverse-action notices should be retained for 25 months from the date of notification. It is consistent with the reference output and uses precise terminology. There are no factual errors or omissions. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['CT-8', 'RB-11']",
+            "citation_wellformed": "all 2 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (2 cited)",
+            "groundedness": "The answer states that copies of consumer adverse-action notices are retained for 25 months from the date of notification. This claim is directly supported by the cited clause text, which states exactly that: 'Copies of consumer adverse-action notices are retained for 25 months from the date of notification.' Therefore, there are no unsupported claims. Thus, the score should be: true."
+          },
+          "latency_s": 1.183617
+        },
+        {
+          "example_id": "Q15",
+          "category": "internal_policy",
+          "difficulty": "medium",
+          "question": "Can our automated drafting system write the ECOA and FCRA disclosure paragraphs itself, so the wording reads more naturally in each letter?",
+          "reference_answer": "No. The statutory disclosure paragraphs, elements E2 through E7, are fixed template text and are never drafted, paraphrased or regenerated per letter, by a person or by an automated system. Only the reason statement E1 and the applicant's details vary between letters.",
+          "reference_clause_ids": [
+            "CT-3"
+          ],
+          "answer": "No, the ECOA and FCRA disclosure paragraphs must use fixed template text and cannot be drafted, paraphrased, or regenerated for each letter. Only the reason statement and the applicant's details may vary between letters.",
+          "clause_ids": [
+            "CT-3"
+          ],
+          "prompt_tokens": 2030,
+          "completion_tokens": 59,
+          "cost_usd": 0.0003399,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output accurately states that the ECOA and FCRA disclosure paragraphs must remain as fixed template text, matching the information provided in the reference outputs. It correctly notes that only the reason statement and applicant details can vary. There are no factual errors, incomplete parts, or ambiguous statements. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['CT-3']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer states that the ECOA and FCRA disclosure paragraphs must use fixed template text and cannot be drafted, paraphrased, or regenerated. This is supported by the reference clause which specifically states that the statutory disclosure paragraphs (E2 through E7) are 'fixed template text' and are 'never drafted, paraphrased or regenerated per letter.' Therefore, all claims in the answer are supported by the cited clause. Thus, the score should be: true."
+          },
+          "latency_s": 1.494859
+        },
+        {
+          "example_id": "Q01",
+          "category": "regulation_b",
+          "difficulty": "easy",
+          "question": "We received a personal loan application on 3 March but it was missing proof of income, which arrived on 20 March. By when must Cardinal Trust notify the applicant of the decision?",
+          "reference_answer": "Within 30 days of 20 March, because the 30-day clock runs from the date the application became complete, not from the date it was first received.",
+          "reference_clause_ids": [
+            "RB-3"
+          ],
+          "answer": "Cardinal Trust must notify the applicant of the decision within 30 days after receiving the completed application, which is on 20 March. Therefore, the notification must be sent by 19 April.",
+          "clause_ids": [
+            "RB-3",
+            "RB-4"
+          ],
+          "prompt_tokens": 2041,
+          "completion_tokens": 59,
+          "cost_usd": 0.00034155,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output accurately states that Cardinal Trust must notify the applicant within 30 days of receiving the completed application. It correctly identifies that the application became complete on 20 March and calculates the notification date as 19 April, which is logically consistent with the rules mentioned. Furthermore, it employs precise language without any factual errors or ambiguities. Thus, the score should be: true.",
+            "citation_validity": "extra (valid) ['RB-4']",
+            "citation_wellformed": "all 2 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (2 cited)",
+            "groundedness": "The answer correctly states that Cardinal Trust must notify the applicant within 30 days after receiving the completed application on 20 March, resulting in a notification deadline of 19 April. This interpretation is supported by clause [RB-3], which confirms the 30-day period starting from the completed application. There are no unsupported claims or contradictions to the cited text, as all factors regarding the timing of notification are accurately referenced based on the facts provided. Thus, the score should be: true."
+          },
+          "latency_s": 1.335096
+        },
+        {
+          "example_id": "Q17",
+          "category": "internal_policy",
+          "difficulty": "easy",
+          "question": "Which federal agency do we name in element E3, and at what address?",
+          "reference_answer": "The Bureau of Consumer Financial Protection, 1700 G Street NW, Washington, DC 20552.",
+          "reference_clause_ids": [
+            "CT-6"
+          ],
+          "answer": "The federal agency named in element E3 is the Bureau of Consumer Financial Protection, 1700 G Street NW, Washington, DC 20552.",
+          "clause_ids": [
+            "CT-6"
+          ],
+          "prompt_tokens": 2020,
+          "completion_tokens": 45,
+          "cost_usd": 0.00033,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output correctly identifies the federal agency as the Bureau of Consumer Financial Protection and provides its address as 1700 G Street NW, Washington, DC 20552. It directly addresses the question asked, includes complete and accurate information without any factual errors, maintains logical consistency, and utilizes precise terminology. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['CT-6']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The claim states that the federal agency named in element E3 is the Bureau of Consumer Financial Protection, located at 1700 G Street NW, Washington, DC 20552. This claim is directly supported by the cited text, which explicitly names the same agency and address. Since all claims made in the answer are accurately reflected in the cited clause, the answer is grounded. Thus, the score should be: true."
+          },
+          "latency_s": 1.247368
+        },
+        {
+          "example_id": "Q08",
+          "category": "regulation_b",
+          "difficulty": "hard",
+          "question": "Someone applied for a product line we simply do not offer, so we turned them down. Adverse action notice required?",
+          "reference_answer": "No. A refusal because the creditor does not offer the type of credit or credit plan requested is not adverse action.",
+          "reference_clause_ids": [
+            "RB-2"
+          ],
+          "answer": "No adverse action notice is required because the refusal to extend credit is due to the fact that the creditor does not offer the type of credit or credit plan requested.",
+          "clause_ids": [
+            "RB-2"
+          ],
+          "prompt_tokens": 2028,
+          "completion_tokens": 47,
+          "cost_usd": 0.0003324,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output correctly states that an adverse action notice is not required when the refusal is due to the creditor not offering the type of credit requested. It accurately reflects the guidance that a refusal for this reason does not constitute adverse action, aligning with the reference outputs. The terminology used is precise and there are no factual inaccuracies or omissions. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['RB-2']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer states that no adverse action notice is required because the refusal to extend credit is due to the creditor not offering the type of credit or credit plan requested. This claim is directly supported by the clause text, which states that a refusal to extend credit is not considered adverse action when it is because the creditor does not offer the type of credit requested. Since the claim is supported and there are no unsupported claims or contradictions, the score should be: true."
+          },
+          "latency_s": 1.313589
+        },
+        {
+          "example_id": "Q02",
+          "category": "regulation_b",
+          "difficulty": "easy",
+          "question": "An application is still incomplete after three weeks. What are our options, and what must a notice of incompleteness say?",
+          "reference_answer": "Within 30 days we must either send a notice of incompleteness or send an adverse action notice. A notice of incompleteness must specify the information still needed, give a reasonable period to provide it, and state that failure to supply the information will mean no further consideration is given to the application.",
+          "reference_clause_ids": [
+            "RB-4"
+          ],
+          "answer": "If an application is incomplete after three weeks, we must either send a notice of incompleteness specifying the information needed and a reasonable period to provide it, or send an adverse action notice. The notice of incompleteness must state that failure to supply the information will mean no further consideration is given to the application.",
+          "clause_ids": [
+            "RB-4"
+          ],
+          "prompt_tokens": 2029,
+          "completion_tokens": 78,
+          "cost_usd": 0.00035115,
+          "error": null,
+          "scores": {
+            "correctness": false,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The model's response incorrectly states that the action must be taken after three weeks instead of the correct timeframe of 30 days. This is a factual error. Moreover, while it generally describes the requirements for a notice of incompleteness, it lacks precision in terms of the regulatory expectations and does not clearly state that a reasonable period must be specified. Thus, the score should be: false.",
+            "citation_validity": "resolved exactly to ['RB-4']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer claims that if an application is incomplete after three weeks, the options are to send a notice of incompleteness or an adverse action notice, which aligns with the statement in the clause that this action must occur within 30 days. It also correctly summarizes that the notice of incompleteness must state that failure to supply the information will mean no further consideration of the application. Since all claims are supported by the cited text, the score should be: true."
+          },
+          "latency_s": 1.650342
+        }
+      ]
+    },
+    {
+      "target": "gpt4o",
+      "label": "gpt-4o + grounded prompt",
+      "model": "gpt-4o",
+      "prompt_variant": "full",
+      "experiment_name": "cardinal-gpt4o-55d81686",
+      "wall_seconds": 28.09,
+      "rows": [
+        {
+          "example_id": "Q20",
+          "category": "edge_case",
+          "difficulty": "hard",
+          "question": "A business applicant with $4 million of gross revenues last year was declined. Same written notice and statement of reasons as a consumer?",
+          "reference_answer": "No. Where the applicant's gross revenues exceeded $1 million in the preceding fiscal year, notification may be oral or in writing, and the statement of reasons need only be provided on the applicant's written request. Business credit is also outside the scope of the consumer credit notice policy.",
+          "reference_clause_ids": [
+            "RB-10",
+            "CT-1"
+          ],
+          "answer": "No, different notification rules apply to business credit. For a business applicant with gross revenues exceeding $1 million, the creditor may notify orally or in writing and need only provide the statement of reasons on the applicant's written request.",
+          "clause_ids": [
+            "RB-10"
+          ],
+          "prompt_tokens": 2030,
+          "completion_tokens": 60,
+          "cost_usd": 0.005675,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 0.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output accurately explains that different notification rules apply to business credit, specifically stating that oral notification may be used along with written notice for an applicant with gross revenues exceeding $1 million. It also correctly indicates that the statement of reasons is only required upon written request. This matches the information provided in the reference output, and there are no factual errors, logical inconsistencies, or incorrect terminology. Therefore, the response meets all parts of the rubric. Thus, the score should be: true.",
+            "citation_validity": "missing ['CT-1']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer makes the claim that different notification rules apply to business credit, which is supported by the clause stating that \"Different notification rules apply to business credit.\" It also claims that for a business applicant with gross revenues exceeding $1 million, the creditor may notify orally or in writing and needs to provide the statement of reasons only upon the applicant's written request. These specifics are taken directly from the clause, confirming that all claims made in the answer are supported. Thus, the score should be: true."
+          },
+          "latency_s": 1.682722
+        },
+        {
+          "example_id": "Q07",
+          "category": "regulation_b",
+          "difficulty": "medium",
+          "question": "A customer agreed to a change in the terms of their account. Does that count as adverse action requiring a notice?",
+          "reference_answer": "No. A change in the terms of an account expressly agreed to by the applicant is not adverse action.",
+          "reference_clause_ids": [
+            "RB-2"
+          ],
+          "answer": "A change in the terms of an account expressly agreed to by the applicant is not considered adverse action and does not require a notice.",
+          "clause_ids": [
+            "RB-2"
+          ],
+          "prompt_tokens": 2027,
+          "completion_tokens": 41,
+          "cost_usd": 0.0054775,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The response accurately states that a change in the terms of an account that is agreed to by the customer does not count as adverse action. This is consistent with the information provided in the reference output, and it addresses the question fully without any factual errors or ambiguities. The terminology used is precise and appropriate for the context, and there are no logical inconsistencies present in the response. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['RB-2']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The response correctly states that a change in the terms of an account that is expressly agreed to by the applicant is not considered adverse action. This claim is directly supported by the clause text, which explicitly states that such a change does not constitute adverse action. Since all claims made in the answer are supported by the cited text, the score should be: true."
+          },
+          "latency_s": 1.216298
+        },
+        {
+          "example_id": "Q13",
+          "category": "fcra",
+          "difficulty": "hard",
+          "question": "A numerical credit score was used in the decision. What extra items must the notice disclose, and how many key factors?",
+          "reference_answer": "The score itself, the range of possible scores under the model used, the key factors that adversely affected the score listed in order of importance, the date the score was created, and the name of the person or entity that provided it. Up to four key factors, or up to five where the number of enquiries on the file was one of the key factors.",
+          "reference_clause_ids": [
+            "FC-6"
+          ],
+          "answer": "The notice must disclose the credit score itself, the range of possible scores under the model used, the key factors that adversely affected the score (up to four, or up to five if the number of enquiries on the file was one of the key factors), the date the score was created, and the name of the person or entity that provided the score.",
+          "clause_ids": [
+            "FC-6"
+          ],
+          "prompt_tokens": 2028,
+          "completion_tokens": 86,
+          "cost_usd": 0.00593,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output correctly identifies the necessary disclosures regarding the numerical credit score, including the credit score itself, the range of possible scores, the key factors affecting the score (mentioning the maximum of four or five), the creation date of the score, and the name of the entity that provided it. The structure and terminology align well with the provided reference, without any factual inaccuracies or omissions. All parts of the question are addressed comprehensively and logically. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['FC-6']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer correctly claims that the notice must disclose the credit score itself, the range of possible scores, the key factors that adversely affected the score (up to four, or up to five if the number of inquiries is one of the key factors), the date the score was created, and the name of the provider of the score. All these claims are explicitly stated in the cited clause. Thus, the score should be: true."
+          },
+          "latency_s": 1.916202
+        },
+        {
+          "example_id": "Q06",
+          "category": "regulation_b",
+          "difficulty": "medium",
+          "question": "There are two joint applicants on a declined application. Do both need to receive the notice?",
+          "reference_answer": "No. The notice need only be given to one applicant, but it must go to the primary applicant where one is readily apparent.",
+          "reference_clause_ids": [
+            "RB-9"
+          ],
+          "answer": "The notice need only be given to one of the applicants, but it must go to the primary applicant where one is readily apparent.",
+          "clause_ids": [
+            "RB-9"
+          ],
+          "prompt_tokens": 2022,
+          "completion_tokens": 41,
+          "cost_usd": 0.005465,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output correctly states that the notice only needs to be given to one of the applicants, specifically indicating that it should be sent to the primary applicant if one is readily apparent. This information is accurate and complete, reflecting the guideline that only one notice is required and addressing all parts of the question without any factual errors or logical inconsistencies. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['RB-9']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer accurately reflects the information contained in the cited clause. The claim that 'the notice need only be given to one of the applicants' is directly supported by the clause, which explicitly states that the notice need only be given to one applicant. The claim that it 'must go to the primary applicant where one is readily apparent' is also directly supported by the clause. Since both claims made in the answer are supported by the cited text, the answer is grounded. Thus, the score should be: true."
+          },
+          "latency_s": 0.859639
+        },
+        {
+          "example_id": "Q14",
+          "category": "fcra",
+          "difficulty": "hard",
+          "question": "We declined partly on information from the applicant's employer, who is not a credit bureau. What do we owe the applicant, and must we name the employer?",
+          "reference_answer": "The applicant must be told of their right to learn the nature of that information, and the request must be made within 60 days of learning of the adverse action. We are not required to disclose the source of the information, so the employer need not be named.",
+          "reference_clause_ids": [
+            "FC-7"
+          ],
+          "answer": "You must inform the applicant of their right to learn the nature of the information obtained from the employer, and the request must be made within 60 days of learning of the adverse action. You are not required to disclose the source of the information, so you do not need to name the employer.",
+          "clause_ids": [
+            "FC-7"
+          ],
+          "prompt_tokens": 2036,
+          "completion_tokens": 74,
+          "cost_usd": 0.00583,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output provides accurate and complete information regarding the rights of the applicant in relation to information obtained from an employer that is not a credit bureau. It correctly states that the applicant must be informed of their right to learn about the information obtained and that this request must be made within 60 days of the adverse action. Additionally, it asserts that disclosing the source of information is not required, meaning the employer does not need to be named. All parts of the question are addressed, and the terminology used is precise. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['FC-7']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer claims that the applicant must be informed of their right to learn the nature of the information obtained from the employer, which is directly supported by the cited text. It correctly states that the request must be made within 60 days of learning of the adverse action, also supported by the clause. Additionally, it claims that there is no requirement to disclose the source of the information (the employer), which aligns with the clause's statement that the creditor is not required to disclose the source. All claims made in the answer are supported by the cited text. Thus, the score should be: true."
+          },
+          "latency_s": 1.455
+        },
+        {
+          "example_id": "Q18",
+          "category": "internal_policy",
+          "difficulty": "medium",
+          "question": "An automatically drafted notice fails the deterministic element check. What happens to it, and what human review applies?",
+          "reference_answer": "It is never sent; it is returned for regeneration. Separately, a credit officer must read a sample of at least 5% of notices each week.",
+          "reference_clause_ids": [
+            "CT-7"
+          ],
+          "answer": "A notice that fails the deterministic element check is never sent; it is returned for regeneration. Additionally, a sample of at least 5% of notices must be read by a credit officer each week.",
+          "clause_ids": [
+            "CT-7"
+          ],
+          "prompt_tokens": 2025,
+          "completion_tokens": 55,
+          "cost_usd": 0.0056125,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output correctly states that a notice that fails the deterministic element check is not sent and is returned for regeneration. It also accurately mentions the requirement for a credit officer to review at least 5% of notices weekly. The information is complete and addresses all parts of the question regarding the fate of the notice and the human review process. No factual errors, misstatements, or logical inconsistencies are present. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['CT-7']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer contains the following claims: 1. \"A notice that fails the deterministic element check is never sent; it is returned for regeneration.\" This is directly supported by [CT-7], which states that a notice failing the check is returned for regeneration and not sent. 2. \"A sample of at least 5% of notices must be read by a credit officer each week.\" This is also directly supported by [CT-7], which states that a sample of notices must be read by a credit officer weekly. Both claims are backed by the cited text. Thus, the score should be: TRUE."
+          },
+          "latency_s": 1.11255
+        },
+        {
+          "example_id": "Q09",
+          "category": "regulation_b",
+          "difficulty": "hard",
+          "question": "We approved the loan but at a much smaller amount than requested, and the applicant used the funds. Is that adverse action?",
+          "reference_answer": "No. Where the creditor makes a counteroffer and the applicant uses or expressly accepts the credit offered, the refusal to grant credit in the amount requested is not adverse action.",
+          "reference_clause_ids": [
+            "RB-1"
+          ],
+          "answer": "No, this is not considered adverse action because the applicant used or expressly accepted the credit offered, which is a counteroffer.",
+          "clause_ids": [
+            "RB-1"
+          ],
+          "prompt_tokens": 2029,
+          "completion_tokens": 40,
+          "cost_usd": 0.0054725,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The response correctly identifies that the situation described is not considered adverse action due to the applicant accepting the credit offered. It provides accurate information that aligns with the reference outputs, without any factual errors or misleading statements. Additionally, the terminology used is precise and consistent. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['RB-1']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer claims that this situation isn't considered adverse action because the applicant used or accepted the credit offered as a counteroffer. This is supported by the cited text from clause [RB-1], which defines adverse action and states that it does not apply when the creditor makes a counteroffer and the applicant uses or accepts the credit. There are no unsupported claims in the answer, as all claims are directly related to the definitions in the cited clause. Thus, the score should be: true."
+          },
+          "latency_s": 0.950374
+        },
+        {
+          "example_id": "Q04",
+          "category": "regulation_b",
+          "difficulty": "medium",
+          "question": "The decision came from our credit scoring system. Is it enough to tell the applicant they did not achieve a qualifying score?",
+          "reference_answer": "No. Stating that the applicant failed to achieve a qualifying score is not sufficient on its own; the notice must disclose the principal factors that contributed to the score. We do not have to explain how or why a factor was weighted, and we need not list more than four principal reasons.",
+          "reference_clause_ids": [
+            "RB-8"
+          ],
+          "answer": "No, it is not enough to state that the applicant did not achieve a qualifying score. The notice must disclose the principal factors that contributed to the score, and reasons must be specific. A statement like 'insufficient information' or 'you do not meet our minimum standards' is too vague.",
+          "clause_ids": [
+            "RB-8"
+          ],
+          "prompt_tokens": 2028,
+          "completion_tokens": 74,
+          "cost_usd": 0.00581,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output correctly asserts that merely stating the applicant did not achieve a qualifying score is insufficient. It emphasizes the requirement to disclose the principal factors contributing to the score with specific reasons, aligning with both the factual accuracy and completeness needed. There are no factual errors, and the response addresses all parts of the question clearly. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['RB-8']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer states that it is not enough to only tell the applicant that they did not achieve a qualifying score. This is supported by the clause that indicates a statement about failing to meet a qualifying score is insufficient on its own and that principal factors contributing to the score must also be disclosed. It further mentions that vague explanations like 'insufficient information' are inadequate, which is also supported by the clause. Thus, the score should be: true."
+          },
+          "latency_s": 1.327416
+        },
+        {
+          "example_id": "Q12",
+          "category": "fcra",
+          "difficulty": "easy",
+          "question": "What two rights relating to the consumer report itself must we tell the applicant about?",
+          "reference_answer": "The right to obtain a free copy of the consumer report from the agency, requested within 60 days of receiving the adverse action notice; and the right to dispute directly with the agency the accuracy or completeness of any information in the report.",
+          "reference_clause_ids": [
+            "FC-4",
+            "FC-5"
+          ],
+          "answer": "The applicant must be informed of their right to obtain a free copy of the consumer report within 60 days of receiving the adverse action notice, and their right to dispute the accuracy or completeness of any information in the report directly with the consumer reporting agency.",
+          "clause_ids": [
+            "CT-2",
+            "FC-4",
+            "FC-5"
+          ],
+          "prompt_tokens": 2020,
+          "completion_tokens": 75,
+          "cost_usd": 0.0058,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output accurately identifies two specific rights related to consumer reports: the right to obtain a free copy of the report within 60 days of receiving an adverse action notice and the right to dispute the accuracy or completeness of information in the report. It addresses both aspects of the question completely and correctly, with no factual errors or ambiguities, and uses precise terminology. Therefore, the score should be: true.",
+            "citation_validity": "extra (valid) ['CT-2']",
+            "citation_wellformed": "all 3 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (3 cited)",
+            "groundedness": "The answer correctly identifies two rights relating to the consumer report that must be communicated to the applicant: the right to obtain a free copy of the consumer report within 60 days and the right to dispute inaccuracies. Both of these claims are supported by the cited clauses: the right to a free copy is directly stated in [FC-4], and the right to dispute inaccuracies is supported by [FC-5]. Since every claim in the answer is supported by the cited text, the score should be: true."
+          },
+          "latency_s": 1.570015
+        },
+        {
+          "example_id": "Q22",
+          "category": "edge_case",
+          "difficulty": "medium",
+          "question": "Must every adverse action notice spell out the specific reasons for the decision?",
+          "reference_answer": "Not necessarily. The notice must contain either a statement of the specific principal reasons, or a disclosure of the applicant's right to obtain those reasons within 30 days of requesting them together with the name, address and telephone number of the person who can provide them.",
+          "reference_clause_ids": [
+            "RB-7"
+          ],
+          "answer": "No, an adverse action notice must either contain a statement of the specific principal reasons for the action or a disclosure of the applicant's right to obtain those reasons within 30 days of requesting them, along with the contact information of the person who can provide them.",
+          "clause_ids": [
+            "RB-7"
+          ],
+          "prompt_tokens": 2018,
+          "completion_tokens": 67,
+          "cost_usd": 0.005715,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output accurately explains that an adverse action notice does not necessarily have to spell out the specific reasons for the decision, but it must either provide these reasons or inform the applicant of their right to obtain them within 30 days. Additionally, it mentions the requirement to include contact information for the person who can provide these details, which is in line with the reference outputs. The terminology is precise, and the information is factually correct and complete. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['RB-7']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer correctly states that an adverse action notice must either contain a specific statement of reasons for the action or disclose the applicant's right to obtain those reasons within 30 days, along with contact information. This is directly supported by the referenced clause, which specifies the same requirements (either a statement of reasons or a disclosure of rights). Thus, the score should be: TRUE."
+          },
+          "latency_s": 1.506871
+        },
+        {
+          "example_id": "Q19",
+          "category": "edge_case",
+          "difficulty": "hard",
+          "question": "A reviewer is confident the applicant's recent job change contributed to the decline, but it is not among the recorded principal reasons. Can it go in the letter?",
+          "reference_answer": "No. Reasons must be taken from the principal reasons recorded by the underwriting engine. No other reason may be added, including one a reviewer believes to be true, and including information the applicant volunteered in free text on their application.",
+          "reference_clause_ids": [
+            "CT-4"
+          ],
+          "answer": "No, the reasons stated in the notice must be taken from the principal reasons recorded by the underwriting engine for that application. No other reason may be added, even if a reviewer believes it to be true.",
+          "clause_ids": [
+            "CT-4"
+          ],
+          "prompt_tokens": 2036,
+          "completion_tokens": 56,
+          "cost_usd": 0.00565,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The model output accurately reflects the requirement that only principal reasons recorded by the underwriting engine can be included in the letter. It correctly indicates that personal beliefs or unrecorded reasons cannot be added, which addresses all aspects of the question. Additionally, there are no factual errors, ambiguities, or logical inconsistencies present in the response. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['CT-4']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer correctly states that the reasons for the notice must be taken from the principal reasons recorded by the underwriting engine and that no other reason may be added. This is supported by the clause text which explicitly states that reasons must come from the decision record, and emphasizes the restriction on adding reasons that a reviewer believes to be true, thereby aligning with the claims made in the answer. As each claim in the answer is clearly supported by the cited text, the score should be: true."
+          },
+          "latency_s": 1.070119
+        },
+        {
+          "example_id": "Q11",
+          "category": "fcra",
+          "difficulty": "easy",
+          "question": "What must the notice say about the credit bureau's role in the decision?",
+          "reference_answer": "That the consumer reporting agency did not make the decision to take the adverse action and is unable to provide the specific reasons for it.",
+          "reference_clause_ids": [
+            "FC-3"
+          ],
+          "answer": "The notice must state that the consumer reporting agency did not make the decision to take the adverse action and is unable to provide the specific reasons for it.",
+          "clause_ids": [
+            "FC-3"
+          ],
+          "prompt_tokens": 2019,
+          "completion_tokens": 45,
+          "cost_usd": 0.0054975,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output accurately reflects the requirements for the notice regarding the credit bureau's role in the decision. It states that the consumer reporting agency did not make the decision to take adverse action and emphasizes that they cannot provide specific reasons, matching the reference output exactly. There are no factual errors or incompleteness in the information provided. Thus, the score should be: SCORE_YOU_ASSIGN.",
+            "citation_validity": "resolved exactly to ['FC-3']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer correctly claims that the notice must state two things: 1) the consumer reporting agency did not make the decision to take the adverse action, and 2) it is unable to provide the specific reasons for that decision. These claims are directly supported by the clause text, which states both of these points verbatim. Thus, the score should be: SCORE_YOU_ASSIGN."
+          },
+          "latency_s": 0.745719
+        },
+        {
+          "example_id": "Q10",
+          "category": "fcra",
+          "difficulty": "easy",
+          "question": "Which details of the credit bureau must appear on the notice?",
+          "reference_answer": "The name, address and telephone number of the consumer reporting agency that furnished the report. For a nationwide agency the number given must be a toll-free number established by that agency.",
+          "reference_clause_ids": [
+            "FC-2"
+          ],
+          "answer": "The notice must include the name, address, and toll-free telephone number of the consumer reporting agency that furnished the report.",
+          "clause_ids": [
+            "CT-2",
+            "FC-2"
+          ],
+          "prompt_tokens": 2016,
+          "completion_tokens": 44,
+          "cost_usd": 0.00548,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output correctly identifies that the notice must include the name, address, and toll-free telephone number of the consumer reporting agency. It aligns with the information provided in the reference outputs. There are no factual inaccuracies, and it addresses all parts of the question. Thus, the score should be: true.",
+            "citation_validity": "extra (valid) ['CT-2']",
+            "citation_wellformed": "all 2 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (2 cited)",
+            "groundedness": "The answer states that the notice must include the name, address, and toll-free telephone number of the consumer reporting agency that furnished the report. This is directly supported by the text in clause [FC-2], which specifies that the notice must give the name, address, and telephone number of the agency, explicitly stating that the telephone number must be toll-free for nationwide agencies. Thus, the answer is grounded as all claims made are supported by the cited text. Thus, the score should be: true."
+          },
+          "latency_s": 0.879649
+        },
+        {
+          "example_id": "Q05",
+          "category": "regulation_b",
+          "difficulty": "medium",
+          "question": "We made a counteroffer and the applicant has not responded. What do we have to send, and when?",
+          "reference_answer": "The counteroffer itself must be notified within 30 days. If the applicant does not expressly accept or use the credit offered within 90 days of the counteroffer, we must then send an adverse action notice.",
+          "reference_clause_ids": [
+            "RB-5"
+          ],
+          "answer": "If the applicant does not expressly accept or use the credit offered within 90 days of the counteroffer, you must send an adverse action notice.",
+          "clause_ids": [
+            "RB-5"
+          ],
+          "prompt_tokens": 2026,
+          "completion_tokens": 44,
+          "cost_usd": 0.005505,
+          "error": null,
+          "scores": {
+            "correctness": false,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output fails to provide complete information regarding the requirement to notify the applicant about the counteroffer within 30 days, which is a critical component of the question. It only mentions the 90-day period regarding the adverse action notice but does not acknowledge the initial 30-day notification period that must occur when a counteroffer is made. This omission constitutes a lack of completeness and accuracy. Thus, the score should be: false.",
+            "citation_validity": "resolved exactly to ['RB-5']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer makes the following claims: 1) 'the applicant has not responded'; 2) 'you must send an adverse action notice'; 3) 'if the applicant does not expressly accept or use the credit offered within 90 days of the counteroffer'. Claim 1 is a factual statement that sets up the context but is not contradicted by the clause. Claim 2 is supported as the cited clause states that an adverse action notice must be sent in the specified circumstance. Claim 3 is also supported as it directly quotes the timeframe specified in the clause. All claims are consistent with the cited text, thus, the score should be: true."
+          },
+          "latency_s": 0.855225
+        },
+        {
+          "example_id": "Q21",
+          "category": "edge_case",
+          "difficulty": "medium",
+          "question": "Our internal target is 10 business days. If we miss it and take 20 days, have we breached the regulation?",
+          "reference_answer": "No. The 10-business-day turnaround is an internal service target only and does not displace the 30-day regulatory deadline, which is still met at 20 days.",
+          "reference_clause_ids": [
+            "CT-9",
+            "RB-3"
+          ],
+          "answer": "No, you have not breached the regulation. The regulatory deadline is 30 days after receiving a completed application.",
+          "clause_ids": [
+            "RB-3",
+            "CT-9"
+          ],
+          "prompt_tokens": 2029,
+          "completion_tokens": 42,
+          "cost_usd": 0.0054925,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": false
+          },
+          "comments": {
+            "correctness": "The model’s response accurately reflects the information provided in the prompt. The answer correctly identifies that the internal target of 10 business days is not a regulatory requirement and clarifies that the actual regulatory deadline is 30 days. This demonstrates accurate and complete information without any factual errors. It also addresses all parts of the question, is logically consistent concerning the rules described, and uses precise terminology regarding the distinction between internal targets and regulatory deadlines. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['CT-9', 'RB-3']",
+            "citation_wellformed": "all 2 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (2 cited)",
+            "groundedness": "The answer claims, \"No, you have not breached the regulation,\" which contradicts the cited clause in RB-3 stating that the creditor must notify within '30 days' after receipt of a completed application. However, it also refers to an internal target of 10 business days from CT-9, but it misinterprets the implications regarding breach. The key unsupported claim here is that missing the 10 business day internal target does not amount to a breach of the regulation; the phrase 'you have not breached the regulation' implies that meeting the internal target matters, while the regulation is strictly tied to the 30-day rule clearly stated. Thus, the score should be: false."
+          },
+          "latency_s": 0.925495
+        },
+        {
+          "example_id": "Q16",
+          "category": "internal_policy",
+          "difficulty": "medium",
+          "question": "The applicant told us in their application that they are on maternity leave. Should the letter acknowledge that sympathetically?",
+          "reference_answer": "No. A notice must not refer to pregnancy or parental leave, or any other listed protected characteristic, anywhere outside the standard ECOA notice paragraph — even where the applicant raised the matter themselves.",
+          "reference_clause_ids": [
+            "CT-5"
+          ],
+          "answer": "No, the letter must not refer to the applicant's maternity leave outside the standard ECOA notice paragraph.",
+          "clause_ids": [
+            "CT-5"
+          ],
+          "prompt_tokens": 2026,
+          "completion_tokens": 36,
+          "cost_usd": 0.005425,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output accurately reflects the guidelines regarding the reference to maternity leave in the applicant's letter context. It informs that maternity leave should be mentioned only in the standard ECOA notice paragraph and not elsewhere, aligning with the provided reference output. The response provides complete and precise information without factual errors or logical inconsistencies. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['CT-5']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer correctly states that the letter must not mention the applicant's maternity leave outside the designated paragraph. This is supported by the clause which explicitly states that references to an applicant's characteristics, including pregnancy, should not occur outside the standard ECOA notice paragraph. There are no unsupported claims made in the answer. Thus, the score should be: true."
+          },
+          "latency_s": 0.812267
+        },
+        {
+          "example_id": "Q03",
+          "category": "regulation_b",
+          "difficulty": "easy",
+          "question": "How long do we have to keep a copy of a consumer adverse-action notice, and from what date?",
+          "reference_answer": "25 months, running from the date the applicant was notified.",
+          "reference_clause_ids": [
+            "RB-11",
+            "CT-8"
+          ],
+          "answer": "Copies of consumer adverse-action notices must be retained for 25 months from the date of notification.",
+          "clause_ids": [
+            "CT-8",
+            "RB-11"
+          ],
+          "prompt_tokens": 2025,
+          "completion_tokens": 39,
+          "cost_usd": 0.0054525,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output provides accurate and complete information regarding the retention period for consumer adverse-action notices, stating the requirement of retaining them for 25 months from the date of notification. This aligns perfectly with the reference provided and contains no factual errors. Moreover, it addresses the question fully, is logically consistent, and uses precise terminology. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['CT-8', 'RB-11']",
+            "citation_wellformed": "all 2 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (2 cited)",
+            "groundedness": "The answer states that copies of consumer adverse-action notices must be retained for 25 months from the date of notification. This is supported by the clause [CT-8], which explicitly states that copies must be retained for 25 months from the date of notification. Thus, there are no unsupported claims, and the answer is fully grounded in the cited text. Thus, the score should be: true."
+          },
+          "latency_s": 0.913357
+        },
+        {
+          "example_id": "Q15",
+          "category": "internal_policy",
+          "difficulty": "medium",
+          "question": "Can our automated drafting system write the ECOA and FCRA disclosure paragraphs itself, so the wording reads more naturally in each letter?",
+          "reference_answer": "No. The statutory disclosure paragraphs, elements E2 through E7, are fixed template text and are never drafted, paraphrased or regenerated per letter, by a person or by an automated system. Only the reason statement E1 and the applicant's details vary between letters.",
+          "reference_clause_ids": [
+            "CT-3"
+          ],
+          "answer": "No, the statutory disclosure paragraphs (E2 through E7) must use fixed template text and cannot be drafted, paraphrased, or regenerated by any system.",
+          "clause_ids": [
+            "CT-3"
+          ],
+          "prompt_tokens": 2030,
+          "completion_tokens": 48,
+          "cost_usd": 0.005555,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output correctly states that the ECOA and FCRA disclosure paragraphs must use fixed template text and cannot be drafted or paraphrased by any system, which aligns with the reference output. It accurately addresses the question, contains no factual errors, and uses clear terminology. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['CT-3']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer correctly states that the statutory disclosure paragraphs (E2 through E7) must use fixed template text and cannot be drafted, paraphrased, or regenerated by any system, which aligns with the clause text that emphasizes the fixed nature of the disclosure text. All claims made in the answer are directly supported by the cited clause. Thus, the score should be: true."
+          },
+          "latency_s": 0.893554
+        },
+        {
+          "example_id": "Q01",
+          "category": "regulation_b",
+          "difficulty": "easy",
+          "question": "We received a personal loan application on 3 March but it was missing proof of income, which arrived on 20 March. By when must Cardinal Trust notify the applicant of the decision?",
+          "reference_answer": "Within 30 days of 20 March, because the 30-day clock runs from the date the application became complete, not from the date it was first received.",
+          "reference_clause_ids": [
+            "RB-3"
+          ],
+          "answer": "Cardinal Trust must notify the applicant of the decision within 30 days after receiving the completed application, which was on 20 March. Therefore, the notification must be sent by 19 April.",
+          "clause_ids": [
+            "RB-3"
+          ],
+          "prompt_tokens": 2041,
+          "completion_tokens": 54,
+          "cost_usd": 0.0056425,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output correctly identifies the date the application became complete (20 March) and accurately states that Cardinal Trust has 30 days from that date to make a decision. It also provides the correct deadline for notifying the applicant (19 April) and aligns with the reference outputs, confirming the completeness and correctness of the information. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['RB-3']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer states that Cardinal Trust must notify the applicant within 30 days after receiving the completed application on 20 March. This claim is supported by the clause, which specifies that the creditor must notify the applicant within 30 days of receiving a completed application. The calculation of the deadline being 19 April is also correct based on the 30-day period starting from 20 March. There are no unsupported claims in the answer. Thus, the score should be: true."
+          },
+          "latency_s": 1.148741
+        },
+        {
+          "example_id": "Q17",
+          "category": "internal_policy",
+          "difficulty": "easy",
+          "question": "Which federal agency do we name in element E3, and at what address?",
+          "reference_answer": "The Bureau of Consumer Financial Protection, 1700 G Street NW, Washington, DC 20552.",
+          "reference_clause_ids": [
+            "CT-6"
+          ],
+          "answer": "The federal agency named in element E3 is the Bureau of Consumer Financial Protection, located at 1700 G Street NW, Washington, DC 20552.",
+          "clause_ids": [
+            "CT-6"
+          ],
+          "prompt_tokens": 2020,
+          "completion_tokens": 47,
+          "cost_usd": 0.00552,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output accurately names the federal agency as the Bureau of Consumer Financial Protection and provides the correct address of 1700 G Street NW, Washington, DC 20552. It addresses the question fully by including both the agency and its address while using precise terminology without any factual errors. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['CT-6']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer states that the federal agency named in element E3 is the Bureau of Consumer Financial Protection and provides its address as 1700 G Street NW, Washington, DC 20552. Both claims are explicitly supported by the cited clause text, which confirms the name of the agency and the address. There are no unsupported claims or contradictions. Thus, the score should be: true."
+          },
+          "latency_s": 0.953295
+        },
+        {
+          "example_id": "Q08",
+          "category": "regulation_b",
+          "difficulty": "hard",
+          "question": "Someone applied for a product line we simply do not offer, so we turned them down. Adverse action notice required?",
+          "reference_answer": "No. A refusal because the creditor does not offer the type of credit or credit plan requested is not adverse action.",
+          "reference_clause_ids": [
+            "RB-2"
+          ],
+          "answer": "No adverse action notice is required because a refusal to extend credit for a product line the creditor does not offer is not considered adverse action.",
+          "clause_ids": [
+            "RB-2"
+          ],
+          "prompt_tokens": 2028,
+          "completion_tokens": 42,
+          "cost_usd": 0.00549,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output provides accurate information consistent with the prompt and reference outputs. It correctly states that a refusal to offer a product line that does not exist is not considered adverse action, thereby addressing the question completely. Additionally, there are no factual errors, logical inconsistencies, or misleading statements. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['RB-2']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer states that \"No adverse action notice is required because a refusal to extend credit for a product line the creditor does not offer is not considered adverse action.\" This claim is directly supported by the cited text, which specifies that \"a refusal to extend credit because the creditor does not offer the type of credit or credit plan requested\" is not considered adverse action. There are no unsupported claims in the answer, and it accurately reflects the information in the cited clause. Thus, the score should be: true."
+          },
+          "latency_s": 0.838739
+        },
+        {
+          "example_id": "Q02",
+          "category": "regulation_b",
+          "difficulty": "easy",
+          "question": "An application is still incomplete after three weeks. What are our options, and what must a notice of incompleteness say?",
+          "reference_answer": "Within 30 days we must either send a notice of incompleteness or send an adverse action notice. A notice of incompleteness must specify the information still needed, give a reasonable period to provide it, and state that failure to supply the information will mean no further consideration is given to the application.",
+          "reference_clause_ids": [
+            "RB-4"
+          ],
+          "answer": "If an application is incomplete, you must either send a notice of incompleteness specifying the information needed and a reasonable period to provide it, or send an adverse action notice within 30 days. A notice of incompleteness must state that failure to supply the information will mean no further consideration is given to the application.",
+          "clause_ids": [
+            "RB-4"
+          ],
+          "prompt_tokens": 2029,
+          "completion_tokens": 79,
+          "cost_usd": 0.0058625,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output accurately reflects the requirements for processing an incomplete application by stating the options available within a specified time frame, which matches the expectations set in the reference. It correctly includes what a notice of incompleteness must contain, such as a specification of what is needed and a warning regarding consequences for non-compliance. There are no factual errors, inconsistencies, or ambiguities present. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['RB-4']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer accurately reflects the requirement that if an application is incomplete, the creditor must either send a notice of incompleteness or an adverse action notice within 30 days, as stated in the clause. It correctly mentions that a notice of incompleteness needs to specify the required information and a reasonable period for submission. Additionally, it correctly states that the notice must indicate that failing to provide the required information will lead to no further consideration of the application. Thus, there are no unsupported or contradictory claims in the answer. Thus, the score should be: true."
+          },
+          "latency_s": 1.159581
+        }
+      ]
+    },
+    {
+      "target": "terse",
+      "label": "gpt-4o-mini + terse prompt",
+      "model": "gpt-4o-mini",
+      "prompt_variant": "terse",
+      "experiment_name": "cardinal-terse-86b10069",
+      "wall_seconds": 29.15,
+      "rows": [
+        {
+          "example_id": "Q20",
+          "category": "edge_case",
+          "difficulty": "hard",
+          "question": "A business applicant with $4 million of gross revenues last year was declined. Same written notice and statement of reasons as a consumer?",
+          "reference_answer": "No. Where the applicant's gross revenues exceeded $1 million in the preceding fiscal year, notification may be oral or in writing, and the statement of reasons need only be provided on the applicant's written request. Business credit is also outside the scope of the consumer credit notice policy.",
+          "reference_clause_ids": [
+            "RB-10",
+            "CT-1"
+          ],
+          "answer": "No, different notification rules apply to business credit. For a business applicant with gross revenues exceeding $1 million, the creditor may notify orally or in writing and is only required to provide the statement of reasons upon the applicant's written request.",
+          "clause_ids": [
+            "10"
+          ],
+          "prompt_tokens": 1906,
+          "completion_tokens": 59,
+          "cost_usd": 0.0003213,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 0.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": false
+          },
+          "comments": {
+            "correctness": "The output accurately explains that different notification rules apply to business credit compared to consumer credit, specifically mentioning that for business applicants with gross revenues exceeding $1 million, notifications may be oral or in writing. It also correctly states that a statement of reasons is only required upon written request, which aligns with the reference outputs. Additionally, the terminology used is precise and accurate. Therefore, all parts of the question are addressed correctly and logically. Thus, the score should be: true.",
+            "citation_validity": "missing ['CT-1']",
+            "citation_wellformed": "recoverable-but-malformed ['10']",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer makes several claims regarding notification rules for business credit applicants, but no clause was cited to support any of these claims. Specifically, the answer claims that different notification rules apply to business credit and states requirements for notification and reasons based on business revenues. However, because there was no referenced clause text to support these claims, they remain unsupported. Thus, the score should be: false."
+          },
+          "latency_s": 2.053134
+        },
+        {
+          "example_id": "Q07",
+          "category": "regulation_b",
+          "difficulty": "medium",
+          "question": "A customer agreed to a change in the terms of their account. Does that count as adverse action requiring a notice?",
+          "reference_answer": "No. A change in the terms of an account expressly agreed to by the applicant is not adverse action.",
+          "reference_clause_ids": [
+            "RB-2"
+          ],
+          "answer": "No, a change in the terms of an account that is expressly agreed to by the applicant does not count as adverse action and therefore does not require a notice.",
+          "clause_ids": [
+            "RB-2"
+          ],
+          "prompt_tokens": 1903,
+          "completion_tokens": 49,
+          "cost_usd": 0.00031485,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output accurately reflects the information provided in the input. It correctly interprets the situation and provides a clear explanation that a change in account terms, agreed upon by the customer, does not constitute adverse action requiring a notice. The terminology used is precise and there are no factual errors or ambiguities present. The answer is complete and addresses the specific question asked. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['RB-2']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer accurately states that a change in the terms of an account that is expressly agreed to by the applicant does not count as adverse action requiring a notice. This is directly supported by the clause text which states that such a change is not considered adverse action. Thus, the score should be: true."
+          },
+          "latency_s": 1.706817
+        },
+        {
+          "example_id": "Q13",
+          "category": "fcra",
+          "difficulty": "hard",
+          "question": "A numerical credit score was used in the decision. What extra items must the notice disclose, and how many key factors?",
+          "reference_answer": "The score itself, the range of possible scores under the model used, the key factors that adversely affected the score listed in order of importance, the date the score was created, and the name of the person or entity that provided it. Up to four key factors, or up to five where the number of enquiries on the file was one of the key factors.",
+          "reference_clause_ids": [
+            "FC-6"
+          ],
+          "answer": "The notice must additionally disclose the numerical credit score itself, the range of possible scores under the model used, the key factors that adversely affected the score (listed in order of importance, up to four factors, or up to five if the number of inquiries on the file was one of the key factors), the date the score was created, and the name of the person or entity that provided the score.",
+          "clause_ids": [
+            "FC-6"
+          ],
+          "prompt_tokens": 1904,
+          "completion_tokens": 95,
+          "cost_usd": 0.0003426,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output accurately and completely lists all the required items that must be disclosed when using a numerical credit score in decision making. It includes the numerical score, the scoring range, key factors affecting the credit score, the date created, and the name of the entity that provided the score. Additionally, it correctly mentions the limit of up to four key factors or five if the number of inquiries is included. There are no factual errors or incomplete information, and the terminology used is precise and accurate. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['FC-6']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer accurately lists the extra items that the notice must disclose based on the cited clause text. Each item mentioned in the answer matches the language of the clause: it states that the notice must disclose the numerical credit score, the range of possible scores, key factors that adversely affected the score (noting the maximum quantity allowed), the date the score was created, and the name of the provider of the score. There are no claims in the answer that contradict the cited text. Thus, the score should be: true."
+          },
+          "latency_s": 2.128679
+        },
+        {
+          "example_id": "Q18",
+          "category": "internal_policy",
+          "difficulty": "medium",
+          "question": "An automatically drafted notice fails the deterministic element check. What happens to it, and what human review applies?",
+          "reference_answer": "It is never sent; it is returned for regeneration. Separately, a credit officer must read a sample of at least 5% of notices each week.",
+          "reference_clause_ids": [
+            "CT-7"
+          ],
+          "answer": "A notice that fails the deterministic element check is never sent; it is returned for regeneration. Additionally, a sample of at least 5% of notices generated by the automated drafting system must be read by a credit officer each week.",
+          "clause_ids": [
+            "7"
+          ],
+          "prompt_tokens": 1901,
+          "completion_tokens": 58,
+          "cost_usd": 0.00031995,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 0.0,
+            "citation_wellformed": 0.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": false
+          },
+          "comments": {
+            "correctness": "The output correctly states that a notice failing the deterministic element check is never sent and that it is returned for regeneration, which aligns with the factual content. It also accurately describes the requirement of human review, specifically mentioning that a credit officer must read a sample of at least 5% of notices generated by the automated drafting system each week. There are no factual errors or omissions, and the terminology is precise. Thus, the score should be: true.",
+            "citation_validity": "missing ['CT-7']; unresolved ['7']",
+            "citation_wellformed": "ambiguous ['7']",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer claims that 'a notice that fails the deterministic element check is never sent; it is returned for regeneration,' and also states 'a sample of at least 5% of notices generated by the automated drafting system must be read by a credit officer each week.' However, the answer does not cite any source clauses that contain this information. Since the cited text is non-existent, this implies a lack of support for all claims made in the answer. Thus, the score should be: false."
+          },
+          "latency_s": 1.266353
+        },
+        {
+          "example_id": "Q06",
+          "category": "regulation_b",
+          "difficulty": "medium",
+          "question": "There are two joint applicants on a declined application. Do both need to receive the notice?",
+          "reference_answer": "No. The notice need only be given to one applicant, but it must go to the primary applicant where one is readily apparent.",
+          "reference_clause_ids": [
+            "RB-9"
+          ],
+          "answer": "Only one of the joint applicants needs to receive the notice, and it should be sent to the primary applicant if one is readily apparent.",
+          "clause_ids": [
+            "9"
+          ],
+          "prompt_tokens": 1898,
+          "completion_tokens": 39,
+          "cost_usd": 0.0003081,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 0.0,
+            "citation_wellformed": 0.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": false
+          },
+          "comments": {
+            "correctness": "The output correctly addresses the question by stating that only one joint applicant needs to receive the notice and specifies that it should be sent to the primary applicant if identifiable. This matches the factual information in the reference output, which also confirms the same point without any discrepancies. Furthermore, the terminology used is precise and accurate, and the logical flow is consistent throughout. Thus, the score should be: true.",
+            "citation_validity": "missing ['RB-9']; unresolved ['9']",
+            "citation_wellformed": "ambiguous ['9']",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer claims that only one of the joint applicants needs to receive the notice, which is unsupported by any cited text. Additionally, it states that the notice should be sent to the primary applicant if one is readily apparent, which is also unsupported. The absence of any referenced clause to support these claims makes the answer ungrounded. Thus, the score should be: false."
+          },
+          "latency_s": 1.052225
+        },
+        {
+          "example_id": "Q14",
+          "category": "fcra",
+          "difficulty": "hard",
+          "question": "We declined partly on information from the applicant's employer, who is not a credit bureau. What do we owe the applicant, and must we name the employer?",
+          "reference_answer": "The applicant must be told of their right to learn the nature of that information, and the request must be made within 60 days of learning of the adverse action. We are not required to disclose the source of the information, so the employer need not be named.",
+          "reference_clause_ids": [
+            "FC-7"
+          ],
+          "answer": "You must inform the applicant of their right to learn the nature of the information obtained from the employer, and this request must be made within 60 days of learning of the adverse action. However, you are not required to disclose the name of the employer.",
+          "clause_ids": [
+            "FC-7"
+          ],
+          "prompt_tokens": 1912,
+          "completion_tokens": 66,
+          "cost_usd": 0.0003264,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output accurately reflects the requirements regarding informing the applicant about their rights related to the information obtained from the employer. It correctly states that the applicant must be informed of their rights to learn about the nature of the information and that this request should occur within 60 days. Furthermore, it correctly indicates that there is no obligation to disclose the name of the employer. Therefore, the output meets all criteria outlined in the rubric. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['FC-7']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer accurately reflects the requirements in the cited clause. It specifies that the applicant must be informed of their right to learn the nature of the information obtained from the employer and that this must occur within 60 days of learning of the adverse action. Additionally, it correctly states that the creditor is not required to disclose the name of the employer. Thus, all claims made in the answer are supported by the referenced text. Thus, the score should be: true."
+          },
+          "latency_s": 1.430156
+        },
+        {
+          "example_id": "Q04",
+          "category": "regulation_b",
+          "difficulty": "medium",
+          "question": "The decision came from our credit scoring system. Is it enough to tell the applicant they did not achieve a qualifying score?",
+          "reference_answer": "No. Stating that the applicant failed to achieve a qualifying score is not sufficient on its own; the notice must disclose the principal factors that contributed to the score. We do not have to explain how or why a factor was weighted, and we need not list more than four principal reasons.",
+          "reference_clause_ids": [
+            "RB-8"
+          ],
+          "answer": "No, it is not enough to simply tell the applicant they did not achieve a qualifying score. The notice must disclose the principal factors that contributed to the score, as a statement that the applicant failed to achieve a qualifying score on a credit scoring system is not sufficient on its own.",
+          "clause_ids": [
+            "8"
+          ],
+          "prompt_tokens": 1904,
+          "completion_tokens": 68,
+          "cost_usd": 0.0003264,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 0.0,
+            "citation_wellformed": 0.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": false
+          },
+          "comments": {
+            "correctness": "The output accurately states that simply telling the applicant they did not achieve a qualifying score is insufficient, which addresses the entire question. It correctly identifies the need to disclose principal factors contributing to the score without requiring extensive explanations. There are no factual errors, the answer is logically consistent, and it uses precise terminology regarding the requirements of a credit scoring notice. Thus, the score should be: true.",
+            "citation_validity": "missing ['RB-8']; unresolved ['8']",
+            "citation_wellformed": "ambiguous ['8']",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer claims that it is not enough to simply tell the applicant that they did not achieve a qualifying score, stating that a notice must disclose the principal factors that contributed to the score. However, since the answer did not cite any clause text to support these claims, there are no specific sentences from the clause that affirm or contradict this statement. Therefore, without any supporting clauses, the claims made in the answer are unsupported and thus ungrounded. Thus, the score should be: false."
+          },
+          "latency_s": 1.159262
+        },
+        {
+          "example_id": "Q09",
+          "category": "regulation_b",
+          "difficulty": "hard",
+          "question": "We approved the loan but at a much smaller amount than requested, and the applicant used the funds. Is that adverse action?",
+          "reference_answer": "No. Where the creditor makes a counteroffer and the applicant uses or expressly accepts the credit offered, the refusal to grant credit in the amount requested is not adverse action.",
+          "reference_clause_ids": [
+            "RB-1"
+          ],
+          "answer": "No, this is not considered adverse action. Since the applicant accepted the credit offered, even though it was for a smaller amount than requested, it does not fall under the definition of adverse action as outlined in RB-1. Adverse action specifically refers to a refusal to grant credit in substantially the amount or on substantially the terms requested, unless a counteroffer is made and accepted.",
+          "clause_ids": [
+            "RB-1"
+          ],
+          "prompt_tokens": 1905,
+          "completion_tokens": 93,
+          "cost_usd": 0.00034155,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output correctly identifies that the loan approval at a smaller amount than requested is not considered adverse action, as the applicant accepted the credit offered. It accurately references the applicable guidelines regarding counteroffers and what constitutes adverse action. There are no factual errors, and it addresses the overall context of the question completely and logically. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['RB-1']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer makes the claim that the loan was approved for a smaller amount than requested and that the applicant accepted the funds. According to [RB-1], adverse action refers specifically to a refusal to grant credit in substantially the amount requested unless the credit offered is accepted. The answer correctly states that since the applicant did accept the credit, this does not constitute adverse action. Each claim in the answer is supported by the clause, particularly the aspects of acceptance of a counteroffer and the definition of adverse action. Thus, the score should be: true."
+          },
+          "latency_s": 1.509676
+        },
+        {
+          "example_id": "Q12",
+          "category": "fcra",
+          "difficulty": "easy",
+          "question": "What two rights relating to the consumer report itself must we tell the applicant about?",
+          "reference_answer": "The right to obtain a free copy of the consumer report from the agency, requested within 60 days of receiving the adverse action notice; and the right to dispute directly with the agency the accuracy or completeness of any information in the report.",
+          "reference_clause_ids": [
+            "FC-4",
+            "FC-5"
+          ],
+          "answer": "The applicant must be informed of their right to obtain a free copy of the consumer report from the agency within 60 days of receiving the adverse action notice, and their right to dispute directly with the consumer reporting agency the accuracy or completeness of any information in the report.",
+          "clause_ids": [
+            "4",
+            "5"
+          ],
+          "prompt_tokens": 1896,
+          "completion_tokens": 68,
+          "cost_usd": 0.0003252,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 0.0,
+            "citation_wellformed": 0.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": false
+          },
+          "comments": {
+            "correctness": "The output accurately conveys both rights related to the consumer report that must be communicated to the applicant, specifically mentioning the right to obtain a free copy of the report and the right to dispute any inaccuracies. There are no factual errors or omissions, and the terminology used is precise and appropriate. Both parts of the question are fully addressed, and the information is logically consistent. Thus, the score should be: true.",
+            "citation_validity": "missing ['FC-4', 'FC-5']; unresolved ['4', '5']",
+            "citation_wellformed": "ambiguous ['4', '5']",
+            "citation_fabricated_free": "no fabricated references (2 cited)",
+            "groundedness": "The answer claims that the applicant has a right to obtain a free copy of the consumer report within 60 days of receiving the adverse action notice, and their right to dispute the accuracy or completeness of the report. However, since no specific clause has been cited in the corpus to support these claims, they cannot be grounded. Thus, the score should be: false."
+          },
+          "latency_s": 1.172653
+        },
+        {
+          "example_id": "Q22",
+          "category": "edge_case",
+          "difficulty": "medium",
+          "question": "Must every adverse action notice spell out the specific reasons for the decision?",
+          "reference_answer": "Not necessarily. The notice must contain either a statement of the specific principal reasons, or a disclosure of the applicant's right to obtain those reasons within 30 days of requesting them together with the name, address and telephone number of the person who can provide them.",
+          "reference_clause_ids": [
+            "RB-7"
+          ],
+          "answer": "Yes, every adverse action notice must include a statement of the specific principal reasons for the action taken. However, if the notice does not provide these reasons, it must disclose the applicant's right to obtain those reasons within 30 days of requesting them.",
+          "clause_ids": [
+            "7",
+            "8"
+          ],
+          "prompt_tokens": 1894,
+          "completion_tokens": 65,
+          "cost_usd": 0.0003231,
+          "error": null,
+          "scores": {
+            "correctness": false,
+            "citation_validity": 0.0,
+            "citation_wellformed": 0.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": false
+          },
+          "comments": {
+            "correctness": "The response incorrectly states that every adverse action notice must include specific reasons for the decision. Instead, according to the reference output, it is sufficient for the notice to either include the specific principal reasons or disclose the applicant's right to obtain those reasons. Thus, the score should be: false.",
+            "citation_validity": "missing ['RB-7']; unresolved ['7', '8']",
+            "citation_wellformed": "ambiguous ['7', '8']",
+            "citation_fabricated_free": "no fabricated references (2 cited)",
+            "groundedness": "The answer claims that 'every adverse action notice must include a statement of the specific principal reasons for the action taken' which requires direct support from a cited clause but does not cite or reference any clause in the corpus to validate this claim. Furthermore, the assertion that 'if the notice does not provide these reasons, it must disclose the applicant's right to obtain those reasons within 30 days' is also unsupported because it relies on external knowledge rather than on a specified clause. Thus, 'every adverse action notice must include a statement of the specific principal reasons' and 'the notice must disclose the applicant's right' are unsupported claims. Thus, the score should be: false."
+          },
+          "latency_s": 1.513217
+        },
+        {
+          "example_id": "Q11",
+          "category": "fcra",
+          "difficulty": "easy",
+          "question": "What must the notice say about the credit bureau's role in the decision?",
+          "reference_answer": "That the consumer reporting agency did not make the decision to take the adverse action and is unable to provide the specific reasons for it.",
+          "reference_clause_ids": [
+            "FC-3"
+          ],
+          "answer": "The notice must state that the consumer reporting agency did not make the decision to take the adverse action and is unable to provide the specific reasons for it.",
+          "clause_ids": [
+            "3",
+            "6"
+          ],
+          "prompt_tokens": 1895,
+          "completion_tokens": 45,
+          "cost_usd": 0.00031125,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 0.0,
+            "citation_wellformed": 0.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": false
+          },
+          "comments": {
+            "correctness": "The output accurately reflects the requirement for the notice regarding the credit bureau's role in the decision-making process. It correctly states that the consumer reporting agency did not make the decision to take adverse action and that it cannot provide specific reasons for that decision. The statement is complete, logically consistent, and uses precise terminology. Additionally, there are no factual errors or misleading claims. Thus, the score should be: true.",
+            "citation_validity": "missing ['FC-3']; unresolved ['3', '6']",
+            "citation_wellformed": "ambiguous ['3', '6']",
+            "citation_fabricated_free": "no fabricated references (2 cited)",
+            "groundedness": "The answer provides specific claims regarding the content of the notice about the credit bureau's role in the decision. However, it does not cite any clause that supports these claims. Since there is no supporting clause in the corpus, the claims cannot be verified. Thus, the score should be: false."
+          },
+          "latency_s": 1.198253
+        },
+        {
+          "example_id": "Q19",
+          "category": "edge_case",
+          "difficulty": "hard",
+          "question": "A reviewer is confident the applicant's recent job change contributed to the decline, but it is not among the recorded principal reasons. Can it go in the letter?",
+          "reference_answer": "No. Reasons must be taken from the principal reasons recorded by the underwriting engine. No other reason may be added, including one a reviewer believes to be true, and including information the applicant volunteered in free text on their application.",
+          "reference_clause_ids": [
+            "CT-4"
+          ],
+          "answer": "No, the reviewer's confidence about the applicant's recent job change cannot be included in the letter because the reasons stated in the notice must be taken solely from the principal reasons recorded by the underwriting engine for that application. No other reasons may be added, even if a reviewer believes them to be true.",
+          "clause_ids": [
+            "4"
+          ],
+          "prompt_tokens": 1912,
+          "completion_tokens": 72,
+          "cost_usd": 0.00033,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 0.0,
+            "citation_wellformed": 0.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": false
+          },
+          "comments": {
+            "correctness": "The output accurately reflects the requirement that reasons in the letter should solely be derived from recorded principal reasons and correctly states that subjective beliefs of the reviewer, such as the impact of a recent job change, should not be included. The information provided is complete and logically consistent with the reference outputs. No factual errors or misleading statements are present. Thus, the score should be: true.",
+            "citation_validity": "missing ['CT-4']; unresolved ['4']",
+            "citation_wellformed": "ambiguous ['4']",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer claims that the reviewer's confidence about the applicant's job change cannot be included in the letter because only recorded principal reasons may be cited. However, since no actual clause was cited that supports this claim regarding the inclusion or exclusion of reasons in the letter, the claim about the strict adherence to recorded principal reasons is unsupported. Thus, the unsupported claim is that only recorded principal reasons may be included in the letter. Thus, the score should be: false."
+          },
+          "latency_s": 1.573011
+        },
+        {
+          "example_id": "Q21",
+          "category": "edge_case",
+          "difficulty": "medium",
+          "question": "Our internal target is 10 business days. If we miss it and take 20 days, have we breached the regulation?",
+          "reference_answer": "No. The 10-business-day turnaround is an internal service target only and does not displace the 30-day regulatory deadline, which is still met at 20 days.",
+          "reference_clause_ids": [
+            "CT-9",
+            "RB-3"
+          ],
+          "answer": "No, missing the internal target of 10 business days does not constitute a breach of regulation, as the regulatory deadline is 30 days. The internal target is for operational efficiency and does not displace the regulatory requirement.",
+          "clause_ids": [
+            "9",
+            "3"
+          ],
+          "prompt_tokens": 1905,
+          "completion_tokens": 59,
+          "cost_usd": 0.00032115,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 0.0,
+            "citation_wellformed": 0.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": false
+          },
+          "comments": {
+            "correctness": "The output provides accurate and complete information regarding the distinction between internal targets and regulatory deadlines. It correctly identifies that the internal target of 10 business days does not constitute a breach of regulation as long as the regulatory requirement of 30 days is met, which aligns with the reference outputs. There are no factual errors, and the terminology used is precise and accurate. Thus, the score should be: true.",
+            "citation_validity": "missing ['CT-9', 'RB-3']; unresolved ['9', '3']",
+            "citation_wellformed": "ambiguous ['9', '3']",
+            "citation_fabricated_free": "no fabricated references (2 cited)",
+            "groundedness": "The answer makes claims about the internal target and its implications, but it does not cite any supporting clause text. The claim 'the regulatory deadline is 30 days' is made without being grounded in a specific clause. Since the answer lacks citation of any clause that supports its claims and relies instead on general knowledge, it is considered unsupported. Thus, the score should be: false."
+          },
+          "latency_s": 1.462717
+        },
+        {
+          "example_id": "Q10",
+          "category": "fcra",
+          "difficulty": "easy",
+          "question": "Which details of the credit bureau must appear on the notice?",
+          "reference_answer": "The name, address and telephone number of the consumer reporting agency that furnished the report. For a nationwide agency the number given must be a toll-free number established by that agency.",
+          "reference_clause_ids": [
+            "FC-2"
+          ],
+          "answer": "The notice must include the name, address, and toll-free telephone number of the consumer reporting agency that furnished the report.",
+          "clause_ids": [
+            "2",
+            "4"
+          ],
+          "prompt_tokens": 1892,
+          "completion_tokens": 39,
+          "cost_usd": 0.0003072,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 0.0,
+            "citation_wellformed": 0.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": false
+          },
+          "comments": {
+            "correctness": "The output correctly identifies the required details of the credit bureau that must appear on the notice, including the name, address, and toll-free telephone number. It aligns with the reference output, which specifies the same information. There are no factual inaccuracies or missing information, and the terminology used is precise and accurate. Thus, the score should be: true.",
+            "citation_validity": "missing ['FC-2']; unresolved ['2', '4']",
+            "citation_wellformed": "ambiguous ['2', '4']",
+            "citation_fabricated_free": "no fabricated references (2 cited)",
+            "groundedness": "The answer states that the notice must include the 'name, address, and toll-free telephone number of the consumer reporting agency that furnished the report.' Since no clause was cited in the answer to support this claim, it is unsupported. Thus, the score should be: false."
+          },
+          "latency_s": 1.05253
+        },
+        {
+          "example_id": "Q05",
+          "category": "regulation_b",
+          "difficulty": "medium",
+          "question": "We made a counteroffer and the applicant has not responded. What do we have to send, and when?",
+          "reference_answer": "The counteroffer itself must be notified within 30 days. If the applicant does not expressly accept or use the credit offered within 90 days of the counteroffer, we must then send an adverse action notice.",
+          "reference_clause_ids": [
+            "RB-5"
+          ],
+          "answer": "If the applicant does not expressly accept or use the credit offered within 90 days of the counteroffer, you must send an adverse action notice. This notice must be sent within 30 days after the 90-day period has elapsed.",
+          "clause_ids": [
+            "5",
+            "7",
+            "5"
+          ],
+          "prompt_tokens": 1902,
+          "completion_tokens": 65,
+          "cost_usd": 0.0003243,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 0.0,
+            "citation_wellformed": 0.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": false
+          },
+          "comments": {
+            "correctness": "The output provides accurate information regarding the time frame for sending the adverse action notice, which aligns with the reference outputs. It correctly states that if the applicant does not respond within 90 days, the notice must be sent within 30 days after that period. There are no factual errors or incomplete answers, and the terminology used is precise and consistent with legal requirements. Thus, the score should be: true.",
+            "citation_validity": "missing ['RB-5']; unresolved ['5', '7', '5']",
+            "citation_wellformed": "ambiguous ['5', '7', '5']",
+            "citation_fabricated_free": "no fabricated references (3 cited)",
+            "groundedness": "The answer claims that you must send an adverse action notice if the applicant does not respond within 90 days, and that this notice must be sent within 30 days after the 90-day period has elapsed. However, there is no cited clause to support any of these claims, making them unsupported. Therefore, I cannot confirm the validity of the answer based on the rubric. Thus, the score should be: false."
+          },
+          "latency_s": 1.980442
+        },
+        {
+          "example_id": "Q03",
+          "category": "regulation_b",
+          "difficulty": "easy",
+          "question": "How long do we have to keep a copy of a consumer adverse-action notice, and from what date?",
+          "reference_answer": "25 months, running from the date the applicant was notified.",
+          "reference_clause_ids": [
+            "RB-11",
+            "CT-8"
+          ],
+          "answer": "A copy of a consumer adverse-action notice must be retained for 25 months from the date of notification.",
+          "clause_ids": [
+            "8",
+            "11"
+          ],
+          "prompt_tokens": 1901,
+          "completion_tokens": 36,
+          "cost_usd": 0.00030675,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 0.0,
+            "citation_wellformed": 0.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": false
+          },
+          "comments": {
+            "correctness": "The output accurately states that a copy of a consumer adverse-action notice must be retained for 25 months from the date of notification. This aligns perfectly with the reference outputs provided. There are no factual inaccuracies, missing information, or logical inconsistencies. Thus, the score should be: true.",
+            "citation_validity": "missing ['CT-8']; unresolved ['8']",
+            "citation_wellformed": "ambiguous ['8']; recoverable-but-malformed ['11']",
+            "citation_fabricated_free": "no fabricated references (2 cited)",
+            "groundedness": "The provided answer makes a factual claim that a copy of a consumer adverse-action notice must be retained for 25 months from the date of notification. However, the answer did not cite any specific clause that states this requirement. Since the cited answer does not reference a source clause that supports the claim about retention time or start date, it is unsupported. Thus, the score should be: false."
+          },
+          "latency_s": 0.84793
+        },
+        {
+          "example_id": "Q16",
+          "category": "internal_policy",
+          "difficulty": "medium",
+          "question": "The applicant told us in their application that they are on maternity leave. Should the letter acknowledge that sympathetically?",
+          "reference_answer": "No. A notice must not refer to pregnancy or parental leave, or any other listed protected characteristic, anywhere outside the standard ECOA notice paragraph — even where the applicant raised the matter themselves.",
+          "reference_clause_ids": [
+            "CT-5"
+          ],
+          "answer": "No, the letter must not refer to the applicant's maternity leave or any other protected characteristic outside the standard ECOA notice paragraph. Acknowledging such information would violate compliance requirements.",
+          "clause_ids": [
+            "5"
+          ],
+          "prompt_tokens": 1902,
+          "completion_tokens": 48,
+          "cost_usd": 0.0003141,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 0.0,
+            "citation_wellformed": 0.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": false
+          },
+          "comments": {
+            "correctness": "The output clearly communicates that the letter should not acknowledge the applicant's maternity leave, citing compliance requirements. This aligns with the reference output, which makes a similar statement regarding protected characteristics. There are no factual errors, and the terminology used is precise and accurate. Additionally, the answer addresses the entire inquiry by providing a clear rationale for the position taken. Thus, the score should be: true.",
+            "citation_validity": "missing ['CT-5']; unresolved ['5']",
+            "citation_wellformed": "ambiguous ['5']",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer claims that the letter must not refer to the applicant's maternity leave or any other protected characteristic due to compliance requirements. However, there is no cited clause or text that directly supports this specific assertion. Additionally, the phrase 'would violate compliance requirements' introduces a legal obligation or consequence not present in the provided clause text. Therefore, the claims made regarding compliance and the obligation not to acknowledge maternity leave are unsupported. Thus, the score should be: false."
+          },
+          "latency_s": 1.143489
+        },
+        {
+          "example_id": "Q15",
+          "category": "internal_policy",
+          "difficulty": "medium",
+          "question": "Can our automated drafting system write the ECOA and FCRA disclosure paragraphs itself, so the wording reads more naturally in each letter?",
+          "reference_answer": "No. The statutory disclosure paragraphs, elements E2 through E7, are fixed template text and are never drafted, paraphrased or regenerated per letter, by a person or by an automated system. Only the reason statement E1 and the applicant's details vary between letters.",
+          "reference_clause_ids": [
+            "CT-3"
+          ],
+          "answer": "No, the ECOA and FCRA disclosure paragraphs must use fixed template text and should never be drafted, paraphrased, or regenerated for each letter. They must remain consistent across all notices.",
+          "clause_ids": [
+            "3"
+          ],
+          "prompt_tokens": 1906,
+          "completion_tokens": 51,
+          "cost_usd": 0.0003165,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 0.0,
+            "citation_wellformed": 0.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": false
+          },
+          "comments": {
+            "correctness": "The output accurately and completely answers the question regarding the nature of the ECOA and FCRA disclosure paragraphs, stating that they must remain consistent and cannot be altered or generated anew for each letter. It aligns with the provided reference output, ensuring no factual errors or omissions. The terminology is precise and there are no logical inconsistencies in the statement. Thus, the score should be: true.",
+            "citation_validity": "missing ['CT-3']; unresolved ['3']",
+            "citation_wellformed": "ambiguous ['3']",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer claims that the ECOA and FCRA disclosure paragraphs 'must use fixed template text and should never be drafted, paraphrased, or regenerated for each letter.' However, this claim contradicts the provided clauses, which do not support the idea that these paragraphs are prohibited from being paraphrased or rewritten as long as they retain the required content. Since the answer did not cite any clause, it fails to provide support for its claims. Thus, the score should be: false."
+          },
+          "latency_s": 0.993986
+        },
+        {
+          "example_id": "Q17",
+          "category": "internal_policy",
+          "difficulty": "easy",
+          "question": "Which federal agency do we name in element E3, and at what address?",
+          "reference_answer": "The Bureau of Consumer Financial Protection, 1700 G Street NW, Washington, DC 20552.",
+          "reference_clause_ids": [
+            "CT-6"
+          ],
+          "answer": "The federal agency named in element E3 is the Bureau of Consumer Financial Protection, located at 1700 G Street NW, Washington, DC 20552.",
+          "clause_ids": [
+            "6"
+          ],
+          "prompt_tokens": 1896,
+          "completion_tokens": 44,
+          "cost_usd": 0.0003108,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 0.0,
+            "citation_wellformed": 0.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": false
+          },
+          "comments": {
+            "correctness": "The output correctly identifies the federal agency as the Bureau of Consumer Financial Protection and provides the accurate address. There are no factual errors, the information is complete, and it addresses the question fully. The terminology used is precise and accurate, and there are no logical inconsistencies. Thus, the score should be: true.",
+            "citation_validity": "missing ['CT-6']; unresolved ['6']",
+            "citation_wellformed": "ambiguous ['6']",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer identifies a specific federal agency (Bureau of Consumer Financial Protection) and its address (1700 G Street NW, Washington, DC 20552) as the response to the prompt. However, it did not reference any clause or text as support for these claims. Since there is no cited clause text to validate these claims, they are unsupported. Thus, the score should be: false."
+          },
+          "latency_s": 1.266583
+        },
+        {
+          "example_id": "Q01",
+          "category": "regulation_b",
+          "difficulty": "easy",
+          "question": "We received a personal loan application on 3 March but it was missing proof of income, which arrived on 20 March. By when must Cardinal Trust notify the applicant of the decision?",
+          "reference_answer": "Within 30 days of 20 March, because the 30-day clock runs from the date the application became complete, not from the date it was first received.",
+          "reference_clause_ids": [
+            "RB-3"
+          ],
+          "answer": "Cardinal Trust must notify the applicant of the decision within 30 days after receiving the completed application, which is considered to be on 20 March when the proof of income was received. Therefore, the notification must be sent by 19 April.",
+          "clause_ids": [
+            "RB-3",
+            "RB-4"
+          ],
+          "prompt_tokens": 1917,
+          "completion_tokens": 69,
+          "cost_usd": 0.00032895,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output correctly interprets that the 30-day period for notifying the applicant begins on the date the application becomes complete (20 March), and it accurately calculates 30 days from that date to arrive at 19 April. The information provided is accurate, complete, and logically consistent with the requirements outlined in the prompt. Thus, the score should be: true.",
+            "citation_validity": "extra (valid) ['RB-4']",
+            "citation_wellformed": "all 2 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (2 cited)",
+            "groundedness": "The answer correctly claims that the 30-day notification period starts once the application is complete, which is confirmed by the cited clause [RB-3]. It also correctly states that the application was completed on 20 March when the proof of income was received, which is also backed by the citation. Lastly, the calculation of the notification deadline as being by 19 April is correct based on the 30 days after 20 March. Thus, every claim is supported. Thus, the score should be: true."
+          },
+          "latency_s": 1.230961
+        },
+        {
+          "example_id": "Q08",
+          "category": "regulation_b",
+          "difficulty": "hard",
+          "question": "Someone applied for a product line we simply do not offer, so we turned them down. Adverse action notice required?",
+          "reference_answer": "No. A refusal because the creditor does not offer the type of credit or credit plan requested is not adverse action.",
+          "reference_clause_ids": [
+            "RB-2"
+          ],
+          "answer": "No adverse action notice is required in this case because the refusal to extend credit is due to the fact that the creditor does not offer the type of credit or credit plan requested, which is not considered adverse action.",
+          "clause_ids": [
+            "RB-2"
+          ],
+          "prompt_tokens": 1904,
+          "completion_tokens": 59,
+          "cost_usd": 0.000321,
+          "error": null,
+          "scores": {
+            "correctness": true,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output correctly addresses the question, providing accurate information about when an adverse action notice is required. It confirms that in the specific scenario of turning down a product line that is not offered, such refusal does not constitute adverse action. The language is precise and consistent with the reference output. Thus, the score should be: true.",
+            "citation_validity": "resolved exactly to ['RB-2']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer makes the claim that an adverse action notice is not required because the refusal to extend credit is due to the creditor not offering the type of credit requested. This is directly supported by the cited clause, which states that a refusal to extend credit because the creditor does not offer the requested credit plan is not considered adverse action. Since all claims made in the answer are supported by the clause text, thus the score should be: true."
+          },
+          "latency_s": 1.21577
+        },
+        {
+          "example_id": "Q02",
+          "category": "regulation_b",
+          "difficulty": "easy",
+          "question": "An application is still incomplete after three weeks. What are our options, and what must a notice of incompleteness say?",
+          "reference_answer": "Within 30 days we must either send a notice of incompleteness or send an adverse action notice. A notice of incompleteness must specify the information still needed, give a reasonable period to provide it, and state that failure to supply the information will mean no further consideration is given to the application.",
+          "reference_clause_ids": [
+            "RB-4"
+          ],
+          "answer": "If an application is still incomplete after three weeks, the creditor must either send a notice of incompleteness specifying the information needed and a reasonable period to provide it, or send an adverse action notice. The notice of incompleteness must state that failure to supply the information will mean no further consideration is given to the application.",
+          "clause_ids": [
+            "RB-4"
+          ],
+          "prompt_tokens": 1905,
+          "completion_tokens": 80,
+          "cost_usd": 0.00033375,
+          "error": null,
+          "scores": {
+            "correctness": false,
+            "citation_validity": 1.0,
+            "citation_wellformed": 1.0,
+            "citation_fabricated_free": 1.0,
+            "groundedness": true
+          },
+          "comments": {
+            "correctness": "The output provides some relevant information but contains factual inaccuracies. Specifically, the reference material notes that the creditor must send a notice of incompleteness within 30 days, not three weeks, and fails to specify the exact time frame correctly. It also does not articulate what constitutes a 'reasonable period' for the information to be provided, which may mislead the reader. Additionally, it does not address what an 'adverse action notice' entails, which could be crucial information. Thus, the score should be: FALSE.",
+            "citation_validity": "resolved exactly to ['RB-4']",
+            "citation_wellformed": "all 1 citations exactly formed",
+            "citation_fabricated_free": "no fabricated references (1 cited)",
+            "groundedness": "The answer states that if an application is still incomplete after three weeks, the creditor must send a notice of incompleteness or an adverse action notice. This is supported by the clause which specifies that the creditor must act within 30 days (which includes three weeks) and the specific actions that the creditor must take (sending a notice of incompleteness or an adverse action notice). Additionally, the answer correctly states that the notice of incompleteness must indicate that failure to provide the necessary information will result in no further consideration of the application, which is directly supported by the clause's text. Thus, all claims made in the answer are supported by the cited text. Thus, the score should be: true."
+          },
+          "latency_s": 1.385699
+        }
+      ]
+    }
+  ]
+}

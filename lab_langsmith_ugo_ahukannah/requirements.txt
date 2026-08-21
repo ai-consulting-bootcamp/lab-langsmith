@@ -1,0 +1,5 @@
+openai>=1.40
+langsmith>=0.4
+openevals>=0.2
+python-dotenv>=1.0
+matplotlib>=3.8
