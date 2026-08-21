@@ -72,6 +72,8 @@ written up in [`custom_evaluator.md`](lab_langsmith_ugo_ahukannah/custom_evaluat
 | [`optimization_summary.md`](optimization_summary.md) | Step 16 — cost/performance trade-off and when to pick each config |
 | [`lab_langsmith_ugo_ahukannah/dataset_documentation.md`](lab_langsmith_ugo_ahukannah/dataset_documentation.md) | Steps 1, 3, 4 — domain, sources, data structure, LangSmith dataset |
 | [`lab_langsmith_ugo_ahukannah/custom_evaluator.md`](lab_langsmith_ugo_ahukannah/custom_evaluator.md) | Steps 11–13 — custom evaluator design, the rewrite, what it revealed |
+| [`lab_langsmith_ugo_ahukannah/tips_and_troubleshooting.md`](lab_langsmith_ugo_ahukannah/tips_and_troubleshooting.md) | The issues the lab warns about, what each looked like here, and three it does not warn about |
+| [`lab_langsmith_ugo_ahukannah/extension_activities.md`](lab_langsmith_ugo_ahukannah/extension_activities.md) | Which optional extensions were completed, which was not, and why |
 | [`lab_langsmith_ugo_ahukannah/corpus/`](lab_langsmith_ugo_ahukannah/corpus/) | The three source documents, 27 clauses |
 | `lab_langsmith_ugo_ahukannah/questions.json` | 22-question bank with reference answers and clause citations |
 | `lab_langsmith_ugo_ahukannah/corpus_index.py` | Parses the corpus into addressable clauses |
@@ -101,6 +103,24 @@ written up in [`custom_evaluator.md`](lab_langsmith_ugo_ahukannah/custom_evaluat
 | 7, 13, 27, 28, 29 — *(optional)* cost/performance | `optimization_summary.md`, three-way A/B in `analysis_summary.json` |
 
 Both optional blocks are complete.
+
+## Extension activities
+
+| Extension | Status | Where |
+|---|---|---|
+| Multiple evaluators | **done** | Five evaluators, four of them custom — comparing them *is* the finding |
+| Domain-specific analysis | **done** | By category and difficulty; difficulty is inverted (hard 1.00, medium 0.67) |
+| Cost & performance optimization | **done** | [`optimization_summary.md`](optimization_summary.md) — 16.7× cost gap, prompt beats model |
+| Expand the dataset | partial | 22 examples, 24 of 27 clauses exercised; the binding constraint is statistical, not coverage |
+| Reproducibility study | **not done** | The honest gap — one run per configuration, so small differences cannot be separated from noise |
+
+Full write-up, including three things built beyond the lab's list, in
+[`extension_activities.md`](lab_langsmith_ugo_ahukannah/extension_activities.md).
+
+Issues encountered and how they were handled — dataset validation, target
+function errors, the `KeyError: 'reasoning'` that an openevals judge prompt
+causes, results analysis, and the EU-endpoint 403 — are in
+[`tips_and_troubleshooting.md`](lab_langsmith_ugo_ahukannah/tips_and_troubleshooting.md).
 
 ## Running it
 
