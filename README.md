@@ -1,23 +1,96 @@
-# Micromanage your agents
+# Micromanage Your Agents — Custom LangSmith Evaluation
 
-**Track:** Module 5 — Evaluation & strategy · **When:** Week 7, Day 4 · **Status:** Required
+This submission evaluates an **evidence-grounded social-impact consulting assistant**. The assistant receives a short program brief and a consultant question, then returns a structured decision, a concise evidence-based answer, and a next action. The dataset is deliberately small (15 examples) but covers monitoring, finance, safeguarding, privacy, inclusion, and governance at three difficulty levels.
 
-This repository contains everything you need for this lab.
+## What is included
 
-## Files
+- A versioned, validated dataset derived from the scenario cards in `data/source_briefs.md`.
+- An idempotent LangSmith dataset uploader.
+- A traced OpenAI target with two prompt configurations for A/B comparison.
+- Deterministic correctness and custom consulting-quality evaluators.
+- An OpenEvals LLM-as-judge evaluator for reference-aware correctness.
+- A credential-free local baseline that proves the full data → target → evaluation → analysis pipeline.
+- Compact evaluation and optimization reports at the repository root.
 
-- [`instructions.md`](./instructions.md) — the lab instructions
-- [`rubric.md`](./rubric.md) — how your submission is graded; this is what the AI reviewer checks your PR against
+## Quick start
 
-## How to complete this lab
+Python 3.10+ is required.
 
-1. **Fork** this repository.
-2. Do the work described in `instructions.md`, committing to your fork.
-3. Open a **pull request** back into this repository.
-4. You'll receive **AI feedback** on your PR based on `rubric.md`. Address any blocking feedback and push updates to the same PR.
+```bash
+python -m venv .venv
+source .venv/bin/activate        # Windows Git Bash: source .venv/Scripts/activate
+pip install -e ".[dev]"
+cp .env.example .env             # never commit .env
+python -m social_impact_eval.validate
+python -m social_impact_eval.offline_run
+pytest
+```
 
-## Submission hygiene
+To create the dataset and run the traced LangSmith experiment:
 
-- Keep this repository scoped to this lab only — no unrelated projects or personal files.
-- Use clear, descriptive filenames.
-- Remove secrets, API keys, and tokens before committing.
+```bash
+export LANGSMITH_API_KEY="..."
+export OPENAI_API_KEY="..."
+export LANGSMITH_TRACING="true"
+python -m social_impact_eval.upload_dataset
+python -m social_impact_eval.run_experiment --variant evidence_first
+python -m social_impact_eval.run_experiment --variant concise
+```
+
+The default LangSmith endpoint is the standard US endpoint (`https://api.smith.langchain.com`), matching the configured workspace key. Set `LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com` only for a key issued by an EU LangSmith workspace. The scripts print the dataset and experiment identifiers returned by LangSmith.
+
+## LangSmith artifacts
+
+- Dataset: `paola-social-impact-consulting-eval-v1`
+- Project: `paola-social-impact-agent-evals`
+- [Dataset and two-experiment comparison](https://smith.langchain.com/o/63cd6e13-a3e6-4f18-8155-2537acb86cf8/datasets/f1c3e65b-e2af-4315-ad3b-1806c07a49a6/compare?selectedSessions=0162e5ea-6355-4711-bf7e-9237b964b076%2C1673e114-003b-4723-a298-411ddadf7d45)
+- [Concise experiment](https://smith.langchain.com/o/63cd6e13-a3e6-4f18-8155-2537acb86cf8/datasets/f1c3e65b-e2af-4315-ad3b-1806c07a49a6/compare?selectedSessions=0162e5ea-6355-4711-bf7e-9237b964b076) — `concise-gpt-5.4-mini-3a90cba0`
+- [Evidence-first experiment](https://smith.langchain.com/o/63cd6e13-a3e6-4f18-8155-2537acb86cf8/datasets/f1c3e65b-e2af-4315-ad3b-1806c07a49a6/compare?selectedSessions=1673e114-003b-4723-a298-411ddadf7d45) — `evidence_first-gpt-5.4-mini-036a2b3d`
+- [Successful GitHub Actions run](https://github.com/paolahsp/lab-langsmith-social-impact/actions/runs/32667348222)
+
+The live comparison ran all 15 examples per variant. Evidence-first improved semantic correctness from **0.92 to 1.00** and consulting quality from **0.80 to 0.86**, while concise achieved higher exact decision correctness (**1.00 vs 0.92**) with lower latency, token use, and cost. See `evaluation_summary.md` and `optimization_summary.md` for the interpretation.
+
+## Data schema
+
+Each JSON example contains:
+
+| Field | Meaning |
+| --- | --- |
+| `id` | Stable case identifier |
+| `inputs.brief` | Source-grounding context supplied to the assistant |
+| `inputs.question` | Consulting question |
+| `outputs.decision` | Reference label: `proceed`, `clarify`, or `escalate` |
+| `outputs.answer` | Reference explanation |
+| `outputs.next_action` | Expected operational next step |
+| `metadata` | Category, difficulty, source card, and required evidence terms |
+
+## File map
+
+| Path | Purpose |
+| --- | --- |
+| `data/source_briefs.md` | Fifteen source scenario cards |
+| `data/social_impact_eval_dataset.json` | LangSmith-ready examples and references |
+| `src/social_impact_eval/validate.py` | Dataset quality checks |
+| `src/social_impact_eval/upload_dataset.py` | Idempotent LangSmith upload |
+| `src/social_impact_eval/target.py` | Traced OpenAI target and prompt variants |
+| `src/social_impact_eval/evaluators.py` | Exact, custom, and OpenEvals evaluators |
+| `src/social_impact_eval/run_experiment.py` | LangSmith experiment runner |
+| `src/social_impact_eval/offline_run.py` | Credential-free reproducibility run |
+| `src/social_impact_eval/analyze.py` | Aggregate and segmented metrics |
+| `results/offline_results.json` | Row-level baseline evidence |
+| `results/metrics.json` | Aggregate baseline metrics |
+| `evaluation_summary.md` | Required compact evaluation report |
+| `optimization_summary.md` | Optional A/B optimization report |
+| `docs/custom_evaluator.md` | Evaluator criteria and interpretation |
+| `tests/` | Unit and integration-style offline tests |
+
+## Reproducibility and safety
+
+The dataset is synthetic and contains no personal or client data. Randomness is disabled (`temperature=0`), examples use stable IDs, dataset creation is idempotent, API imports are lazy so local validation works without credentials, and `.env` plus generated caches are ignored.
+
+## References
+
+- [OpenEvals](https://github.com/langchain-ai/openevals)
+- [LangSmith dataset management](https://docs.langchain.com/langsmith/manage-datasets-programmatically)
+- [LangSmith evaluation guide](https://docs.langchain.com/langsmith/evaluate-llm-application)
+- [LangSmith custom tracing](https://docs.langchain.com/langsmith/annotate-code)
