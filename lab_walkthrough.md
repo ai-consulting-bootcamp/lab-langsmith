@@ -105,7 +105,7 @@ The function was successfully tested on 3 distinct dataset examples:
 
 **2. Final Metrics & Insights:**
 *   **Accuracy:** 87.50% (14/16 exact matches).
-*   **Cost:** $0.00036 total (~$0.00002/example) — essentially free, worth noting for your report
+*   **Cost:** $0.00036 total (~$0.00002/example) — essentially free
 *   **Tokens:** 2,321 total
 *   **Failure Analysis:** The model struggled exclusively with cross-domain edge cases. It misclassified two `Sci/Tech` articles as `Sports` (video game context) and `Business` (corporate tech context). 
 *   **Next Steps for Optimization:** To hit 100% accuracy, the system prompt in `target_functions.py` needs to be updated with few-shot examples clarifying that video game releases and tech-corporate initiatives should strictly default to `Sci/Tech`.
