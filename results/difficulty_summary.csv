@@ -1,0 +1,4 @@
+difficulty,examples,mean_label_accuracy,correctness_rate
+easy,4,0.5,0.5
+hard,6,0.6,0.5
+medium,5,0.3,0.2

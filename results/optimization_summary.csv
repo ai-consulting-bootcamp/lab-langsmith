@@ -1,0 +1,3 @@
+model,examples,mean_label_accuracy,median_label_accuracy,fully_correct_cases,correctness_rate,total_input_tokens,total_output_tokens,total_tokens,total_cost_usd,mean_cost_per_example_usd,mean_latency_seconds,median_latency_seconds,cost_per_correct_case_usd
+gpt-4.1,15,0.8666666666666667,1.0,12,0.8,8769,2121,10890,0.0345059999999999,0.0023003999999999932,1.2297663029128065,1.0203314169775697,0.0028754999999999913
+gpt-4o-mini,15,0.47333333333333333,0.5,6,0.4,8769,1705,10474,0.0023383499999998,0.00015588999999998666,1.7951813500840217,1.4585664169862866,0.00038972499999996666

@@ -1,0 +1,16 @@
+case_id,gpt-4.1,gpt-4o-mini,difference_gpt4.1_minus_mini,winner
+case_01_clear_inclusion,1.0,1.0,0.0,tie
+case_02_clear_inclusion,1.0,1.0,0.0,tie
+case_03_clear_exclusion,1.0,0.0,1.0,gpt-4.1
+case_04_clear_exclusion,1.0,0.0,1.0,gpt-4.1
+case_05_missing_information,1.0,0.0,1.0,gpt-4.1
+case_06_missing_information,1.0,1.0,0.0,tie
+case_07_ambiguous_evidence,0.0,0.0,0.0,tie
+case_08_ambiguous_evidence,1.0,1.0,0.0,tie
+case_09_multiple_criteria,1.0,0.5,0.5,gpt-4.1
+case_10_multiple_criteria,1.0,0.6,0.4,gpt-4.1
+case_11_temporal_reasoning,1.0,0.0,1.0,gpt-4.1
+case_12_boundary_value,1.0,0.0,1.0,gpt-4.1
+case_13_medical_terminology,1.0,1.0,0.0,tie
+case_14_mixed_evidence,1.0,1.0,0.0,tie
+case_15_not_applicable,0.0,0.0,0.0,tie
