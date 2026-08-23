@@ -1,0 +1,212 @@
+[
+  {
+    "input": {
+      "contract_notice": "Contract W56HZV20C0124 awarded to RENK AMERICA LLC by Department of Defense for $902,580,413.82. Description: UCA HARDWARE THOR III HMPT XMS AND ANCILLARY HARDWARE"
+    },
+    "output": {
+      "vendor_name": "RENK AMERICA LLC",
+      "award_amount": 902580413.82,
+      "award_id": "W56HZV20C0124"
+    },
+    "metadata": {
+      "awarding_agency": "Department of Defense",
+      "start_date": "2020-06-12"
+    }
+  },
+  {
+    "input": {
+      "contract_notice": "Contract W56HZV15C0119 awarded to L3 TECHNOLOGIES, INC. by Department of Defense for $456,463,060.04. Description: 63 EACH OF THE FOLLOWING HARDWARE ITEMS FOR THE BRADLEY FIGHTING VEHICLE SYSTEM (BFVS):  THOR HMPT 800HP REMAN TRANSMISSION, NSN 2520-01-626-5061 TCM ELECTRONIC ASSEMBLY, NSN 2520-01-627-6468 SHIFT TOWER, NSN 2520-01-465-5184 TEC CABLE, NSN 6150-01-631-6134."
+    },
+    "output": {
+      "vendor_name": "L3 TECHNOLOGIES, INC.",
+      "award_amount": 456463060.04,
+      "award_id": "W56HZV15C0119"
+    },
+    "metadata": {
+      "awarding_agency": "Department of Defense",
+      "start_date": "2015-05-20"
+    }
+  },
+  {
+    "input": {
+      "contract_notice": "Contract SPRDL120C0023 awarded to ALLISON TRANSMISSION INC by Department of Defense for $35,284,615.90. Description: THIS IS THE AWARD FOR 160 TRANSMISSIONS"
+    },
+    "output": {
+      "vendor_name": "ALLISON TRANSMISSION INC",
+      "award_amount": 35284615.9,
+      "award_id": "SPRDL120C0023"
+    },
+    "metadata": {
+      "awarding_agency": "Department of Defense",
+      "start_date": "2019-10-30"
+    }
+  },
+  {
+    "input": {
+      "contract_notice": "Contract DAAE0799CN031 awarded to ALLISON TRANSMISSION, INC. by Department of Defense for $21,599,420.87. Description: None"
+    },
+    "output": {
+      "vendor_name": "ALLISON TRANSMISSION, INC.",
+      "award_amount": 21599420.87,
+      "award_id": "DAAE0799CN031"
+    },
+    "metadata": {
+      "awarding_agency": "Department of Defense",
+      "start_date": "1999-07-01"
+    }
+  },
+  {
+    "input": {
+      "contract_notice": "Contract SPRDL126C0001 awarded to CATERPILLAR INC by Department of Defense for $20,791,828.98. Description: ITEM: ENGINE, DIESEL NSN: 2815-01-578-3605 QTY: 318"
+    },
+    "output": {
+      "vendor_name": "CATERPILLAR INC",
+      "award_amount": 20791828.98,
+      "award_id": "SPRDL126C0001"
+    },
+    "metadata": {
+      "awarding_agency": "Department of Defense",
+      "start_date": "2025-11-03"
+    }
+  },
+  {
+    "input": {
+      "contract_notice": "Contract SPRRA226C0006 awarded to BAE SYSTEMS LAND & ARMAMENTS L.P. by Department of Defense for $19,827,460.00. Description: PROCUREMENT OF 73 BRADLEY ENGINE FUEL TANKS IN SUPPORT OF TACOM"
+    },
+    "output": {
+      "vendor_name": "BAE SYSTEMS LAND & ARMAMENTS L.P.",
+      "award_amount": 19827460.0,
+      "award_id": "SPRRA226C0006"
+    },
+    "metadata": {
+      "awarding_agency": "Department of Defense",
+      "start_date": "2026-01-15"
+    }
+  },
+  {
+    "input": {
+      "contract_notice": "Contract SPRDL126C0095 awarded to TECMOTIV (USA), INC. by Department of Defense for $15,106,726.56. Description: FIRM-FIXED PRICE CONTRACT, NOUN:INJECTION PUMP, NSN: 2910-01-696-8274, PART NUMBER: KT414350, QUANTITY: 496 EACH W/ 100% OPTION"
+    },
+    "output": {
+      "vendor_name": "TECMOTIV (USA), INC.",
+      "award_amount": 15106726.56,
+      "award_id": "SPRDL126C0095"
+    },
+    "metadata": {
+      "awarding_agency": "Department of Defense",
+      "start_date": "2026-04-08"
+    }
+  },
+  {
+    "input": {
+      "contract_notice": "Contract SPRDL124F0119 awarded to TWIN DISC, INCORPORATED by Department of Defense for $11,084,283.56. Description: DELIVERY ORDERS"
+    },
+    "output": {
+      "vendor_name": "TWIN DISC, INCORPORATED",
+      "award_amount": 11084283.56,
+      "award_id": "SPRDL124F0119"
+    },
+    "metadata": {
+      "awarding_agency": "Department of Defense",
+      "start_date": "2024-04-22"
+    }
+  },
+  {
+    "input": {
+      "contract_notice": "Contract SPRDL125F0177 awarded to LOC PERFORMANCE PRODUCTS LLC by Department of Defense for $9,553,677.06. Description: DELIVERY ORDER TO ADD 21,309 EA"
+    },
+    "output": {
+      "vendor_name": "LOC PERFORMANCE PRODUCTS LLC",
+      "award_amount": 9553677.06,
+      "award_id": "SPRDL125F0177"
+    },
+    "metadata": {
+      "awarding_agency": "Department of Defense",
+      "start_date": "2025-07-30"
+    }
+  },
+  {
+    "input": {
+      "contract_notice": "Contract SPE7L124C0053 awarded to QPI PRO, INC. by Department of Defense for $8,866,866.00. Description: 8510864456!LINK,TRACK SHOE,CONNECTING"
+    },
+    "output": {
+      "vendor_name": "QPI PRO, INC.",
+      "award_amount": 8866866.0,
+      "award_id": "SPE7L124C0053"
+    },
+    "metadata": {
+      "awarding_agency": "Department of Defense",
+      "start_date": "2024-09-05"
+    }
+  },
+  {
+    "input": {
+      "contract_notice": "Contract W912CH24C0011 awarded to PENN POWER GROUP LLC by Department of Defense for $8,659,258.12. Description: ONE TIME BUY WITH AN OPTION YEAR, QTY 4,362 EA"
+    },
+    "output": {
+      "vendor_name": "PENN POWER GROUP LLC",
+      "award_amount": 8659258.12,
+      "award_id": "W912CH24C0011"
+    },
+    "metadata": {
+      "awarding_agency": "Department of Defense",
+      "start_date": "2024-09-23"
+    }
+  },
+  {
+    "input": {
+      "contract_notice": "Contract SPRDL125F0162 awarded to AM GENERAL LLC by Department of Defense for $8,645,045.50. Description: DELIVERY ORDER TO ADD 1,274 EA"
+    },
+    "output": {
+      "vendor_name": "AM GENERAL LLC",
+      "award_amount": 8645045.5,
+      "award_id": "SPRDL125F0162"
+    },
+    "metadata": {
+      "awarding_agency": "Department of Defense",
+      "start_date": "2025-07-30"
+    }
+  },
+  {
+    "input": {
+      "contract_notice": "Contract SPRDL125F0172 awarded to CLARKE POWER SERVICES INC by Department of Defense for $8,514,464.00. Description: TRANSMISSIONS, GEN IV IN SUPPORT OF FMTV"
+    },
+    "output": {
+      "vendor_name": "CLARKE POWER SERVICES INC",
+      "award_amount": 8514464.0,
+      "award_id": "SPRDL125F0172"
+    },
+    "metadata": {
+      "awarding_agency": "Department of Defense",
+      "start_date": "2025-08-20"
+    }
+  },
+  {
+    "input": {
+      "contract_notice": "Contract SPRDL125F0171 awarded to HONEYWELL INTERNATIONAL INC. by Department of Defense for $8,164,500.00. Description: GENERATOR,ENGINE AC NSN: 2920-01-305-8419 MFR CAGE: 64547 MFR PART NUMBER: 4200120-6 QTY 375 EA"
+    },
+    "output": {
+      "vendor_name": "HONEYWELL INTERNATIONAL INC.",
+      "award_amount": 8164500.0,
+      "award_id": "SPRDL125F0171"
+    },
+    "metadata": {
+      "awarding_agency": "Department of Defense",
+      "start_date": "2025-09-23"
+    }
+  },
+  {
+    "input": {
+      "contract_notice": "Contract SPRDL125C0017 awarded to MTP DRIVETRAIN SERVICES, L.L.C. by Department of Defense for $7,313,075.00. Description: NSN:  2520-01-562-6793 NAME:  HYDRAULIC TRANSMISSION QTY:  145 W/100% OPTION"
+    },
+    "output": {
+      "vendor_name": "MTP DRIVETRAIN SERVICES, L.L.C.",
+      "award_amount": 7313075.0,
+      "award_id": "SPRDL125C0017"
+    },
+    "metadata": {
+      "awarding_agency": "Department of Defense",
+      "start_date": "2024-12-06"
+    }
+  }
+]
