@@ -1,0 +1,182 @@
+[
+    {
+    "inputs": {
+    "context": "Since 2024, the EU ETS applies to cargo and passenger ships of 5,000 gross tonnage or above.",
+    "question": "Which cargo and passenger ships have been covered by the EU ETS since 2024?"
+    },
+    "outputs": {
+    "answer": "Cargo and passenger ships of 5,000 gross tonnage or above."
+    },
+    "metadata": {
+    "regulation": "EU ETS",
+    "topic": "ship scope",
+    "source_url": "https://climate.ec.europa.eu/areas-action/transport-decarbonisation/reducing-emissions-shipping-sector/faq-maritime-transport-eu-emissions-trading-system-ets_en",
+    "accessed_date": "2026-08-23"
+    }
+},
+{
+    "inputs": {
+        "context": "The EU ETS covers 100% of emissions from voyages between two EU ports and 50% of emissions from voyages between an EU port and a non-EU port.",
+        "question": "What share of voyage emissions does the EU ETS cover for EU-to-EU voyages and for voyages between an EU port and a non-EU port?"
+    },
+    "outputs": {
+        "answer": "It covers 100% of emissions from voyages between two EU ports and 50% of emissions from voyages between an EU port and a non-EU port."
+    },
+    "metadata": {
+        "regulation": "EU ETS",
+        "topic": "voyage emissions scope",
+        "source_url": "https://climate.ec.europa.eu/areas-action/transport-decarbonisation/reducing-emissions-shipping-sector/faq-maritime-transport-eu-emissions-trading-system-ets_en",
+        "accessed_date": "2026-08-23"
+    }
+    },
+    {
+    "inputs": {
+        "context": "The EU ETS was extended to maritime transport emissions on 1 January 2024.",
+        "question": "When was the EU ETS extended to maritime transport emissions?"
+    },
+    "outputs": {
+        "answer": "1 January 2024."
+    },
+    "metadata": {
+        "regulation": "EU ETS",
+        "topic": "start date",
+        "source_url": "https://climate.ec.europa.eu/areas-action/transport-decarbonisation/reducing-emissions-shipping-sector/faq-maritime-transport-eu-emissions-trading-system-ets_en",
+        "accessed_date": "2026-08-23"
+    }
+    },
+    {
+    "inputs": {
+        "context": "Shipping companies must cover 40% of 2024 reported emissions in 2025, 70% of 2025 emissions in 2026, and 100% from 2027 onward.",
+        "question": "What percentage of reported emissions must shipping companies cover with EU ETS allowances in 2025, 2026, and from 2027 onward?"
+    },
+    "outputs": {
+        "answer": "40% in 2025, 70% in 2026, and 100% from 2027 onward."
+    },
+    "metadata": {
+        "regulation": "EU ETS",
+        "topic": "allowance phase-in",
+        "source_url": "https://climate.ec.europa.eu/areas-action/transport-decarbonisation/reducing-emissions-shipping-sector/faq-maritime-transport-eu-emissions-trading-system-ets_en",
+        "accessed_date": "2026-08-23"
+    }
+    },
+    {
+    "inputs": {
+        "context": "Shipping companies must surrender the required EU allowances by 30 September of the year after the reporting year.",
+        "question": "By what date must shipping companies surrender the required EU ETS allowances?"
+    },
+    "outputs": {
+        "answer": "By 30 September of the year after the reporting year."
+    },
+    "metadata": {
+        "regulation": "EU ETS",
+        "topic": "allowance surrender deadline",
+        "source_url": "https://climate.ec.europa.eu/areas-action/transport-decarbonisation/reducing-emissions-shipping-sector/faq-maritime-transport-eu-emissions-trading-system-ets_en",
+        "accessed_date": "2026-08-23"
+    }
+    },
+    {
+    "inputs": {
+        "context": "The maritime EU ETS covers carbon dioxide from 2024, while methane and nitrous oxide enter its scope in 2026.",
+        "question": "Which greenhouse gases does the maritime EU ETS cover from 2024 and which additional gases enter in 2026?"
+    },
+    "outputs": {
+        "answer": "It covers carbon dioxide from 2024; methane and nitrous oxide enter in 2026."
+    },
+    "metadata": {
+        "regulation": "EU ETS",
+        "topic": "greenhouse gas scope",
+        "source_url": "https://climate.ec.europa.eu/areas-action/transport-decarbonisation/reducing-emissions-shipping-sector/faq-maritime-transport-eu-emissions-trading-system-ets_en",
+        "accessed_date": "2026-08-23"
+    }
+    },
+    {
+    "inputs": {
+        "context": "FuelEU Maritime applies to commercial passenger or cargo ships above 5,000 gross tonnes that call at EU ports, regardless of flag.",
+        "question": "Which commercial ships are covered by FuelEU Maritime?"
+    },
+    "outputs": {
+        "answer": "Commercial passenger or cargo ships above 5,000 gross tonnes that call at EU ports, regardless of flag."
+    },
+    "metadata": {
+        "regulation": "FuelEU Maritime",
+        "topic": "ship scope",
+        "source_url": "https://transport.ec.europa.eu/transport-modes/maritime/decarbonising-maritime-transport-fueleu-maritime/questions-and-answers-regulation-eu-20231805-use-renewable-and-low-carbon-fuels-maritime-transport_en",
+        "accessed_date": "2026-08-23"
+    }
+    },
+    {
+    "inputs": {
+        "context": "FuelEU Maritime has applied fully since 1 January 2025, except the monitoring-plan provisions that began in August 2024.",
+        "question": "Since when has FuelEU Maritime applied fully?"
+    },
+    "outputs": {
+        "answer": "Since 1 January 2025."
+    },
+    "metadata": {
+        "regulation": "FuelEU Maritime",
+        "topic": "start date",
+        "source_url": "https://transport.ec.europa.eu/transport-modes/maritime/decarbonising-maritime-transport-fueleu-maritime_en",
+        "accessed_date": "2026-08-23"
+    }
+    },
+    {
+    "inputs": {
+        "context": "FuelEU sets annual greenhouse-gas-intensity limits for onboard energy, starting with a 2% reduction target in 2025 and reaching an 80% reduction target in 2050.",
+        "question": "What are FuelEU Maritime's greenhouse-gas-intensity reduction targets for 2025 and 2050?"
+    },
+    "outputs": {
+        "answer": "A 2% reduction target in 2025 and an 80% reduction target in 2050."
+    },
+    "metadata": {
+        "regulation": "FuelEU Maritime",
+        "topic": "GHG intensity targets",
+        "source_url": "https://transport.ec.europa.eu/transport-modes/maritime/decarbonising-maritime-transport-fueleu-maritime_en",
+        "accessed_date": "2026-08-23"
+    }
+    },
+    {
+    "inputs": {
+        "context": "FuelEU measures greenhouse-gas intensity on a well-to-wake lifecycle basis and includes carbon dioxide, methane, and nitrous oxide.",
+        "question": "How does FuelEU Maritime measure greenhouse-gas intensity, and which gases does it include?"
+    },
+    "outputs": {
+        "answer": "It uses a well-to-wake lifecycle basis and includes carbon dioxide, methane, and nitrous oxide."
+    },
+    "metadata": {
+        "regulation": "FuelEU Maritime",
+        "topic": "lifecycle emissions",
+        "source_url": "https://transport.ec.europa.eu/transport-modes/maritime/decarbonising-maritime-transport-fueleu-maritime_en",
+        "accessed_date": "2026-08-23"
+    }
+    },
+    {
+    "inputs": {
+        "context": "For a voyage between an EU port and a third-country port, FuelEU applies to one half of the energy used.",
+        "question": "What share of energy used on a voyage between an EU port and a third-country port is covered by FuelEU Maritime?"
+    },
+    "outputs": {
+        "answer": "One half, or 50%, of the energy used."
+    },
+    "metadata": {
+        "regulation": "FuelEU Maritime",
+        "topic": "international voyage coverage",
+        "source_url": "https://transport.ec.europa.eu/transport-modes/maritime/decarbonising-maritime-transport-fueleu-maritime/questions-and-answers-regulation-eu-20231805-use-renewable-and-low-carbon-fuels-maritime-transport_en",
+        "accessed_date": "2026-08-23"
+    }
+    },
+    {
+    "inputs": {
+        "context": "From 1 January 2030, qualifying container and passenger ships at berth in AFIR-covered EU ports must use onshore power or a zero-emission technology for their electrical demand at berth.",
+        "question": "What must qualifying container and passenger ships use at berth in AFIR-covered EU ports from 1 January 2030?"
+    },
+    "outputs": {
+        "answer": "Onshore power or a zero-emission technology for their electrical demand at berth."
+    },
+    "metadata": {
+        "regulation": "FuelEU Maritime",
+        "topic": "onshore power requirement",
+        "source_url": "https://transport.ec.europa.eu/transport-modes/maritime/decarbonising-maritime-transport-fueleu-maritime/questions-and-answers-regulation-eu-20231805-use-renewable-and-low-carbon-fuels-maritime-transport_en",
+        "accessed_date": "2026-08-23"
+    }
+    }
+]
