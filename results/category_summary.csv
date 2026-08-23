@@ -1,0 +1,11 @@
+category,examples,mean_label_accuracy,correctness_rate
+clear_inclusion,2,1.0,1.0
+medical_terminology,1,1.0,1.0
+mixed_evidence,1,1.0,1.0
+multiple_criteria,2,0.55,0.0
+ambiguous_evidence,2,0.5,0.5
+missing_information,2,0.5,0.5
+boundary_value,1,0.0,0.0
+clear_exclusion,2,0.0,0.0
+not_applicable,1,0.0,0.0
+temporal_reasoning,1,0.0,0.0
