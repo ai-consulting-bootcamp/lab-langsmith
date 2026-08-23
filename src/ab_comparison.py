@@ -103,6 +103,7 @@ def main() -> None:
             max_concurrency=args.max_concurrency,
             metadata={"model": model_name, "task": "ag_news_classification", "purpose": "ab_comparison"},
         )
+        print(results) # added to print the results of each model evaluation after AI feedback
         experiment_names[model_name] = prefix
         print(f"[OK] '{model_name}' run complete.\n")
 

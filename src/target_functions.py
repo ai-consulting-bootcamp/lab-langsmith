@@ -1,4 +1,3 @@
-import os
 from dotenv import load_dotenv
 from langsmith import traceable
 from langsmith.wrappers import wrap_openai
@@ -19,8 +18,10 @@ def target_classifier(inputs: dict) -> dict:
                      the prompt and the raw news article text.
                      
     Returns:
-    - dict: A dictionary containing the key "actual_output" with the predicted 
-            category (e.g., 'World', 'Sports', 'Business', 'Sci/Tech').
+    - dict: A dictionary containing the key "expected_output" with the predicted 
+            category (e.g., 'World', 'Sports', 'Business', 'Sci/Tech'). Named
+            "expected_output" to match the dataset's reference output schema,
+            so exact_match_evaluator can compare both sides using the same key.
     """
     try:
         response = openai_client.chat.completions.create(
