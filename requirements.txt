@@ -1,0 +1,4 @@
+langsmith>=0.1.147
+openai>=1.40.0
+python-dotenv>=1.0.1
+datasets>=2.20.0

@@ -1,0 +1,226 @@
+[
+  {
+    "inputs": {
+      "question": "Classify the following article text into one of these categories: World, Sports, Business, Sci/Tech.\n\nText: Venezuelans Vote Early in Referendum on Chavez Rule (Reuters) Reuters - Venezuelans turned out early\\and in large numbers on Sunday to vote in a historic referendum\\that will either remove left-wing President Hugo Chavez from\\office or give him a new mandate to govern for the next two\\years."
+    },
+    "outputs": {
+      "expected_output": "World"
+    },
+    "metadata": {
+      "source_index": 492,
+      "dataset": "ag_news",
+      "category": "World",
+      "difficulty": "easy"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Classify the following article text into one of these categories: World, Sports, Business, Sci/Tech.\n\nText: S.Koreans Clash with Police on Iraq Troop Dispatch (Reuters) Reuters - South Korean police used water cannon in\\central Seoul Sunday to disperse at least 7,000 protesters\\urging the government to reverse a controversial decision to\\send more troops to Iraq."
+    },
+    "outputs": {
+      "expected_output": "World"
+    },
+    "metadata": {
+      "source_index": 493,
+      "dataset": "ag_news",
+      "category": "World",
+      "difficulty": "medium"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Classify the following article text into one of these categories: World, Sports, Business, Sci/Tech.\n\nText: Palestinians in Israeli Jails Start Hunger Strike (Reuters) Reuters - Thousands of Palestinian\\prisoners in Israeli jails began a hunger strike for better\\conditions Sunday, but Israel's security minister said he\\didn't care if they starved to death."
+    },
+    "outputs": {
+      "expected_output": "World"
+    },
+    "metadata": {
+      "source_index": 494,
+      "dataset": "ag_news",
+      "category": "World",
+      "difficulty": "hard"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Classify the following article text into one of these categories: World, Sports, Business, Sci/Tech.\n\nText: Seven Georgian soldiers wounded as South Ossetia ceasefire violated (AFP) AFP - Sporadic gunfire and shelling took place overnight in the disputed Georgian region of South Ossetia in violation of a fragile ceasefire, wounding seven Georgian servicemen."
+    },
+    "outputs": {
+      "expected_output": "World"
+    },
+    "metadata": {
+      "source_index": 495,
+      "dataset": "ag_news",
+      "category": "World",
+      "difficulty": "medium"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Classify the following article text into one of these categories: World, Sports, Business, Sci/Tech.\n\nText: Phelps, Thorpe Advance in 200 Freestyle (AP) AP - Michael Phelps took care of qualifying for the Olympic 200-meter freestyle semifinals Sunday, and then found out he had been added to the American team for the evening's 400 freestyle relay final. Phelps' rivals Ian Thorpe and Pieter van den Hoogenband and teammate Klete Keller were faster than the teenager in the 200 free preliminaries."
+    },
+    "outputs": {
+      "expected_output": "Sports"
+    },
+    "metadata": {
+      "source_index": 448,
+      "dataset": "ag_news",
+      "category": "Sports",
+      "difficulty": "easy"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Classify the following article text into one of these categories: World, Sports, Business, Sci/Tech.\n\nText: Reds Knock Padres Out of Wild-Card Lead (AP) AP - Wily Mo Pena homered twice and drove in four runs, helping the Cincinnati Reds beat the San Diego Padres 11-5 on Saturday night. San Diego was knocked out of a share of the NL wild-card lead with the loss and Chicago's victory over Los Angeles earlier in the day."
+    },
+    "outputs": {
+      "expected_output": "Sports"
+    },
+    "metadata": {
+      "source_index": 449,
+      "dataset": "ag_news",
+      "category": "Sports",
+      "difficulty": "medium"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Classify the following article text into one of these categories: World, Sports, Business, Sci/Tech.\n\nText: Dreaming done, NBA stars awaken to harsh Olympic reality (AFP) AFP - National Basketball Association players trying to win a fourth consecutive Olympic gold medal for the United States have gotten the wake-up call that the \"Dream Team\" days are done even if supporters have not."
+    },
+    "outputs": {
+      "expected_output": "Sports"
+    },
+    "metadata": {
+      "source_index": 450,
+      "dataset": "ag_news",
+      "category": "Sports",
+      "difficulty": "hard"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Classify the following article text into one of these categories: World, Sports, Business, Sci/Tech.\n\nText: Indians Beat Twins 7-1, Nearing AL Lead (AP) AP - The Cleveland Indians pulled within one game of the AL Central lead, scoring four runs in the first inning and beating the Minnesota Twins 7-1 Saturday night behind home runs by Travis Hafner and Victor Martinez."
+    },
+    "outputs": {
+      "expected_output": "Sports"
+    },
+    "metadata": {
+      "source_index": 451,
+      "dataset": "ag_news",
+      "category": "Sports",
+      "difficulty": "medium"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Classify the following article text into one of these categories: World, Sports, Business, Sci/Tech.\n\nText: Wall St. Bears Claw Back Into the Black (Reuters) Reuters - Short-sellers, Wall Street's dwindling\\band of ultra-cynics, are seeing green again."
+    },
+    "outputs": {
+      "expected_output": "Business"
+    },
+    "metadata": {
+      "source_index": 0,
+      "dataset": "ag_news",
+      "category": "Business",
+      "difficulty": "easy"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Classify the following article text into one of these categories: World, Sports, Business, Sci/Tech.\n\nText: Carlyle Looks Toward Commercial Aerospace (Reuters) Reuters - Private investment firm Carlyle Group,\\which has a reputation for making well-timed and occasionally\\controversial plays in the defense industry, has quietly placed\\its bets on another part of the market."
+    },
+    "outputs": {
+      "expected_output": "Business"
+    },
+    "metadata": {
+      "source_index": 1,
+      "dataset": "ag_news",
+      "category": "Business",
+      "difficulty": "medium"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Classify the following article text into one of these categories: World, Sports, Business, Sci/Tech.\n\nText: Oil and Economy Cloud Stocks' Outlook (Reuters) Reuters - Soaring crude prices plus worries\\about the economy and the outlook for earnings are expected to\\hang over the stock market next week during the depth of the\\summer doldrums."
+    },
+    "outputs": {
+      "expected_output": "Business"
+    },
+    "metadata": {
+      "source_index": 2,
+      "dataset": "ag_news",
+      "category": "Business",
+      "difficulty": "hard"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Classify the following article text into one of these categories: World, Sports, Business, Sci/Tech.\n\nText: Iraq Halts Oil Exports from Main Southern Pipeline (Reuters) Reuters - Authorities have halted oil export\\flows from the main pipeline in southern Iraq after\\intelligence showed a rebel militia could strike\\infrastructure, an oil official said on Saturday."
+    },
+    "outputs": {
+      "expected_output": "Business"
+    },
+    "metadata": {
+      "source_index": 3,
+      "dataset": "ag_news",
+      "category": "Business",
+      "difficulty": "medium"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Classify the following article text into one of these categories: World, Sports, Business, Sci/Tech.\n\nText: 'Madden,' 'ESPN' Football Score in Different Ways (Reuters) Reuters - Was absenteeism a little high\\on Tuesday among the guys at the office? EA Sports would like\\to think it was because \"Madden NFL 2005\" came out that day,\\and some fans of the football simulation are rabid enough to\\take a sick day to play it."
+    },
+    "outputs": {
+      "expected_output": "Sci/Tech"
+    },
+    "metadata": {
+      "source_index": 78,
+      "dataset": "ag_news",
+      "category": "Sci/Tech",
+      "difficulty": "easy"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Classify the following article text into one of these categories: World, Sports, Business, Sci/Tech.\n\nText: Group to Propose New High-Speed Wireless Format (Reuters) Reuters - A group of technology companies\\including Texas Instruments Inc. (TXN.N), STMicroelectronics\\(STM.PA) and Broadcom Corp. (BRCM.O), on Thursday said they\\will propose a new wireless networking standard up to 10 times\\the speed of the current generation."
+    },
+    "outputs": {
+      "expected_output": "Sci/Tech"
+    },
+    "metadata": {
+      "source_index": 79,
+      "dataset": "ag_news",
+      "category": "Sci/Tech",
+      "difficulty": "easy"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Classify the following article text into one of these categories: World, Sports, Business, Sci/Tech.\n\nText: AOL to Sell Cheap PCs to Minorities and Seniors (Reuters) Reuters - America Online on Thursday said it\\plans to sell a low-priced PC targeting low-income and minority\\households who agree to sign up for a year of dialup Internet\\service."
+    },
+    "outputs": {
+      "expected_output": "Sci/Tech"
+    },
+    "metadata": {
+      "source_index": 80,
+      "dataset": "ag_news",
+      "category": "Sci/Tech",
+      "difficulty": "hard"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Classify the following article text into one of these categories: World, Sports, Business, Sci/Tech.\n\nText: Companies Approve New High-Capacity Disc Format (Reuters) Reuters - A group of consumer electronics\\makers said on Wednesday they approved the format for a new\\generation of discs that can store five times the data of DVDs\\at the same cost -- enough to put a full season of \"The\\Sopranos\" on one disc."
+    },
+    "outputs": {
+      "expected_output": "Sci/Tech"
+    },
+    "metadata": {
+      "source_index": 81,
+      "dataset": "ag_news",
+      "category": "Sci/Tech",
+      "difficulty": "medium"
+    }
+  }
+]
