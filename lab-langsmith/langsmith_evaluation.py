@@ -447,6 +447,74 @@ Score 1 = correct and complete. Score 0 = has factual errors or missing critical
 
 
 # ---------------------------------------------------------------------------
+# 4b. Custom Evaluator — Clarity & Actionability (beyond correctness)
+# ---------------------------------------------------------------------------
+def clarity_evaluator(inputs: dict, outputs: dict, reference_outputs: dict) -> dict:
+    """
+    LLM-as-judge evaluator that scores whether an answer is clear and
+    actionable for a working designer, independent of factual correctness.
+
+    Dimension: Clarity & Actionability
+      - Could a designer apply this answer without needing to look anything up?
+      - Is it free of unnecessary jargon or filler?
+      - Is it appropriately concise for the question asked?
+
+    Scale: 1 (clear, well-structured, immediately usable) to
+           0 (correct but hard to parse, overly dense, or vague)
+    This is intentionally independent of the correctness evaluator so the two
+    scores can diverge (e.g. an answer can be factually correct but poorly
+    structured, or vice versa).
+    """
+    question = inputs.get("question", "")
+    model_answer = outputs.get("answer", "")
+
+    eval_prompt = f"""You are evaluating an answer for CLARITY AND ACTIONABILITY only.
+Do NOT evaluate factual correctness — assume the content may or may not be accurate.
+
+QUESTION:
+{question}
+
+ANSWER TO EVALUATE:
+{model_answer}
+
+Score this answer on clarity and actionability for a working designer:
+1. Could someone apply this answer directly, without needing to look anything up?
+2. Is it free of unnecessary jargon or filler?
+3. Is the length appropriate for the question (not padded, not too terse)?
+
+Respond with JSON only (no markdown backticks):
+{{"score": 1 or 0, "reasoning": "brief explanation"}}
+
+Score 1 = clear and immediately usable. Score 0 = hard to parse, vague, or poorly
+structured, regardless of whether the facts are correct."""
+
+    response = oai_client.chat.completions.create(
+        model=MODEL,
+        temperature=0,
+        response_format={"type": "json_object"},
+        messages=[
+            {"role": "system", "content": "You are a strict but fair evaluator. Respond with JSON only."},
+            {"role": "user", "content": eval_prompt},
+        ],
+    )
+
+    raw = response.choices[0].message.content
+    try:
+        result = json.loads(raw)
+        return {
+            "key": "clarity_actionability",
+            "score": result.get("score", 0),
+            "comment": result.get("reasoning", ""),
+        }
+    except json.JSONDecodeError:
+        return {
+            "key": "clarity_actionability",
+            "score": 0,
+            "comment": f"Failed to parse judge output: {raw[:200]}",
+        }
+
+
+# ---------------------------------------------------------------------------
 # 5. Run Evaluation
 # ---------------------------------------------------------------------------
 def run_evaluation(dataset):
@@ -454,7 +522,7 @@ def run_evaluation(dataset):
     print(f"\nRunning evaluation experiment: '{EXPERIMENT_PREFIX}'...")
     print(f"  Dataset: {DATASET_NAME} ({len(EXAMPLES)} examples)")
     print(f"  Model: {MODEL}")
-    print(f"  Evaluator: correctness (LLM-as-judge)")
+    print(f"  Evaluators: correctness, clarity_actionability (LLM-as-judge)")
     print("  This may take 1-2 minutes...\n")
 
     start = time.time()
@@ -462,7 +530,7 @@ def run_evaluation(dataset):
     results = evaluate(
         ux_qa_target,
         data=DATASET_NAME,
-        evaluators=[correctness_evaluator],
+        evaluators=[correctness_evaluator, clarity_evaluator],
         experiment_prefix=EXPERIMENT_PREFIX,
         max_concurrency=2,
     )
@@ -470,6 +538,133 @@ def run_evaluation(dataset):
     elapsed = round(time.time() - start, 2)
     print(f"\nEvaluation completed in {elapsed}s.")
     return results, elapsed
+
+
+# ---------------------------------------------------------------------------
+# 5b. A/B Model Comparison — cost/performance trade-off
+# ---------------------------------------------------------------------------
+COMPARISON_MODELS = ["gpt-4o-mini", "gpt-4o"]
+
+# Approximate list prices (USD per 1K tokens) as of the time this script was
+# written. VERIFY against https://openai.com/api/pricing/ before trusting the
+# cost numbers this produces — prices change and this script does not fetch
+# them live.
+MODEL_PRICING_PER_1K_TOKENS = {
+    "gpt-4o-mini": {"input": 0.00015, "output": 0.0006},
+    "gpt-4o": {"input": 0.0025, "output": 0.01},
+}
+
+
+def make_target_for_model(model_name: str):
+    """Build a traceable target function bound to a specific model."""
+
+    @traceable(name=f"ux_qa_target_{model_name}")
+    def target(inputs: dict) -> dict:
+        question = inputs["question"]
+        response = oai_client.chat.completions.create(
+            model=model_name,
+            temperature=0,
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "You are a senior UX design expert. Answer the following "
+                        "question accurately and concisely. Focus on practical, "
+                        "actionable knowledge. If the question asks for a list, "
+                        "provide all items. Be precise with numbers and standards "
+                        "(e.g., WCAG ratios, heuristic names)."
+                    ),
+                },
+                {"role": "user", "content": question},
+            ],
+        )
+        usage = response.usage
+        return {
+            "answer": response.choices[0].message.content,
+            "prompt_tokens": usage.prompt_tokens if usage else None,
+            "completion_tokens": usage.completion_tokens if usage else None,
+        }
+
+    return target
+
+
+def run_ab_comparison(dataset):
+    """
+    Run the same dataset + correctness evaluator across COMPARISON_MODELS
+    and return per-model aggregate metrics for a cost/performance comparison.
+
+    NOTE: this makes real API calls per model per example. With 15 examples
+    and 2 models that is up to 30 target calls plus 30 judge calls. Costs at
+    time of writing are roughly cents, not dollars, but you should confirm
+    current pricing before relying on the numbers this produces.
+    """
+    comparison_results = {}
+
+    for model_name in COMPARISON_MODELS:
+        print(f"\n--- A/B run: {model_name} ---")
+        target_fn = make_target_for_model(model_name)
+        start = time.time()
+
+        results = evaluate(
+            target_fn,
+            data=DATASET_NAME,
+            evaluators=[correctness_evaluator],
+            experiment_prefix=f"ux-eval-ab-{model_name}",
+            max_concurrency=2,
+        )
+
+        elapsed = round(time.time() - start, 2)
+
+        scores = []
+        total_prompt_tokens = 0
+        total_completion_tokens = 0
+
+        for result in results:
+            try:
+                run = result.get("run") if isinstance(result, dict) else getattr(result, "run", None)
+                eval_res = (
+                    result.get("evaluation_results")
+                    if isinstance(result, dict)
+                    else getattr(result, "evaluation_results", None)
+                )
+                if run and hasattr(run, "outputs") and run.outputs:
+                    total_prompt_tokens += run.outputs.get("prompt_tokens") or 0
+                    total_completion_tokens += run.outputs.get("completion_tokens") or 0
+                if eval_res:
+                    res_list = eval_res.get("results", []) if isinstance(eval_res, dict) else getattr(eval_res, "results", [])
+                    for r in res_list:
+                        s = r.get("score") if isinstance(r, dict) else getattr(r, "score", None)
+                        if s is not None:
+                            scores.append(s)
+            except Exception as e:
+                print(f"  Warning: could not parse a result for {model_name}: {e}")
+
+        pricing = MODEL_PRICING_PER_1K_TOKENS.get(model_name, {"input": 0, "output": 0})
+        estimated_cost = round(
+            (total_prompt_tokens / 1000) * pricing["input"]
+            + (total_completion_tokens / 1000) * pricing["output"],
+            4,
+        )
+
+        avg_score = round(sum(scores) / len(scores), 3) if scores else None
+        comparison_results[model_name] = {
+            "avg_correctness": avg_score,
+            "n_scored": len(scores),
+            "elapsed_seconds": elapsed,
+            "total_prompt_tokens": total_prompt_tokens,
+            "total_completion_tokens": total_completion_tokens,
+            "estimated_cost_usd": estimated_cost,
+        }
+        print(f"  avg_correctness={avg_score}  elapsed={elapsed}s  "
+              f"est_cost=${estimated_cost}")
+
+    with open("ab_comparison_results.json", "w") as f:
+        json.dump(comparison_results, f, indent=2)
+
+    print("\nA/B comparison saved to ab_comparison_results.json")
+    print("Fill in optimization_summary.md using these numbers — do not")
+    print("guess or reuse numbers from a different run.")
+    return comparison_results
 
 
 # ---------------------------------------------------------------------------
@@ -612,6 +807,15 @@ if __name__ == "__main__":
 
         # Step 5: Analyze
         analyze_results(results, elapsed)
+
+        # Optional Step 14: A/B model comparison.
+        # Only runs if you explicitly pass --ab, since it doubles API calls
+        # and cost versus a single run.
+        if "--ab" in sys.argv:
+            run_ab_comparison(dataset)
+        else:
+            print("\n(Skipping A/B comparison. Run with --ab to compare "
+                  f"{COMPARISON_MODELS} and produce ab_comparison_results.json.)")
     except Exception as exc:
         print("\nEvaluation setup failed.")
         print(f"Reason: {exc}")
