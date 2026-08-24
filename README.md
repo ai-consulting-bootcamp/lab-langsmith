@@ -16,6 +16,7 @@ This repository contains everything you need for this lab.
 - [`rubric.md`](./rubric.md) — how your submission is graded; this is what the AI reviewer checks your PR against
 - `01_openevals.ipynb`, `02_langsmith.ipynb`: reference notebooks with implementation patterns
 - `langsmith_evaluation.ipynb`: dataset creation, target function, evaluators (correctness and tone), the evaluation run, the model A/B comparison, and results analysis
+- `langsmith_ui_review.md`: notes from reviewing datasets and experiment traces directly in the LangSmith UI
 - `evaluation_summary.md`: methodology, results, and the custom tone evaluator's findings
 - `optimization_summary.md`: cost-performance comparison across `gpt-4o-mini`, `gpt-4o`, and `gpt-5.6-luna`
 
