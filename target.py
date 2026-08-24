@@ -1,5 +1,4 @@
 import json
-import os
 from dotenv import load_dotenv
 from langsmith import traceable
 from langsmith.wrappers import wrap_openai
@@ -22,12 +21,9 @@ Rules:
 - Preserve book/item titles close to how they're written, with reasonable capitalization.
 """
 
-@traceable(name="extract_school_order")
-def target(inputs: dict) -> dict:
-    raw_message = inputs["raw_message"]
-
+def _extract(raw_message: str, model: str) -> dict:
     response = openai_client.chat.completions.create(
-        model="gpt-4o-mini",
+        model=model,
         temperature=0,
         response_format={"type": "json_object"},
         messages=[
@@ -35,13 +31,21 @@ def target(inputs: dict) -> dict:
             {"role": "user", "content": raw_message},
         ],
     )
-
     try:
-        parsed = json.loads(response.choices[0].message.content)
+        return json.loads(response.choices[0].message.content)
     except (json.JSONDecodeError, KeyError, IndexError):
-        parsed = {"items": []}
+        return {"items": []}
 
-    return parsed
+
+@traceable(name="extract_school_order")
+def target(inputs: dict) -> dict:
+    return _extract(inputs["raw_message"], model="gpt-4o-mini")
+
+
+@traceable(name="extract_school_order_gpt4o")
+def target_gpt4o(inputs: dict) -> dict:
+    return _extract(inputs["raw_message"], model="gpt-4o")
+
 
 if __name__ == "__main__":
     test_messages = [
@@ -53,24 +57,3 @@ if __name__ == "__main__":
         print(msg)
         print(json.dumps(target({"raw_message": msg}), indent=2))
         print()
-
-@traceable(name="extract_school_order_gpt4o")
-def target_gpt4o(inputs: dict) -> dict:
-    raw_message = inputs["raw_message"]
-
-    response = openai_client.chat.completions.create(
-        model="gpt-4o",
-        temperature=0,
-        response_format={"type": "json_object"},
-        messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": raw_message},
-        ],
-    )
-
-    try:
-        parsed = json.loads(response.choices[0].message.content)
-    except (json.JSONDecodeError, KeyError, IndexError):
-        parsed = {"items": []}
-
-    return parsed

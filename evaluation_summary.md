@@ -24,3 +24,7 @@ We evaluated gpt-4o-mini's ability to extract structured school book orders (sch
 | 5 | "bramharshi vidya mandr clas 6 — ..." | typo'd/informal school name not normalized |
 
 Custom evaluator (completeness — item-level coverage, ignoring field accuracy) scored **1.00 average across all 13 examples**, including all 6 correctness failures. This confirms the model never drops or hallucinates items; 100% of observed errors are attribute-normalization failures, 0% are coverage failures.
+
+**Evaluator methodology note**
+
+Both the correctness and completeness judges were updated to receive the original raw order message as context, alongside the reference and extracted outputs, so the judge can resolve ambiguous cases (e.g. abbreviations, informal phrasing) against the actual source text rather than the reference/output pair alone. The completeness evaluator was also hardened: it now validates that the judge response contains `total_reference_items`, `missing_count`, and `extra_count` before scoring, and explicitly distinguishes a genuine 0.0 (nothing covered) from a malformed/unparseable judge response — the latter is flagged via a `judge_parse_failed` metadata field instead of being silently scored as a real 0. These are robustness/methodology improvements to the judge itself; they did not change the underlying extraction failures described above.

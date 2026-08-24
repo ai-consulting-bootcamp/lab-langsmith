@@ -1,4 +1,4 @@
-import os
+import json
 from dotenv import load_dotenv
 from langsmith import Client
 
@@ -29,3 +29,11 @@ results_4o = client.evaluate(
     max_concurrency=3,
 )
 print("gpt-4o done:", results_4o)
+
+with open("experiment_results.json", "w") as f:
+    json.dump({
+        "gpt-4o-mini": str(results_mini),
+        "gpt-4o": str(results_4o),
+    }, f, indent=2)
+
+print("Saved experiment_results.json")
