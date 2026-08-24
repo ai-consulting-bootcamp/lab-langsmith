@@ -1,18 +1,20 @@
 # Part 1: Domain and Documents
 
-Domain: repository documentation Q&A for the OpenEvals project.
+**Domain:** repository/documentation Q&A for the OpenEvals project.
 
-This dataset uses the repository README, Python package metadata, and the lab brief as source material. The goal is to evaluate whether a model can answer straightforward questions about the project setup, intended use, and required deliverables.
+The dataset evaluates whether an LLM can answer short factual questions about the official OpenEvals documentation when the relevant documentation context is supplied with each question. This is a practical AI/technology knowledge use case because the same pattern can be used for developer-documentation assistants.
 
-Good examples in this domain are short, unambiguous questions with one clear reference answer, such as package requirements, environment variables, dataset requirements, or file locations. A strong example should be answerable directly from the source text and should not require guessing or outside knowledge.
+**Source document:**
+- Official `langchain-ai/openevals` README: https://github.com/langchain-ai/openevals/blob/main/README.md
 
-Source documents:
-- `README.md`
-- `python/pyproject.toml`
-- the lab brief provided for this exercise
+A good example has one clear documentation question, a short supporting context passage, and a concise reference answer. The 10 examples were selected from different README topics such as installation, setup, LLM-as-judge, scoring, LangSmith integration, agent evaluation, and other evaluator types. Lab-meta questions were excluded so the dataset stays focused on the real OpenEvals domain.
 
-Example fields:
-- `inputs.question`: the user question or prompt
-- `outputs.answer`: the expected answer for exact-match evaluation
-- `metadata.source`: which source document the example came from
-- `metadata.topic`: the category of the example
+**Example structure:**
+- `inputs.question`: documentation question
+- `inputs.context`: supporting documentation information
+- `outputs.answer`: expected reference answer
+- `metadata.source`: source label
+- `metadata.source_url`: source link
+- `metadata.source_section`: relevant README section
+- `metadata.topic`: analysis category
+- `metadata.difficulty`: easy or medium

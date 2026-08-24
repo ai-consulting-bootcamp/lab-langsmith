@@ -1,32 +1,130 @@
-# Minimal LangSmith Lab
+# Simple LangSmith Lab — OpenEvals Documentation Q&A
 
 Author: Parisa Dehghani
 
-This folder contains the simplest version of the lab required by the provided brief.
+This repository completes the mandatory parts of the LangSmith custom-dataset lab using a 10-example OpenEvals repository/documentation Q&A dataset. Optional custom-evaluator and cost/performance extensions are not included.
 
-What it does:
-- builds a 10-example repository-QA dataset from local files
-- defines a traceable target function
-- evaluates outputs with exact match
-- optionally uploads the dataset and experiment to LangSmith when `LANGSMITH_API_KEY` is set
-- documents the Part 1 domain and document sources in `part1_domain_writeup.md`
-- documents the LangSmith setup in `langsmith_setup.md`
+## What the project does
 
-How to run:
+`run_lab.py` performs the complete required workflow:
+
+1. Checks the LangSmith EU configuration and verifies a real connection.
+2. Creates or verifies the `openevals-repo-qa-v2` LangSmith dataset.
+3. Confirms that all 10 examples are present and match `examples.json`.
+4. Tests the real LLM-backed target function on 3 examples.
+5. Runs the full evaluation in LangSmith.
+6. Uses OpenEvals `CORRECTNESS_PROMPT` as an LLM-as-judge evaluator.
+7. Saves the experiment results to `results.csv`.
+8. Creates `analysis.md` with metrics, topic analysis, and failure observations.
+9. Rewrites `evaluation_summary.md` with the real results.
+10. Saves the LangSmith dataset and experiment URLs in `langsmith_links.md`.
+
+## Dataset
+
+Domain: OpenEvals repository/documentation Q&A.
+
+Source:
+- https://github.com/langchain-ai/openevals/blob/main/README.md
+
+Each example contains:
+- a question;
+- supporting documentation context;
+- a reference answer;
+- source, topic, and difficulty metadata.
+
+The dataset intentionally focuses on OpenEvals itself rather than meta-questions about the lab.
+
+## Setup
+
+Create a virtual environment:
 
 ```bash
-cd /home/parisa/Ironhack-Practice/7th-Week/Day5/lab-langsmith
-python run_lab.py --mode local
+python -m venv .venv
 ```
 
-To try the LangSmith upload path, set `LANGSMITH_API_KEY` and run:
+Activate it.
+
+macOS/Linux:
 
 ```bash
-cd /home/parisa/Ironhack-Practice/7th-Week/Day5/lab-langsmith
-python run_lab.py --mode both
+source .venv/bin/activate
 ```
 
-The local run writes the short narrative to `evaluation_summary.md`.  
+Windows PowerShell:
 
-# For a clean run on this machine, use:
-python run_lab.py --mode local. For the full LangSmith attempt, you need a machine that can actually reach the EU endpoint.
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Copy `.env.example` to a new file named `.env`, then add your real keys:
+
+```text
+LANGSMITH_API_KEY=...
+OPENAI_API_KEY=...
+```
+
+Do not commit `.env`.
+
+## Run
+
+Run the complete lab with one command:
+
+```bash
+python run_lab.py
+```
+
+A successful run prints:
+- `LangSmith connection: OK`
+- project name
+- EU endpoint
+- tracing state
+- verified dataset count
+- experiment name
+- experiment URL
+- dataset URL
+
+## After the run
+
+The script creates or updates:
+
+- `results.csv` — per-example LangSmith evaluation results
+- `analysis.md` — mean, median, pass rate, topic metrics, failures, and recommendation
+- `evaluation_summary.md` — required short report with real metrics and links
+- `langsmith_links.md` — dataset and experiment URLs
+
+Also add one screenshot from the LangSmith experiment UI to the `screenshots/` folder before submission.
+
+## File map
+
+| File | Purpose |
+|---|---|
+| `README.md` | Setup, run instructions, and file map |
+| `run_lab.py` | Complete dataset + target + evaluator + LangSmith experiment workflow |
+| `examples.json` | 10 OpenEvals documentation Q&A examples |
+| `part1_domain_writeup.md` | Domain, source, example selection, and data structure |
+| `langsmith_setup.md` | EU endpoint, project, tracing, and connection verification |
+| `.env.example` | Safe environment-variable template |
+| `.gitignore` | Prevents secrets and local environment files from being committed |
+| `requirements.txt` | Python packages |
+| `evaluation_summary.md` | Required short report; automatically replaced after the live run |
+| `results.csv` | Generated real experiment results |
+| `analysis.md` | Generated result analysis |
+| `langsmith_links.md` | Generated dataset and experiment URLs |
+| `screenshots/` | LangSmith UI evidence |
+
+## Submission check
+
+Before committing, confirm that:
+- the terminal showed `LangSmith connection: OK`;
+- the dataset has 10 examples in LangSmith;
+- the LangSmith experiment completed;
+- `results.csv`, `analysis.md`, and `langsmith_links.md` exist;
+- `evaluation_summary.md` contains real metrics instead of the starter text;
+- one LangSmith UI screenshot is in `screenshots/`;
+- `.env` is not committed.

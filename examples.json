@@ -1,122 +1,162 @@
 [
   {
     "inputs": {
-      "question": "What is OpenEvals for?"
+      "question": "What is the main purpose of OpenEvals?",
+      "context": "OpenEvals is designed to give developers a starting point for writing evaluations for LLM applications, which can then be extended with application-specific evaluators."
     },
     "outputs": {
-      "answer": "OpenEvals is an open-source package of evaluators for LLM applications."
+      "answer": "OpenEvals provides a starting point for writing evaluations for LLM applications that can be extended for specific applications."
     },
     "metadata": {
-      "source": "README.md",
-      "topic": "overview"
+      "source": "OpenEvals README",
+      "source_url": "https://github.com/langchain-ai/openevals/blob/main/README.md",
+      "source_section": "Overview",
+      "topic": "overview",
+      "difficulty": "easy"
     }
   },
   {
     "inputs": {
-      "question": "Which Python version does the package require?"
+      "question": "How do you install OpenEvals for Python?",
+      "context": "The OpenEvals Python installation command shown in the documentation is: pip install openevals."
     },
     "outputs": {
-      "answer": "Python 3.10 or newer."
+      "answer": "Run `pip install openevals`."
     },
     "metadata": {
-      "source": "pyproject.toml",
-      "topic": "setup"
+      "source": "OpenEvals README",
+      "source_url": "https://github.com/langchain-ai/openevals/blob/main/README.md",
+      "source_section": "Installation",
+      "topic": "setup",
+      "difficulty": "easy"
     }
   },
   {
     "inputs": {
-      "question": "What is the default quickstart judge model mentioned in the README?"
+      "question": "Which environment variable is used for the OpenAI API key in the OpenEvals quickstart?",
+      "context": "The OpenEvals quickstart tells users to export their OpenAI API key with the environment variable OPENAI_API_KEY."
     },
     "outputs": {
-      "answer": "openai:gpt-5.6-sol"
+      "answer": "The environment variable is `OPENAI_API_KEY`."
     },
     "metadata": {
-      "source": "README.md",
-      "topic": "quickstart"
+      "source": "OpenEvals README",
+      "source_url": "https://github.com/langchain-ai/openevals/blob/main/README.md",
+      "source_section": "Quickstart",
+      "topic": "setup",
+      "difficulty": "easy"
     }
   },
   {
     "inputs": {
-      "question": "What environment variable do you set for the OpenAI API key?"
+      "question": "Which function creates an LLM-as-judge evaluator in OpenEvals?",
+      "context": "OpenEvals provides the create_llm_as_judge function. It accepts a prompt and model and returns an evaluator function."
     },
     "outputs": {
-      "answer": "OPENAI_API_KEY"
+      "answer": "Use `create_llm_as_judge`."
     },
     "metadata": {
-      "source": "README.md",
-      "topic": "setup"
+      "source": "OpenEvals README",
+      "source_url": "https://github.com/langchain-ai/openevals/blob/main/README.md",
+      "source_section": "LLM-as-judge",
+      "topic": "evaluator",
+      "difficulty": "easy"
     }
   },
   {
     "inputs": {
-      "question": "What environment variable do you set for the LangSmith API key?"
+      "question": "Which prebuilt prompt should be used to judge answer correctness?",
+      "context": "The OpenEvals documentation imports CORRECTNESS_PROMPT from openevals.prompts and uses it with create_llm_as_judge for correctness evaluation."
     },
     "outputs": {
-      "answer": "LANGSMITH_API_KEY"
+      "answer": "Use `CORRECTNESS_PROMPT` from `openevals.prompts`."
     },
     "metadata": {
-      "source": "provided brief",
-      "topic": "setup"
+      "source": "OpenEvals README",
+      "source_url": "https://github.com/langchain-ai/openevals/blob/main/README.md",
+      "source_section": "Correctness",
+      "topic": "evaluator",
+      "difficulty": "easy"
     }
   },
   {
     "inputs": {
-      "question": "How many examples does the lab require at minimum?"
+      "question": "What parameter names does OpenEvals recommend by convention for LLM-as-judge evaluators?",
+      "context": "OpenEvals recommends using the conventional parameter names inputs, outputs, and reference_outputs for LLM-as-judge evaluators."
     },
     "outputs": {
-      "answer": "At least 10 examples."
+      "answer": "The recommended names are `inputs`, `outputs`, and `reference_outputs`."
     },
     "metadata": {
-      "source": "provided brief",
-      "topic": "dataset"
+      "source": "OpenEvals README",
+      "source_url": "https://github.com/langchain-ai/openevals/blob/main/README.md",
+      "source_section": "LLM-as-judge",
+      "topic": "evaluator",
+      "difficulty": "medium"
     }
   },
   {
     "inputs": {
-      "question": "What file should contain the short evaluation paragraph?"
+      "question": "What does the continuous option change in an OpenEvals LLM-as-judge evaluator?",
+      "context": "When continuous is enabled for an OpenEvals LLM-as-judge evaluator, the evaluator returns a floating-point score between 0 and 1 instead of the default binary score."
     },
     "outputs": {
-      "answer": "evaluation_summary.md"
+      "answer": "It changes the evaluator from a binary score to a floating-point score between 0 and 1."
     },
     "metadata": {
-      "source": "provided brief",
-      "topic": "deliverable"
+      "source": "OpenEvals README",
+      "source_url": "https://github.com/langchain-ai/openevals/blob/main/README.md",
+      "source_section": "Customizing output score values",
+      "topic": "evaluator",
+      "difficulty": "medium"
     }
   },
   {
     "inputs": {
-      "question": "What should be excluded from this task?"
+      "question": "What are the two main ways the OpenEvals documentation describes for running evaluations with LangSmith?",
+      "context": "The LangSmith integration section describes test-runner integrations such as pytest or Vitest/Jest, and it also describes running evaluations with LangSmith's evaluate function."
     },
     "outputs": {
-      "answer": "The extension activities are optional and should be skipped."
+      "answer": "Use the pytest/Vitest/Jest integrations or LangSmith's `evaluate` function."
     },
     "metadata": {
-      "source": "provided brief",
-      "topic": "scope"
+      "source": "OpenEvals README",
+      "source_url": "https://github.com/langchain-ai/openevals/blob/main/README.md",
+      "source_section": "LangSmith Integration",
+      "topic": "langsmith",
+      "difficulty": "medium"
     }
   },
   {
     "inputs": {
-      "question": "What kind of dataset should be created in LangSmith?"
+      "question": "Which package does OpenEvals recommend for evaluations specifically focused on LLM agents?",
+      "context": "The OpenEvals overview points users who need evaluations specifically for LLM agents to the agentevals project."
     },
     "outputs": {
-      "answer": "A custom dataset based on your chosen domain or documents."
+      "answer": "It recommends the `agentevals` project."
     },
     "metadata": {
-      "source": "provided brief",
-      "topic": "dataset"
+      "source": "OpenEvals README",
+      "source_url": "https://github.com/langchain-ai/openevals/blob/main/README.md",
+      "source_section": "Overview",
+      "topic": "ecosystem",
+      "difficulty": "easy"
     }
   },
   {
     "inputs": {
-      "question": "What is the simplest evaluation criterion used in the lab implementation?"
+      "question": "Besides LLM-as-judge evaluators, name two simple comparison evaluators listed by OpenEvals.",
+      "context": "The OpenEvals documentation lists other evaluator types including exact match, Levenshtein distance, and embedding similarity."
     },
     "outputs": {
-      "answer": "Exact match against the reference answer."
+      "answer": "Two examples are exact match and Levenshtein distance."
     },
     "metadata": {
-      "source": "lab implementation",
-      "topic": "evaluation"
+      "source": "OpenEvals README",
+      "source_url": "https://github.com/langchain-ai/openevals/blob/main/README.md",
+      "source_section": "Other evaluators",
+      "topic": "evaluator",
+      "difficulty": "medium"
     }
   }
 ]

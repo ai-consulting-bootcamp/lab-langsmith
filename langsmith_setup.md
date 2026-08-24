@@ -1,18 +1,20 @@
 # LangSmith Setup
 
-Project name:
-- `lab-langsmith-parisa-dehghani`
+This lab uses the LangSmith **EU** endpoint.
 
-Environment variables:
-- `LANGSMITH_API_KEY`: your LangSmith key
-- `LANGSMITH_TRACING=true`: enables tracing
-- `LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com`: EU endpoint for this account
-- `LANGSMITH_PROJECT=lab-langsmith-parisa-dehghani`: keeps experiments grouped under a clear project name
+Configuration:
+- Project: `lab-langsmith-parisa-dehghani`
+- Endpoint: `https://eu.api.smith.langchain.com`
+- Tracing: `true`
+- Dataset: `openevals-repo-qa-v2`
 
-How the script uses them:
-- `run_lab.py` reads the active LangSmith settings and prints a setup summary before evaluation.
-- The LangSmith branch only runs when the API key is present and the endpoint is reachable.
+Required local environment variables:
+- `LANGSMITH_API_KEY`
+- `OPENAI_API_KEY`
+- `LANGSMITH_TRACING=true`
+- `LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com`
+- `LANGSMITH_PROJECT=lab-langsmith-parisa-dehghani`
 
-Notes:
-- If the endpoint is unreachable from the current machine, the script falls back to the local evaluation path.
-- The project name above is the one to use for this lab iteration.
+`run_lab.py` performs a real LangSmith API connection check before evaluation. It prints the active project, endpoint, and tracing setting. If authentication or connectivity fails, the script raises the real error instead of silently falling back to a local-only result.
+
+The OpenAI client is wrapped with `wrap_openai`, and the target function also uses `@traceable`, so the model call and target function are visible in LangSmith tracing.
