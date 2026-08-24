@@ -1,0 +1,107 @@
+[
+  {
+    "id": "REQ-001",
+    "requirement": "The company must demonstrate experience delivering renewable energy projects.",
+    "expected_classification": "SUPPORTED",
+    "category": "project_experience",
+    "difficulty": "easy"
+  },
+  {
+    "id": "REQ-002",
+    "requirement": "The company must demonstrate experience with solar energy projects.",
+    "expected_classification": "SUPPORTED",
+    "category": "project_experience",
+    "difficulty": "easy"
+  },
+  {
+    "id": "REQ-003",
+    "requirement": "The company must demonstrate experience with wind energy projects.",
+    "expected_classification": "SUPPORTED",
+    "category": "project_experience",
+    "difficulty": "medium"
+  },
+  {
+    "id": "REQ-004",
+    "requirement": "The company must demonstrate experience delivering an offshore wind project above 100 MW.",
+    "expected_classification": "INSUFFICIENT",
+    "category": "project_experience",
+    "difficulty": "hard"
+  },
+  {
+    "id": "REQ-005",
+    "requirement": "The company must demonstrate technical capability in renewable energy engineering.",
+    "expected_classification": "SUPPORTED",
+    "category": "technical_capability",
+    "difficulty": "easy"
+  },
+  {
+    "id": "REQ-006",
+    "requirement": "The company must provide engineering support for renewable energy projects.",
+    "expected_classification": "SUPPORTED",
+    "category": "technical_capability",
+    "difficulty": "medium"
+  },
+  {
+    "id": "REQ-007",
+    "requirement": "The company must demonstrate capability to support offshore wind projects.",
+    "expected_classification": "PARTIALLY_SUPPORTED",
+    "category": "technical_capability",
+    "difficulty": "hard"
+  },
+  {
+    "id": "REQ-008",
+    "requirement": "The company must demonstrate experience with nuclear power plant engineering.",
+    "expected_classification": "INSUFFICIENT",
+    "category": "technical_capability",
+    "difficulty": "medium"
+  },
+  {
+    "id": "REQ-009",
+    "requirement": "The company must hold relevant ISO certifications.",
+    "expected_classification": "SUPPORTED",
+    "category": "certification",
+    "difficulty": "easy"
+  },
+  {
+    "id": "REQ-010",
+    "requirement": "The company must demonstrate compliance with documented quality standards.",
+    "expected_classification": "SUPPORTED",
+    "category": "certification",
+    "difficulty": "medium"
+  },
+  {
+    "id": "REQ-011",
+    "requirement": "The company must hold a certification specifically for offshore wind farm construction.",
+    "expected_classification": "INSUFFICIENT",
+    "category": "certification",
+    "difficulty": "hard"
+  },
+  {
+    "id": "REQ-012",
+    "requirement": "The company must provide evidence of its renewable energy capabilities.",
+    "expected_classification": "SUPPORTED",
+    "category": "company_capability",
+    "difficulty": "easy"
+  },
+  {
+    "id": "REQ-013",
+    "requirement": "The company must demonstrate the ability to prepare structured tender responses.",
+    "expected_classification": "SUPPORTED",
+    "category": "company_capability",
+    "difficulty": "medium"
+  },
+  {
+    "id": "REQ-014",
+    "requirement": "The company must demonstrate experience delivering a 500 MW offshore wind farm.",
+    "expected_classification": "INSUFFICIENT",
+    "category": "unsupported_requirement",
+    "difficulty": "hard"
+  },
+  {
+    "id": "REQ-015",
+    "requirement": "The company must demonstrate experience delivering commercial nuclear reactors.",
+    "expected_classification": "INSUFFICIENT",
+    "category": "unsupported_requirement",
+    "difficulty": "hard"
+  }
+]
