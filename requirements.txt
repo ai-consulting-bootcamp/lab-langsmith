@@ -1,0 +1,6 @@
+langsmith
+openai
+openevals
+langchain-openai
+pandas
+python-dotenv
