@@ -16,6 +16,7 @@ DATA_PATH = ROOT / "examples.json"
 SUMMARY_PATH = ROOT / "evaluation_summary.md"
 DATASET_NAME = "openevals-repo-qa"
 EXPERIMENT_PREFIX = "openevals-repo-qa"
+PROJECT_NAME = os.environ.get("LANGSMITH_PROJECT", "lab-langsmith-parisa-dehghani")
 
 try:
     from langsmith import Client, traceable
@@ -63,6 +64,16 @@ def endpoint_is_reachable() -> bool:
             return True
     except (urllib.error.URLError, TimeoutError, OSError):
         return False
+
+
+def langsmith_setup_summary() -> dict[str, str]:
+    endpoint = os.environ.get("LANGSMITH_ENDPOINT", "https://api.smith.langchain.com")
+    return {
+        "project_name": PROJECT_NAME,
+        "endpoint": endpoint,
+        "tracing": os.environ.get("LANGSMITH_TRACING", "false"),
+        "api_key_set": str(bool(os.environ.get("LANGSMITH_API_KEY"))).lower(),
+    }
 
 
 @traceable(name="repo_qa_target")
@@ -171,6 +182,8 @@ def main() -> None:
     examples = load_examples()
     local_results = run_local_eval(examples)
     experiment_url = None
+
+    print(json.dumps({"langsmith_setup": langsmith_setup_summary()}, indent=2))
 
     if args.mode in {"langsmith", "both"}:
         experiment_url = try_langsmith_eval(examples)

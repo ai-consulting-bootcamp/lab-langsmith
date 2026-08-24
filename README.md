@@ -9,6 +9,8 @@ What it does:
 - defines a traceable target function
 - evaluates outputs with exact match
 - optionally uploads the dataset and experiment to LangSmith when `LANGSMITH_API_KEY` is set
+- documents the Part 1 domain and document sources in `part1_domain_writeup.md`
+- documents the LangSmith setup in `langsmith_setup.md`
 
 How to run:
 
