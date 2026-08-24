@@ -1,0 +1,15 @@
+[
+  {"case_id": "case_001", "strategy": "AUTOMATED", "rationale": "Verified numeric answers make exact automated comparison reliable at this volume."},
+  {"case_id": "case_002", "strategy": "HUMAN", "rationale": "People should judge emotional resonance and brand voice because no objective answer exists."},
+  {"case_id": "case_003", "strategy": "AUTOMATED", "rationale": "Rules can check the approved reason and mandatory text across every draft."},
+  {"case_id": "case_004", "strategy": "AUTOMATED", "rationale": "JSON Schema can test the keys, types, and additional-property rule deterministically."},
+  {"case_id": "case_005", "strategy": "HYBRID", "rationale": "Automated style metrics can narrow the options before an editor makes the final decision."},
+  {"case_id": "case_006", "strategy": "HYBRID", "rationale": "Rule checks provide coverage, while qualified reviewers must judge contextual safety and possible harm."},
+  {"case_id": "case_007", "strategy": "HUMAN", "rationale": "Community representatives and relevant experts should judge respect, framing, and legitimacy."},
+  {"case_id": "case_008", "strategy": "AUTOMATED", "rationale": "The complete executable test suite supplies an objective release signal."},
+  {"case_id": "case_009", "strategy": "HUMAN", "rationale": "Experts must first define the quality standard and produce the gold examples."},
+  {"case_id": "case_010", "strategy": "HYBRID", "rationale": "Human calibration should validate the judge before automated scoring is applied at scale."},
+  {"case_id": "case_011", "strategy": "AUTOMATED", "rationale": "Correct tool selection and arguments can be compared directly with complete references."},
+  {"case_id": "case_012", "strategy": "HUMAN", "rationale": "Human reviewers should assess stereotyping, context, and fairness impacts in the ranking explanations."}
+]
+

@@ -1,0 +1,147 @@
+[
+  {
+    "inputs": {
+      "case_id": "case_001",
+      "scenario": "A finance team must check 50,000 generated answers to arithmetic questions. Every question has one verified numeric answer and tolerance is zero.",
+      "constraints": "High volume, deterministic ground truth, low ambiguity."
+    },
+    "outputs": {
+      "strategy": "AUTOMATED",
+      "rationale": "Exact-match or numeric checks are reliable and scalable because every item has an unambiguous verified answer."
+    },
+    "metadata": {"category": "deterministic_accuracy", "difficulty": "easy", "source": "course-designed fictional scenario"}
+  },
+  {
+    "inputs": {
+      "case_id": "case_002",
+      "scenario": "A fashion brand is choosing among twelve campaign slogans. The main question is which slogan feels distinctive, emotionally resonant, and faithful to the brand voice.",
+      "constraints": "Small sample, subjective taste, no single correct answer."
+    },
+    "outputs": {
+      "strategy": "HUMAN",
+      "rationale": "Human reviewers are best placed to judge emotional resonance, originality, and nuanced brand fit."
+    },
+    "metadata": {"category": "subjective_quality", "difficulty": "easy", "source": "course-designed fictional scenario"}
+  },
+  {
+    "inputs": {
+      "case_id": "case_003",
+      "scenario": "A bank is piloting an LLM that drafts customer explanations for declined loan applications. Each response must use only approved reasons, include mandatory text, and remain respectful.",
+      "constraints": "Regulated and high-impact; some requirements are machine-checkable while tone and factual boundaries are nuanced."
+    },
+    "outputs": {
+      "strategy": "HYBRID",
+      "rationale": "Automated rules should verify controlled text and approved reasons, while trained humans review nuanced accuracy, tone, and edge cases."
+    },
+    "metadata": {"category": "regulated_communications", "difficulty": "hard", "source": "course-designed fictional scenario"}
+  },
+  {
+    "inputs": {
+      "case_id": "case_004",
+      "scenario": "An API assistant must return JSON containing exactly three required keys with defined data types and no additional properties.",
+      "constraints": "Formal schema exists and semantic quality is outside this test's scope."
+    },
+    "outputs": {
+      "strategy": "AUTOMATED",
+      "rationale": "A JSON Schema validator can deterministically test required keys, types, and forbidden additional properties at scale."
+    },
+    "metadata": {"category": "format_compliance", "difficulty": "easy", "source": "course-designed fictional scenario"}
+  },
+  {
+    "inputs": {
+      "case_id": "case_005",
+      "scenario": "An editor is selecting the most compelling ending from five experimental short stories. All endings are grammatically correct and deliberately unconventional.",
+      "constraints": "Creative preference is the target; the sample is small."
+    },
+    "outputs": {
+      "strategy": "HUMAN",
+      "rationale": "Human literary judgment is necessary because the criterion is creative impact rather than objectively measurable correctness."
+    },
+    "metadata": {"category": "creative_preference", "difficulty": "medium", "source": "course-designed fictional scenario"}
+  },
+  {
+    "inputs": {
+      "case_id": "case_006",
+      "scenario": "A health information chatbot is being tested before a limited pilot. Evaluators must detect prohibited diagnosis claims, verify required safety language, and assess whether advice could mislead a patient.",
+      "constraints": "High stakes; some failures follow explicit rules while harmful ambiguity requires expertise."
+    },
+    "outputs": {
+      "strategy": "HYBRID",
+      "rationale": "Automated safety checks provide coverage, but qualified human reviewers must assess contextual harm, ambiguity, and escalation quality."
+    },
+    "metadata": {"category": "safety_critical", "difficulty": "hard", "source": "course-designed fictional scenario"}
+  },
+  {
+    "inputs": {
+      "case_id": "case_007",
+      "scenario": "A museum is reviewing AI-written exhibit labels about a living Indigenous community. The central question is whether the framing is respectful and represents the community's perspective appropriately.",
+      "constraints": "Small dataset; legitimacy and lived experience matter more than scale."
+    },
+    "outputs": {
+      "strategy": "HUMAN",
+      "rationale": "Review should be led by appropriately situated human experts and community representatives because cultural legitimacy cannot be reduced to a generic metric."
+    },
+    "metadata": {"category": "cultural_sensitivity", "difficulty": "hard", "source": "course-designed fictional scenario"}
+  },
+  {
+    "inputs": {
+      "case_id": "case_008",
+      "scenario": "A coding assistant generates implementations of a pure function. A complete unit-test suite specifies expected behavior, including edge cases, and the only release criterion is whether all tests pass.",
+      "constraints": "Deterministic execution environment and complete tests."
+    },
+    "outputs": {
+      "strategy": "AUTOMATED",
+      "rationale": "Executing the complete test suite gives an objective, repeatable, and scalable pass-or-fail signal."
+    },
+    "metadata": {"category": "code_execution", "difficulty": "easy", "source": "course-designed fictional scenario"}
+  },
+  {
+    "inputs": {
+      "case_id": "case_009",
+      "scenario": "A team is entering a novel scientific domain with no benchmark and no accepted answer key. Its first goal is to define what a high-quality answer looks like and create twenty gold examples.",
+      "constraints": "No ground truth exists yet; domain expertise is available."
+    },
+    "outputs": {
+      "strategy": "HUMAN",
+      "rationale": "Domain experts must establish the rubric and initial gold standard before automated evaluation can be calibrated."
+    },
+    "metadata": {"category": "ground_truth_creation", "difficulty": "medium", "source": "course-designed fictional scenario"}
+  },
+  {
+    "inputs": {
+      "case_id": "case_010",
+      "scenario": "A company has built an LLM-as-judge for support responses and wants to know whether its scores are trustworthy before using it on 100,000 conversations.",
+      "constraints": "Large future volume; automated judge is new and unvalidated."
+    },
+    "outputs": {
+      "strategy": "HYBRID",
+      "rationale": "Humans should label a representative calibration set, then the automated judge can scale after agreement and failure modes are measured."
+    },
+    "metadata": {"category": "judge_validation", "difficulty": "medium", "source": "course-designed fictional scenario"}
+  },
+  {
+    "inputs": {
+      "case_id": "case_011",
+      "scenario": "An agent must call one of four tools and produce arguments that conform to the selected tool's schema. Test cases specify the correct tool and exact required arguments.",
+      "constraints": "Structured outputs and complete expected values are available."
+    },
+    "outputs": {
+      "strategy": "AUTOMATED",
+      "rationale": "Tool choice and schema-conformant arguments can be compared directly with complete reference values."
+    },
+    "metadata": {"category": "tool_use", "difficulty": "medium", "source": "course-designed fictional scenario"}
+  },
+  {
+    "inputs": {
+      "case_id": "case_012",
+      "scenario": "A recruitment platform generates explanations for candidate rankings. The team must detect prohibited attributes, compare treatment across counterfactual profiles, and assess subtle stereotyping in the language.",
+      "constraints": "High impact; repeatable tests and nuanced fairness review are both required."
+    },
+    "outputs": {
+      "strategy": "HYBRID",
+      "rationale": "Automated counterfactual and prohibited-term tests provide consistent coverage, while humans assess subtle bias, context, and material impact."
+    },
+    "metadata": {"category": "fairness", "difficulty": "hard", "source": "course-designed fictional scenario"}
+  }
+]
+

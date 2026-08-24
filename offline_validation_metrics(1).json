@@ -1,0 +1,17 @@
+{
+  "validation_mode": "offline_fixed_fixture_not_model_output",
+  "case_count": 12,
+  "strategy_accuracy": 0.75,
+  "format_compliance_rate": 1.0,
+  "accuracy_by_expected_strategy": {
+    "AUTOMATED": 1.0,
+    "HUMAN": 0.75,
+    "HYBRID": 0.5
+  },
+  "failed_case_ids": [
+    "case_003",
+    "case_005",
+    "case_012"
+  ],
+  "note": "These metrics validate the pipeline with fixed fixtures; they are not LangSmith experiment results."
+}
