@@ -4,7 +4,7 @@
 
 This repository contains everything you need for this lab.
 
-## Step 1: Domain and Documents
+## Step 1: Choose Your Domain and Documents
 
 - **Domain:** Retail customer support, the same scenario used in the companion `lab-llm-judges` lab: a chatbot that handles returns, product questions, and complaints for an online retailer.
 - **Sources:** Examples are written by hand, based on realistic support intents from two benchmarks researched in `lab-llm-judges/benchmark_audit.md`: the [ABCD dataset](https://github.com/asappresearch/abcd) (policy-bound refund and order-change dialogues) and the [Bitext Customer Support dataset](https://huggingface.co/datasets/bitext/Bitext-customer-support-llm-chatbot-training-dataset) (intent categories such as ORDER, REFUND, DELIVERY, COMPLAINT). The 5 evaluation prompts from `lab-llm-judges/evaluation_design.md` are expanded into the fuller example set here.
