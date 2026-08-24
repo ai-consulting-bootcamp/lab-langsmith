@@ -19,6 +19,7 @@ This repository contains everything you need for this lab.
 - `langsmith_ui_review.md`: notes from reviewing datasets and experiment traces directly in the LangSmith UI
 - `evaluation_summary.md`: methodology, results, and the custom tone evaluator's findings
 - `optimization_summary.md`: cost-performance comparison across `gpt-4o-mini`, `gpt-4o`, and `gpt-5.6-luna`
+- `troubleshooting_notes.md`: real issues hit while building the notebook, and how they were fixed
 
 ## Dataset and experiments
 
