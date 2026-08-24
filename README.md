@@ -1,23 +1,30 @@
-# Micromanage your agents
+# Minimal LangSmith Lab
 
-**Track:** Module 5 — Evaluation & strategy · **When:** Week 7, Day 4 · **Status:** Required
+Author: Parisa Dehghani
 
-This repository contains everything you need for this lab.
+This folder contains the simplest version of the lab required by the provided brief.
 
-## Files
+What it does:
+- builds a 10-example repository-QA dataset from local files
+- defines a traceable target function
+- evaluates outputs with exact match
+- optionally uploads the dataset and experiment to LangSmith when `LANGSMITH_API_KEY` is set
 
-- [`instructions.md`](./instructions.md) — the lab instructions
-- [`rubric.md`](./rubric.md) — how your submission is graded; this is what the AI reviewer checks your PR against
+How to run:
 
-## How to complete this lab
+```bash
+cd /home/parisa/Ironhack-Practice/7th-Week/Day5/lab-langsmith
+python run_lab.py --mode local
+```
 
-1. **Fork** this repository.
-2. Do the work described in `instructions.md`, committing to your fork.
-3. Open a **pull request** back into this repository.
-4. You'll receive **AI feedback** on your PR based on `rubric.md`. Address any blocking feedback and push updates to the same PR.
+To try the LangSmith upload path, set `LANGSMITH_API_KEY` and run:
 
-## Submission hygiene
+```bash
+cd /home/parisa/Ironhack-Practice/7th-Week/Day5/lab-langsmith
+python run_lab.py --mode both
+```
 
-- Keep this repository scoped to this lab only — no unrelated projects or personal files.
-- Use clear, descriptive filenames.
-- Remove secrets, API keys, and tokens before committing.
+The local run writes the short narrative to `evaluation_summary.md`.  
+
+# For a clean run on this machine, use:
+python run_lab.py --mode local. For the full LangSmith attempt, you need a machine that can actually reach the EU endpoint.

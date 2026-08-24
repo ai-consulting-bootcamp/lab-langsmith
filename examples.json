@@ -1,0 +1,122 @@
+[
+  {
+    "inputs": {
+      "question": "What is OpenEvals for?"
+    },
+    "outputs": {
+      "answer": "OpenEvals is an open-source package of evaluators for LLM applications."
+    },
+    "metadata": {
+      "source": "README.md",
+      "topic": "overview"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Which Python version does the package require?"
+    },
+    "outputs": {
+      "answer": "Python 3.10 or newer."
+    },
+    "metadata": {
+      "source": "pyproject.toml",
+      "topic": "setup"
+    }
+  },
+  {
+    "inputs": {
+      "question": "What is the default quickstart judge model mentioned in the README?"
+    },
+    "outputs": {
+      "answer": "openai:gpt-5.6-sol"
+    },
+    "metadata": {
+      "source": "README.md",
+      "topic": "quickstart"
+    }
+  },
+  {
+    "inputs": {
+      "question": "What environment variable do you set for the OpenAI API key?"
+    },
+    "outputs": {
+      "answer": "OPENAI_API_KEY"
+    },
+    "metadata": {
+      "source": "README.md",
+      "topic": "setup"
+    }
+  },
+  {
+    "inputs": {
+      "question": "What environment variable do you set for the LangSmith API key?"
+    },
+    "outputs": {
+      "answer": "LANGSMITH_API_KEY"
+    },
+    "metadata": {
+      "source": "provided brief",
+      "topic": "setup"
+    }
+  },
+  {
+    "inputs": {
+      "question": "How many examples does the lab require at minimum?"
+    },
+    "outputs": {
+      "answer": "At least 10 examples."
+    },
+    "metadata": {
+      "source": "provided brief",
+      "topic": "dataset"
+    }
+  },
+  {
+    "inputs": {
+      "question": "What file should contain the short evaluation paragraph?"
+    },
+    "outputs": {
+      "answer": "evaluation_summary.md"
+    },
+    "metadata": {
+      "source": "provided brief",
+      "topic": "deliverable"
+    }
+  },
+  {
+    "inputs": {
+      "question": "What should be excluded from this task?"
+    },
+    "outputs": {
+      "answer": "The extension activities are optional and should be skipped."
+    },
+    "metadata": {
+      "source": "provided brief",
+      "topic": "scope"
+    }
+  },
+  {
+    "inputs": {
+      "question": "What kind of dataset should be created in LangSmith?"
+    },
+    "outputs": {
+      "answer": "A custom dataset based on your chosen domain or documents."
+    },
+    "metadata": {
+      "source": "provided brief",
+      "topic": "dataset"
+    }
+  },
+  {
+    "inputs": {
+      "question": "What is the simplest evaluation criterion used in the lab implementation?"
+    },
+    "outputs": {
+      "answer": "Exact match against the reference answer."
+    },
+    "metadata": {
+      "source": "lab implementation",
+      "topic": "evaluation"
+    }
+  }
+]

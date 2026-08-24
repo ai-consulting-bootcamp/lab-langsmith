@@ -1,0 +1,3 @@
+Author: Parisa Dehghani
+
+This minimal lab uses a 10-example repository-QA dataset built from the local README, package metadata, and the provided brief; the target function is a traceable lookup-based answerer, and the evaluator is exact match against the reference answer. On the local dry run, the target scored 10/10 (100% accuracy). The main limitation is that this is a lightweight smoke test rather than a real LLM benchmark; the next step would be to replace the lookup target with an LLM-backed function and run the same dataset through LangSmith with live tracing. LangSmith experiment was not run in this environment because no API key was set.
