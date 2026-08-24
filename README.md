@@ -35,6 +35,8 @@ LANGSMITH_TRACING=true
 OPENAI_API_KEY=your_key
 ```
 
+The `.env` file (not committed) holds `LANGSMITH_API_KEY`, `LANGSMITH_ENDPOINT`, and `OPENAI_API_KEY`.
+
 Then run in order:
 ```bash
 python create_dataset.py   # uploads the 13 examples to LangSmith (skips if dataset already exists)
