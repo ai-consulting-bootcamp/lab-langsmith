@@ -1,0 +1,13 @@
+case_id,category,difficulty,expected_strategy,fixture_strategy,fixture_rationale,strategy_exact_match,format_compliance,validation_mode
+case_001,deterministic_accuracy,easy,AUTOMATED,AUTOMATED,Verified numeric answers make exact automated comparison reliable at this volume.,1,1,offline_fixed_fixture_not_model_output
+case_002,subjective_quality,easy,HUMAN,HUMAN,People should judge emotional resonance and brand voice because no objective answer exists.,1,1,offline_fixed_fixture_not_model_output
+case_003,regulated_communications,hard,HYBRID,AUTOMATED,Rules can check the approved reason and mandatory text across every draft.,0,1,offline_fixed_fixture_not_model_output
+case_004,format_compliance,easy,AUTOMATED,AUTOMATED,"JSON Schema can test the keys, types, and additional-property rule deterministically.",1,1,offline_fixed_fixture_not_model_output
+case_005,creative_preference,medium,HUMAN,HYBRID,Automated style metrics can narrow the options before an editor makes the final decision.,0,1,offline_fixed_fixture_not_model_output
+case_006,safety_critical,hard,HYBRID,HYBRID,"Rule checks provide coverage, while qualified reviewers must judge contextual safety and possible harm.",1,1,offline_fixed_fixture_not_model_output
+case_007,cultural_sensitivity,hard,HUMAN,HUMAN,"Community representatives and relevant experts should judge respect, framing, and legitimacy.",1,1,offline_fixed_fixture_not_model_output
+case_008,code_execution,easy,AUTOMATED,AUTOMATED,The complete executable test suite supplies an objective release signal.,1,1,offline_fixed_fixture_not_model_output
+case_009,ground_truth_creation,medium,HUMAN,HUMAN,Experts must first define the quality standard and produce the gold examples.,1,1,offline_fixed_fixture_not_model_output
+case_010,judge_validation,medium,HYBRID,HYBRID,Human calibration should validate the judge before automated scoring is applied at scale.,1,1,offline_fixed_fixture_not_model_output
+case_011,tool_use,medium,AUTOMATED,AUTOMATED,Correct tool selection and arguments can be compared directly with complete references.,1,1,offline_fixed_fixture_not_model_output
+case_012,fairness,hard,HYBRID,HUMAN,"Human reviewers should assess stereotyping, context, and fairness impacts in the ranking explanations.",0,1,offline_fixed_fixture_not_model_output

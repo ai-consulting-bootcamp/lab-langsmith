@@ -1,0 +1,7 @@
+langsmith>=0.3.13,<1
+openai>=1.0,<3
+openevals>=0.1,<1
+pandas>=2.0,<3
+python-dotenv>=1.0,<2
+pytest>=8.0,<10
+
