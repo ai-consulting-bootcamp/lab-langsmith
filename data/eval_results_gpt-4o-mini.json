@@ -1,0 +1,182 @@
+[
+  {
+    "example_id": "14a21ce1-17e6-45e0-9bff-eae6758c76cb",
+    "primary_tag": "Productivity",
+    "reference_title": "This 10-Minute Routine Will Increase Your Clarity And Creativity",
+    "generated_title": "Unlocking the Power of Your Subconscious: A Simple Routine for Success",
+    "correctness_score": 0.9,
+    "correctness_reasoning": "The generated title, \"Unlocking the Power of Your Subconscious: A Simple Routine for Success,\" accurately represents the article's core topic about harnessing the subconscious mind to achieve success. It reflects the idea presented in the article about directing the subconscious for personal development and shares a practical aspect related to routine, similar to the reference title. The only slight deviation is in the phrasing of 'clarity and creativity' as found in the reference title, which is more specific than the broader 'power' in the generated title. Nonetheless, the title is reasonable and publishable for this content. Thus, the score should be: 0.9.",
+    "run_id": "46f6e3db-9c78-4a05-9c1b-a00a5d43f418",
+    "error": null
+  },
+  {
+    "example_id": "11db44cd-2a41-4d88-9e6f-49ae93324b75",
+    "primary_tag": "People",
+    "reference_title": "Dr Faisal Dar \u2014 Pioneer of Liver Transplantation in Pakistan",
+    "generated_title": "Revolutionizing Healthcare: Dr. Faisal Dar's Journey to Pioneering Liver Transplantation in Pakistan",
+    "correctness_score": 0.9,
+    "correctness_reasoning": "The generated title captures the essence of the article, highlighting Dr. Faisal Dar's significant achievements in liver transplantation in Pakistan, which accurately reflects the content of the excerpt. It presents his journey in a way that emphasizes the revolutionary impact he has had on healthcare in the region. While the wording and structure differ slightly from the reference title, the core subject remains consistent. Therefore, the title aligns well with both the article's content and the subject of the reference title. Thus, the score should be: 0.9.",
+    "run_id": "e46bc254-c3cf-45df-8979-dfae5b1b7329",
+    "error": null
+  },
+  {
+    "example_id": "17656cda-444b-4014-a692-ca674ac0d52b",
+    "primary_tag": "Writing",
+    "reference_title": "For Creatives, Silence Isn\u2019t Always Golden",
+    "generated_title": "Why Creatives Thrive in Coffee Shop Chaos: The Surprising Science Behind Noise and Innovation",
+    "correctness_score": 0.9,
+    "correctness_reasoning": "The generated title captures the core subject of how noise in environments like coffee shops can impact creativity, and it aligns well with the article\u2019s content discussing the relationship between ambient noise and creative performance. It also effectively reflects the surprising findings of research regarding creatives thriving in such settings. The reference title suggests a similar paradoxical notion about silence and creativity, which is also touched upon in the article. However, the phrase 'Chaos' might imply a greater level of disorder than is discussed in the article, which focuses more on moderate ambient noise rather than outright chaos. Thus, the score should be: 0.9.",
+    "run_id": "6a69d3dd-8f3c-4431-9ecd-253262d5b166",
+    "error": null
+  },
+  {
+    "example_id": "1c8aed68-5aaf-43cb-989e-b380e72cdc57",
+    "primary_tag": "Self Improvement",
+    "reference_title": "Sunlight \u2014 The Natural Supplement For Our Mental Health",
+    "generated_title": "The Surprising Connection Between Sunlight and Your Mental Wellbeing",
+    "correctness_score": 1.0,
+    "correctness_reasoning": "The generated title, \"The Surprising Connection Between Sunlight and Your Mental Wellbeing,\" accurately represents the article's focus on the relationship between sunlight and mental health, specifically how it affects serotonin levels and overall wellbeing. It closely aligns with the reference title, which emphasizes the positive impact of sunlight as a natural supplement for mental health. Both titles target the same core subject of how sunlight influences mental wellbeing. Thus, the score should be: 1.0.",
+    "run_id": "2b095d68-e42b-439e-89c5-3738f6625722",
+    "error": null
+  },
+  {
+    "example_id": "39be3ad8-20dd-440e-a3db-9f867221a2fe",
+    "primary_tag": "Marketing",
+    "reference_title": "An Effective Five-Step Process for Writing Captivating Headlines",
+    "generated_title": "Master the Art of Attention: A Five-Step Guide to Crafting Irresistible Headlines",
+    "correctness_score": 0.9,
+    "correctness_reasoning": "The generated title 'Master the Art of Attention: A Five-Step Guide to Crafting Irresistible Headlines' accurately represents the article's content about creating captivating headlines through a five-step process. Although it uses different wording and adds a flair to the phrase 'Master the Art of Attention,' it still captures the core subject of writing effective headlines. There is a minor deviation in not using the word 'Effective' which the reference title does, but the overall essence remains intact. Thus, the score should be: 0.9.",
+    "run_id": "2db73fdc-18cd-41a6-b0ae-f0d80486365a",
+    "error": null
+  },
+  {
+    "example_id": "1909b1bf-e462-4798-a7cd-328e27fd7f37",
+    "primary_tag": "Mental Health",
+    "reference_title": "Mental Note Vol. 24",
+    "generated_title": "Celebrating Connection: Our Top Stories on Mental Health and Resilience This Holiday Season",
+    "correctness_score": 0.8,
+    "correctness_reasoning": "The generated title, \"Celebrating Connection: Our Top Stories on Mental Health and Resilience This Holiday Season,\" accurately reflects the themes of appreciation, mental health, and festive spirit discussed in the article excerpt. It suggests a collection of important stories related to mental health, which aligns with the article's content about recognizing top stories and the significance of mental health. However, the reference title \"Mental Note Vol. 24\" is much more vague and does not specifically mention the holiday or mental health while indicating it is the 24th issue. Therefore, while the generated title is certainly publishable and relevant, it does stray into more specific territory that may not directly reflect the broader and less specific nature of the reference title. Thus, the score should be: 0.8.",
+    "run_id": "b1254423-00ae-4add-84b6-dca5026c8ee2",
+    "error": null
+  },
+  {
+    "example_id": "59c34b77-e8c8-4e5c-953b-12717ef61592",
+    "primary_tag": "Marketing",
+    "reference_title": "Loss Aversion \u2014 how fear influences customer choice",
+    "generated_title": "Harnessing the Power of Loss Aversion: How Fear of Missing Out Drives Consumer Choices",
+    "correctness_score": 1.0,
+    "correctness_reasoning": "The generated title accurately reflects the core topic of the article, which discusses Loss Aversion and its influence on consumer choices, particularly in relation to Fear of Missing Out (FOMO). It encapsulates the psychological principles mentioned in the article and would be a reasonable title for a human editor to publish. The generated title captures the same core subject as the reference title, though it uses slightly different wording. Thus, the score should be: 1.0.",
+    "run_id": "65913d18-4794-4669-8e46-1d25080bdad7",
+    "error": null
+  },
+  {
+    "example_id": "6b08be3f-5205-46b8-a29e-f06f7fe43ede",
+    "primary_tag": "Brain",
+    "reference_title": "Surviving a Rod Through the Head",
+    "generated_title": "How Phineas Gage's Brain Injury Revolutionized Our Understanding of Personality and Neuroscience",
+    "correctness_score": 1.0,
+    "correctness_reasoning": "The generated title accurately represents the article's content about Phineas Gage and his brain injury, emphasizing its significance in understanding personality and neuroscience. It aligns with the article's focus on the implications of Gage's accident, which transformed the perception of brain function. Although the wording differs from the reference title, it captures the core subject accurately. Thus, the score should be: 1.0.",
+    "run_id": "724ec73c-0662-48bd-8975-c19a54387238",
+    "error": null
+  },
+  {
+    "example_id": "6689e97c-1499-4243-bfe3-871e8a2811b6",
+    "primary_tag": "Health",
+    "reference_title": "The FDA Banned These Chemicals \u2014 and They\u2019re Still Everywhere",
+    "generated_title": "The Hidden Dangers of Antibacterial Chemicals: Why Your Home May Still Be Contaminated",
+    "correctness_score": 0.9,
+    "correctness_reasoning": "The generated title, \"The Hidden Dangers of Antibacterial Chemicals: Why Your Home May Still Be Contaminated\" accurately reflects the article's content, focusing on the ongoing presence of the antibacterial chemicals despite the FDA ban. It captures the core subject of contamination by antibacterial agents in everyday products within the home. While the reference title emphasizes the FDA ban, the generated title broadens the discussion to highlight health risks and the ongoing presence of these chemicals. Therefore, it is a reasonable and publishable title. Thus, the score should be: 0.9.",
+    "run_id": "ef25fe2b-e2d1-4575-9226-4c8033e2f562",
+    "error": null
+  },
+  {
+    "example_id": "9c5001b4-fe4b-48e9-b95d-4a2fbbba3c14",
+    "primary_tag": "Mental Health",
+    "reference_title": "Your Brain On Coronavirus",
+    "generated_title": "The Hidden Toll of COVID-19: Unraveling the Pandemic's Impact on Health and Loneliness",
+    "correctness_score": 1.0,
+    "correctness_reasoning": "The generated title accurately reflects the core subject matter of the article, which discusses the multifaceted impact of the COVID-19 pandemic on health, including brain health and mental well-being, as well as themes of loneliness and isolation. It encompasses the troubling consequences of the pandemic, aligning with the reference title's focus on the effects of the coronavirus. Therefore, it meets all criteria for a correct and publishable title. Thus, the score should be: 1.0.",
+    "run_id": "ab226e9f-aeaf-4b65-a768-018b04b5da5d",
+    "error": null
+  },
+  {
+    "example_id": "6f21eb78-cb56-4d20-a8bf-22d0d082405c",
+    "primary_tag": "Creativity",
+    "reference_title": "Can This Toxic Question Please Just Go Away?",
+    "generated_title": "The Art of Writing: Balancing Passion and Profit in Your Creative Journey",
+    "correctness_score": 0.5,
+    "correctness_reasoning": "The title 'The Art of Writing: Balancing Passion and Profit in Your Creative Journey' does capture certain elements of the article, such as the tension between writing for passion and for profit. However, it does not align well with the more conflict-oriented nature of the article, which discusses the debate over whether one should write because they must or to make money. The reference title suggests a critique of a prevailing mindset or question, which is less directly reflected in the generated title. Moreover, the title sounds more like a generic article on writing rather than addressing the specific topic of the debate as presented in the article. Thus, the score should be: 0.5.",
+    "run_id": "9513788e-04ce-4b1d-b9cb-d69b6b26f926",
+    "error": null
+  },
+  {
+    "example_id": "a60e15ad-40b3-4ec1-9c64-48ac66ce9868",
+    "primary_tag": "Entrepreneurship",
+    "reference_title": "To Quickly Build Trust, Tell Your Origin Story",
+    "generated_title": "Unleashing the Power of Your Origin Story: 5 Key Elements to Build Trust and Connection",
+    "correctness_score": 0.9,
+    "correctness_reasoning": "The generated title, \"Unleashing the Power of Your Origin Story: 5 Key Elements to Build Trust and Connection,\" effectively captures the core subject of the article, which focuses on crafting an origin story and its importance in building trust. It also highlights the relevance of key elements to the process, similar to the essence of the reference title, which emphasizes telling an origin story to quickly build trust. Both titles align with the article's main theme, making the generated title a reasonable and accurate representation. Thus, the score should be: 0.9.",
+    "run_id": "2b8ed3dd-2033-4c07-a960-d653d986e12d",
+    "error": null
+  },
+  {
+    "example_id": "b6eff6b3-ef32-4e4e-8446-e33b988db314",
+    "primary_tag": "Society",
+    "reference_title": "Mentally, Young Adults Are Suffering Most From COVID",
+    "generated_title": "The Silent Struggle: How COVID-19 Deepened Mental Health Crises Among Young Adults",
+    "correctness_score": 1.0,
+    "correctness_reasoning": "The generated title accurately represents the key topic of the article, which discusses the significant mental health impacts of COVID-19 on young adults. It captures the essence of the article by highlighting the struggles young adults face, similar to the reference title. There is a clear alignment with the content, covering the deepened mental health crises and the specific demographic affected. Additionally, it meets the criteria for a reasonable publishable title. Thus, the score should be: 1.0.",
+    "run_id": "290ac761-362c-4518-87cb-2cc22b2ad767",
+    "error": null
+  },
+  {
+    "example_id": "bc33c4f1-21ae-4fff-a884-eae2e04a7874",
+    "primary_tag": "Lifestyle",
+    "reference_title": "The Ted Talk That Changed My Life",
+    "generated_title": "Harnessing Curiosity: The Key to Breaking Bad Habits Through Mindfulness",
+    "correctness_score": 0.8,
+    "correctness_reasoning": "The generated title, 'Harnessing Curiosity: The Key to Breaking Bad Habits Through Mindfulness,' accurately reflects the main themes discussed in the article, particularly focusing on how mindfulness and curiosity can help disrupt negative habit patterns. It captures the essence of mindfulness as a tool for behavior change, which aligns well with the article's topic. However, while it fits the content well, it does not align closely with the reference title, which suggests a more personal reflection rather than a thematic analysis. Thus, the score should be: 0.8.",
+    "run_id": "5c3d7790-6904-4460-af16-6e8ba3b0776b",
+    "error": null
+  },
+  {
+    "example_id": "c27832ea-7816-43d9-88a5-98be7e6a6669",
+    "primary_tag": "Productivity",
+    "reference_title": "Four Exercises to Strengthen Your Writing",
+    "generated_title": "Unlock Your Creativity: 4 Essential Writing Exercises to Overcome Dialogue Dilemmas and Writer's Block",
+    "correctness_score": 0.8,
+    "correctness_reasoning": "The generated title, \"Unlock Your Creativity: 4 Essential Writing Exercises to Overcome Dialogue Dilemmas and Writer's Block,\" accurately reflects the main content of the article, emphasizing the focus on writing exercises that help with dialogue and writer's block. It captures the essence of the article, which is about sharing specific exercises, and is a reasonable title for publication. However, it diverges slightly from the reference title, which is more straightforward and less promotional. Thus, the score should be: 0.8.",
+    "run_id": "4ea08c67-3c26-4003-a910-d88c042ceb59",
+    "error": null
+  },
+  {
+    "example_id": "f1f315d6-3d71-4caf-b866-bf749eb03235",
+    "primary_tag": "Work",
+    "reference_title": "How to Make Your Day Job Support Your Art",
+    "generated_title": "Embracing the Day Job: How to Let Your 9-to-5 Fuel Your Artistic Passion",
+    "correctness_score": 1.0,
+    "correctness_reasoning": "The generated title accurately reflects the central theme of the article excerpt, which discusses the relationship between day jobs and artistic passion. It implies a supportive connection between working a regular job and pursuing one's art, which aligns perfectly with the content. Furthermore, it captures the essence of the reference title while using different wording. Therefore, it is a reasonable title that could be published. Thus, the score should be: 1.0.",
+    "run_id": "feec7071-fedd-44a9-b2e6-f2d6bcf45f35",
+    "error": null
+  },
+  {
+    "example_id": "cd7ba080-ea5e-40fc-953a-9119762fa13f",
+    "primary_tag": "Books",
+    "reference_title": "How to Turn Your Popular Blog Series Into a Bestselling Book",
+    "generated_title": "Unlocking Your Bestselling Book Dream: Strategies for Writers on a Budget",
+    "correctness_score": 0.8,
+    "correctness_reasoning": "The generated title, \"Unlocking Your Bestselling Book Dream: Strategies for Writers on a Budget,\" aligns reasonably well with the article's content, which discusses the journey of a writer towards achieving the dream of writing a bestselling book and touches on strategies for attracting readers. However, it emphasizes budget strategies, which is a narrower angle than the more general guidance provided in the article excerpt. The reference title focuses specifically on transforming a popular blog series into a bestseller, which is a more specific aspect not fully captured in the generated title. Thus, the score should be: 0.8.",
+    "run_id": "cc20e8a1-2ab9-4a30-8325-e38a38ca7747",
+    "error": null
+  },
+  {
+    "example_id": "e2b591fa-391e-47d3-a5e5-4189c6752465",
+    "primary_tag": "Health",
+    "reference_title": "Facing Three Fundamental Coronavirus Fears",
+    "generated_title": "Will SARS-CoV-2 Become Just Another Common Cold? Understanding the Path to Endemicity",
+    "correctness_score": 0.7,
+    "correctness_reasoning": "The generated title discusses the potential for SARS-CoV-2 to become endemic and compares it to other coronaviruses that cause the common cold. This aligns with the article's content about immunity and the historical context of coronaviruses. However, the title does not reflect the broader implications or fears regarding coronaviruses as suggested by the reference title, which discusses more general fears rather than the specifics of endemicity. Thus, the score should be: 0.7.",
+    "run_id": "9ba8e7ef-842d-4208-8700-2f6e0f0cb542",
+    "error": null
+  }
+]
