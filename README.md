@@ -53,12 +53,11 @@ The command is idempotent for an existing dataset with the expected 12 rows. It 
 
 ## LangSmith links and results
 
-- **Dataset:** Pending a credentialed run; expected name `ironhack-support-ticket-priority-v1`
-- **Experiment:** Pending a credentialed run
+- **Dataset:** [`ironhack-support-ticket-priority-v1`](https://smith.langchain.com/o/90426365-e410-4629-9c60-e0e6f05ccf5d/datasets/b8d3b2a8-e09a-430e-8bba-dec2aa346dd9) — 12 verified examples
+- **Experiment:** [`ticket-priority-baseline-32443137`](https://smith.langchain.com/o/90426365-e410-4629-9c60-e0e6f05ccf5d/datasets/b8d3b2a8-e09a-430e-8bba-dec2aa346dd9/compare?selectedSessions=96da469f-89b8-4c39-b851-114b11a97813)
+- **Result:** 100% exact priority accuracy (12/12), zero run errors
 - **Analysis:** [`evaluation_summary.md`](evaluation_summary.md)
 - **Evidence record:** [`langsmith_evidence.md`](langsmith_evidence.md)
-
-No hosted identifiers, URLs, or metrics are claimed until an authenticated run succeeds.
 
 ## File map
 
