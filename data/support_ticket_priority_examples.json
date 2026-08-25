@@ -1,0 +1,62 @@
+[
+  {
+    "inputs": {"ticket": "All customers receive a 500 error when they try to sign in. The outage started 15 minutes ago and there is no workaround."},
+    "outputs": {"priority": "P1"},
+    "metadata": {"category": "availability", "difficulty": "clear", "reason": "Complete customer-facing outage with no workaround"}
+  },
+  {
+    "inputs": {"ticket": "A public storage bucket is exposing customer invoices with names and billing addresses. Please contain this immediately."},
+    "outputs": {"priority": "P1"},
+    "metadata": {"category": "security", "difficulty": "clear", "reason": "Active personal-data exposure"}
+  },
+  {
+    "inputs": {"ticket": "Checkout is failing for every order in the EU storefront. Customers cannot pay by any method."},
+    "outputs": {"priority": "P1"},
+    "metadata": {"category": "payments", "difficulty": "clear", "reason": "Revenue-critical function unavailable to all users in a region"}
+  },
+  {
+    "inputs": {"ticket": "A deployment corrupted newly uploaded documents, and affected files cannot be restored from the application."},
+    "outputs": {"priority": "P1"},
+    "metadata": {"category": "data_integrity", "difficulty": "clear", "reason": "Active customer data loss"}
+  },
+  {
+    "inputs": {"ticket": "Report exports time out for files above 20 MB. Smaller exports work, so analysts can split reports as a temporary workaround."},
+    "outputs": {"priority": "P2"},
+    "metadata": {"category": "degradation", "difficulty": "clear", "reason": "Important feature degraded with a workaround"}
+  },
+  {
+    "inputs": {"ticket": "About one third of mobile users see duplicate notifications. Core account actions still work."},
+    "outputs": {"priority": "P2"},
+    "metadata": {"category": "mobile", "difficulty": "clear", "reason": "Material impact to many users without full outage"}
+  },
+  {
+    "inputs": {"ticket": "The finance team cannot load the monthly reconciliation dashboard, but they can download the same figures as CSV."},
+    "outputs": {"priority": "P2"},
+    "metadata": {"category": "business_workflow", "difficulty": "boundary", "reason": "Important workflow blocked but an adequate workaround exists"}
+  },
+  {
+    "inputs": {"ticket": "Search results are taking 12 seconds instead of 2 seconds for most users. Results are still correct and other features are normal."},
+    "outputs": {"priority": "P2"},
+    "metadata": {"category": "performance", "difficulty": "boundary", "reason": "Widespread severe degradation, not a complete outage"}
+  },
+  {
+    "inputs": {"ticket": "How can I change the email address on my account? I can still sign in and use the product."},
+    "outputs": {"priority": "P3"},
+    "metadata": {"category": "how_to", "difficulty": "clear", "reason": "Routine support question"}
+  },
+  {
+    "inputs": {"ticket": "The settings page has a typo in the sentence below the Save button."},
+    "outputs": {"priority": "P3"},
+    "metadata": {"category": "cosmetic", "difficulty": "clear", "reason": "Cosmetic defect with no functional impact"}
+  },
+  {
+    "inputs": {"ticket": "Please add a dark mode option to the dashboard in a future release."},
+    "outputs": {"priority": "P3"},
+    "metadata": {"category": "feature_request", "difficulty": "clear", "reason": "Non-urgent enhancement request"}
+  },
+  {
+    "inputs": {"ticket": "One user cannot upload a profile photo in Safari 17, but PNG uploads work in Chrome and the rest of the account is unaffected."},
+    "outputs": {"priority": "P3"},
+    "metadata": {"category": "minor_bug", "difficulty": "boundary", "reason": "Narrow impact with an easy workaround"}
+  }
+]
