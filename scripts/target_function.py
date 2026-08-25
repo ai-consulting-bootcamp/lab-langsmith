@@ -31,17 +31,13 @@ SYSTEM_PROMPT = (
 )
 
 
-@traceable(name="blog-title-target")
-def generate_title(inputs: dict) -> dict:
-    """inputs: {"article_text": str} -> outputs: {"title": str}
-
-    Errors are caught and surfaced as an empty title + error field rather than
-    raising, so a single failed API call doesn't abort the whole evaluation run.
-    """
-    article_text = inputs["article_text"]
+def _call_model(model: str, article_text: str) -> dict:
+    """Shared call logic. Errors are caught and surfaced as an empty title +
+    error field rather than raising, so a single failed API call doesn't
+    abort the whole evaluation run."""
     try:
         response = openai_client.chat.completions.create(
-            model=MODEL,
+            model=model,
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": article_text},
@@ -53,6 +49,19 @@ def generate_title(inputs: dict) -> dict:
         return {"title": title}
     except Exception as e:
         return {"title": "", "error": str(e)}
+
+
+@traceable(name="blog-title-target")
+def generate_title(inputs: dict) -> dict:
+    """inputs: {"article_text": str} -> outputs: {"title": str}. Uses gpt-4o-mini."""
+    return _call_model(MODEL, inputs["article_text"])
+
+
+@traceable(name="blog-title-target-gpt4o")
+def generate_title_gpt4o(inputs: dict) -> dict:
+    """Same task as generate_title, but with gpt-4o - used for the Step 14
+    cost/performance A/B comparison (scripts/run_ab_comparison.py)."""
+    return _call_model("gpt-4o", inputs["article_text"])
 
 
 def _smoke_test():

@@ -37,6 +37,9 @@ rationale.
 6. **(Optional)** Built a second, independent custom evaluator for *editorial style fit*
    (does the title read like something a human editor would actually publish, vs. an
    SEO-style meta-description) and ran both evaluators together for comparison.
+7. **(Optional)** Ran an A/B cost-performance comparison between `gpt-4o-mini` and `gpt-4o`
+   on the same task, dataset, and evaluator, pulling real cost/token/latency data from
+   LangSmith to determine which model is actually worth its price for this task.
 
 ### Data Structure (Step 3)
 
@@ -95,8 +98,11 @@ no local download needed, overwrites `data/blog_title_examples.json`).
   are essentially uncorrelated (r = 0.025) — the model is topically accurate on nearly every
   example while almost never producing a title that would pass an editor's bar for
   conciseness. See `data/custom_evaluator_summary.md`.
+- **Cost/performance finding:** `gpt-4o` scored slightly *lower* than `gpt-4o-mini` (0.892
+  vs. 0.906) while costing **16.5x more per example** ($0.0016 vs. $0.0001) — no measurable
+  quality benefit justifies the extra cost on this task. See `optimization_summary.md`.
 
-Full narrative: [`evaluation_summary.md`](evaluation_summary.md).
+Full narrative: [`evaluation_summary.md`](evaluation_summary.md) and [`optimization_summary.md`](optimization_summary.md).
 
 ### How to Run
 
@@ -115,6 +121,10 @@ python3 scripts/analyze_results.py             # Step 9: aggregate/categorical a
 # Optional: custom evaluator (Steps 11-13)
 python3 scripts/custom_evaluator.py            # smoke-test the style-fit evaluator
 python3 scripts/run_evaluation_with_custom.py  # run both evaluators together
+
+# Optional: cost/performance A/B comparison (Steps 14-15)
+python3 scripts/run_ab_comparison.py           # run gpt-4o-mini vs gpt-4o
+python3 scripts/analyze_cost_performance.py    # compare cost, score, latency
 ```
 
 All scripts read credentials from `.env` (see `.env.example` for the required variables,
@@ -143,7 +153,11 @@ including the LangSmith EU endpoint).
 | `scripts/analyze_results.py` | Aggregate/categorical analysis script (Step 9) |
 | `scripts/custom_evaluator.py` | Custom style-fit evaluator (Step 11) |
 | `scripts/run_evaluation_with_custom.py` | Runs both evaluators together (Step 12) |
+| `scripts/run_ab_comparison.py` | Runs gpt-4o-mini vs. gpt-4o with cost/token/latency tracking (Step 14) |
+| `scripts/analyze_cost_performance.py` | Cost-performance comparison + recommendation (Step 15) |
+| `data/ab_comparison_results.json` | Per-example results for both models (Step 14) |
 | `evaluation_summary.md` | Required top-level evaluation report (Step 10) |
+| `optimization_summary.md` | Cost-performance recommendation (Step 16) |
 | `lab_proof.md` | Screenshot evidence write-up — see "Screenshots" below |
 | `screenshots/` | Screenshot image files |
 
@@ -164,6 +178,7 @@ Full write-up with captions in [`lab_proof.md`](lab_proof.md). Direct index for 
 - Correctness-only experiment (current, matches `data/eval_results_gpt-4o-mini.json`):
   `gpt-4o-mini-blog-title-55fcee73`
 - Correctness + style-fit experiment: `gpt-4o-mini-blog-title-multi-eval-993d4c7e`
+- A/B comparison experiments: `ab-gpt-4o-mini-92d3085a` and `ab-gpt-4o-fce27e55`
 
 `scripts/run_evaluation.py` was run more than once while testing the pipeline
 (`temperature=0.3` means each rerun regenerates slightly different titles/scores); all
