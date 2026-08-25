@@ -1,0 +1,440 @@
+[
+  {
+    "id": "ops_001",
+    "inputs": {
+      "question": "What Operations/CX finding is justified by the evidence?",
+      "evidence": [
+        {
+          "evidence_id": "EV-OPS-001",
+          "domain": "operations_cx",
+          "claim": "The organisation publishes an online volunteer application form.",
+          "evidence_type": "fact",
+          "status": "supported",
+          "confidence": 0.95,
+          "requires_validation": false,
+          "contradiction_ids": []
+        }
+      ]
+    },
+    "outputs": {
+      "expected_finding_type": "observed",
+      "expected_finding": "The organisation provides a publicly visible digital entry point for prospective volunteers.",
+      "expected_evidence_ids": [
+        "EV-OPS-001"
+      ],
+      "requires_validation": false
+    },
+    "metadata": {
+      "category": "observed",
+      "difficulty": "easy",
+      "capability": "supported_fact_detection"
+    }
+  },
+  {
+    "id": "ops_002",
+    "inputs": {
+      "question": "Classify the Operations/CX signal and produce the safest finding.",
+      "evidence": [
+        {
+          "evidence_id": "EV-OPS-002",
+          "domain": "operations_cx",
+          "claim": "Volunteer applications appear to be reviewed before onboarding.",
+          "evidence_type": "inference",
+          "status": "partially_supported",
+          "confidence": 0.72,
+          "requires_validation": true,
+          "contradiction_ids": []
+        }
+      ]
+    },
+    "outputs": {
+      "expected_finding_type": "inferred",
+      "expected_finding": "Public signals suggest a volunteer journey pattern at the qualification stage, but the pattern requires validation.",
+      "expected_evidence_ids": [
+        "EV-OPS-002"
+      ],
+      "requires_validation": true
+    },
+    "metadata": {
+      "category": "inferred",
+      "difficulty": "medium",
+      "capability": "inference_control"
+    }
+  },
+  {
+    "id": "ops_003",
+    "inputs": {
+      "question": "How should this hypothesis be represented?",
+      "evidence": [
+        {
+          "evidence_id": "EV-OPS-003",
+          "domain": "operations_cx",
+          "claim": "Volunteer applications may not receive a consistent first response.",
+          "evidence_type": "hypothesis",
+          "status": "partially_supported",
+          "confidence": 0.58,
+          "requires_validation": true,
+          "contradiction_ids": []
+        }
+      ]
+    },
+    "outputs": {
+      "expected_finding_type": "hypothesis",
+      "expected_evidence_ids": [
+        "EV-OPS-003"
+      ],
+      "requires_validation": true,
+      "expected_validation_focus": "Confirm whether volunteer applications receive acknowledgement and follow-up consistently."
+    },
+    "metadata": {
+      "category": "hypothesis",
+      "difficulty": "medium",
+      "capability": "hypothesis_handling"
+    }
+  },
+  {
+    "id": "ops_004",
+    "inputs": {
+      "question": "What can be concluded about the internal process?",
+      "evidence": [
+        {
+          "evidence_id": "EV-OPS-004",
+          "domain": "operations_cx",
+          "claim": "The public website contains a volunteer application form but does not describe what happens after submission.",
+          "evidence_type": "unknown",
+          "status": "unknown",
+          "confidence": 0.5,
+          "requires_validation": true,
+          "contradiction_ids": []
+        }
+      ]
+    },
+    "outputs": {
+      "expected_finding_type": "unknown",
+      "expected_finding": "Public evidence does not establish the internal volunteer process after the application stage.",
+      "expected_evidence_ids": [
+        "EV-OPS-004"
+      ],
+      "requires_validation": true
+    },
+    "metadata": {
+      "category": "unknown",
+      "difficulty": "medium",
+      "capability": "unknown_preservation"
+    }
+  },
+  {
+    "id": "ops_005",
+    "inputs": {
+      "question": "Resolve the safest Operations/CX conclusion from the conflicting evidence.",
+      "evidence": [
+        {
+          "evidence_id": "EV-OPS-005A",
+          "domain": "operations_cx",
+          "claim": "Volunteer enquiries receive a confirmation email.",
+          "evidence_type": "fact",
+          "status": "contradicted",
+          "confidence": 0.7,
+          "requires_validation": true,
+          "contradiction_ids": [
+            "EV-OPS-005B"
+          ]
+        },
+        {
+          "evidence_id": "EV-OPS-005B",
+          "domain": "operations_cx",
+          "claim": "No confirmation step is visible after volunteer enquiry submission.",
+          "evidence_type": "fact",
+          "status": "contradicted",
+          "confidence": 0.7,
+          "requires_validation": true,
+          "contradiction_ids": [
+            "EV-OPS-005A"
+          ]
+        }
+      ]
+    },
+    "outputs": {
+      "expected_finding_type": "unknown",
+      "expected_finding": "Public Operations/CX evidence is contradictory, so the current process state cannot be determined.",
+      "expected_evidence_ids": [
+        "EV-OPS-005A",
+        "EV-OPS-005B"
+      ],
+      "requires_validation": true
+    },
+    "metadata": {
+      "category": "contradiction",
+      "difficulty": "hard",
+      "capability": "contradiction_handling"
+    }
+  },
+  {
+    "id": "ops_006",
+    "inputs": {
+      "question": "Which evidence should be used for Operations/CX analysis?",
+      "evidence": [
+        {
+          "evidence_id": "EV-OPS-006A",
+          "domain": "operations_cx",
+          "claim": "The organisation publishes a stakeholder contact email.",
+          "evidence_type": "fact",
+          "status": "supported",
+          "confidence": 0.92,
+          "requires_validation": false,
+          "contradiction_ids": []
+        },
+        {
+          "evidence_id": "EV-REV-006B",
+          "domain": "revenue",
+          "claim": "Donation income increased year over year.",
+          "evidence_type": "fact",
+          "status": "supported",
+          "confidence": 0.9,
+          "requires_validation": false,
+          "contradiction_ids": []
+        }
+      ]
+    },
+    "outputs": {
+      "expected_finding_type": "observed",
+      "expected_evidence_ids": [
+        "EV-OPS-006A"
+      ],
+      "excluded_evidence_ids": [
+        "EV-REV-006B"
+      ],
+      "requires_validation": false
+    },
+    "metadata": {
+      "category": "domain_filtering",
+      "difficulty": "easy",
+      "capability": "strict_domain_filter"
+    }
+  },
+  {
+    "id": "ops_007",
+    "inputs": {
+      "question": "Produce a grounded finding and keep evidence references valid.",
+      "evidence": [
+        {
+          "evidence_id": "EV-OPS-007",
+          "domain": "operations_cx",
+          "claim": "The website lists a public phone number for stakeholder enquiries.",
+          "evidence_type": "fact",
+          "status": "supported",
+          "confidence": 0.97,
+          "requires_validation": false,
+          "contradiction_ids": []
+        }
+      ]
+    },
+    "outputs": {
+      "expected_finding_type": "observed",
+      "expected_evidence_ids": [
+        "EV-OPS-007"
+      ],
+      "forbidden_evidence_ids": [
+        "EV-OPS-999"
+      ],
+      "requires_validation": false
+    },
+    "metadata": {
+      "category": "referential_integrity",
+      "difficulty": "easy",
+      "capability": "evidence_id_integrity"
+    }
+  },
+  {
+    "id": "ops_008",
+    "inputs": {
+      "question": "What should the analysis say about the donor journey?",
+      "evidence": [
+        {
+          "evidence_id": "EV-OPS-008",
+          "domain": "operations_cx",
+          "claim": "The organisation accepts donations through a public online donation page.",
+          "evidence_type": "fact",
+          "status": "supported",
+          "confidence": 0.96,
+          "requires_validation": false,
+          "contradiction_ids": []
+        }
+      ]
+    },
+    "outputs": {
+      "expected_finding_type": "observed",
+      "expected_finding": "The organisation provides a publicly visible donation entry point.",
+      "expected_evidence_ids": [
+        "EV-OPS-008"
+      ],
+      "requires_validation": false
+    },
+    "metadata": {
+      "category": "journey_mapping",
+      "difficulty": "easy",
+      "capability": "donor_journey_detection"
+    }
+  },
+  {
+    "id": "ops_009",
+    "inputs": {
+      "question": "What can be safely said about post-donation follow-up?",
+      "evidence": [
+        {
+          "evidence_id": "EV-OPS-009",
+          "domain": "operations_cx",
+          "claim": "The public site confirms that donations can be submitted online, but it does not describe confirmation, follow-up or re-engagement.",
+          "evidence_type": "unknown",
+          "status": "insufficient_evidence",
+          "confidence": 0.45,
+          "requires_validation": true,
+          "contradiction_ids": []
+        }
+      ]
+    },
+    "outputs": {
+      "expected_finding_type": "unknown",
+      "expected_evidence_ids": [
+        "EV-OPS-009"
+      ],
+      "requires_validation": true,
+      "expected_validation_focus": "Clarify what happens after a donation is received, including confirmation, follow-up and re-engagement."
+    },
+    "metadata": {
+      "category": "validation_question",
+      "difficulty": "medium",
+      "capability": "validation_question_generation"
+    }
+  },
+  {
+    "id": "ops_010",
+    "inputs": {
+      "question": "Assess the internal ownership claim using only the available evidence.",
+      "evidence": [
+        {
+          "evidence_id": "EV-OPS-010",
+          "domain": "operations_cx",
+          "claim": "The public website provides a general contact form.",
+          "evidence_type": "fact",
+          "status": "supported",
+          "confidence": 0.94,
+          "requires_validation": false,
+          "contradiction_ids": []
+        }
+      ],
+      "candidate_claim": "Volunteer enquiries are automatically assigned to the Operations Manager."
+    },
+    "outputs": {
+      "expected_decision": "reject_unsupported_claim",
+      "expected_finding_type": "observed",
+      "expected_evidence_ids": [
+        "EV-OPS-010"
+      ],
+      "forbidden_claim": "Volunteer enquiries are automatically assigned to the Operations Manager."
+    },
+    "metadata": {
+      "category": "groundedness",
+      "difficulty": "hard",
+      "capability": "unsupported_internal_process_rejection"
+    }
+  },
+  {
+    "id": "ops_011",
+    "inputs": {
+      "question": "Generate the Operations/CX finding without introducing a technology recommendation.",
+      "evidence": [
+        {
+          "evidence_id": "EV-OPS-011",
+          "domain": "operations_cx",
+          "claim": "The organisation publishes a general email address for stakeholder contact.",
+          "evidence_type": "fact",
+          "status": "supported",
+          "confidence": 0.93,
+          "requires_validation": false,
+          "contradiction_ids": []
+        }
+      ]
+    },
+    "outputs": {
+      "expected_finding_type": "observed",
+      "expected_evidence_ids": [
+        "EV-OPS-011"
+      ],
+      "forbidden_recommendations": [
+        "implement a CRM",
+        "deploy a chatbot",
+        "automate the workflow"
+      ]
+    },
+    "metadata": {
+      "category": "scope_control",
+      "difficulty": "medium",
+      "capability": "no_technology_recommendation"
+    }
+  },
+  {
+    "id": "ops_012",
+    "inputs": {
+      "question": "Create the safest set of findings from this mixed Operations/CX evidence.",
+      "evidence": [
+        {
+          "evidence_id": "EV-OPS-012A",
+          "domain": "operations_cx",
+          "claim": "Prospective volunteers can submit an online application.",
+          "evidence_type": "fact",
+          "status": "supported",
+          "confidence": 0.96,
+          "requires_validation": false,
+          "contradiction_ids": []
+        },
+        {
+          "evidence_id": "EV-OPS-012B",
+          "domain": "operations_cx",
+          "claim": "Volunteer applications may receive inconsistent follow-up.",
+          "evidence_type": "inference",
+          "status": "partially_supported",
+          "confidence": 0.61,
+          "requires_validation": true,
+          "contradiction_ids": []
+        },
+        {
+          "evidence_id": "EV-IMP-012C",
+          "domain": "impact",
+          "claim": "The programme reports positive participant outcomes.",
+          "evidence_type": "fact",
+          "status": "supported",
+          "confidence": 0.89,
+          "requires_validation": false,
+          "contradiction_ids": []
+        }
+      ]
+    },
+    "outputs": {
+      "expected_findings": [
+        {
+          "finding_type": "observed",
+          "evidence_ids": [
+            "EV-OPS-012A"
+          ],
+          "requires_validation": false
+        },
+        {
+          "finding_type": "inferred",
+          "evidence_ids": [
+            "EV-OPS-012B"
+          ],
+          "requires_validation": true
+        }
+      ],
+      "excluded_evidence_ids": [
+        "EV-IMP-012C"
+      ]
+    },
+    "metadata": {
+      "category": "mixed_case",
+      "difficulty": "hard",
+      "capability": "multi_signal_reasoning"
+    }
+  }
+]
