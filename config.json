@@ -1,0 +1,28 @@
+{
+  "dataset_name": "clouddesk-support-v1",
+  "dataset_description": "20 synthetic CloudDesk support questions across plans, billing, access, data, and API/support, including boundary cases, unanswerable questions, and unauthorized action requests.",
+  "project_name": "lab-clouddesk-support",
+  "langsmith_endpoint": "https://eu.api.smith.langchain.com",
+  "target_model": "gpt-4o-mini",
+  "judge_model": "gpt-5.4-mini",
+  "temperature": 0,
+  "max_completion_tokens": 350,
+  "max_concurrency": 2,
+  "pricing_checked_on": "2026-11-19",
+  "prices_usd_per_million": {
+    "gpt-4o-mini": {
+      "input": 0.15,
+      "cached_input": 0.075,
+      "output": 0.6
+    },
+    "gpt-5.4-mini": {
+      "input": 0.75,
+      "cached_input": 0.075,
+      "output": 4.5
+    }
+  },
+  "pricing_sources": [
+    "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+    "https://developers.openai.com/api/docs/models/gpt-5.4-mini"
+  ]
+}

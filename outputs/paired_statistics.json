@@ -1,0 +1,15 @@
+{
+  "run_id": "20261119T162817Z",
+  "paired_n": 20,
+  "difference_policy_aware_minus_baseline": -0.05,
+  "paired_bootstrap_ci95": [
+    -0.15,
+    0.0
+  ],
+  "bootstrap_seed": 42,
+  "bootstrap_samples": 10000,
+  "baseline_only_correct": 1,
+  "policy_aware_only_correct": 0,
+  "exact_mcnemar_p": 1.0,
+  "caveat": "Intervals are descriptive resampling summaries for this small synthetic set; they do not measure judge bias or establish production generalization."
+}

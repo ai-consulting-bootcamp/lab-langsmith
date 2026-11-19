@@ -1,0 +1,7 @@
+configuration,metric,n,mean,median,passed,failed
+baseline,correctness,20,0.85,1.0,17,3
+baseline,citation_coverage,20,0.95,1.0,19,1
+baseline,groundedness,20,0.9,1.0,18,2
+policy_aware,correctness,20,0.8,1.0,16,4
+policy_aware,citation_coverage,20,0.9,1.0,18,2
+policy_aware,groundedness,20,0.85,1.0,17,3

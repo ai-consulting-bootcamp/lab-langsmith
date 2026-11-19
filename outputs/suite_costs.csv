@@ -1,0 +1,3 @@
+role,calls,prompt_tokens,completion_tokens,cached_tokens,estimated_cost_usd
+judge,90,59881,9042,0,0.08559975
+target,46,17752,2704,0,0.004285199999995

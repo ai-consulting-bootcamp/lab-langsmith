@@ -1,0 +1,11 @@
+configuration,category,correctness_mean,correctness_count,citation_coverage_mean,citation_coverage_count,groundedness_mean,groundedness_count
+baseline,access,1.0,4,1.0,4,1.0,4
+baseline,api_support,0.75,4,1.0,4,1.0,4
+baseline,billing,0.75,4,1.0,4,0.75,4
+baseline,data,1.0,4,1.0,4,1.0,4
+baseline,plans,0.75,4,0.75,4,0.75,4
+policy_aware,access,1.0,4,1.0,4,1.0,4
+policy_aware,api_support,0.75,4,1.0,4,1.0,4
+policy_aware,billing,0.75,4,1.0,4,0.75,4
+policy_aware,data,1.0,4,0.75,4,1.0,4
+policy_aware,plans,0.5,4,0.75,4,0.5,4

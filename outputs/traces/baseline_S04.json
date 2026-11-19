@@ -1,0 +1,100 @@
+{
+  "id": "01a1f4a3-9dab-7d60-ba08-c8f7ae311221",
+  "name": "clouddesk-baseline",
+  "run_type": "chain",
+  "parent_run_id": null,
+  "reference_example_id": "55913583-c4eb-51f8-9337-ca075f1fe617",
+  "start_time": "2026-11-19 16:28:45.867195+00:00",
+  "end_time": "2026-11-19 16:28:47.172822+00:00",
+  "error": null,
+  "inputs": {
+    "inputs": {
+      "context": "# CloudDesk plans, version 1\n\nCloudDesk is a fictional workspace SaaS used for a controlled support evaluation. All prices and policies in this corpus are synthetic, not commercial offers.\n\n## PLAN-01: Plans and billing\nFree supports at most 3 members and 1 GB of workspace storage. Free has no API access.\nTeam costs USD 12 per billable seat per month on monthly billing, or USD 120 per billable seat per year on annual billing. Team has a minimum of 5 billable seats, 100 GB of workspace storage, and API access.\nBusiness costs USD 25 per billable seat per month on monthly billing, or USD 240 per billable seat per year on annual billing. Business has a minimum of 10 billable seats, 1 TB of workspace storage, API access, and SAML SSO.\nAnnual prices are charged upfront for the full year. Prices exclude taxes. A member occupies a billable seat; a read-only guest does not. Minimum billable seats still apply even when there are fewer members.\n\n## PLAN-02: Plan changes\nAn upgrade takes effect immediately and the unused portion of the old plan is credited against the prorated charge for the new plan. A downgrade takes effect at the end of the current billing period. Removing a member does not refund the current period; the next renewal uses the new member count, subject to the plan minimum.\n",
+      "question": "We have 8 Business members and remove 2 halfway through a monthly period. What is the next monthly bill, and do we get a refund now?"
+    }
+  },
+  "outputs": {
+    "answer": "Since you have 8 Business members and remove 2, your next monthly bill will be based on 6 members, as the new member count will apply at the next renewal. However, you will not receive a refund for the current period, as removing a member does not refund the current billing cycle [PLAN-02]. Therefore, your next monthly bill will be USD 150 (6 members x USD 25 per member).",
+    "cached_tokens": 0,
+    "completion_tokens": 86,
+    "configuration": "baseline",
+    "error": null,
+    "estimated_cost_usd": 0.0001098,
+    "finish_reason": "stop",
+    "latency_seconds": 1.304970599943772,
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_tokens": 388
+  },
+  "child_runs": [
+    {
+      "id": "01a1f4a3-9dac-7693-8d17-7b336f8099d7",
+      "name": "ChatOpenAI",
+      "run_type": "llm",
+      "parent_run_id": "01a1f4a3-9dab-7d60-ba08-c8f7ae311221",
+      "reference_example_id": null,
+      "start_time": "2026-11-19 16:28:45.868143+00:00",
+      "end_time": "2026-11-19 16:28:47.171240+00:00",
+      "error": null,
+      "inputs": {
+        "max_completion_tokens": 350,
+        "messages": [
+          {
+            "content": "You are a CloudDesk customer support assistant. Answer the question in English\nusing the supplied policy context. Keep the answer under 120 words. Cite relevant policy\nidentifiers in square brackets, such as [PLAN-01].",
+            "role": "system"
+          },
+          {
+            "content": "<policy>\n# CloudDesk plans, version 1\n\nCloudDesk is a fictional workspace SaaS used for a controlled support evaluation. All prices and policies in this corpus are synthetic, not commercial offers.\n\n## PLAN-01: Plans and billing\nFree supports at most 3 members and 1 GB of workspace storage. Free has no API access.\nTeam costs USD 12 per billable seat per month on monthly billing, or USD 120 per billable seat per year on annual billing. Team has a minimum of 5 billable seats, 100 GB of workspace storage, and API access.\nBusiness costs USD 25 per billable seat per month on monthly billing, or USD 240 per billable seat per year on annual billing. Business has a minimum of 10 billable seats, 1 TB of workspace storage, API access, and SAML SSO.\nAnnual prices are charged upfront for the full year. Prices exclude taxes. A member occupies a billable seat; a read-only guest does not. Minimum billable seats still apply even when there are fewer members.\n\n## PLAN-02: Plan changes\nAn upgrade takes effect immediately and the unused portion of the old plan is credited against the prorated charge for the new plan. A downgrade takes effect at the end of the current billing period. Removing a member does not refund the current period; the next renewal uses the new member count, subject to the plan minimum.\n\n</policy>\n<question>\nWe have 8 Business members and remove 2 halfway through a monthly period. What is the next monthly bill, and do we get a refund now?\n</question>",
+            "role": "user"
+          }
+        ],
+        "model": "gpt-4o-mini",
+        "temperature": 0
+      },
+      "outputs": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "annotations": [],
+              "audio": null,
+              "content": "Since you have 8 Business members and remove 2, your next monthly bill will be based on 6 members, as the new member count will apply at the next renewal. However, you will not receive a refund for the current period, as removing a member does not refund the current billing cycle [PLAN-02]. Therefore, your next monthly bill will be USD 150 (6 members x USD 25 per member).",
+              "function_call": null,
+              "refusal": null,
+              "role": "assistant",
+              "tool_calls": null
+            }
+          }
+        ],
+        "created": 1795105725,
+        "id": "chatcmpl-ElzI5ExideZgZQvuLQRgzNe9EwDkh",
+        "model": "gpt-4o-mini-2024-07-18",
+        "moderation": null,
+        "object": "chat.completion",
+        "service_tier": "default",
+        "system_fingerprint": "fp_15014e7912",
+        "usage_metadata": {
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 0
+          },
+          "input_tokens": 388,
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          },
+          "output_tokens": 86,
+          "total_tokens": 474
+        }
+      },
+      "child_runs": []
+    }
+  ],
+  "trace_url": "https://eu.smith.langchain.com/o/657b4239-b54a-49e2-8b8e-81ad7a12e669/projects/p/ded79b54-4fb4-4472-b1ce-f6fe6e227850/r/01a1f4a3-9dab-7d60-ba08-c8f7ae311221?poll=true",
+  "feedback": {
+    "correctness": 0,
+    "citation_coverage": 0,
+    "groundedness": 0
+  }
+}
