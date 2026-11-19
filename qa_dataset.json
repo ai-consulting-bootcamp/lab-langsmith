@@ -1,0 +1,205 @@
+{
+  "name": "EU AI Act and GDPR Course Q&A",
+  "description": "Grounded question-and-answer examples extracted from the Week 7 EU AI Act and GDPR course files.",
+  "version": "1.0",
+  "examples": [
+    {
+      "id": "eu-ai-001",
+      "topic": "EU AI Act",
+      "difficulty": "foundational",
+      "question": "What four AI Act outcome categories should be represented in the consulting exercise?",
+      "answer": "The exercise covers prohibited AI practices, high-risk AI systems, limited-risk systems with transparency obligations, and minimal-risk systems with no specific AI Act obligations.",
+      "source_file": "lab-eu-ai-act-compliance/instructions.md",
+      "source_section": "CFU checkpoints — Recognize"
+    },
+    {
+      "id": "eu-ai-002",
+      "topic": "EU AI Act",
+      "difficulty": "foundational",
+      "question": "What facts should every hidden client brief contain?",
+      "answer": "It should identify the company or industry, business problem, expected AI behavior, data or signals used, people affected, and whether a human reviews or overrides the output.",
+      "source_file": "lab-eu-ai-act-compliance/instructions.md",
+      "source_section": "Phase 1 — Build the hidden client brief"
+    },
+    {
+      "id": "eu-ai-003",
+      "topic": "EU AI Act",
+      "difficulty": "intermediate",
+      "question": "What is the required decision rule for a prohibited AI use?",
+      "answer": "Deny the use as proposed and offer a redesigned lawful alternative that moves the client away from the prohibited behavior.",
+      "source_file": "lab-eu-ai-act-compliance/instructions.md",
+      "source_section": "Required decision rules"
+    },
+    {
+      "id": "eu-ai-004",
+      "topic": "EU AI Act",
+      "difficulty": "intermediate",
+      "question": "How should a high-risk AI use be handled in an approval decision?",
+      "answer": "It should not be denied automatically, but approval must depend on clear controls, human oversight, and documentation.",
+      "source_file": "lab-eu-ai-act-compliance/instructions.md",
+      "source_section": "Required decision rules"
+    },
+    {
+      "id": "eu-ai-005",
+      "topic": "EU AI Act",
+      "difficulty": "intermediate",
+      "question": "What is the required approach for limited-risk systems?",
+      "answer": "Approval depends on clear transparency disclosures and safe deployment boundaries so people know when the relevant AI interaction or content is involved.",
+      "source_file": "lab-eu-ai-act-compliance/instructions.md",
+      "source_section": "Required decision rules"
+    },
+    {
+      "id": "eu-ai-006",
+      "topic": "EU AI Act",
+      "difficulty": "foundational",
+      "question": "What is the normal approval position for minimal-risk AI?",
+      "answer": "Approval is usually possible because there are no specific AI Act obligations for the minimal-risk use, while parallel issues such as GDPR, consumer protection, or misleading claims should still be checked.",
+      "source_file": "lab-eu-ai-act-compliance/instructions.md",
+      "source_section": "Required decision rules"
+    },
+    {
+      "id": "eu-ai-007",
+      "topic": "EU AI Act",
+      "difficulty": "intermediate",
+      "question": "What roles must be mapped in the proposed AI architecture?",
+      "answer": "The architecture should identify the provider, deployer, any third-party vendor, the system trigger, model behavior, human review point, output or decision, and relevant records, logging, or disclosure layers.",
+      "source_file": "lab-eu-ai-act-compliance/instructions.md",
+      "source_section": "Phase 2 — Review your partner as the consultant"
+    },
+    {
+      "id": "eu-ai-008",
+      "topic": "EU AI Act",
+      "difficulty": "intermediate",
+      "question": "Why should category labels be hidden from the partner during the exercise?",
+      "answer": "Hiding the labels makes the review realistic: the consultant must infer the legal tier from the business context, system design, and affected people rather than matching a scenario to a supplied answer.",
+      "source_file": "lab-eu-ai-act-compliance/instructions.md",
+      "source_section": "Expected output"
+    },
+    {
+      "id": "eu-ai-009",
+      "topic": "EU AI Act",
+      "difficulty": "advanced",
+      "question": "Why is a warehouse workforce-planning tool provisionally treated as high-risk in the GDPR audit pack?",
+      "answer": "It allocates shifts and stations using individual work behavior and evaluates employee performance through reliability and productivity scores, which the pack provisionally maps to Annex III point 4(b).",
+      "source_file": "lab-gdpr-compliance/GDPR_Audit_Pack_Warehouse_Workforce_Planning.md",
+      "source_section": "Scenario carried forward from lab lab-eu-ai-act-compliance"
+    },
+    {
+      "id": "eu-ai-010",
+      "topic": "EU AI Act",
+      "difficulty": "advanced",
+      "question": "Why is an AI CV-screening tool likely high-risk under the course materials?",
+      "answer": "The tool analyses or filters job applications and evaluates candidates, which the audit pack maps to Annex III point 4(a). The startup may be the provider if it places the system on the market under its name, while the employer is the deployer.",
+      "source_file": "lab-gdpr-compliance/GPDR_Audit_Pack.md",
+      "source_section": "Section C — Law stacking"
+    },
+    {
+      "id": "gdpr-001",
+      "topic": "GDPR",
+      "difficulty": "foundational",
+      "question": "What is the likely GDPR controller/processor split for warehouse workforce planning?",
+      "answer": "The grocery operator is likely the controller because it chooses the workforce-planning purposes and how outputs affect workers. The vendor is a processor if it acts only on documented instructions; otherwise its role needs reassessment.",
+      "source_file": "lab-gdpr-compliance/GDPR_Audit_Pack_Warehouse_Workforce_Planning.md",
+      "source_section": "Controller / processor split"
+    },
+    {
+      "id": "gdpr-002",
+      "topic": "GDPR",
+      "difficulty": "intermediate",
+      "question": "What separate purposes should be distinguished in the warehouse planning data map?",
+      "answer": "The map should separate operational shift or station allocation from employee evaluation, coaching, and preferred-shift decisions based on per-worker scores. These purposes should not be treated as interchangeable.",
+      "source_file": "lab-gdpr-compliance/GDPR_Audit_Pack_Warehouse_Workforce_Planning.md",
+      "source_section": "Phase 2 — Mini GDPR audit worksheet, Data map"
+    },
+    {
+      "id": "gdpr-003",
+      "topic": "GDPR",
+      "difficulty": "advanced",
+      "question": "What must be done before relying on legitimate interests for workforce planning?",
+      "answer": "The controller must define the purpose, assess necessity, and document a legitimate-interests balancing test for each purpose. Employment-contract necessity should not be assumed, and employee consent should not be used without checking whether it is genuinely freely given.",
+      "source_file": "lab-gdpr-compliance/GDPR_Audit_Pack_Warehouse_Workforce_Planning.md",
+      "source_section": "Lawful basis per purpose"
+    },
+    {
+      "id": "gdpr-004",
+      "topic": "GDPR",
+      "difficulty": "intermediate",
+      "question": "When might warehouse attendance or productivity data become special-category data?",
+      "answer": "The stated data is not automatically Article 9 data, but the controller must check whether error or attendance patterns are used to infer health, disability, union activity, or another protected attribute. If so, processing should stop pending a valid Article 9 condition and legal review.",
+      "source_file": "lab-gdpr-compliance/GDPR_Audit_Pack_Warehouse_Workforce_Planning.md",
+      "source_section": "Special-category data (Article 9)"
+    },
+    {
+      "id": "gdpr-005",
+      "topic": "GDPR",
+      "difficulty": "advanced",
+      "question": "Does a nominal manager override automatically remove Article 22 concerns?",
+      "answer": "No. The review must be meaningful, independent, and documented. A rubber-stamp override is insufficient. If decisions are solely automated and similarly significant, the controller must assess the Article 22 conditions and required safeguards.",
+      "source_file": "lab-gdpr-compliance/GDPR_Audit_Pack_Warehouse_Workforce_Planning.md",
+      "source_section": "Automated decisions (Article 22)"
+    },
+    {
+      "id": "gdpr-006",
+      "topic": "GDPR",
+      "difficulty": "advanced",
+      "question": "Why should a DPIA be treated as required before the warehouse pilot?",
+      "answer": "The processing likely creates high risk because it evaluates employees, monitors work patterns, combines datasets, uses AI for allocation, and concerns workers in a power-imbalanced employment relationship. The DPIA should be completed before processing and reviewed with the DPO and worker representatives as appropriate.",
+      "source_file": "lab-gdpr-compliance/GDPR_Audit_Pack_Warehouse_Workforce_Planning.md",
+      "source_section": "DPIA — treat as required before the pilot"
+    },
+    {
+      "id": "gdpr-007",
+      "topic": "GDPR",
+      "difficulty": "intermediate",
+      "question": "What rights-related information should workers receive about the scoring system?",
+      "answer": "They should receive clear information about purposes, data sources, retention, recipients, score use, meaningful human review, and how to challenge an outcome. The organization should provide practical routes to correct source data and contest assignments.",
+      "source_file": "lab-gdpr-compliance/GDPR_Audit_Pack_Warehouse_Workforce_Planning.md",
+      "source_section": "Likely data-subject friction points"
+    },
+    {
+      "id": "gdpr-008",
+      "topic": "GDPR",
+      "difficulty": "intermediate",
+      "question": "What should an Article 28 DPA cover when the vendor is a processor?",
+      "answer": "It should cover documented instructions, confidentiality, security, assistance with rights, DPIAs and breaches, sub-processor approval, audit information, and return or deletion of data at the end of the service.",
+      "source_file": "lab-gdpr-compliance/GDPR_Audit_Pack_Warehouse_Workforce_Planning.md",
+      "source_section": "DPA"
+    },
+    {
+      "id": "gdpr-009",
+      "topic": "GDPR",
+      "difficulty": "foundational",
+      "question": "What is the likely controller/processor model for the CV-screening startup?",
+      "answer": "Each employer customer is the controller and deployer for recruitment, while the startup is the processor if it acts only on documented instructions. The startup may separately be a controller for defined account, billing, or security purposes.",
+      "source_file": "lab-gdpr-compliance/GPDR_Audit_Pack.md",
+      "source_section": "Controller / processor split"
+    },
+    {
+      "id": "gdpr-010",
+      "topic": "GDPR",
+      "difficulty": "advanced",
+      "question": "What should the CV-screening product do with sensitive information that appears in resumes?",
+      "answer": "It should minimise inputs and be designed not to use or infer special-category traits for ranking. Any requested Article 9 processing should be escalated for legal review.",
+      "source_file": "lab-gdpr-compliance/GPDR_Audit_Pack.md",
+      "source_section": "Special-category data (Article 9)"
+    },
+    {
+      "id": "gdpr-011",
+      "topic": "GDPR",
+      "difficulty": "advanced",
+      "question": "What controls should prevent the CV-screening tool from making an impermissible automated rejection?",
+      "answer": "Recruiters should be able to inspect relevant factors and independently confirm, reject, or override rankings before a candidate is screened out. The product should prevent automatic rejection, retain appropriate logs, and support the employer's rights and challenge workflows.",
+      "source_file": "lab-gdpr-compliance/GPDR_Audit_Pack.md",
+      "source_section": "Automated decision-making (Article 22)"
+    },
+    {
+      "id": "gdpr-012",
+      "topic": "GDPR",
+      "difficulty": "intermediate",
+      "question": "What is the recommended launch decision for the CV-screening startup?",
+      "answer": "Go with conditions. Before live applicant processing, the startup should confirm roles and data terms, sign Article 28 DPAs, map sub-processors and transfers, complete provider compliance and customer DPIA support, and implement meaningful human review.",
+      "source_file": "lab-gdpr-compliance/GPDR_Audit_Pack.md",
+      "source_section": "Phase 3 — Client recommendation memo"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+model,n_examples,correctness_mean,correctness_n,reference_token_f1_mean,reference_token_f1_n
+gpt-4o-mini,22,0.273,22,0.203,22
+gpt-5.4-mini,22,0.0,22,0.005,22
