@@ -1,0 +1,10 @@
+{
+  "dataset_id": "cb947ac6-2849-45de-854c-a589623941e0",
+  "dataset_name": "clouddesk-support-v1",
+  "dataset_url": "https://eu.smith.langchain.com/datasets/cb947ac6-2849-45de-854c-a589623941e0",
+  "description": "20 synthetic CloudDesk support questions across plans, billing, access, data, and API/support, including boundary cases, unanswerable questions, and unauthorized action requests.",
+  "count": 20,
+  "sha256": "42eb91e22d4e1ec70ead421e488ba985b0fc10107178348c48b8fd85cd424325",
+  "all_fields_verified": true,
+  "verified_at_utc": "2026-11-19T16:28:17.005335+00:00"
+}

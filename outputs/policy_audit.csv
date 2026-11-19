@@ -1,0 +1,9 @@
+configuration,case_id,review_basis,failure_type,original_correctness,original_groundedness,policy_audit_correctness,policy_audit_groundedness,finding
+baseline,S04,"policy text and explicit arithmetic, not independent human annotation",ignored_billing_minimum,False,False,False,False,Business minimum is 10 billable seats; 10 x 25 = 250; no forced downgrade.
+baseline,S07,"policy text and explicit arithmetic, not independent human annotation",wrong_eligibility,False,False,False,False,Renewal charges are excluded from standard refund eligibility.
+baseline,S19,"policy text and explicit arithmetic, not independent human annotation",business_hour_arithmetic,False,True,False,False,Friday 16:00-17:00 plus Monday 09:00-12:00; groundedness judge false positive.
+policy_aware,S03,"policy text and explicit arithmetic, not independent human annotation",misinterpreted_condition,False,False,False,False,Billing minimum is not a membership eligibility restriction; 5 x 120 = 600.
+policy_aware,S04,"policy text and explicit arithmetic, not independent human annotation",ignored_billing_minimum,False,False,False,False,Business minimum is 10 billable seats; 10 x 25 = 250; no forced downgrade.
+policy_aware,S07,"policy text and explicit arithmetic, not independent human annotation",wrong_eligibility,False,False,False,False,Renewal charges are excluded from standard refund eligibility.
+policy_aware,S15,"policy text and explicit arithmetic, not independent human annotation",missing_citation,True,True,True,True,Factual abstention is correct; required DATA-02 citation is missing.
+policy_aware,S19,"policy text and explicit arithmetic, not independent human annotation",business_hour_arithmetic,False,True,False,False,Friday 16:00-17:00 plus Monday 09:00-12:00; groundedness judge false positive.

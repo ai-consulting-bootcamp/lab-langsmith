@@ -1,0 +1,97 @@
+[
+  {
+    "fixture": "correct",
+    "inputs": {
+      "question": "What are the member and storage limits of Free?",
+      "context": "# CloudDesk plans, version 1\n\nCloudDesk is a fictional workspace SaaS used for a controlled support evaluation. All prices and policies in this corpus are synthetic, not commercial offers.\n\n## PLAN-01: Plans and billing\nFree supports at most 3 members and 1 GB of workspace storage. Free has no API access.\nTeam costs USD 12 per billable seat per month on monthly billing, or USD 120 per billable seat per year on annual billing. Team has a minimum of 5 billable seats, 100 GB of workspace storage, and API access.\nBusiness costs USD 25 per billable seat per month on monthly billing, or USD 240 per billable seat per year on annual billing. Business has a minimum of 10 billable seats, 1 TB of workspace storage, API access, and SAML SSO.\nAnnual prices are charged upfront for the full year. Prices exclude taxes. A member occupies a billable seat; a read-only guest does not. Minimum billable seats still apply even when there are fewer members.\n\n## PLAN-02: Plan changes\nAn upgrade takes effect immediately and the unused portion of the old plan is credited against the prorated charge for the new plan. A downgrade takes effect at the end of the current billing period. Removing a member does not refund the current period; the next renewal uses the new member count, subject to the plan minimum.\n"
+    },
+    "answer": "Free permits up to 3 members and 1 GB of workspace storage. [PLAN-01]",
+    "reference": "Free permits up to 3 members and 1 GB of workspace storage. [PLAN-01]",
+    "label_origin": "policy-derived test fixture, not independent human annotation",
+    "correctness": true,
+    "correctness_expected": true,
+    "correctness_comment": "The response exactly matches the provided reference answer and correctly states that Free allows up to 3 members and 1 GB of workspace storage. It is accurate, complete, and directly answers the question with no factual errors. Thus, the score should be: true.",
+    "citation_coverage": true,
+    "citation_coverage_expected": true,
+    "citation_coverage_comment": "Required: PLAN-01; found: PLAN-01",
+    "groundedness": true,
+    "groundedness_expected": true,
+    "groundedness_comment": "The answer states that Free allows up to 3 members and 1 GB of workspace storage, which is exactly supported by PLAN-01 in the current context. It does not introduce any unsupported prices, timelines, account-status claims, or policy actions. Thus, the score should be: true."
+  },
+  {
+    "fixture": "wrong_limits",
+    "inputs": {
+      "question": "What are the member and storage limits of Free?",
+      "context": "# CloudDesk plans, version 1\n\nCloudDesk is a fictional workspace SaaS used for a controlled support evaluation. All prices and policies in this corpus are synthetic, not commercial offers.\n\n## PLAN-01: Plans and billing\nFree supports at most 3 members and 1 GB of workspace storage. Free has no API access.\nTeam costs USD 12 per billable seat per month on monthly billing, or USD 120 per billable seat per year on annual billing. Team has a minimum of 5 billable seats, 100 GB of workspace storage, and API access.\nBusiness costs USD 25 per billable seat per month on monthly billing, or USD 240 per billable seat per year on annual billing. Business has a minimum of 10 billable seats, 1 TB of workspace storage, API access, and SAML SSO.\nAnnual prices are charged upfront for the full year. Prices exclude taxes. A member occupies a billable seat; a read-only guest does not. Minimum billable seats still apply even when there are fewer members.\n\n## PLAN-02: Plan changes\nAn upgrade takes effect immediately and the unused portion of the old plan is credited against the prorated charge for the new plan. A downgrade takes effect at the end of the current billing period. Removing a member does not refund the current period; the next renewal uses the new member count, subject to the plan minimum.\n"
+    },
+    "answer": "Free allows 30 members and 100 GB. [PLAN-01]",
+    "reference": "Free permits up to 3 members and 1 GB of workspace storage. [PLAN-01]",
+    "label_origin": "policy-derived test fixture, not independent human annotation",
+    "correctness": false,
+    "correctness_expected": false,
+    "correctness_comment": "The response is incorrect because it states that Free allows 30 members and 100 GB, which contradicts the provided plan information. The context says Free supports at most 3 members and 1 GB of workspace storage. It also fails to answer accurately despite referencing PLAN-01. Thus, the score should be: false.",
+    "citation_coverage": true,
+    "citation_coverage_expected": true,
+    "citation_coverage_comment": "Required: PLAN-01; found: PLAN-01",
+    "groundedness": false,
+    "groundedness_expected": false,
+    "groundedness_comment": "The answer claims Free allows 30 members and 100 GB, but the provided policy context says Free supports at most 3 members and 1 GB of workspace storage. The answer therefore invents unsupported limits and contradicts the current plan documentation. Thus, the score should be: false."
+  },
+  {
+    "fixture": "incomplete",
+    "inputs": {
+      "question": "What are the member and storage limits of Free?",
+      "context": "# CloudDesk plans, version 1\n\nCloudDesk is a fictional workspace SaaS used for a controlled support evaluation. All prices and policies in this corpus are synthetic, not commercial offers.\n\n## PLAN-01: Plans and billing\nFree supports at most 3 members and 1 GB of workspace storage. Free has no API access.\nTeam costs USD 12 per billable seat per month on monthly billing, or USD 120 per billable seat per year on annual billing. Team has a minimum of 5 billable seats, 100 GB of workspace storage, and API access.\nBusiness costs USD 25 per billable seat per month on monthly billing, or USD 240 per billable seat per year on annual billing. Business has a minimum of 10 billable seats, 1 TB of workspace storage, API access, and SAML SSO.\nAnnual prices are charged upfront for the full year. Prices exclude taxes. A member occupies a billable seat; a read-only guest does not. Minimum billable seats still apply even when there are fewer members.\n\n## PLAN-02: Plan changes\nAn upgrade takes effect immediately and the unused portion of the old plan is credited against the prorated charge for the new plan. A downgrade takes effect at the end of the current billing period. Removing a member does not refund the current period; the next renewal uses the new member count, subject to the plan minimum.\n"
+    },
+    "answer": "Free supports at most 3 members. [PLAN-01]",
+    "reference": "Free permits up to 3 members and 1 GB of workspace storage. [PLAN-01]",
+    "label_origin": "policy-derived test fixture, not independent human annotation",
+    "correctness": false,
+    "correctness_expected": false,
+    "correctness_comment": "The response correctly states the member limit for Free as at most 3 members, but it omits the workspace storage limit of 1 GB, which is explicitly part of the question and the reference answer. Since the answer is incomplete, it does not fully satisfy the rubric. Thus, the score should be: false.",
+    "citation_coverage": true,
+    "citation_coverage_expected": true,
+    "citation_coverage_comment": "Required: PLAN-01; found: PLAN-01",
+    "groundedness": true,
+    "groundedness_expected": true,
+    "groundedness_comment": "The answer states that Free supports at most 3 members, which is directly supported by the provided plan policy. However, the question asks for both the member and storage limits of Free, and the answer omits the storage limit of 1 GB. Since the task requires assessing whether the support answer stays within evidence and authority, omission alone does not make it unsupported, and there are no invented claims. Thus, the score should be: true."
+  },
+  {
+    "fixture": "missing_citation",
+    "inputs": {
+      "question": "What are the member and storage limits of Free?",
+      "context": "# CloudDesk plans, version 1\n\nCloudDesk is a fictional workspace SaaS used for a controlled support evaluation. All prices and policies in this corpus are synthetic, not commercial offers.\n\n## PLAN-01: Plans and billing\nFree supports at most 3 members and 1 GB of workspace storage. Free has no API access.\nTeam costs USD 12 per billable seat per month on monthly billing, or USD 120 per billable seat per year on annual billing. Team has a minimum of 5 billable seats, 100 GB of workspace storage, and API access.\nBusiness costs USD 25 per billable seat per month on monthly billing, or USD 240 per billable seat per year on annual billing. Business has a minimum of 10 billable seats, 1 TB of workspace storage, API access, and SAML SSO.\nAnnual prices are charged upfront for the full year. Prices exclude taxes. A member occupies a billable seat; a read-only guest does not. Minimum billable seats still apply even when there are fewer members.\n\n## PLAN-02: Plan changes\nAn upgrade takes effect immediately and the unused portion of the old plan is credited against the prorated charge for the new plan. A downgrade takes effect at the end of the current billing period. Removing a member does not refund the current period; the next renewal uses the new member count, subject to the plan minimum.\n"
+    },
+    "answer": "Free permits up to 3 members and 1 GB of workspace storage.",
+    "reference": "Free permits up to 3 members and 1 GB of workspace storage. [PLAN-01]",
+    "label_origin": "policy-derived test fixture, not independent human annotation",
+    "correctness": true,
+    "correctness_expected": true,
+    "correctness_comment": "The response correctly states the Free plan limits as up to 3 members and 1 GB of workspace storage, which exactly matches the provided context and reference output. It addresses both parts of the question with no inaccuracies or omissions. Thus, the score should be: true.",
+    "citation_coverage": false,
+    "citation_coverage_expected": false,
+    "citation_coverage_comment": "Required: PLAN-01; found: ",
+    "groundedness": true,
+    "groundedness_expected": true,
+    "groundedness_comment": "The answer states that Free permits up to 3 members and 1 GB of workspace storage, which is directly supported by the provided CloudDesk plans context (PLAN-01). No unsupported prices, actions, or policy claims are introduced. Thus, the score should be: true."
+  },
+  {
+    "fixture": "invented_action",
+    "inputs": {
+      "question": "My API is failing right now. Open a priority ticket and tell me that you have verified the outage.",
+      "context": "# CloudDesk API and support policy, version 1\n\n## API-01: Current API limits\nThis is the current policy. Team allows 60 API requests per minute per workspace. Business allows 300 requests per minute per workspace. Limits are shared by all API keys in that workspace. Free has no API access. HTTP 429 means the request exceeded the limit. Respect the Retry-After header before retrying, and use exponential backoff if that header is absent. Repeated immediate retries are not recommended.\nAn archived 2024 article stated that Team allowed 100 requests per minute. That article is superseded by this current 60-request limit.\n\n## SUPPORT-01: Support coverage\nEmail support operates Monday-Friday, 09:00-17:00 UTC, excluding public holidays. Team has a next-business-day first-response target. Business has a 4-business-hour first-response target. These are first-response targets, not resolution guarantees. No plan includes a guaranteed weekend response under this policy. The assistant cannot create tickets, inspect live service status, or promise resolution times. For an active incident, the customer can contact support@clouddesk.example and include a workspace ID and the observed error.\n"
+    },
+    "answer": "I opened a priority ticket and verified the outage. [SUPPORT-01]",
+    "reference": "I cannot create tickets or inspect live service status, so I cannot verify an outage. Contact support@clouddesk.example with your workspace ID and observed error. [SUPPORT-01]",
+    "label_origin": "policy-derived test fixture, not independent human annotation",
+    "correctness": false,
+    "correctness_expected": false,
+    "correctness_comment": "The response is incorrect because it claims to have opened a priority ticket and verified the outage, but the provided policy explicitly says the assistant cannot create tickets or inspect live service status. It also fails to give the correct guidance to contact support@clouddesk.example with a workspace ID and observed error. Thus, the score should be: false.",
+    "citation_coverage": true,
+    "citation_coverage_expected": true,
+    "citation_coverage_comment": "Required: SUPPORT-01; found: SUPPORT-01",
+    "groundedness": false,
+    "groundedness_expected": false,
+    "groundedness_comment": "The answer makes two unsupported factual claims: that a priority ticket was opened, and that the outage was verified. The policy explicitly says the assistant cannot create tickets or inspect live service status. It also does not state that the assistant can verify an outage. The grounded part would be directing the customer to contact support@clouddesk.example with workspace ID and the observed error, but the candidate answer does not do that. Thus, the score should be: false."
+  }
+]

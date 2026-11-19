@@ -1,0 +1,47 @@
+{
+  "verified_at_utc": "2026-11-19T16:32:32.205496+00:00",
+  "run_id": "20261119T162817Z",
+  "experiments": {
+    "baseline": {
+      "root_runs": 20,
+      "scored_runs": 20,
+      "feedback_count": 60,
+      "all_feedback_matches": true,
+      "traces": [
+        {
+          "case_id": "S01",
+          "file": "traces/baseline_S01.json",
+          "trace_url": "https://eu.smith.langchain.com/o/657b4239-b54a-49e2-8b8e-81ad7a12e669/projects/p/ded79b54-4fb4-4472-b1ce-f6fe6e227850/r/01a1f4a3-b743-7967-9287-aa7976c9ac77?poll=true"
+        },
+        {
+          "case_id": "S04",
+          "file": "traces/baseline_S04.json",
+          "trace_url": "https://eu.smith.langchain.com/o/657b4239-b54a-49e2-8b8e-81ad7a12e669/projects/p/ded79b54-4fb4-4472-b1ce-f6fe6e227850/r/01a1f4a3-9dab-7d60-ba08-c8f7ae311221?poll=true"
+        },
+        {
+          "case_id": "S19",
+          "file": "traces/baseline_S19.json",
+          "trace_url": "https://eu.smith.langchain.com/o/657b4239-b54a-49e2-8b8e-81ad7a12e669/projects/p/ded79b54-4fb4-4472-b1ce-f6fe6e227850/r/01a1f4a3-b1cd-74e5-8856-da85e488b15e?poll=true"
+        }
+      ]
+    },
+    "policy_aware": {
+      "root_runs": 20,
+      "scored_runs": 20,
+      "feedback_count": 60,
+      "all_feedback_matches": true,
+      "traces": [
+        {
+          "case_id": "S03",
+          "file": "traces/policy_aware_S03.json",
+          "trace_url": "https://eu.smith.langchain.com/o/657b4239-b54a-49e2-8b8e-81ad7a12e669/projects/p/5ddbec33-d0ff-4ea4-9966-9067fa05bf6c/r/01a1f4a4-26c4-7001-bb67-4968a17b716b?poll=true"
+        },
+        {
+          "case_id": "S19",
+          "file": "traces/policy_aware_S19.json",
+          "trace_url": "https://eu.smith.langchain.com/o/657b4239-b54a-49e2-8b8e-81ad7a12e669/projects/p/5ddbec33-d0ff-4ea4-9966-9067fa05bf6c/r/01a1f4a4-2d3b-7e96-848e-488ba648fcfa?poll=true"
+        }
+      ]
+    }
+  }
+}

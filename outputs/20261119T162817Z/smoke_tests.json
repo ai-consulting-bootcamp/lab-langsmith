@@ -1,0 +1,80 @@
+[
+  {
+    "configuration": "baseline",
+    "case_id": "S01",
+    "answer": "The Free plan supports a maximum of 3 members and provides 1 GB of workspace storage. Additionally, it does not include API access [PLAN-01].",
+    "error": null,
+    "model": "gpt-4o-mini-2024-07-18",
+    "finish_reason": "stop",
+    "prompt_tokens": 367,
+    "completion_tokens": 32,
+    "cached_tokens": 0,
+    "latency_seconds": 0.9605490000685677,
+    "estimated_cost_usd": 7.425e-05
+  },
+  {
+    "configuration": "baseline",
+    "case_id": "S06",
+    "answer": "Yes, you are eligible for a refund since you are within the 14-day window from your first annual subscription charge, which is 336 hours. To request the refund, please send an email to billing@clouddesk.example, including your workspace ID and invoice number. Remember that the refund will be processed back to your original payment method within 5-10 business days once approved. Note that cancellation of renewal does not automatically submit a refund request [BILL-01].",
+    "error": null,
+    "model": "gpt-4o-mini-2024-07-18",
+    "finish_reason": "stop",
+    "prompt_tokens": 341,
+    "completion_tokens": 97,
+    "cached_tokens": 0,
+    "latency_seconds": 1.7294114000396803,
+    "estimated_cost_usd": 0.00010934999999999999
+  },
+  {
+    "configuration": "baseline",
+    "case_id": "S15",
+    "answer": "The policy does not specify the backup retention duration. For confirmation on this detail, you would need to contact support directly [DATA-02].",
+    "error": null,
+    "model": "gpt-4o-mini-2024-07-18",
+    "finish_reason": "stop",
+    "prompt_tokens": 280,
+    "completion_tokens": 28,
+    "cached_tokens": 0,
+    "latency_seconds": 1.142644300009124,
+    "estimated_cost_usd": 5.88e-05
+  },
+  {
+    "configuration": "policy_aware",
+    "case_id": "S01",
+    "answer": "The Free plan supports a maximum of 3 members and provides 1 GB of workspace storage [PLAN-01].",
+    "error": null,
+    "model": "gpt-4o-mini-2024-07-18",
+    "finish_reason": "stop",
+    "prompt_tokens": 497,
+    "completion_tokens": 23,
+    "cached_tokens": 0,
+    "latency_seconds": 0.9725243999855593,
+    "estimated_cost_usd": 8.834999999999999e-05
+  },
+  {
+    "configuration": "policy_aware",
+    "case_id": "S06",
+    "answer": "Yes, you are eligible for a refund since your first annual subscription charge was within the 14-day (336 hours) window. To request the refund, you need to send an email to billing@clouddesk.example, including your workspace ID and invoice number. Remember that the refund will be processed back to your original payment method within 5-10 business days once approved. Please note that cancellation of renewal does not automatically submit a refund request [BILL-01].",
+    "error": null,
+    "model": "gpt-4o-mini-2024-07-18",
+    "finish_reason": "stop",
+    "prompt_tokens": 471,
+    "completion_tokens": 96,
+    "cached_tokens": 0,
+    "latency_seconds": 1.900545799988322,
+    "estimated_cost_usd": 0.00012825
+  },
+  {
+    "configuration": "policy_aware",
+    "case_id": "S15",
+    "answer": "The policy does not specify the backup retention duration. For confirmation on this detail, please contact support directly. [DATA-02]",
+    "error": null,
+    "model": "gpt-4o-mini-2024-07-18",
+    "finish_reason": "stop",
+    "prompt_tokens": 410,
+    "completion_tokens": 26,
+    "cached_tokens": 0,
+    "latency_seconds": 0.8779683000175282,
+    "estimated_cost_usd": 7.709999999999999e-05
+  }
+]
