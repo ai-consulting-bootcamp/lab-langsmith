@@ -1,0 +1,3 @@
+# Optimization summary
+
+The Part 6 comparison used the same 22-example EU AI Act and GDPR dataset with deterministic token-F1 scoring. `gpt-4o-mini` recorded a 0.203 mean token-F1 and 2.05 seconds per example, while `gpt-5.4-mini` recorded 0.005 and 0.81 seconds per example. Cost values are currently zero because provider pricing was not configured; rerun the notebook with the documented price environment variables before making a cost-based production decision. Based on the observed quality results, the smaller model should not be selected solely for speed until the target receives better source context and the comparison is repeated with a reliable cost estimate.
