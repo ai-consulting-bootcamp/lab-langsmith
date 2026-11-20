@@ -1,0 +1,322 @@
+[
+  {
+    "question": "A client wants an AI that reads employees' faces and voices in video calls to give each person an 'engagement score'. Which EU AI Act risk level does this fall under?",
+    "answer": "Prohibited. Emotion recognition in the workplace (or in education) is a banned practice under Article 5(1)(f), apart from narrow medical or safety exceptions. There is no compliance path: the consultant should stop the work, escalate and document it.",
+    "must_include": [
+      [
+        "prohibited",
+        "banned"
+      ]
+    ],
+    "category": "prohibited_practices",
+    "difficulty": "easy",
+    "source": "Lesson 1 slide 22; Lesson 2 slide 18",
+    "post_cutoff_fact": false
+  },
+  {
+    "question": "An insurer wants a 'TrustScore' for every customer that combines payment history, social-media behaviour, lifestyle and personality, and uses low scores to offer worse insurance terms. Is this allowed under the EU AI Act?",
+    "answer": "No. This is social scoring, banned under Article 5(1)(c): scoring people on behaviour or personal characteristics where the score leads to detrimental treatment in unrelated contexts, or treatment that is unjustified or disproportionate. The ban applies to private companies as well as governments.",
+    "must_include": [
+      [
+        "social scoring"
+      ],
+      [
+        "prohibited",
+        "banned",
+        "not allowed"
+      ]
+    ],
+    "category": "prohibited_practices",
+    "difficulty": "medium",
+    "source": "Lesson 2 slides 15-16",
+    "post_cutoff_fact": false
+  },
+  {
+    "question": "A start-up wants to scrape millions of public photos from social media to build a face-search database. The photos are publicly available. Can they do this under the EU AI Act?",
+    "answer": "No. Untargeted scraping of facial images from the internet or CCTV to build or expand facial-recognition databases is prohibited under Article 5(1)(e). 'Publicly available' does not mean free to use for every AI purpose.",
+    "must_include": [
+      [
+        "prohibited",
+        "banned",
+        "not allowed"
+      ],
+      [
+        "scrap"
+      ]
+    ],
+    "category": "prohibited_practices",
+    "difficulty": "easy",
+    "source": "Lesson 2 slide 18",
+    "post_cutoff_fact": false
+  },
+  {
+    "question": "What new prohibited practice did the Digital Omnibus add to Article 5 of the EU AI Act, and from when does it apply?",
+    "answer": "AI systems that create non-consensual sexual/intimate images of real people ('nudify' tools) or child sexual abuse material. This ban applies from 2 December 2026. A general image generator can also fall under it if it is easy to misuse this way and has no real safeguards.",
+    "must_include": [
+      [
+        "2 december 2026",
+        "december 2, 2026",
+        "2 dec 2026",
+        "2nd december 2026"
+      ],
+      [
+        "nud",
+        "intimate",
+        "sexual"
+      ]
+    ],
+    "category": "timeline",
+    "difficulty": "hard",
+    "source": "Lesson 1 slide 22; Lesson 2 slide 19; Regulation (EU) 2026/1744",
+    "post_cutoff_fact": true
+  },
+  {
+    "question": "From what date do the high-risk obligations apply to stand-alone Annex III AI systems such as CV-screening or credit-scoring tools?",
+    "answer": "From 2 December 2027. The original date was 2 August 2026, but the Digital Omnibus (Regulation (EU) 2026/1744, in force since 27 July 2026) postponed it by 16 months. Client plans built on 'high-risk from August 2026' are out of date.",
+    "must_include": [
+      [
+        "2 december 2027",
+        "december 2, 2027",
+        "2 dec 2027",
+        "2nd december 2027"
+      ]
+    ],
+    "category": "timeline",
+    "difficulty": "hard",
+    "source": "Lesson 1 slide 11; Lesson 2 slides 23, 27, 51",
+    "post_cutoff_fact": true
+  },
+  {
+    "question": "When do the high-risk rules apply to AI that is a safety component of a product covered by EU product-safety law (Annex I), such as a medical device or a lift?",
+    "answer": "From 2 August 2028. The Digital Omnibus moved this from 2 August 2027 (a 12-month delay). These systems must follow both the product's own safety law and the AI Act.",
+    "must_include": [
+      [
+        "2 august 2028",
+        "august 2, 2028",
+        "2 aug 2028",
+        "2nd august 2028"
+      ]
+    ],
+    "category": "timeline",
+    "difficulty": "hard",
+    "source": "Lesson 2 slides 23-24, 27, 51",
+    "post_cutoff_fact": true
+  },
+  {
+    "question": "A company uses AI only to sort incoming job applications into folders by date received. Another company uses AI to rank job candidates. Which of these is high-risk under the EU AI Act?",
+    "answer": "Only the ranking tool is high-risk. Employment is an Annex III area, but sorting applications by date is a narrow procedural task, so the 'narrow task' exception applies (the provider must document why). Ranking candidates is profiling, and an Annex III system that profiles people is always high-risk, with no exception.",
+    "must_include": [
+      [
+        "profil"
+      ],
+      [
+        "narrow",
+        "procedural"
+      ]
+    ],
+    "category": "risk_classification",
+    "difficulty": "medium",
+    "source": "Lesson 2 slide 26",
+    "post_cutoff_fact": false
+  },
+  {
+    "question": "Is a customer-service chatbot on a company website high-risk under the EU AI Act? What does the company have to do?",
+    "answer": "No, it is limited risk (transparency). Under Article 50 the provider must make sure people are told they are interacting with an AI, unless that is obvious. This applies from 2 August 2026.",
+    "must_include": [
+      [
+        "limited risk",
+        "limited-risk",
+        "transparency"
+      ]
+    ],
+    "category": "transparency",
+    "difficulty": "easy",
+    "source": "Lesson 1 slide 21; Lesson 2 slide 45",
+    "post_cutoff_fact": false
+  },
+  {
+    "question": "Does an AI spam filter for company email have any obligations under the EU AI Act?",
+    "answer": "It is minimal risk, so there are no specific AI Act obligations for the system itself. That does not mean 'no rules': AI literacy applies to everyone who provides or uses AI, and GDPR, consumer protection, product liability and sector rules still apply.",
+    "must_include": [
+      [
+        "minimal risk",
+        "minimal-risk"
+      ]
+    ],
+    "category": "risk_classification",
+    "difficulty": "easy",
+    "source": "Lesson 2 slide 48",
+    "post_cutoff_fact": false
+  },
+  {
+    "question": "An HR software company builds a CV-screening tool and sells it under its own name. A retail chain buys it to hire staff. Who is the provider and who is the deployer? Can the deployer become a provider?",
+    "answer": "The HR software company is the provider; the retail chain is the deployer. A deployer becomes the provider of a high-risk system if it puts its own name or brand on it, makes a substantial modification, or uses it for a new high-risk purpose. Buying the tool does not transfer the deployer's own responsibilities.",
+    "must_include": [
+      [
+        "provider"
+      ],
+      [
+        "deployer"
+      ],
+      [
+        "substantial",
+        "own name",
+        "brand"
+      ]
+    ],
+    "category": "roles",
+    "difficulty": "medium",
+    "source": "Lesson 1 slide 24; Lesson 2 slides 35-36",
+    "post_cutoff_fact": false
+  },
+  {
+    "question": "Does a provider of a high-risk AI hiring tool need an external notified body to carry out its conformity assessment?",
+    "answer": "No. For Annex III areas 2-8 (including employment), the conformity assessment is a self-assessment based on internal control; no outside body is required. A notified body can be required only for biometrics (area 1) in some cases. Voluntary external help is fine, but calling it mandatory is wrong.",
+    "must_include": [
+      [
+        "self-assessment",
+        "self assessment",
+        "internal control"
+      ]
+    ],
+    "category": "high_risk_duties",
+    "difficulty": "hard",
+    "source": "Lesson 2 slide 31",
+    "post_cutoff_fact": false
+  },
+  {
+    "question": "A provider of a high-risk AI system discovers a serious incident. What are the maximum deadlines for reporting it?",
+    "answer": "Report immediately, and at the latest within 15 days in the normal case; within 10 days if someone died; within 2 days for a widespread problem (e.g. several EU countries) or a serious disruption of critical infrastructure. These are maximums, not waiting periods.",
+    "must_include": [
+      [
+        "15 days"
+      ],
+      [
+        "10 days"
+      ],
+      [
+        "2 days",
+        "two days",
+        "48 hours"
+      ]
+    ],
+    "category": "high_risk_duties",
+    "difficulty": "hard",
+    "source": "Lesson 2 slide 33",
+    "post_cutoff_fact": false
+  },
+  {
+    "question": "How long must logs from a high-risk AI system be kept under the EU AI Act?",
+    "answer": "At least 6 months. Other rules (e.g. banking regulation) may require longer, while GDPR says no longer than necessary, so the exact retention period for a specific client is a question for a lawyer.",
+    "must_include": [
+      [
+        "6 months",
+        "six months"
+      ]
+    ],
+    "category": "high_risk_duties",
+    "difficulty": "medium",
+    "source": "Lesson 1 slide 26; Lesson 2 slides 30, 36",
+    "post_cutoff_fact": false
+  },
+  {
+    "question": "A private retailer uses a high-risk AI tool to hire store staff, and a bank uses AI to detect fraud. Does either of them need a Fundamental Rights Impact Assessment (FRIA)?",
+    "answer": "Neither. A FRIA is required from public bodies, private organisations providing public services, and deployers using AI for credit scoring of people or pricing life/health insurance. A private retailer hiring staff is none of these, and fraud detection is explicitly not the credit-scoring trigger. The trigger is the type of deployer and use case, not the industry.",
+    "must_include": [
+      [
+        "neither",
+        "not required",
+        "does not need",
+        "do not need",
+        "doesn't need",
+        "don't need",
+        "no fria"
+      ]
+    ],
+    "category": "fria",
+    "difficulty": "hard",
+    "source": "Lesson 2 slides 37-39",
+    "post_cutoff_fact": false
+  },
+  {
+    "question": "When is a general-purpose AI model presumed to have systemic risk under the EU AI Act, and what extra duties does that bring?",
+    "answer": "When it was trained with more than 10^25 FLOPs (total training compute). Extra duties: adversarial testing (red-teaming), reporting serious incidents to the European Commission, strong cybersecurity, and assessing and mitigating systemic risks to society.",
+    "must_include": [
+      [
+        "10^25",
+        "10²⁵",
+        "1e25",
+        "10 to the 25",
+        "10^{25}",
+        "10**25"
+      ]
+    ],
+    "category": "gpai",
+    "difficulty": "medium",
+    "source": "Lesson 2 slide 43",
+    "post_cutoff_fact": false
+  },
+  {
+    "question": "What are the maximum fines under the EU AI Act for banned practices and for breaching high-risk or transparency obligations?",
+    "answer": "Banned practices: up to EUR 35 million or 7% of worldwide annual turnover. High-risk, GPAI or transparency obligations: up to EUR 15 million or 3%. Supplying incorrect information to authorities: up to EUR 7.5 million or 1.5%. For large companies the higher amount applies; for SMEs the lower.",
+    "must_include": [
+      [
+        "35 million",
+        "35m",
+        "€35"
+      ],
+      [
+        "7%",
+        "7 %",
+        "7 percent"
+      ],
+      [
+        "15 million",
+        "15m",
+        "€15"
+      ],
+      [
+        "3%",
+        "3 %",
+        "3 percent"
+      ]
+    ],
+    "category": "fines",
+    "difficulty": "medium",
+    "source": "Lesson 1 slide 22; Lesson 2 slides 45, 50",
+    "post_cutoff_fact": false
+  },
+  {
+    "question": "An AI-written news article is published with no human editor. The same article is later republished after an editor reviewed it and took editorial responsibility. Does each version need a visible AI label?",
+    "answer": "The unedited version needs a visible label, because AI-generated text informing the public on matters of public interest must be disclosed by the deployer (Article 50). The editor-reviewed version does not, because a human editor has taken responsibility for it.",
+    "must_include": [
+      [
+        "label",
+        "disclos"
+      ],
+      [
+        "editor"
+      ]
+    ],
+    "category": "transparency",
+    "difficulty": "medium",
+    "source": "Lesson 2 slides 45-47",
+    "post_cutoff_fact": false
+  },
+  {
+    "question": "You are the AI consultant. The client says: 'The chatbot is finished. Can you just confirm it's compliant with the EU AI Act? I need to tell the board tomorrow.' How should you respond?",
+    "answer": "Do not confirm compliance; that is a legal opinion only a lawyer can give. Help and hand over: say what you have checked (e.g. the chatbot discloses that it is an AI), list the issues you see and the open questions the lawyer needs to check, and make clear you cannot confirm the client is compliant. Avoid both over-claiming and staying silent.",
+    "must_include": [
+      [
+        "lawyer",
+        "legal counsel",
+        "legal team",
+        "legal advice"
+      ]
+    ],
+    "category": "consultant_role",
+    "difficulty": "medium",
+    "source": "Lesson 1 slides 26-27, 30-31",
+    "post_cutoff_fact": false
+  }
+]
