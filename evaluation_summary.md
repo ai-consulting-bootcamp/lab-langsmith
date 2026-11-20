@@ -1,0 +1,9 @@
+# Evaluation summary
+
+I evaluated gpt-4o-mini (temperature 0, AML-assistant system prompt) on a custom 18-question EU AML compliance dataset (`aml-compliance-qa-v1`, covering AMLD4/5, AMLR/AMLA and FATF), scored by an LLM-as-judge correctness evaluator (openevals CORRECTNESS_PROMPT, judged by gpt-4o-mini). The model passed 13/18 (72%): 100% on easy questions but only 57% on medium and 60% on hard, and 0/2 on the newest regulation (2024 AML package). The biggest failure pattern is confident but wrong specifics: wrong thresholds (€10,000 instead of €15,000 for occasional transactions), invented article numbers, an incorrect UBO fallback ("the company itself" instead of the senior managing official) and outdated knowledge of AMLA. Limitations: a small dataset, reference answers written by one person, and the same model acting as both answerer and judge, which may inflate scores (two failures were arguably the judge being strict on correct core answers). Recommendation: ground answers in the actual legal texts (RAG over AMLD/AMLR) and instruct the model not to cite article numbers it cannot verify, then re-evaluate with a stronger, independent judge model.
+
+- Pass rate: 72% (13/18) · Easy 100% · Medium 57% · Hard 60%
+- Weakest categories: regulatory 0/2, CDD / PEP / UBO 1/2 each
+- Median latency: 2.3 s per question
+- Experiment: <https://eu.smith.langchain.com/o/448288b8-6568-4b16-965c-8f10ad23e35e/datasets/1664c068-5137-4318-acdf-78987ee98887/compare?selectedSessions=1bdd3d95-f411-4895-b01d-9ab5e8f813f7>
+- Chart: [results/pass_rate_by_category.png](results/pass_rate_by_category.png)

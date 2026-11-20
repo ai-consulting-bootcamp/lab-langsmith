@@ -1,0 +1,236 @@
+[
+  {
+    "inputs": {
+      "question": "What are the three classic stages of money laundering?"
+    },
+    "outputs": {
+      "answer": "Placement (introducing illicit funds into the financial system), layering (moving and disguising the funds through complex transactions to obscure their origin) and integration (re-entering the funds into the legitimate economy so they appear lawful)."
+    },
+    "metadata": {
+      "category": "fundamentals",
+      "difficulty": "easy",
+      "source": "FATF typologies"
+    }
+  },
+  {
+    "inputs": {
+      "question": "What is 'structuring' or 'smurfing' in an AML context?"
+    },
+    "outputs": {
+      "answer": "Splitting a large amount of cash into multiple smaller deposits or transactions, often by several people, to stay below reporting or identification thresholds and avoid detection."
+    },
+    "metadata": {
+      "category": "typologies",
+      "difficulty": "easy",
+      "source": "FATF typologies"
+    }
+  },
+  {
+    "inputs": {
+      "question": "What are the core elements of customer due diligence (CDD) under the EU AML Directive?"
+    },
+    "outputs": {
+      "answer": "Identifying the customer and verifying their identity on reliable independent sources; identifying the beneficial owner and taking reasonable measures to verify them; assessing and understanding the purpose and intended nature of the business relationship; and conducting ongoing monitoring of the relationship and transactions."
+    },
+    "metadata": {
+      "category": "cdd",
+      "difficulty": "medium",
+      "source": "AMLD4 Art. 13"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Above what ownership threshold is a natural person generally considered a beneficial owner of a company under the EU AML Directive?"
+    },
+    "outputs": {
+      "answer": "Holding more than 25% of the shares or voting rights, or an ownership interest of more than 25%, directly or indirectly, is an indication of ownership. Control through other means also counts; if no one qualifies, the senior managing official is recorded as beneficial owner."
+    },
+    "metadata": {
+      "category": "ubo",
+      "difficulty": "easy",
+      "source": "AMLD4 Art. 3(6)"
+    }
+  },
+  {
+    "inputs": {
+      "question": "If no natural person can be identified as beneficial owner of a company after exhausting all means, who should be recorded under the EU AML Directive?"
+    },
+    "outputs": {
+      "answer": "The natural person(s) holding the position of senior managing official, provided there are no grounds for suspicion; the obliged entity must keep records of the actions taken to identify the beneficial owner."
+    },
+    "metadata": {
+      "category": "ubo",
+      "difficulty": "hard",
+      "source": "AMLD4 Art. 3(6)(a)(ii)"
+    }
+  },
+  {
+    "inputs": {
+      "question": "What is a politically exposed person (PEP) and what measures are required for one?"
+    },
+    "outputs": {
+      "answer": "A natural person who is or has been entrusted with a prominent public function (e.g. head of state, minister, MP, senior judge, central bank board member). Enhanced due diligence applies: senior management approval for the relationship, measures to establish source of wealth and source of funds, and enhanced ongoing monitoring. This also covers family members and close associates."
+    },
+    "metadata": {
+      "category": "pep",
+      "difficulty": "medium",
+      "source": "AMLD4 Arts. 3(9), 20"
+    }
+  },
+  {
+    "inputs": {
+      "question": "For how long must a former PEP continue to be treated as a PEP under the EU AML Directive?"
+    },
+    "outputs": {
+      "answer": "For at least 12 months after they cease to hold the prominent public function, and until they are deemed to pose no further PEP-specific risk."
+    },
+    "metadata": {
+      "category": "pep",
+      "difficulty": "medium",
+      "source": "AMLD4 Art. 22"
+    }
+  },
+  {
+    "inputs": {
+      "question": "How long must obliged entities retain CDD documents and transaction records under the EU AML Directive?"
+    },
+    "outputs": {
+      "answer": "For five years after the end of the business relationship or after the date of an occasional transaction, after which personal data must be deleted unless national law provides otherwise (member states may allow a further retention of up to five years)."
+    },
+    "metadata": {
+      "category": "record_keeping",
+      "difficulty": "medium",
+      "source": "AMLD4 Art. 40"
+    }
+  },
+  {
+    "inputs": {
+      "question": "What is 'tipping off' and is it allowed?"
+    },
+    "outputs": {
+      "answer": "Tipping off means disclosing to the customer or a third party that a suspicious transaction report has been or will be filed, or that an ML/TF investigation is under way. It is prohibited."
+    },
+    "metadata": {
+      "category": "reporting",
+      "difficulty": "easy",
+      "source": "AMLD4 Art. 39"
+    }
+  },
+  {
+    "inputs": {
+      "question": "To which authority must a suspicious transaction be reported in an EU member state?"
+    },
+    "outputs": {
+      "answer": "To the national Financial Intelligence Unit (FIU), promptly and on the obliged entity's own initiative (e.g. FIU-Nederland in the Netherlands)."
+    },
+    "metadata": {
+      "category": "reporting",
+      "difficulty": "easy",
+      "source": "AMLD4 Art. 33"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Above what amount does an occasional transaction trigger customer due diligence under the EU AML Directive?"
+    },
+    "outputs": {
+      "answer": "EUR 15,000 or more, whether carried out in a single operation or in several operations that appear to be linked. Lower thresholds apply in specific cases, e.g. EUR 10,000 in cash for traders in goods and transfers of funds above EUR 1,000."
+    },
+    "metadata": {
+      "category": "cdd",
+      "difficulty": "medium",
+      "source": "AMLD4 Art. 11"
+    }
+  },
+  {
+    "inputs": {
+      "question": "When are obliged entities required to apply enhanced due diligence?"
+    },
+    "outputs": {
+      "answer": "In higher-risk situations identified by the entity or member state, and in prescribed cases: business relationships or transactions involving high-risk third countries on the EU list, PEPs, cross-border correspondent relationships with third-country respondent institutions, and complex or unusually large transactions or unusual patterns without an apparent economic or lawful purpose."
+    },
+    "metadata": {
+      "category": "edd",
+      "difficulty": "hard",
+      "source": "AMLD4 Arts. 18-24"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Can an EU credit institution maintain a correspondent relationship with a shell bank?"
+    },
+    "outputs": {
+      "answer": "No. Credit and financial institutions are prohibited from entering into or continuing a correspondent relationship with a shell bank, and must take measures to ensure they do not engage with a respondent that allows its accounts to be used by a shell bank."
+    },
+    "metadata": {
+      "category": "edd",
+      "difficulty": "medium",
+      "source": "AMLD4 Art. 24"
+    }
+  },
+  {
+    "inputs": {
+      "question": "What does the 'risk-based approach' mean in AML compliance?"
+    },
+    "outputs": {
+      "answer": "Obliged entities identify and assess the ML/TF risks they face (customers, countries, products, channels) and apply measures proportionate to those risks: enhanced measures where risk is higher, simplified measures where risk is demonstrably lower, documented in a business-wide risk assessment."
+    },
+    "metadata": {
+      "category": "fundamentals",
+      "difficulty": "easy",
+      "source": "FATF Recommendation 1; AMLD4 Art. 8"
+    }
+  },
+  {
+    "inputs": {
+      "question": "Is a lawyer obliged to report a suspicion of money laundering learned while defending a client in judicial proceedings?"
+    },
+    "outputs": {
+      "answer": "No. Member states must exempt lawyers and similar legal professionals from the reporting obligation for information received in the course of ascertaining the client's legal position or defending or representing the client in judicial proceedings, unless the lawyer is taking part in the laundering or knows the client seeks advice for ML/TF purposes."
+    },
+    "metadata": {
+      "category": "reporting",
+      "difficulty": "hard",
+      "source": "AMLD4 Art. 34(2)"
+    }
+  },
+  {
+    "inputs": {
+      "question": "What is AMLA and where is it based?"
+    },
+    "outputs": {
+      "answer": "The EU Anti-Money Laundering Authority, established in 2024 under the EU AML package, based in Frankfurt. It coordinates national supervisors and FIUs and will directly supervise a number of the highest-risk cross-border financial entities."
+    },
+    "metadata": {
+      "category": "regulatory",
+      "difficulty": "medium",
+      "source": "Regulation (EU) 2024/1620"
+    }
+  },
+  {
+    "inputs": {
+      "question": "What EU-wide cash payment limit does the new AML Regulation (AMLR) introduce?"
+    },
+    "outputs": {
+      "answer": "A maximum of EUR 10,000 for cash payments made or received by persons trading in goods or providing services, with member states allowed to set a lower limit. It applies from July 2027."
+    },
+    "metadata": {
+      "category": "regulatory",
+      "difficulty": "hard",
+      "source": "Regulation (EU) 2024/1624 Art. 80"
+    }
+  },
+  {
+    "inputs": {
+      "question": "A new corporate client has a three-layer ownership chain through offshore entities, insists on paying fees in cash, and is reluctant to explain the source of funds. What should the compliance officer do?"
+    },
+    "outputs": {
+      "answer": "Treat it as high risk: apply enhanced due diligence, identify and verify the beneficial owners through the full chain, establish source of funds and wealth, and get senior management approval. If the concerns cannot be resolved, do not onboard or proceed, consider whether there are grounds for suspicion and, if so, file a report with the FIU without tipping off the client."
+    },
+    "metadata": {
+      "category": "scenario",
+      "difficulty": "hard",
+      "source": "AMLD4 Arts. 14, 18, 33, 39"
+    }
+  }
+]
