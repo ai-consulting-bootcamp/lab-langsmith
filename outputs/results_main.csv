@@ -1,0 +1,217 @@
+inputs.question,outputs.answer,error,reference.answer,feedback.correctness,feedback.keyword_overlap,execution_time,example_id,id
+"A multi-tenant RAG application retrieves private documents belonging to another customer because its vector similarity search does not enforce access permissions. The retrieved documents contain no malicious instructions. Which OWASP vulnerability does this illustrate, and why is it different from prompt injection?","This scenario illustrates the vulnerability of **Data Leakage** as outlined in the OWASP GenAI LLM Top 10. Data Leakage occurs when sensitive information is unintentionally exposed to unauthorized users, which can happen in multi-tenant applications if access controls are not properly enforced.
+
+In this case, the vector similarity search retrieves private documents belonging to another customer due to a lack of access permissions. This means that users can access data that they should not have permission to view, leading to potential privacy violations and breaches of confidentiality.
+
+This situation is different from **Prompt Injection**, which involves manipulating the input to an AI model to produce unintended outputs or behaviors. Prompt injection typically focuses on influencing the model's responses through crafted inputs, whereas data leakage is concerned with unauthorized access to sensitive data due to inadequate security measures. In summary, data leakage is about unauthorized access to data, while prompt injection is about manipulating the model's behavior through input.",,"This illustrates LLM09: Vector and Embedding Weaknesses, specifically an access-control failure in a vector-based retrieval system. The application retrieves documents based on semantic similarity without enforcing the necessary access restrictions, potentially exposing another customer's private information. Unlike prompt injection, this vulnerability exploits weaknesses in the retrieval and embedding layer rather than malicious instructions that manipulate the model's behavior.",False,True,3.471115,30c05a15-7b6c-41b9-b062-e7ff075a1339,01a1f950-3190-7bf0-8b8e-7488c8ed8bfc
+"An LLM-powered web application generates HTML content and displays it directly in users' browsers without sanitization or output encoding. An attacker manipulates the generated content to include malicious JavaScript. Which OWASP vulnerability does this illustrate, and what security measures should be implemented?","This scenario illustrates the OWASP vulnerability known as Cross-Site Scripting (XSS). XSS occurs when an application includes untrusted data in a web page without proper validation or escaping, allowing attackers to inject malicious scripts that can execute in the context of a user's browser.
+
+**Risks:**
+- Attackers can steal sensitive information (e.g., cookies, session tokens).
+- They can perform actions on behalf of users (e.g., account takeover).
+- It can lead to defacement of the website or distribution of malware.
+
+**Causes:**
+- Lack of input validation and output encoding.
+- Trusting user-generated content without proper sanitization.
+
+**Mitigations:**
+1. **Output Encoding:** Always encode output data before rendering it in the browser. Use context-specific encoding (e.g., HTML, JavaScript, URL encoding).
+2. **Content Security Policy (CSP):** Implement a CSP to restrict the sources from which scripts can be loaded and executed.
+3. **Input Validation:** Validate and sanitize all user inputs to ensure they conform to expected formats.
+4. **Use Security Libraries:** Utilize libraries that automatically handle sanitization and encoding (e.g., DOMPurify for HTML).
+5. **Regular Security Audits:** Conduct regular security assessments and code reviews to identify and remediate potential vulnerabilities.
+
+By implementing these measures, the risk of XSS can be significantly reduced, enhancing the overall security of the LLM-powered web application.",,"This illustrates LLM10: Improper Output Handling. The application processes LLM-generated content without sufficient validation, sanitization, or context-specific output encoding, allowing malicious JavaScript to execute in the user's browser through cross-site scripting (XSS). The application should treat LLM outputs as untrusted data and apply appropriate validation, sanitization, and context-specific encoding before passing them to downstream components.",True,True,4.477306,1d9a457c-1d0c-4be9-87fe-56f44863d570,01a1f950-318e-7082-86a2-be3856a79781
+"A company stores internal authorization rules and tool configurations in an LLM's hidden system prompt, assuming users cannot access them. An attacker successfully reconstructs these instructions. Which OWASP vulnerability does this illustrate, and what security principle should the company follow?","This scenario illustrates the OWASP vulnerability known as ""Sensitive Data Exposure."" In this case, the internal authorization rules and tool configurations are considered sensitive data that should be protected from unauthorized access. The fact that an attacker was able to reconstruct these instructions indicates a failure in safeguarding sensitive information.
+
+The relevant security principle the company should follow is ""Least Privilege."" This principle dictates that users and systems should only have the minimum level of access necessary to perform their functions. Additionally, the company should implement strong access controls, data encryption, and regular security assessments to ensure that sensitive data is adequately protected and not exposed through unintended means.",,"This illustrates LLM08: Hidden Context Exposure. The attacker reconstructs non-user-facing system instructions and operational details that may reveal security-relevant logic or tool capabilities. OWASP recommends assuming that hidden context is discoverable and should not be treated as a security boundary. Authorization, privilege separation, and policy enforcement must not rely solely on the secrecy of system prompts, and sensitive credentials should not be embedded in them.",False,True,2.167068,6e6224d1-411f-4817-a33f-c7a41da87eac,01a1f950-430c-78b2-bb64-caef90381432
+What is Prompt Injection according to the OWASP GenAI LLM Top 10 (2026)?,"Prompt Injection is a security vulnerability identified in the OWASP GenAI LLM Top 10 (2026). It occurs when an attacker manipulates the input prompt to a language model (LLM) in a way that alters its intended behavior or output. This can lead to unintended consequences, such as the model generating harmful, misleading, or unauthorized content.
+
+**Risks:** The risks associated with prompt injection include the potential for the LLM to disclose sensitive information, produce biased or harmful outputs, or execute unintended commands that could compromise the integrity of the application or its users.
+
+**Causes:** Prompt injection typically arises from insufficient input validation and sanitization, allowing attackers to craft inputs that exploit the model's processing logic.
+
+**Mitigations:** To mitigate the risks of prompt injection, developers should implement strict input validation and sanitization processes, limit the model's access to sensitive data, and employ monitoring and logging to detect and respond to suspicious activities. Additionally, using context-aware prompts and fine-tuning the model can help reduce the likelihood of exploitation.",,"Prompt injection is a vulnerability where input to a large language model, such as user messages, retrieved documents, or tool outputs, causes the model to behave in ways the application developer did not intend. This vulnerability arises because LLMs process instructions and data together without an enforced trust boundary.",True,True,3.891179,32fd330c-da92-49ed-b97a-321d9dcef4f7,01a1f950-3f1f-77f3-8a07-83fc036ced4e
+"An autonomous AI agent incorrectly concludes that a customer has already paid an invoice and automatically approves an order for shipment. Which OWASP vulnerability does this illustrate, and why is it particularly dangerous in agentic systems?","This scenario illustrates the vulnerability of ""Inaccurate or Misleading Outputs,"" which is part of the OWASP GenAI LLM Top 10. This vulnerability arises when an AI system generates outputs that are incorrect or misleading due to flawed reasoning, insufficient data, or misinterpretation of context.
+
+In agentic systems, this vulnerability is particularly dangerous for several reasons:
+
+1. **Autonomy**: Autonomous agents operate without human oversight, meaning that incorrect conclusions can lead to significant real-world consequences, such as financial loss or reputational damage.
+
+2. **Trust**: Users may place undue trust in the decisions made by AI agents, assuming they are accurate. This trust can lead to a lack of verification processes, increasing the risk of harmful actions based on erroneous outputs.
+
+3. **Scale**: Autonomous agents can operate at scale, processing numerous transactions or decisions simultaneously. A single error can propagate quickly, affecting many customers or transactions.
+
+4. **Complexity**: The complexity of AI models can make it difficult to trace the source of errors, complicating remediation efforts and increasing the likelihood of repeated mistakes.
+
+To mitigate this risk, organizations should implement robust validation mechanisms, including human oversight for critical decisions, continuous monitoring of AI outputs, and regular audits of the decision-making processes to ensure accuracy and reliability.",,"This illustrates LLM07: Misinformation. The agent generates or relies on an incorrect representation of the customer's payment status and uses it to authorize an action. In agentic systems, misinformation is particularly dangerous because incorrect information, reasoning, or inferred system states can be passed to downstream components and trigger unintended actions without human verification. This can cause financial losses, security incidents, or operational disruption.",True,True,3.571709,6edcd683-f945-483c-b21b-016d9116e914,01a1f950-4b83-7bc2-bb3f-26b1fe56ae8d
+"An organization continuously imports unverified documents into its RAG knowledge base. An attacker modifies the stored information, causing the AI assistant to repeatedly provide misleading answers across different sessions. Which OWASP vulnerability does this illustrate, and why?","This scenario illustrates the vulnerability of ""Data Poisoning,"" which is part of the OWASP GenAI LLM Top 10. 
+
+**Risk:** Data poisoning occurs when an attacker manipulates the training or operational data of a machine learning model, leading to the model producing incorrect or misleading outputs. In this case, the attacker modifies unverified documents in the RAG (Retrieval-Augmented Generation) knowledge base, which directly affects the quality and reliability of the information the AI assistant provides.
+
+**Causes:** The continuous importation of unverified documents creates an opportunity for attackers to introduce malicious or misleading content. Without proper validation and verification processes in place, the integrity of the knowledge base is compromised, allowing for the potential manipulation of the AI's responses.
+
+**Mitigations:** To mitigate this risk, organizations should implement strict validation and verification processes for all documents before they are imported into the knowledge base. This can include automated checks for data integrity, human review processes, and the use of trusted sources. Additionally, employing anomaly detection mechanisms can help identify and flag unusual patterns in the data that may indicate tampering. Regular audits of the knowledge base can also help maintain its integrity over time.",,"This illustrates LLM05: Data and Model Poisoning. The attacker manipulates information stored in the RAG knowledge base, causing the AI system to repeatedly retrieve corrupted data and generate misleading answers. Unlike a single runtime prompt injection, the compromised information persists and can influence multiple future interactions. Mitigation requires validating and correcting the affected data and securing the ingestion pipeline.",True,True,4.229694,76382fe1-62b0-48f9-8f76-8c618b6624c8,01a1f950-4e53-7763-a5ce-44d4327cbf8a
+Which three deployment-time properties make prompt injection vulnerabilities worse according to OWASP?,"According to the OWASP GenAI LLM Top 10 (2026), the three deployment-time properties that exacerbate prompt injection vulnerabilities are:
+
+1. **Lack of Input Validation**: When user inputs are not properly validated or sanitized, it increases the risk of malicious prompts being executed. This can lead to unintended behavior or exposure of sensitive information.
+
+2. **Overly Permissive Contexts**: Deployments that allow LLMs to operate in contexts with excessive permissions or capabilities can amplify the impact of prompt injection attacks. If an LLM has access to sensitive operations or data, a successful prompt injection could lead to significant security breaches.
+
+3. **Inadequate User Authentication and Authorization**: Weak or absent authentication and authorization mechanisms can allow unauthorized users to exploit prompt injection vulnerabilities. If users can interact with the LLM without proper checks, they may manipulate prompts to achieve malicious outcomes.
+
+Mitigating these risks involves implementing robust input validation, restricting the operational context of LLMs, and enforcing strong authentication and authorization protocols.",,"The three properties are context-window pooling, memory persistence, and agentic execution. Context-window pooling combines inputs from different trust levels without an enforced boundary. Memory persistence can carry malicious instructions across sessions. Agentic execution allows compromised model outputs to trigger actions through connected tools.",False,False,3.215219,80b0e99f-b25f-4bd6-9a3f-b8caecf950f4,01a1f950-5977-7113-95bd-7f50dd1d7b12
+What are the four lifecycle phases in which sensitive information disclosure can occur according to OWASP?,"According to the OWASP GenAI LLM Top 10 (2026), the four lifecycle phases in which sensitive information disclosure can occur are:
+
+1. **Training Phase**: During this phase, sensitive data may inadvertently be included in the training datasets. If not properly managed, this can lead to the model learning and potentially exposing sensitive information.
+
+2. **Inference Phase**: In this phase, the model generates outputs based on user inputs. If the model has learned sensitive information during training, it may disclose this information in its responses.
+
+3. **Deployment Phase**: When the model is deployed, it may be exposed to various inputs from users. If proper access controls and data sanitization measures are not in place, sensitive information could be disclosed through the model's outputs.
+
+4. **Maintenance Phase**: Ongoing updates and retraining of the model can introduce new vulnerabilities. If sensitive information is not adequately managed during these updates, it may lead to further disclosures.
+
+Mitigating risks associated with sensitive information disclosure involves implementing strict data handling policies, regular audits, and employing techniques such as differential privacy during training and inference.",,"The four phases are training-time, inference-time, pipeline-time, and observation-time. Training-time disclosure involves memorized information. Inference-time disclosure exposes live context. Pipeline-time disclosure occurs through derived artifacts or processing workflows. Observation-time disclosure allows information to be inferred from measurable system behavior.",False,True,3.274523,9c96cf4d-4c8f-4f09-87c6-2c87684d7dcc,01a1f950-6606-7bb3-888a-c6418c46c568
+Name at least four possible causes of misinformation in LLM-enabled applications according to OWASP.,"According to the OWASP GenAI LLM Top 10 (2026), four possible causes of misinformation in LLM-enabled applications include:
+
+1. **Training Data Quality**: LLMs are trained on vast datasets that may contain inaccuracies, biases, or outdated information. If the training data is flawed, the model may generate misleading or incorrect outputs.
+
+2. **Model Limitations**: LLMs have inherent limitations in understanding context and nuance. They may misinterpret user queries or fail to recognize ambiguous language, leading to the generation of misleading information.
+
+3. **Prompt Injection Attacks**: Malicious users can manipulate input prompts to influence the model's output. This can result in the generation of false or harmful information that aligns with the attacker’s intent.
+
+4. **Lack of Verification Mechanisms**: Many LLM applications do not incorporate robust verification processes to cross-check generated information against reliable sources. This absence can lead to the dissemination of unverified or false content.
+
+Mitigating these risks involves improving training data quality, enhancing model architecture, implementing input validation, and establishing verification protocols for generated outputs.",,"Possible causes include hallucinations, incomplete or outdated context, weak grounding, ambiguous prompts, biased or corrupted data, misleading summaries, and unvalidated tool outputs. Attackers may also deliberately induce misinformation.",True,True,3.297201,83ba6ec9-1173-49e6-aa4d-e50a065cf789,01a1f950-5edb-7f50-b0d9-78cddc7d1ac1
+Which three axes does OWASP use to characterize the anatomy of a prompt injection attack?,"OWASP characterizes the anatomy of a prompt injection attack using three axes:
+
+1. **Input Manipulation**: This axis focuses on how an attacker can manipulate the input to the language model. It involves crafting prompts that can alter the model's behavior or output in unintended ways.
+
+2. **Output Control**: This axis examines the extent to which an attacker can control or influence the output generated by the language model. It looks at how the model's responses can be shaped through specific prompt structures or content.
+
+3. **Context Awareness**: This axis considers the model's understanding of context and how it can be exploited. It involves assessing how well the model can discern between legitimate prompts and malicious ones, and how context can be used to enhance the effectiveness of an attack.
+
+Understanding these axes helps in identifying vulnerabilities and developing strategies to mitigate the risks associated with prompt injection attacks.",,"OWASP identifies three axes: delivery surface, propagation behavior, and encoding. Delivery surface describes how the injection reaches the model. Propagation behavior describes how it spreads across steps, sessions, or agents. Encoding describes how malicious instructions are represented, such as plain text, obfuscated text, or multimodal content.",False,True,2.745876,9fb95165-64a9-4f9d-a554-5d47b396ac5d,01a1f950-6bbd-7961-b5c3-0d031d9bb355
+What are three major potential consequences of Unbounded Consumption in LLM applications?,"Unbounded Consumption in LLM applications refers to the risk of excessive resource usage, which can lead to several significant consequences:
+
+1. **Denial of Service (DoS)**: Unbounded consumption can overwhelm system resources, such as CPU, memory, or network bandwidth. This can lead to degraded performance or complete unavailability of the application for legitimate users, effectively resulting in a denial of service.
+
+2. **Increased Operational Costs**: Excessive resource consumption can lead to higher operational costs, particularly in cloud environments where usage is billed based on resource consumption. This can strain budgets and lead to unexpected expenses, impacting the overall financial health of the organization.
+
+3. **Data Leakage and Security Risks**: In scenarios where unbounded consumption leads to resource exhaustion, it may trigger fallback mechanisms or error states that expose sensitive data or system internals. This can create vulnerabilities that attackers might exploit, leading to data breaches or unauthorized access.
+
+Mitigations for unbounded consumption include implementing rate limiting, resource quotas, and monitoring usage patterns to detect and respond to anomalies promptly.",,"Three major consequences are disruption of service availability through excessive resource usage, unsustainable financial costs caused by uncontrolled inference, and intellectual property theft through model cloning.",True,True,3.31454,a2a7df48-1e4b-4628-9c10-42d421785ba4,01a1f950-72d2-72f0-b97b-1575270ec043
+A developer downloads a third-party LoRA adapter from a shared model repository. The adapter has been maliciously modified before distribution. Which OWASP vulnerability does this illustrate and why?,"This scenario illustrates the vulnerability of ""Malicious Model Injections,"" which is part of the OWASP GenAI LLM Top 10. 
+
+**Risk:** The risk here is that the developer unknowingly integrates a compromised component into their application, which can lead to various security issues, including data leakage, unauthorized access, or even the execution of harmful commands.
+
+**Causes:** The cause of this vulnerability stems from the reliance on third-party components without adequate verification of their integrity and security. Shared model repositories may not have stringent vetting processes, allowing malicious actors to distribute modified adapters that can exploit the host application.
+
+**Mitigations:** To mitigate this risk, developers should implement several best practices:
+1. **Source Verification:** Only download models and adapters from trusted and verified sources.
+2. **Integrity Checks:** Use cryptographic hashes or signatures to verify the integrity of the downloaded components.
+3. **Code Review:** Conduct thorough code reviews of third-party components before integration.
+4. **Sandbox Testing:** Test the components in a controlled environment to observe their behavior before deploying them in production.
+
+By following these practices, developers can reduce the risk of integrating maliciously modified components into their applications.",,This illustrates LLM04: Supply Chain. Third-party model adapters such as LoRA are part of the LLM supply chain and can introduce security risks if their artifacts are tampered with or maliciously replaced. A compromised adapter may alter model behavior or introduce exploitable weaknesses into downstream systems.,False,True,4.31483,b6574ef5-5dd3-4480-811d-80d1d5bf8db3,01a1f950-7677-70e1-80e0-3638d5bfbc31
+Why can recovering from Data and Model Poisoning be more difficult than fixing a traditional software vulnerability?,"Recovering from Data and Model Poisoning can be more challenging than fixing traditional software vulnerabilities due to several factors:
+
+1. **Complexity of Machine Learning Models**: Machine learning models, especially large language models (LLMs), are often complex and opaque. Understanding how a poisoned dataset has affected the model's behavior can be difficult, making it hard to identify the extent of the damage.
+
+2. **Data Dependency**: Unlike traditional software vulnerabilities that can often be patched by modifying code, machine learning models rely heavily on their training data. If the training data has been poisoned, simply retraining the model may not be sufficient, as the poisoned data could have introduced biases or incorrect patterns that persist even after retraining.
+
+3. **Lack of Version Control**: In many cases, machine learning models do not have robust version control systems in place. This makes it difficult to revert to a previous, unpoisoned state of the model or to track changes in the training data over time.
+
+4. **Detection Challenges**: Identifying data and model poisoning attacks can be inherently difficult. Unlike traditional vulnerabilities that may have clear indicators of compromise, poisoned data may not exhibit obvious signs, leading to delayed detection and response.
+
+5. **Reputation and Trust Issues**: Once a model has been compromised, restoring user trust can be a significant challenge. Users may be hesitant to rely on a model that has previously been shown to be vulnerable, even after remediation efforts.
+
+6. **Resource Intensive Recovery**: The recovery process often requires significant resources, including time, computational power, and expertise to clean the dataset, retrain the model, and validate its performance post-recovery.
+
+To mitigate these risks, organizations should implement robust data validation processes, maintain comprehensive logging and monitoring of model performance, and establish clear protocols for model versioning and rollback.",,"Data and Model Poisoning can introduce harmful patterns, biases, or backdoors into training data, model behavior, or persistent knowledge stores. Unlike a traditional software vulnerability that may be fixed by changing code, poisoning can require data revalidation, retraining, model replacement, or pipeline redesign.",True,True,4.033748,c2582e57-b40d-4a3f-9db6-321b597a33bf,01a1f950-7fc6-7e71-a622-e0314b796432
+Why are vectorless retrieval systems such as BM25-only search not exposed to the specific embedding-geometry attacks described in LLM09?,"Vectorless retrieval systems like BM25 operate on traditional information retrieval principles, primarily focusing on term frequency and inverse document frequency to rank documents based on keyword matches. These systems do not utilize embeddings or vector representations of text, which are susceptible to specific embedding-geometry attacks described in LLM09.
+
+The risks associated with embedding-geometry attacks stem from the manipulation of vector spaces where embeddings reside. Attackers can exploit the geometric properties of these embeddings to mislead the model into producing incorrect or biased outputs. Since BM25 does not rely on such embeddings, it is inherently insulated from these types of attacks.
+
+In summary, the absence of vector representations in BM25 means that it does not face the same vulnerabilities as systems that utilize embeddings, making it less susceptible to the specific risks outlined in LLM09. However, it is important to note that while BM25 may be safer from these particular attacks, it may still face other security challenges inherent to traditional search systems, such as query manipulation or relevance feedback attacks.",,"Vector and Embedding Weaknesses depend on numerical embeddings and similarity-search mechanisms. BM25-only retrieval does not use embedding geometry, so attacks that specifically exploit vector-space properties do not apply. However, these systems can still be affected by other non-geometric retrieval and application security risks.",True,True,2.957066,c763b965-1ae8-466b-b27b-eb8f8be5d7ab,01a1f950-8754-7a81-b4a2-341edbe1dc1d
+How does Excessive Agency differ from Improper Output Handling according to OWASP?,"Excessive Agency and Improper Output Handling are two distinct risks identified in the OWASP GenAI LLM Top 10.
+
+**Excessive Agency** refers to the risk associated with giving users too much control or influence over the model's outputs. This can lead to unintended consequences, such as the generation of harmful or misleading content. The primary concern is that users may exploit the model's capabilities to produce outputs that align with their malicious intents, thereby increasing the risk of misinformation, bias, or harmful behavior.
+
+**Improper Output Handling**, on the other hand, focuses on the risks related to how the outputs generated by the model are processed, filtered, or presented to users. This includes failing to adequately sanitize or validate outputs before they are displayed or used, which can lead to security vulnerabilities such as injection attacks, data leakage, or the dissemination of inappropriate content.
+
+In summary, Excessive Agency is about the risks of user influence on model outputs, while Improper Output Handling pertains to the risks associated with the management and presentation of those outputs. Mitigations for Excessive Agency may involve implementing stricter controls on user inputs and outputs, whereas Improper Output Handling requires robust validation and sanitization processes for the outputs generated by the model.",,"Excessive Agency concerns damaging actions enabled by excessive functionality, permissions, or autonomy granted to an LLM system. Improper Output Handling concerns insufficient validation or sanitization of LLM outputs before downstream systems process them. The former focuses on the agent's capabilities and authority, while the latter focuses on unsafe processing of generated outputs.",False,True,3.142501,cd7f31d6-ef74-43ac-90a9-499d7fcea915,01a1f950-92e1-76f0-ad51-6dfec9378322
+How do LLM supply chain vulnerabilities differ from traditional software supply chain vulnerabilities according to OWASP?,"According to the OWASP GenAI LLM Top 10 (2026), LLM supply chain vulnerabilities differ from traditional software supply chain vulnerabilities in several key ways:
+
+1. **Data Dependency**: LLMs are heavily reliant on vast datasets for training. Vulnerabilities can arise from the inclusion of biased, malicious, or low-quality data, which can lead to harmful outputs or reinforce biases. Traditional software vulnerabilities typically stem from code dependencies rather than data.
+
+2. **Model Complexity**: The complexity of LLM architectures can obscure vulnerabilities. Unlike traditional software, where code can be reviewed and tested, LLMs operate as black boxes, making it challenging to identify and mitigate risks associated with model behavior.
+
+3. **Dynamic Behavior**: LLMs can generate outputs based on input prompts, leading to unpredictable behavior. This dynamic nature can introduce risks that are not present in static software components, where behavior is more deterministic.
+
+4. **Third-Party Models**: The use of pre-trained models from third-party sources can introduce risks if those models contain vulnerabilities or biases. In traditional software, third-party libraries can also introduce vulnerabilities, but the impact may be more predictable compared to the unpredictable outputs of LLMs.
+
+5. **Deployment and Fine-Tuning**: The process of deploying and fine-tuning LLMs can introduce additional vulnerabilities, especially if the fine-tuning data is not properly vetted. In traditional software, deployment vulnerabilities often relate to configuration issues or insecure deployment practices.
+
+Mitigations for LLM supply chain vulnerabilities include rigorous data vetting, model auditing, and implementing robust monitoring systems to detect and respond to anomalous behavior.",,"Traditional software supply chain vulnerabilities primarily involve code flaws and software dependencies. LLM supply chain vulnerabilities additionally affect third-party pre-trained models, training datasets, adapters such as LoRA, model artifacts, and model conversion or merging pipelines. These components can be compromised through tampering, poisoning, or malicious artifact replacement, potentially causing biased outputs, security breaches, or system failures.",True,True,5.282833,ca116d21-9e32-4f38-975e-13bd08faf57f,01a1f950-8f87-7e30-a07b-a7cd3fecaab6
+Why should developers avoid storing API keys or authorization rules in hidden system prompts?,"Developers should avoid storing API keys or authorization rules in hidden system prompts due to several critical security risks:
+
+1. **Exposure Risk**: If API keys or authorization rules are embedded in system prompts, they may inadvertently be exposed through logs, error messages, or during debugging. This can lead to unauthorized access to sensitive resources.
+
+2. **Insufficient Access Control**: Hidden prompts may not have adequate access controls, making it easier for malicious actors to exploit these keys if they gain access to the system or application.
+
+3. **Lack of Auditing**: Storing sensitive information in hidden prompts can complicate auditing and monitoring efforts. It becomes challenging to track how and when these keys are used, increasing the risk of misuse.
+
+4. **Hardcoded Secrets**: Hardcoding secrets like API keys in prompts violates the principle of least privilege and can lead to security vulnerabilities. If the code is shared or exposed, the keys can be easily extracted.
+
+**Mitigations**:
+- Use environment variables or secure vaults to store sensitive information securely.
+- Implement access controls and logging to monitor the usage of API keys.
+- Regularly rotate keys and secrets to minimize the impact of potential exposure.
+- Conduct security reviews and audits to ensure that sensitive information is not improperly stored or exposed.
+
+By following these practices, developers can significantly reduce the risk of unauthorized access and enhance the overall security posture of their applications.",,"Hidden system prompts should be considered potentially discoverable. If API keys or credentials are embedded in them, exposure can compromise security. Authorization and policy enforcement must not rely solely on hidden prompt secrecy. Security-sensitive controls should be enforced independently of the model's hidden context.",True,True,3.785249,d3a3866f-8b0e-4f8b-8e6e-3953dcd87d77,01a1f950-9f27-7f20-98a8-a39e96569c71
+"Why is protecting only the final LLM response insufficient to prevent sensitive information disclosure, according to OWASP?","Protecting only the final LLM response is insufficient to prevent sensitive information disclosure because sensitive data can be exposed at multiple stages throughout the interaction with the model. According to OWASP, the risks include:
+
+1. **Input Leakage**: Users may inadvertently provide sensitive information in their prompts, which could be processed and stored by the LLM, leading to potential exposure in future interactions.
+
+2. **Intermediate Outputs**: During the generation process, intermediate outputs or logs may contain sensitive information that could be accessed by unauthorized users or systems.
+
+3. **Model Training Data**: If the LLM has been trained on datasets that include sensitive information, it may inadvertently generate responses that reveal this data, even if the final output seems benign.
+
+4. **Contextual Understanding**: The model's ability to understand context means that it can generate responses that are sensitive based on the context of the conversation, which may not be apparent in the final output alone.
+
+To mitigate these risks, it is essential to implement comprehensive data handling practices, including input sanitization, output filtering, and robust access controls, rather than focusing solely on the final response.",,"Protecting only the final response is insufficient because sensitive information can also be exposed through other channels, including tool-call arguments, reasoning traces, retrieved content, logs, telemetry, and embeddings. OWASP recommends treating all these channels as potential disclosure surfaces subject to appropriate data classification and redaction controls.",False,True,3.770053,dd7122c6-7cfb-49a9-b104-23c14af4aadf,01a1f950-a42b-77d1-9e41-f6744abdb4d4
+An LLM assistant is designed to summarize emails but also has permission to delete messages and can autonomously decide when to use this capability. Why does this represent an Excessive Agency risk according to OWASP?,"The scenario you described represents an Excessive Agency risk according to the OWASP GenAI LLM Top 10 because the LLM assistant is granted a level of autonomy and decision-making power that exceeds what is necessary for its intended function. 
+
+**Risks:**
+1. **Unintended Actions:** The LLM's ability to autonomously delete messages could lead to unintended data loss or the removal of important information without user consent or oversight.
+2. **Malicious Exploitation:** If an attacker gains control of the LLM or manipulates its inputs, they could exploit this excessive agency to delete critical communications or sensitive data.
+3. **User Trust Erosion:** Users may lose trust in the system if they perceive that it can make significant decisions without adequate checks and balances.
+
+**Causes:**
+- The design of the LLM allows it to perform actions beyond summarization, which introduces risks associated with decision-making capabilities.
+- Lack of strict boundaries or controls on the actions the LLM can take increases the potential for misuse.
+
+**Mitigations:**
+- Implement strict access controls and permissions that limit the LLM's capabilities to only what is necessary for its primary function.
+- Introduce a review or confirmation step for actions that have significant consequences, such as deleting messages.
+- Regularly audit and monitor the LLM's actions to ensure compliance with intended use and to detect any anomalies.
+
+By addressing these aspects, organizations can mitigate the risks associated with Excessive Agency in LLM applications.",,"This represents an Excessive Agency risk because the assistant has functionality and permissions beyond what is required for its intended task. Its ability to autonomously delete emails introduces excessive autonomy. Unexpected, ambiguous, or manipulated LLM outputs could trigger unauthorized or damaging actions. OWASP identifies excessive functionality, excessive permissions, and excessive autonomy as the three main root causes of this vulnerability.",True,True,3.828037,ed073013-1fdd-4824-95e7-7a9056397ecb,01a1f950-b2e6-7613-a9bc-5d03cb839df4
+"Why are traditional request-rate limits insufficient to prevent Unbounded Consumption in agentic LLM applications, and which additional controls does OWASP recommend?","Traditional request-rate limits are often insufficient to prevent Unbounded Consumption in agentic LLM applications because they typically focus on limiting the number of requests from a single user or IP address over a specific time period. However, agentic LLM applications can generate a large volume of requests in a short time, especially when they are designed to autonomously interact with users or other systems. This can lead to scenarios where the application consumes excessive resources, such as CPU, memory, or API quotas, without being effectively constrained by basic rate limits.
+
+The OWASP GenAI LLM Top 10 recommends additional controls to mitigate Unbounded Consumption risks, including:
+
+1. **Contextual Limits**: Implementing limits based on the context of the request, such as the complexity of the task or the expected resource consumption, rather than just the number of requests.
+
+2. **Resource Quotas**: Setting quotas on resource usage per user or session, which can help prevent any single user from monopolizing system resources.
+
+3. **Dynamic Throttling**: Employing dynamic throttling mechanisms that adjust limits based on current system load or user behavior patterns, allowing for more flexible and responsive resource management.
+
+4. **Monitoring and Alerts**: Establishing robust monitoring and alerting systems to detect unusual patterns of consumption that may indicate abuse or unintended behavior.
+
+5. **User Behavior Analysis**: Utilizing machine learning or heuristic approaches to analyze user behavior and identify potential misuse or excessive consumption patterns.
+
+By implementing these additional controls, organizations can better manage resource consumption and mitigate the risks associated with Unbounded Consumption in agentic LLM applications.",,"Traditional request-rate limits are insufficient because a single request can trigger expensive reasoning processes, large token consumption, multimodal processing, or cascading tool calls in agentic systems. This creates cost asymmetry, allowing attackers to cause disproportionate computational expenses. OWASP recommends token-aware cost controls, hard spending caps, agent-level circuit breakers, and continuous cost-attribution monitoring.",False,True,4.777628,ebef3785-6612-4225-bcaa-af3086947df5,01a1f950-adf1-7051-946c-25005ffcc041
