@@ -48,11 +48,11 @@ ArTee is the clearest main product for this lab. Investment Analysis and Live Be
 
 ### Step 2: Set Up LangSmith Environment
 
-- **LangSmith endpoint:** [US or EU]
-- **Project name:** [Project name]
-- **Tracing status:** [Working / not working]
-- **Environment configuration:** A repository-root `.env` file is present, and `.gitignore` excludes it so credentials are not committed. Document variable names here, never API keys or tokens.
-- **Connection verification:** [Describe or screenshot the successful client connection.]
+- **LangSmith endpoint:** EU (`https://eu.api.smith.langchain.com`)
+- **Project name:** `langsmith-custom-dataset-evaluation`
+- **Tracing status:** Working
+- **Environment configuration:** A repository-root `.env` file is loaded by the setup notebook and `.gitignore` excludes it so credentials are not committed. The configuration uses `OPENAI_API_KEY`, `LANGSMITH_API_KEY`, `LANGSMITH_TRACING=true`, `LANGSMITH_PROJECT=langsmith-custom-dataset-evaluation`, and `LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com` (the notebook overrides the endpoint to the EU value).
+- **Connection verification:** The setup notebook successfully loaded both API keys and initialized `langsmith.Client` and the LangSmith-wrapped OpenAI client. It completed a traced OpenAI greeting request and a `@traceable` test function, so tracing and client connectivity were working.
 
 ## Part 2: Dataset Creation
 
@@ -180,70 +180,3 @@ ArTee is the clearest main product for this lab. Investment Analysis and Live Be
 **Evaluation summary**
 
 See [`evaluation_summary.md`](./evaluation_summary.md).
-
-## Optional Part 1: Custom Evaluator
-
-### Step 11: Design Custom Evaluator
-
-- **Dimension measured:** [Tone, completeness, format, safety, or another dimension]
-- **Implementation:** [Link to code]
-- **Scoring scale:** [Scale and meaning]
-- **Prompt criteria:** [Summarize the judge prompt]
-- **Test cases:** [Link or list 2-3 test cases]
-
-### Step 12: Run Evaluation with Custom Evaluator
-
-- **Experiment link or export:** [Link or file path]
-- **Comparison method:** [How correctness and custom scores were compared]
-- **Differences observed:** [Describe disagreement patterns.]
-
-### Step 13: Document Custom Evaluator
-
-[Summarize what the evaluator adds beyond correctness, including one example where it provides useful insight.]
-
-## Optional Part 2: Cost & Performance Optimization
-
-### Step 14: Run A/B Comparison
-
-| Configuration | Model | Temperature | Mean score | Latency | Cost | Experiment |
-|---|---|---:|---:|---:|---:|---|
-| [Baseline] | [Model] | [Value] | [Value] | [Value] | [Value] | [Link] |
-| [Variant] | [Model] | [Value] | [Value] | [Value] | [Value] | [Link] |
-
-### Step 15: Analyze Cost-Performance Trade-offs
-
-- **Best maximum-performance option:** [Configuration and reason]
-- **Best cost-efficient option:** [Configuration and reason]
-- **Best balanced option:** [Configuration and reason]
-- **Cost assumptions:** [Pricing source and calculation method]
-
-### Step 16: Create Optimization Report
-
-See [`optimization_summary.md`](./optimization_summary.md).
-
-## Deliverables Map
-
-| Deliverable | Status | Location |
-|---|---|---|
-| Dataset documentation | [Pending / complete] | [File or URL] |
-| Dataset creation code | [Pending / complete] | [File] |
-| Target function code | [Pending / complete] | [File] |
-| Evaluator code | [Pending / complete] | [File] |
-| Evaluation execution code | [Pending / complete] | [File] |
-| LangSmith experiment | [Pending / complete] | [Link or screenshot] |
-| Results export | [Pending / complete] | [File] |
-| Evaluation summary | [Pending / complete] | [`evaluation_summary.md`](./evaluation_summary.md) |
-| Custom evaluator | [Optional / pending / complete] | [File] |
-| Cost-performance analysis | [Optional / pending / complete] | [File] |
-| Optimization summary | [Optional / pending / complete] | [`optimization_summary.md`](./optimization_summary.md) |
-
-## Success Criteria
-
-- [ ] Selected a domain and prepared source documents.
-- [ ] Created a custom LangSmith dataset with at least 10 examples.
-- [ ] Implemented a working target function with tracing enabled.
-- [ ] Successfully ran a LangSmith evaluation.
-- [ ] Analyzed results and created `evaluation_summary.md`.
-- [ ] All required repository deliverables are present.
-- [ ] (Optional) Designed and tested a custom evaluator.
-- [ ] (Optional) Completed cost and performance optimization analysis.
