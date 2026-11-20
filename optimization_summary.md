@@ -10,4 +10,4 @@ I compared three configurations of the EU AI Act risk classifier on the same 24-
 
 LangSmith experiments: [A-gpt-4o-mini-v1](https://smith.langchain.com/o/02ee3189-6ecc-4e1c-b911-6d5a92d2b83c/datasets/3d9fb028-b731-46af-9323-2158b7d3d09d/compare?selectedSessions=c9c541cc-d56f-462b-96ce-45f6812c818d), [B-gpt-5.4-mini-v1](https://smith.langchain.com/o/02ee3189-6ecc-4e1c-b911-6d5a92d2b83c/datasets/3d9fb028-b731-46af-9323-2158b7d3d09d/compare?selectedSessions=a1656a6d-e791-438b-b14a-a254eea5588b), [C-gpt-4o-mini-v2](https://smith.langchain.com/o/02ee3189-6ecc-4e1c-b911-6d5a92d2b83c/datasets/3d9fb028-b731-46af-9323-2158b7d3d09d/compare?selectedSessions=3f893a5d-2d92-4ff6-8719-9c1b57f27db4)
 
-Data and chart: `outputs/ab_comparison.csv`, `outputs/cost_vs_performance.png`
+Data and chart: `outputs/ab_comparison.csv`, `outputs/cost_vs_performance.png`.  
