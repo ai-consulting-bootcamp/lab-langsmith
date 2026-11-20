@@ -1,0 +1,4 @@
+evaluator,scale,n,pass_rate,failed,mean,median,min,max,std
+correctness,True/False,24,0.79,5,,,,,
+class_match,True/False,24,0.79,5,,,,,
+quality_score,1-10,24,,,8.25,10.0,1.0,10.0,3.04

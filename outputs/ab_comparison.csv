@@ -1,0 +1,4 @@
+config,model,prompt,class_match,correctness,quality_mean,quality_median,n_correct,avg_latency_s,tokens_in,tokens_out,total_cost_usd,cost_per_case_usd,cost_per_correct_usd,cost_per_1k_cases_usd,correct_vs_A
+A-gpt-4o-mini-v1,gpt-4o-mini,v1,0.79,0.79,8.21,10.0,19,1.18,14081,1592,0.00307,0.000128,0.000161,0.13,0
+B-gpt-5.4-mini-v1,gpt-5.4-mini,v1,0.96,0.92,9.33,10.0,23,1.16,14057,1974,0.01943,0.000809,0.000845,0.81,4
+C-gpt-4o-mini-v2,gpt-4o-mini,v2,0.88,0.88,8.58,10.0,21,1.19,15641,1614,0.00331,0.000138,0.000158,0.14,2
