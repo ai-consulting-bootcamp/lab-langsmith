@@ -1,0 +1,4 @@
+config,model,pass_rate,keyword_pass_rate,pass_rate_omnibus_qs,avg_latency_s,total_cost_usd,cost_per_example_usd,cost_per_correct_usd,cost_per_1k_questions_usd
+config-a-gpt-4o-mini,gpt-4o-mini,0.16667,0.05556,0.0,1.70925,0.00133,7e-05,0.00044,0.07374
+config-b-gpt-5.4-mini,gpt-5.4-mini,0.55556,0.5,0.0,1.99487,0.01462,0.00081,0.00146,0.81204
+config-c-gpt-4o-mini-briefing,gpt-4o-mini,0.27778,0.22222,1.0,1.53982,0.00182,0.0001,0.00036,0.10126
