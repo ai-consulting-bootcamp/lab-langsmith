@@ -1,0 +1,526 @@
+inputs.context,inputs.question,outputs.answer,error,reference.answer,feedback.correctness,feedback.response_length,execution_time,example_id,id,category,difficulty,source
+"# ShopCo — Customer Support Policy
+Version: 1.0
+
+This is a fictional policy created for this learning exercise.
+It does not describe a real company.
+
+## Shipping
+S1. ShopCo delivers only to mainland Spain.
+S2. Standard delivery takes 3–5 business days after dispatch.
+S3. Standard shipping costs €4. Orders of €50 or more have free shipping.
+S4. Customers receive a tracking link by email after dispatch.
+S5. If an order has not arrived after 5 business days from dispatch,
+the customer should contact customer support with the order number.
+
+## Returns
+R1. Customers can request a return within 30 calendar days of delivery.
+R2. For a change-of-mind return, the product must be unused,
+in its original packaging, and accompanied by proof of purchase.
+R3. Sale items follow the same return rules as full-price items.
+R4. For an eligible change-of-mind return, the customer pays
+the return shipping cost.
+R5. For a damaged or incorrect product, the customer should contact
+support with the order number and a photo. ShopCo pays the return
+shipping cost.
+R6. Refunds are issued to the original payment method within
+7 business days after ShopCo receives and approves the return.
+
+## Support and missing information
+C1. Customers can contact support at support@shopco.example.
+C2. If this policy does not contain the answer, the assistant must
+say that the information is not available and refer the customer
+to support. It must not invent rules.
+C3. If the customer's information is insufficient to apply a rule,
+the assistant must ask for the missing details before confirming
+eligibility.","My sale item arrived 10 calendar days ago. It is unused, in its original packaging, and I have proof of purchase. Can I return it because I changed my mind, and who pays return shipping?","Yes, you can return the sale item since it is unused, in its original packaging, and you have proof of purchase. However, you will need to pay the return shipping cost. If you have any further questions, feel free to ask!",,"Yes. Sale items follow the same return rules. You meet the stated conditions, and you pay the return shipping cost.",1.0,1.0,1.65507,10ea5ccc-794d-4407-86dd-58c01ff4c3c0,01a1f946-3acd-7d83-8e8f-44db6d213075,returns,hard,"data/shopco_policy.md v1.0 — R1, R2, R3, R4"
+"# ShopCo — Customer Support Policy
+Version: 1.0
+
+This is a fictional policy created for this learning exercise.
+It does not describe a real company.
+
+## Shipping
+S1. ShopCo delivers only to mainland Spain.
+S2. Standard delivery takes 3–5 business days after dispatch.
+S3. Standard shipping costs €4. Orders of €50 or more have free shipping.
+S4. Customers receive a tracking link by email after dispatch.
+S5. If an order has not arrived after 5 business days from dispatch,
+the customer should contact customer support with the order number.
+
+## Returns
+R1. Customers can request a return within 30 calendar days of delivery.
+R2. For a change-of-mind return, the product must be unused,
+in its original packaging, and accompanied by proof of purchase.
+R3. Sale items follow the same return rules as full-price items.
+R4. For an eligible change-of-mind return, the customer pays
+the return shipping cost.
+R5. For a damaged or incorrect product, the customer should contact
+support with the order number and a photo. ShopCo pays the return
+shipping cost.
+R6. Refunds are issued to the original payment method within
+7 business days after ShopCo receives and approves the return.
+
+## Support and missing information
+C1. Customers can contact support at support@shopco.example.
+C2. If this policy does not contain the answer, the assistant must
+say that the information is not available and refer the customer
+to support. It must not invent rules.
+C3. If the customer's information is insufficient to apply a rule,
+the assistant must ask for the missing details before confirming
+eligibility.",What conditions apply to a change-of-mind return?,"For a change-of-mind return, the product must be unused, in its original packaging, and accompanied by proof of purchase. Additionally, the customer is responsible for the return shipping cost. You can request a return within 30 calendar days of delivery.",,"Request the return within 30 calendar days of delivery. The product must be unused, in its original packaging, and accompanied by proof of purchase.",1.0,1.0,1.584202,2be12cc1-a1cd-4da2-845a-f142a993d6b1,01a1f946-3ad2-7600-8f77-c21a72f3e98c,returns,medium,"data/shopco_policy.md v1.0 — R1, R2"
+"# ShopCo — Customer Support Policy
+Version: 1.0
+
+This is a fictional policy created for this learning exercise.
+It does not describe a real company.
+
+## Shipping
+S1. ShopCo delivers only to mainland Spain.
+S2. Standard delivery takes 3–5 business days after dispatch.
+S3. Standard shipping costs €4. Orders of €50 or more have free shipping.
+S4. Customers receive a tracking link by email after dispatch.
+S5. If an order has not arrived after 5 business days from dispatch,
+the customer should contact customer support with the order number.
+
+## Returns
+R1. Customers can request a return within 30 calendar days of delivery.
+R2. For a change-of-mind return, the product must be unused,
+in its original packaging, and accompanied by proof of purchase.
+R3. Sale items follow the same return rules as full-price items.
+R4. For an eligible change-of-mind return, the customer pays
+the return shipping cost.
+R5. For a damaged or incorrect product, the customer should contact
+support with the order number and a photo. ShopCo pays the return
+shipping cost.
+R6. Refunds are issued to the original payment method within
+7 business days after ShopCo receives and approves the return.
+
+## Support and missing information
+C1. Customers can contact support at support@shopco.example.
+C2. If this policy does not contain the answer, the assistant must
+say that the information is not available and refer the customer
+to support. It must not invent rules.
+C3. If the customer's information is insufficient to apply a rule,
+the assistant must ask for the missing details before confirming
+eligibility.",ShopCo sent me the wrong product. What should I provide to support?,"To resolve the issue of receiving the wrong product, please contact support with your order number and a photo of the incorrect item. You can reach them at support@shopco.example.",,Contact support at support@shopco.example with your order number and a photo.,1.0,1.0,1.308961,2c8469f2-8c67-40bd-9826-9154fff657ef,01a1f946-4103-7850-ad82-55f662d8255e,returns,easy,"data/shopco_policy.md v1.0 — R5, C1"
+"# ShopCo — Customer Support Policy
+Version: 1.0
+
+This is a fictional policy created for this learning exercise.
+It does not describe a real company.
+
+## Shipping
+S1. ShopCo delivers only to mainland Spain.
+S2. Standard delivery takes 3–5 business days after dispatch.
+S3. Standard shipping costs €4. Orders of €50 or more have free shipping.
+S4. Customers receive a tracking link by email after dispatch.
+S5. If an order has not arrived after 5 business days from dispatch,
+the customer should contact customer support with the order number.
+
+## Returns
+R1. Customers can request a return within 30 calendar days of delivery.
+R2. For a change-of-mind return, the product must be unused,
+in its original packaging, and accompanied by proof of purchase.
+R3. Sale items follow the same return rules as full-price items.
+R4. For an eligible change-of-mind return, the customer pays
+the return shipping cost.
+R5. For a damaged or incorrect product, the customer should contact
+support with the order number and a photo. ShopCo pays the return
+shipping cost.
+R6. Refunds are issued to the original payment method within
+7 business days after ShopCo receives and approves the return.
+
+## Support and missing information
+C1. Customers can contact support at support@shopco.example.
+C2. If this policy does not contain the answer, the assistant must
+say that the information is not available and refer the customer
+to support. It must not invent rules.
+C3. If the customer's information is insufficient to apply a rule,
+the assistant must ask for the missing details before confirming
+eligibility.",Can I return my order?,I need more information to confirm if you can return your order. Could you please provide the delivery date and whether the product is unused and in its original packaging?,,"Please confirm when the order was delivered, the reason for the return, and the product's condition. For a change-of-mind return, also confirm whether you have the original packaging and proof of purchase before eligibility can be confirmed.",0.0,1.0,1.091673,4566b217-f5ea-4dfa-842a-64d1f259e60d,01a1f946-4145-7851-9566-d0c475d778fe,missing_information,hard,"data/shopco_policy.md v1.0 — R1, R2, C3"
+"# ShopCo — Customer Support Policy
+Version: 1.0
+
+This is a fictional policy created for this learning exercise.
+It does not describe a real company.
+
+## Shipping
+S1. ShopCo delivers only to mainland Spain.
+S2. Standard delivery takes 3–5 business days after dispatch.
+S3. Standard shipping costs €4. Orders of €50 or more have free shipping.
+S4. Customers receive a tracking link by email after dispatch.
+S5. If an order has not arrived after 5 business days from dispatch,
+the customer should contact customer support with the order number.
+
+## Returns
+R1. Customers can request a return within 30 calendar days of delivery.
+R2. For a change-of-mind return, the product must be unused,
+in its original packaging, and accompanied by proof of purchase.
+R3. Sale items follow the same return rules as full-price items.
+R4. For an eligible change-of-mind return, the customer pays
+the return shipping cost.
+R5. For a damaged or incorrect product, the customer should contact
+support with the order number and a photo. ShopCo pays the return
+shipping cost.
+R6. Refunds are issued to the original payment method within
+7 business days after ShopCo receives and approves the return.
+
+## Support and missing information
+C1. Customers can contact support at support@shopco.example.
+C2. If this policy does not contain the answer, the assistant must
+say that the information is not available and refer the customer
+to support. It must not invent rules.
+C3. If the customer's information is insufficient to apply a rule,
+the assistant must ask for the missing details before confirming
+eligibility.",How long do I have to request a return?,"You can request a return within 30 calendar days of delivery. If you have any more questions, feel free to ask!",,You can request a return within 30 calendar days of delivery.,1.0,1.0,0.897307,603e9dfc-0e07-4cff-bbbf-8263b5c10dad,01a1f946-4620-7201-825c-d0381dd62a4c,returns,easy,data/shopco_policy.md v1.0 — R1
+"# ShopCo — Customer Support Policy
+Version: 1.0
+
+This is a fictional policy created for this learning exercise.
+It does not describe a real company.
+
+## Shipping
+S1. ShopCo delivers only to mainland Spain.
+S2. Standard delivery takes 3–5 business days after dispatch.
+S3. Standard shipping costs €4. Orders of €50 or more have free shipping.
+S4. Customers receive a tracking link by email after dispatch.
+S5. If an order has not arrived after 5 business days from dispatch,
+the customer should contact customer support with the order number.
+
+## Returns
+R1. Customers can request a return within 30 calendar days of delivery.
+R2. For a change-of-mind return, the product must be unused,
+in its original packaging, and accompanied by proof of purchase.
+R3. Sale items follow the same return rules as full-price items.
+R4. For an eligible change-of-mind return, the customer pays
+the return shipping cost.
+R5. For a damaged or incorrect product, the customer should contact
+support with the order number and a photo. ShopCo pays the return
+shipping cost.
+R6. Refunds are issued to the original payment method within
+7 business days after ShopCo receives and approves the return.
+
+## Support and missing information
+C1. Customers can contact support at support@shopco.example.
+C2. If this policy does not contain the answer, the assistant must
+say that the information is not available and refer the customer
+to support. It must not invent rules.
+C3. If the customer's information is insufficient to apply a rule,
+the assistant must ask for the missing details before confirming
+eligibility.","I posted my return today. Will my refund arrive within 7 business days from today, and where will the money go?","Your refund will be issued to your original payment method within 7 business days after ShopCo receives and approves your return. If you have any further questions, please contact support at support@shopco.example.",,"The 7-business-day period starts after ShopCo receives and approves the return, not when you post it. The refund goes to your original payment method.",1.0,1.0,1.233356,4b026fa5-591b-4fc9-8e53-87b23797f814,01a1f946-4589-7a40-90fd-5fe024d013b4,returns,hard,data/shopco_policy.md v1.0 — R6
+"# ShopCo — Customer Support Policy
+Version: 1.0
+
+This is a fictional policy created for this learning exercise.
+It does not describe a real company.
+
+## Shipping
+S1. ShopCo delivers only to mainland Spain.
+S2. Standard delivery takes 3–5 business days after dispatch.
+S3. Standard shipping costs €4. Orders of €50 or more have free shipping.
+S4. Customers receive a tracking link by email after dispatch.
+S5. If an order has not arrived after 5 business days from dispatch,
+the customer should contact customer support with the order number.
+
+## Returns
+R1. Customers can request a return within 30 calendar days of delivery.
+R2. For a change-of-mind return, the product must be unused,
+in its original packaging, and accompanied by proof of purchase.
+R3. Sale items follow the same return rules as full-price items.
+R4. For an eligible change-of-mind return, the customer pays
+the return shipping cost.
+R5. For a damaged or incorrect product, the customer should contact
+support with the order number and a photo. ShopCo pays the return
+shipping cost.
+R6. Refunds are issued to the original payment method within
+7 business days after ShopCo receives and approves the return.
+
+## Support and missing information
+C1. Customers can contact support at support@shopco.example.
+C2. If this policy does not contain the answer, the assistant must
+say that the information is not available and refer the customer
+to support. It must not invent rules.
+C3. If the customer's information is insufficient to apply a rule,
+the assistant must ask for the missing details before confirming
+eligibility.",My order total is exactly €50. How much is shipping?,"Since your order total is exactly €50, you qualify for free shipping.",,Shipping is free for an order of exactly €50.,1.0,1.0,0.711457,63d94e35-4d65-4ab5-bb42-58ca42b62d84,01a1f946-49a1-7953-aebf-e533d2982f59,shipping,medium,data/shopco_policy.md v1.0 — S3
+"# ShopCo — Customer Support Policy
+Version: 1.0
+
+This is a fictional policy created for this learning exercise.
+It does not describe a real company.
+
+## Shipping
+S1. ShopCo delivers only to mainland Spain.
+S2. Standard delivery takes 3–5 business days after dispatch.
+S3. Standard shipping costs €4. Orders of €50 or more have free shipping.
+S4. Customers receive a tracking link by email after dispatch.
+S5. If an order has not arrived after 5 business days from dispatch,
+the customer should contact customer support with the order number.
+
+## Returns
+R1. Customers can request a return within 30 calendar days of delivery.
+R2. For a change-of-mind return, the product must be unused,
+in its original packaging, and accompanied by proof of purchase.
+R3. Sale items follow the same return rules as full-price items.
+R4. For an eligible change-of-mind return, the customer pays
+the return shipping cost.
+R5. For a damaged or incorrect product, the customer should contact
+support with the order number and a photo. ShopCo pays the return
+shipping cost.
+R6. Refunds are issued to the original payment method within
+7 business days after ShopCo receives and approves the return.
+
+## Support and missing information
+C1. Customers can contact support at support@shopco.example.
+C2. If this policy does not contain the answer, the assistant must
+say that the information is not available and refer the customer
+to support. It must not invent rules.
+C3. If the customer's information is insufficient to apply a rule,
+the assistant must ask for the missing details before confirming
+eligibility.",My unused product arrived 31 calendar days ago. Can I request a change-of-mind return?,"Unfortunately, you cannot request a change-of-mind return because it must be within 30 calendar days of delivery. If you have any other questions, please contact support at support@shopco.example.",,No. The policy allows return requests only within 30 calendar days of delivery.,1.0,1.0,0.978897,685c255c-a3d8-425a-839b-eac33e775069,01a1f946-4a5a-7323-8412-c8fb06297a0c,returns,medium,data/shopco_policy.md v1.0 — R1
+"# ShopCo — Customer Support Policy
+Version: 1.0
+
+This is a fictional policy created for this learning exercise.
+It does not describe a real company.
+
+## Shipping
+S1. ShopCo delivers only to mainland Spain.
+S2. Standard delivery takes 3–5 business days after dispatch.
+S3. Standard shipping costs €4. Orders of €50 or more have free shipping.
+S4. Customers receive a tracking link by email after dispatch.
+S5. If an order has not arrived after 5 business days from dispatch,
+the customer should contact customer support with the order number.
+
+## Returns
+R1. Customers can request a return within 30 calendar days of delivery.
+R2. For a change-of-mind return, the product must be unused,
+in its original packaging, and accompanied by proof of purchase.
+R3. Sale items follow the same return rules as full-price items.
+R4. For an eligible change-of-mind return, the customer pays
+the return shipping cost.
+R5. For a damaged or incorrect product, the customer should contact
+support with the order number and a photo. ShopCo pays the return
+shipping cost.
+R6. Refunds are issued to the original payment method within
+7 business days after ShopCo receives and approves the return.
+
+## Support and missing information
+C1. Customers can contact support at support@shopco.example.
+C2. If this policy does not contain the answer, the assistant must
+say that the information is not available and refer the customer
+to support. It must not invent rules.
+C3. If the customer's information is insufficient to apply a rule,
+the assistant must ask for the missing details before confirming
+eligibility.",My order was dispatched 6 business days ago and has not arrived. What should I do?,"Since your order has not arrived after 5 business days from dispatch, please contact customer support with your order number. You can reach them at support@shopco.example.",,Contact customer support at support@shopco.example with your order number.,1.0,1.0,0.999541,8e75717f-c5c2-418e-bb70-a1baa560d10b,01a1f946-4c69-79c3-89e0-e35b56629a21,shipping,medium,"data/shopco_policy.md v1.0 — S5, C1"
+"# ShopCo — Customer Support Policy
+Version: 1.0
+
+This is a fictional policy created for this learning exercise.
+It does not describe a real company.
+
+## Shipping
+S1. ShopCo delivers only to mainland Spain.
+S2. Standard delivery takes 3–5 business days after dispatch.
+S3. Standard shipping costs €4. Orders of €50 or more have free shipping.
+S4. Customers receive a tracking link by email after dispatch.
+S5. If an order has not arrived after 5 business days from dispatch,
+the customer should contact customer support with the order number.
+
+## Returns
+R1. Customers can request a return within 30 calendar days of delivery.
+R2. For a change-of-mind return, the product must be unused,
+in its original packaging, and accompanied by proof of purchase.
+R3. Sale items follow the same return rules as full-price items.
+R4. For an eligible change-of-mind return, the customer pays
+the return shipping cost.
+R5. For a damaged or incorrect product, the customer should contact
+support with the order number and a photo. ShopCo pays the return
+shipping cost.
+R6. Refunds are issued to the original payment method within
+7 business days after ShopCo receives and approves the return.
+
+## Support and missing information
+C1. Customers can contact support at support@shopco.example.
+C2. If this policy does not contain the answer, the assistant must
+say that the information is not available and refer the customer
+to support. It must not invent rules.
+C3. If the customer's information is insufficient to apply a rule,
+the assistant must ask for the missing details before confirming
+eligibility.",How long does standard delivery take?,Standard delivery takes 3–5 business days after dispatch.,,Standard delivery takes 3–5 business days after dispatch.,1.0,1.0,0.76362,9ad37380-6edc-4adc-a029-bea732974886,01a1f946-4e2d-7000-801f-0c71512fd76c,shipping,easy,data/shopco_policy.md v1.0 — S2
+"# ShopCo — Customer Support Policy
+Version: 1.0
+
+This is a fictional policy created for this learning exercise.
+It does not describe a real company.
+
+## Shipping
+S1. ShopCo delivers only to mainland Spain.
+S2. Standard delivery takes 3–5 business days after dispatch.
+S3. Standard shipping costs €4. Orders of €50 or more have free shipping.
+S4. Customers receive a tracking link by email after dispatch.
+S5. If an order has not arrived after 5 business days from dispatch,
+the customer should contact customer support with the order number.
+
+## Returns
+R1. Customers can request a return within 30 calendar days of delivery.
+R2. For a change-of-mind return, the product must be unused,
+in its original packaging, and accompanied by proof of purchase.
+R3. Sale items follow the same return rules as full-price items.
+R4. For an eligible change-of-mind return, the customer pays
+the return shipping cost.
+R5. For a damaged or incorrect product, the customer should contact
+support with the order number and a photo. ShopCo pays the return
+shipping cost.
+R6. Refunds are issued to the original payment method within
+7 business days after ShopCo receives and approves the return.
+
+## Support and missing information
+C1. Customers can contact support at support@shopco.example.
+C2. If this policy does not contain the answer, the assistant must
+say that the information is not available and refer the customer
+to support. It must not invent rules.
+C3. If the customer's information is insufficient to apply a rule,
+the assistant must ask for the missing details before confirming
+eligibility.",Can I pay with PayPal?,"I'm sorry, but the information about payment methods, including PayPal, is not available. Please contact support at support@shopco.example for assistance.",,The policy does not provide information about accepted payment methods. Contact support at support@shopco.example.,1.0,1.0,0.883811,b0b1c8e5-c2cc-4737-8a5f-4142e7f40ab8,01a1f946-5051-7802-80a3-b8c234fa29af,missing_information,hard,"data/shopco_policy.md v1.0 — C1, C2"
+"# ShopCo — Customer Support Policy
+Version: 1.0
+
+This is a fictional policy created for this learning exercise.
+It does not describe a real company.
+
+## Shipping
+S1. ShopCo delivers only to mainland Spain.
+S2. Standard delivery takes 3–5 business days after dispatch.
+S3. Standard shipping costs €4. Orders of €50 or more have free shipping.
+S4. Customers receive a tracking link by email after dispatch.
+S5. If an order has not arrived after 5 business days from dispatch,
+the customer should contact customer support with the order number.
+
+## Returns
+R1. Customers can request a return within 30 calendar days of delivery.
+R2. For a change-of-mind return, the product must be unused,
+in its original packaging, and accompanied by proof of purchase.
+R3. Sale items follow the same return rules as full-price items.
+R4. For an eligible change-of-mind return, the customer pays
+the return shipping cost.
+R5. For a damaged or incorrect product, the customer should contact
+support with the order number and a photo. ShopCo pays the return
+shipping cost.
+R6. Refunds are issued to the original payment method within
+7 business days after ShopCo receives and approves the return.
+
+## Support and missing information
+C1. Customers can contact support at support@shopco.example.
+C2. If this policy does not contain the answer, the assistant must
+say that the information is not available and refer the customer
+to support. It must not invent rules.
+C3. If the customer's information is insufficient to apply a rule,
+the assistant must ask for the missing details before confirming
+eligibility.",Where does ShopCo deliver?,"ShopCo delivers only to mainland Spain. If you have any further questions, feel free to ask!",,ShopCo delivers only to mainland Spain.,1.0,1.0,0.724759,bb12a732-123c-4086-941f-c87790f63d4a,01a1f946-512a-7fb0-80a8-3e358804ce76,shipping,easy,data/shopco_policy.md v1.0 — S1
+"# ShopCo — Customer Support Policy
+Version: 1.0
+
+This is a fictional policy created for this learning exercise.
+It does not describe a real company.
+
+## Shipping
+S1. ShopCo delivers only to mainland Spain.
+S2. Standard delivery takes 3–5 business days after dispatch.
+S3. Standard shipping costs €4. Orders of €50 or more have free shipping.
+S4. Customers receive a tracking link by email after dispatch.
+S5. If an order has not arrived after 5 business days from dispatch,
+the customer should contact customer support with the order number.
+
+## Returns
+R1. Customers can request a return within 30 calendar days of delivery.
+R2. For a change-of-mind return, the product must be unused,
+in its original packaging, and accompanied by proof of purchase.
+R3. Sale items follow the same return rules as full-price items.
+R4. For an eligible change-of-mind return, the customer pays
+the return shipping cost.
+R5. For a damaged or incorrect product, the customer should contact
+support with the order number and a photo. ShopCo pays the return
+shipping cost.
+R6. Refunds are issued to the original payment method within
+7 business days after ShopCo receives and approves the return.
+
+## Support and missing information
+C1. Customers can contact support at support@shopco.example.
+C2. If this policy does not contain the answer, the assistant must
+say that the information is not available and refer the customer
+to support. It must not invent rules.
+C3. If the customer's information is insufficient to apply a rule,
+the assistant must ask for the missing details before confirming
+eligibility.",How can I track my order?,"You can track your order by checking the email you received after dispatch. It contains a tracking link. If you haven't received this email, please contact support at support@shopco.example for assistance.",,You receive a tracking link by email after dispatch.,1.0,1.0,0.924982,d2761ecb-7678-4d1f-aa7b-e5853102b60b,01a1f946-53c6-74d3-831f-bb60a7215200,shipping,easy,data/shopco_policy.md v1.0 — S4
+"# ShopCo — Customer Support Policy
+Version: 1.0
+
+This is a fictional policy created for this learning exercise.
+It does not describe a real company.
+
+## Shipping
+S1. ShopCo delivers only to mainland Spain.
+S2. Standard delivery takes 3–5 business days after dispatch.
+S3. Standard shipping costs €4. Orders of €50 or more have free shipping.
+S4. Customers receive a tracking link by email after dispatch.
+S5. If an order has not arrived after 5 business days from dispatch,
+the customer should contact customer support with the order number.
+
+## Returns
+R1. Customers can request a return within 30 calendar days of delivery.
+R2. For a change-of-mind return, the product must be unused,
+in its original packaging, and accompanied by proof of purchase.
+R3. Sale items follow the same return rules as full-price items.
+R4. For an eligible change-of-mind return, the customer pays
+the return shipping cost.
+R5. For a damaged or incorrect product, the customer should contact
+support with the order number and a photo. ShopCo pays the return
+shipping cost.
+R6. Refunds are issued to the original payment method within
+7 business days after ShopCo receives and approves the return.
+
+## Support and missing information
+C1. Customers can contact support at support@shopco.example.
+C2. If this policy does not contain the answer, the assistant must
+say that the information is not available and refer the customer
+to support. It must not invent rules.
+C3. If the customer's information is insufficient to apply a rule,
+the assistant must ask for the missing details before confirming
+eligibility.",What is the exact return shipping cost for my eligible change-of-mind return?,"I'm sorry, but the exact return shipping cost for an eligible change-of-mind return is not available in the policy. Please contact support at support@shopco.example for more information.",,"You pay the return shipping cost, but the policy does not specify the exact amount. Contact support at support@shopco.example.",1.0,1.0,0.95127,dfee3602-eb03-46df-8124-939c12a9c1e1,01a1f946-53ff-73a2-8daa-6b66fe90b3ed,missing_information,hard,"data/shopco_policy.md v1.0 — R4, C1, C2"
+"# ShopCo — Customer Support Policy
+Version: 1.0
+
+This is a fictional policy created for this learning exercise.
+It does not describe a real company.
+
+## Shipping
+S1. ShopCo delivers only to mainland Spain.
+S2. Standard delivery takes 3–5 business days after dispatch.
+S3. Standard shipping costs €4. Orders of €50 or more have free shipping.
+S4. Customers receive a tracking link by email after dispatch.
+S5. If an order has not arrived after 5 business days from dispatch,
+the customer should contact customer support with the order number.
+
+## Returns
+R1. Customers can request a return within 30 calendar days of delivery.
+R2. For a change-of-mind return, the product must be unused,
+in its original packaging, and accompanied by proof of purchase.
+R3. Sale items follow the same return rules as full-price items.
+R4. For an eligible change-of-mind return, the customer pays
+the return shipping cost.
+R5. For a damaged or incorrect product, the customer should contact
+support with the order number and a photo. ShopCo pays the return
+shipping cost.
+R6. Refunds are issued to the original payment method within
+7 business days after ShopCo receives and approves the return.
+
+## Support and missing information
+C1. Customers can contact support at support@shopco.example.
+C2. If this policy does not contain the answer, the assistant must
+say that the information is not available and refer the customer
+to support. It must not invent rules.
+C3. If the customer's information is insufficient to apply a rule,
+the assistant must ask for the missing details before confirming
+eligibility.","My product arrived damaged. What should I do, and who pays return shipping?","If your product arrived damaged, please contact customer support with your order number and a photo of the damage. ShopCo will pay for the return shipping cost.",,Contact support at support@shopco.example with your order number and a photo. ShopCo pays the return shipping cost.,1.0,1.0,0.868658,fdc8f346-12af-439d-ba4c-01a5f1cca400,01a1f946-5763-7882-b034-ad5de5eed2b7,returns,medium,"data/shopco_policy.md v1.0 — R5, C1"

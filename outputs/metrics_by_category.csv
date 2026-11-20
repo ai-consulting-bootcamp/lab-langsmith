@@ -1,0 +1,4 @@
+category,total_examples,correctness_scored,correctness_pass_rate,length_scored,length_pass_rate
+missing_information,3,3,0.6666666666666666,3,1.0
+returns,7,7,1.0,7,1.0
+shipping,5,5,1.0,5,1.0
