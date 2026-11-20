@@ -8,7 +8,7 @@ July 2026 Digital Omnibus. An OpenEvals LLM-as-a-judge (`CORRECTNESS_PROMPT`, gp
 Omnibus-dependent questions against **13%** on the rest; the weakest category was **consultant_role**.
 Biggest failure pattern: [fill after error analysis]. Limitations: 18 examples (one example is about
 5.6 points), a single judge model with no human calibration, and ground truth from a teaching deck rather
-than the legal text. Recommendation: [fill].
+than the legal text. R
 
 | Metric | Score |
 |---|---|
@@ -17,4 +17,4 @@ than the legal text. Recommendation: [fill].
 | Correctness, Omnibus questions / others | 0% / 13% |
 | Avg latency | 1.78s |
 
-LangSmith experiment: [link]
+LangSmith experiment: [[link](https://eu.smith.langchain.com/o/56d75618-ab53-46aa-9126-4d9ac8a5f936/datasets/f30b2b21-efd9-4000-ab2d-80447d226548/compare?selectedSessions=66935a4b-698d-435b-8e0d-a2f33ef19df9)]
