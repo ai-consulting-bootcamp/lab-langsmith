@@ -40,20 +40,22 @@ Run the cells top to bottom. In the setup cell, `LANGSMITH_ENDPOINT` is set to t
 change it to `https://api.smith.langchain.com` for a US account. The dataset is created on the first run and reused after that. A full run
 (5 experiments in total, about 200 API calls) costs well under $1.
 
-**Headline result:** closed-book gpt-4o-mini got 11% right, answering from the 2021 draft of the Act. gpt-5.4-mini reached 50%. A six-line briefing fixed every post-Omnibus date question. See [`evaluation_summary.md`](evaluation_summary.md) and [`optimization_summary.md`](optimization_summary.md).
+**Headline result:** closed-book gpt-4o-mini got 17% right, answering from the 2021 draft of the Act. gpt-5.4-mini reached 56%. A six-line briefing fixed every post-Omnibus date question. See [`evaluation_summary.md`](evaluation_summary.md) and [`optimization_summary.md`](optimization_summary.md).
 
 ## LangSmith links
 
 All experiments are in the dataset view (EU region):
 [eu-ai-act-consultant-qa-v1](https://eu.smith.langchain.com/o/56d75618-ab53-46aa-9126-4d9ac8a5f936/datasets/f30b2b21-efd9-4000-ab2d-80447d226548)
 
-| Experiment | Purpose | Result |
+| Experiment (prefix) | Purpose | Result (final run) |
 |---|---|---|
-| `gpt-4o-mini-consultant-promptv1-1e89f2d3` | Main run: correctness + keyword | 11% / 6% |
-| `gpt-4o-mini-consultant-promptv1-advisory-a4a820a4` | Custom evaluator: correctness + advisory quality | 18% / 0.60 |
-| `config-a-gpt-4o-mini-34d795d9` | A/B, baseline | 17% |
-| `config-b-gpt-5.4-mini-…` | A/B, model changed | 50% |
-| `config-c-gpt-4o-mini-briefing-…` | A/B, system prompt + regulatory briefing | 28% (Omnibus questions 3 of 3) |
+| `gpt-4o-mini-consultant-promptv1` | Main run: correctness + keyword | 17% / 6% |
+| `gpt-4o-mini-consultant-promptv1-advisory` | Custom evaluator: correctness + advisory quality | 11% / 0.61 |
+| `config-a-gpt-4o-mini` | A/B, baseline | 17% |
+| `config-b-gpt-5.4-mini` | A/B, model changed | 56% |
+| `config-c-gpt-4o-mini-briefing` | A/B, system prompt + regulatory briefing | 28% (Omnibus questions 3 of 3) |
+
+The notebook was run twice, so each prefix appears twice in LangSmith. The numbers above are from the final run, which matches the files in `outputs/`.
 
 ## File map
 
@@ -65,5 +67,6 @@ All experiments are in the dataset view (EU region):
 | `docs/dataset_documentation.md` | Domain, sources, data structure, field definitions, category list |
 | `evaluation_summary.md` | Evaluation paragraph and key metrics (Step 10, written by the notebook) |
 | `optimization_summary.md` | Cost/performance recommendation (Step 16, written by the notebook) |
-| `outputs/` | Results CSVs, charts and LangSmith screenshots |
+| `outputs/` | Results CSVs and charts |
+| `outputs/screenshots/` | LangSmith UI screenshots: experiments, A/B runs, traces |
 | `requirements.txt` / `.env.example` | Dependencies and environment template (`.env` is git-ignored) |

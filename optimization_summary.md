@@ -1,15 +1,11 @@
 # Optimization summary
 
-I compared three configurations on the same 18 questions with the same evaluators (gpt-4o-mini; gpt-5.4-mini;
-gpt-4o-mini plus a six-line regulatory briefing on the July 2026 Digital Omnibus). The highest pass rate was
-**config-b-gpt-5.4-mini** (56% at $0.812 per 1,000 questions).
-[fill: best trade-off and when to pick each config. Remember: a gap of 1-2 examples (about 6-11 points) may be luck.]
+I compared three configurations on the same 18 questions with the same evaluators. Each comparison with config A changes one thing only: the model (B) or the system prompt (C). **No configuration is good enough for client advice; the best reached 56%.** **gpt-5.4-mini (B)** gave the best quality. It scored 56% against 17% for gpt-4o-mini, a gap of 7 examples, which is far beyond run-to-run noise. It costs about **11× more per question** ($0.81 vs $0.07 per 1,000 questions) and **3.3× more per correct answer**. It knows the *final* Act: correct fines, internal conformity assessment, emotion recognition banned. But it still scored **0 of 3 on Omnibus questions**: it gives the pre-Omnibus date (2 August 2026) and says the Omnibus "is not part of the adopted text". **gpt-4o-mini plus the six-line briefing (C)** is the cheapest per correct answer ($0.00036) and fixed all 3 Omnibus questions (3 of 3). Overall it rose only from 17% to 28%, because the briefing covers dates and the small model's main weakness is the rest of the Act. **When to pick each:** A only as a cheap baseline, never for clients. C for high-volume FAQ work on deadlines, as long as someone keeps the briefing current. B where legal reasoning matters (bans, roles, conformity) and the budget allows. **Best trade-off to test next:** B plus the briefing. The two configurations fail on different questions, so combining them should lift the pass rate well above either alone.
 
-| Config | Model | Pass rate | Pass rate (Omnibus Qs) | Cost / correct answer | Cost / 1k questions | Avg latency |
-|---|---|---|---|---|---|---|
-| config-a-gpt-4o-mini | gpt-4o-mini | 17% | 0% | $0.00044 | $0.074 | 1.71s |
-| config-b-gpt-5.4-mini | gpt-5.4-mini | 56% | 0% | $0.00146 | $0.812 | 1.99s |
-| config-c-gpt-4o-mini-briefing | gpt-4o-mini | 28% | 100% | $0.00036 | $0.101 | 1.54s |
+| Config | Model | What changes | Pass rate | Omnibus questions | Keyword match | Cost per correct answer | Cost per 1,000 questions | Avg latency |
+|---|---|---|---|---|---|---|---|---|
+| A | gpt-4o-mini | baseline | 17% (3 of 18) | 0 of 3 | 6% | $0.00044 | $0.074 | 1.71 s |
+| B | gpt-5.4-mini | model | **56% (10 of 18)** | 0 of 3 | 50% | $0.00146 | $0.812 | 1.99 s |
+| C | gpt-4o-mini + briefing | system prompt | 28% (5 of 18) | **3 of 3** | 22% | **$0.00036** | $0.101 | 1.54 s |
 
-Prices: gpt-4o-mini $0.15/$0.60, gpt-5.4-mini $0.75/$4.50 per 1M input/output tokens (OpenAI pricing, checked 20 Nov 2026).
-Costs cover the model under test only; judge calls cost the same for every config.
+Prices are per 1M input / output tokens: gpt-4o-mini $0.15 / $0.60, gpt-5.4-mini $0.75 / $4.50 (OpenAI pricing page, checked 20 Nov 2026). Costs cover the model under test only; judge calls cost the same for every configuration. B writes almost twice as many output tokens as A (154 vs 83 on average), so most of its extra cost is output. The briefing doubles C's input tokens (359 vs 158), but at gpt-4o-mini prices that adds only about $0.03 per 1,000 questions. Data: `outputs/ab_summary.csv`, `outputs/results_ab_all.csv`, `outputs/cost_vs_performance.png`.
