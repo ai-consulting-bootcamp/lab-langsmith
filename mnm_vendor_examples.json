@@ -1,0 +1,122 @@
+[
+  {
+    "question": "How does MNM-DE create a new vendor?",
+    "context": "\nMNM AG is a fictional wholesale and distribution company.\n\nLegal entities:\n- MNM-DE: German legal entity\n- MNM-NL: Dutch legal entity\n\nCompany rules:\n- Vendor accounts are maintained separately in each legal entity.\n- Party information may be shared through the Global Address Book.\n- Vendor groups: DOMESTIC, FOREIGN, INTERCOMPANY.\n- Standard payment terms: NET30.\n- Vendor bank-detail changes require Finance verification.\n- Vendors placed on All hold cannot be used for transactions.\n- Vendor creation requires approval from the Procurement team.\n- The vendor account number may differ between legal entities.\n",
+    "answer": "Create the vendor in MNM-DE, select the appropriate vendor group, enter required details, and follow MNM AG's Procurement approval process.",
+    "category": "vendor_creation",
+    "difficulty": "easy",
+    "source": "MNM AG fictional policy"
+  },
+  {
+    "question": "Which vendor groups does MNM AG use?",
+    "context": "\nMNM AG is a fictional wholesale and distribution company.\n\nLegal entities:\n- MNM-DE: German legal entity\n- MNM-NL: Dutch legal entity\n\nCompany rules:\n- Vendor accounts are maintained separately in each legal entity.\n- Party information may be shared through the Global Address Book.\n- Vendor groups: DOMESTIC, FOREIGN, INTERCOMPANY.\n- Standard payment terms: NET30.\n- Vendor bank-detail changes require Finance verification.\n- Vendors placed on All hold cannot be used for transactions.\n- Vendor creation requires approval from the Procurement team.\n- The vendor account number may differ between legal entities.\n",
+    "answer": "MNM AG uses DOMESTIC, FOREIGN and INTERCOMPANY vendor groups.",
+    "category": "vendor_configuration",
+    "difficulty": "easy",
+    "source": "MNM AG fictional policy"
+  },
+  {
+    "question": "What are MNM AG's standard vendor payment terms?",
+    "context": "\nMNM AG is a fictional wholesale and distribution company.\n\nLegal entities:\n- MNM-DE: German legal entity\n- MNM-NL: Dutch legal entity\n\nCompany rules:\n- Vendor accounts are maintained separately in each legal entity.\n- Party information may be shared through the Global Address Book.\n- Vendor groups: DOMESTIC, FOREIGN, INTERCOMPANY.\n- Standard payment terms: NET30.\n- Vendor bank-detail changes require Finance verification.\n- Vendors placed on All hold cannot be used for transactions.\n- Vendor creation requires approval from the Procurement team.\n- The vendor account number may differ between legal entities.\n",
+    "answer": "The standard vendor payment terms are NET30.",
+    "category": "payment_configuration",
+    "difficulty": "easy",
+    "source": "MNM AG fictional policy"
+  },
+  {
+    "question": "Can MNM-DE change a vendor's bank details without verification?",
+    "context": "\nMNM AG is a fictional wholesale and distribution company.\n\nLegal entities:\n- MNM-DE: German legal entity\n- MNM-NL: Dutch legal entity\n\nCompany rules:\n- Vendor accounts are maintained separately in each legal entity.\n- Party information may be shared through the Global Address Book.\n- Vendor groups: DOMESTIC, FOREIGN, INTERCOMPANY.\n- Standard payment terms: NET30.\n- Vendor bank-detail changes require Finance verification.\n- Vendors placed on All hold cannot be used for transactions.\n- Vendor creation requires approval from the Procurement team.\n- The vendor account number may differ between legal entities.\n",
+    "answer": "No. MNM AG requires Finance verification before vendor bank details are changed.",
+    "category": "payment_configuration",
+    "difficulty": "medium",
+    "source": "MNM AG fictional policy"
+  },
+  {
+    "question": "What approval is required when creating a vendor?",
+    "context": "\nMNM AG is a fictional wholesale and distribution company.\n\nLegal entities:\n- MNM-DE: German legal entity\n- MNM-NL: Dutch legal entity\n\nCompany rules:\n- Vendor accounts are maintained separately in each legal entity.\n- Party information may be shared through the Global Address Book.\n- Vendor groups: DOMESTIC, FOREIGN, INTERCOMPANY.\n- Standard payment terms: NET30.\n- Vendor bank-detail changes require Finance verification.\n- Vendors placed on All hold cannot be used for transactions.\n- Vendor creation requires approval from the Procurement team.\n- The vendor account number may differ between legal entities.\n",
+    "answer": "MNM AG requires Procurement approval for vendor creation.",
+    "category": "vendor_creation",
+    "difficulty": "easy",
+    "source": "MNM AG fictional policy"
+  },
+  {
+    "question": "A vendor exists in MNM-DE but not MNM-NL. Why?",
+    "context": "\nMNM AG is a fictional wholesale and distribution company.\n\nLegal entities:\n- MNM-DE: German legal entity\n- MNM-NL: Dutch legal entity\n\nCompany rules:\n- Vendor accounts are maintained separately in each legal entity.\n- Party information may be shared through the Global Address Book.\n- Vendor groups: DOMESTIC, FOREIGN, INTERCOMPANY.\n- Standard payment terms: NET30.\n- Vendor bank-detail changes require Finance verification.\n- Vendors placed on All hold cannot be used for transactions.\n- Vendor creation requires approval from the Procurement team.\n- The vendor account number may differ between legal entities.\n",
+    "answer": "Vendor accounts are legal-entity-specific. The vendor must also be established in MNM-NL, although its party information may already exist in the Global Address Book.",
+    "category": "multi_company",
+    "difficulty": "hard",
+    "source": "MNM AG fictional policy and F&O concept"
+  },
+  {
+    "question": "Must the vendor account number be identical in MNM-DE and MNM-NL?",
+    "context": "\nMNM AG is a fictional wholesale and distribution company.\n\nLegal entities:\n- MNM-DE: German legal entity\n- MNM-NL: Dutch legal entity\n\nCompany rules:\n- Vendor accounts are maintained separately in each legal entity.\n- Party information may be shared through the Global Address Book.\n- Vendor groups: DOMESTIC, FOREIGN, INTERCOMPANY.\n- Standard payment terms: NET30.\n- Vendor bank-detail changes require Finance verification.\n- Vendors placed on All hold cannot be used for transactions.\n- Vendor creation requires approval from the Procurement team.\n- The vendor account number may differ between legal entities.\n",
+    "answer": "No. Vendor account numbers may differ between legal entities, even when the underlying party is shared.",
+    "category": "multi_company",
+    "difficulty": "medium",
+    "source": "MNM AG fictional policy"
+  },
+  {
+    "question": "What happens when a vendor is placed on All hold?",
+    "context": "\nMNM AG is a fictional wholesale and distribution company.\n\nLegal entities:\n- MNM-DE: German legal entity\n- MNM-NL: Dutch legal entity\n\nCompany rules:\n- Vendor accounts are maintained separately in each legal entity.\n- Party information may be shared through the Global Address Book.\n- Vendor groups: DOMESTIC, FOREIGN, INTERCOMPANY.\n- Standard payment terms: NET30.\n- Vendor bank-detail changes require Finance verification.\n- Vendors placed on All hold cannot be used for transactions.\n- Vendor creation requires approval from the Procurement team.\n- The vendor account number may differ between legal entities.\n",
+    "answer": "The vendor is blocked from transactions covered by the All hold setting until the hold is removed by an authorised user.",
+    "category": "vendor_controls",
+    "difficulty": "medium",
+    "source": "MNM AG fictional policy and F&O concept"
+  },
+  {
+    "question": "Can an MNM-DE employee automatically use every vendor created in MNM-NL?",
+    "context": "\nMNM AG is a fictional wholesale and distribution company.\n\nLegal entities:\n- MNM-DE: German legal entity\n- MNM-NL: Dutch legal entity\n\nCompany rules:\n- Vendor accounts are maintained separately in each legal entity.\n- Party information may be shared through the Global Address Book.\n- Vendor groups: DOMESTIC, FOREIGN, INTERCOMPANY.\n- Standard payment terms: NET30.\n- Vendor bank-detail changes require Finance verification.\n- Vendors placed on All hold cannot be used for transactions.\n- Vendor creation requires approval from the Procurement team.\n- The vendor account number may differ between legal entities.\n",
+    "answer": "No. Vendor accounts are company-specific. A vendor account must be established in MNM-DE before it can be used there.",
+    "category": "multi_company",
+    "difficulty": "medium",
+    "source": "MNM AG fictional policy and F&O concept"
+  },
+  {
+    "question": "Which team verifies vendor bank-detail changes?",
+    "context": "\nMNM AG is a fictional wholesale and distribution company.\n\nLegal entities:\n- MNM-DE: German legal entity\n- MNM-NL: Dutch legal entity\n\nCompany rules:\n- Vendor accounts are maintained separately in each legal entity.\n- Party information may be shared through the Global Address Book.\n- Vendor groups: DOMESTIC, FOREIGN, INTERCOMPANY.\n- Standard payment terms: NET30.\n- Vendor bank-detail changes require Finance verification.\n- Vendors placed on All hold cannot be used for transactions.\n- Vendor creation requires approval from the Procurement team.\n- The vendor account number may differ between legal entities.\n",
+    "answer": "The Finance team verifies vendor bank-detail changes.",
+    "category": "payment_configuration",
+    "difficulty": "easy",
+    "source": "MNM AG fictional policy"
+  },
+  {
+    "question": "What is the purpose of vendor groups?",
+    "context": "\nMNM AG is a fictional wholesale and distribution company.\n\nLegal entities:\n- MNM-DE: German legal entity\n- MNM-NL: Dutch legal entity\n\nCompany rules:\n- Vendor accounts are maintained separately in each legal entity.\n- Party information may be shared through the Global Address Book.\n- Vendor groups: DOMESTIC, FOREIGN, INTERCOMPANY.\n- Standard payment terms: NET30.\n- Vendor bank-detail changes require Finance verification.\n- Vendors placed on All hold cannot be used for transactions.\n- Vendor creation requires approval from the Procurement team.\n- The vendor account number may differ between legal entities.\n",
+    "answer": "Vendor groups classify vendors and support company-specific vendor configuration and financial processing.",
+    "category": "vendor_configuration",
+    "difficulty": "medium",
+    "source": "Dynamics 365 F&O concept"
+  },
+  {
+    "question": "What should MNM AG check if a vendor cannot be selected for a transaction?",
+    "context": "\nMNM AG is a fictional wholesale and distribution company.\n\nLegal entities:\n- MNM-DE: German legal entity\n- MNM-NL: Dutch legal entity\n\nCompany rules:\n- Vendor accounts are maintained separately in each legal entity.\n- Party information may be shared through the Global Address Book.\n- Vendor groups: DOMESTIC, FOREIGN, INTERCOMPANY.\n- Standard payment terms: NET30.\n- Vendor bank-detail changes require Finance verification.\n- Vendors placed on All hold cannot be used for transactions.\n- Vendor creation requires approval from the Procurement team.\n- The vendor account number may differ between legal entities.\n",
+    "answer": "Check that the vendor account exists in the correct legal entity, review its hold status, and investigate relevant configuration or transaction restrictions.",
+    "category": "troubleshooting",
+    "difficulty": "hard",
+    "source": "MNM AG fictional policy and F&O concept"
+  },
+  {
+    "question": "What is MNM AG's vendor posting profile account number?",
+    "context": "\nMNM AG is a fictional wholesale and distribution company.\n\nLegal entities:\n- MNM-DE: German legal entity\n- MNM-NL: Dutch legal entity\n\nCompany rules:\n- Vendor accounts are maintained separately in each legal entity.\n- Party information may be shared through the Global Address Book.\n- Vendor groups: DOMESTIC, FOREIGN, INTERCOMPANY.\n- Standard payment terms: NET30.\n- Vendor bank-detail changes require Finance verification.\n- Vendors placed on All hold cannot be used for transactions.\n- Vendor creation requires approval from the Procurement team.\n- The vendor account number may differ between legal entities.\n",
+    "answer": "The provided company information does not specify a vendor posting profile account number. This must be checked in the relevant legal entity's F&O configuration.",
+    "category": "unknown_information",
+    "difficulty": "hard",
+    "source": "MNM AG fictional policy"
+  },
+  {
+    "question": "Can a shared Global Address Book party automatically be used as a vendor in both legal entities?",
+    "context": "\nMNM AG is a fictional wholesale and distribution company.\n\nLegal entities:\n- MNM-DE: German legal entity\n- MNM-NL: Dutch legal entity\n\nCompany rules:\n- Vendor accounts are maintained separately in each legal entity.\n- Party information may be shared through the Global Address Book.\n- Vendor groups: DOMESTIC, FOREIGN, INTERCOMPANY.\n- Standard payment terms: NET30.\n- Vendor bank-detail changes require Finance verification.\n- Vendors placed on All hold cannot be used for transactions.\n- Vendor creation requires approval from the Procurement team.\n- The vendor account number may differ between legal entities.\n",
+    "answer": "No. Shared party information does not automatically create a vendor account in every legal entity. The vendor must be established separately in each required company.",
+    "category": "multi_company",
+    "difficulty": "hard",
+    "source": "MNM AG fictional policy and F&O concept"
+  },
+  {
+    "question": "What is the exact bank account number for MNM AG vendor V-1001?",
+    "context": "\nMNM AG is a fictional wholesale and distribution company.\n\nLegal entities:\n- MNM-DE: German legal entity\n- MNM-NL: Dutch legal entity\n\nCompany rules:\n- Vendor accounts are maintained separately in each legal entity.\n- Party information may be shared through the Global Address Book.\n- Vendor groups: DOMESTIC, FOREIGN, INTERCOMPANY.\n- Standard payment terms: NET30.\n- Vendor bank-detail changes require Finance verification.\n- Vendors placed on All hold cannot be used for transactions.\n- Vendor creation requires approval from the Procurement team.\n- The vendor account number may differ between legal entities.\n",
+    "answer": "The provided information does not contain vendor V-1001's bank account number. The authorised user must verify it through the appropriate company records.",
+    "category": "unknown_information",
+    "difficulty": "hard",
+    "source": "MNM AG fictional policy"
+  }
+]
