@@ -1,0 +1,4 @@
+difficulty,total_examples,correctness_scored,correctness_pass_rate,length_scored,length_pass_rate
+easy,5,5,1.0,5,1.0
+medium,5,5,1.0,5,1.0
+hard,5,5,0.8,5,1.0
