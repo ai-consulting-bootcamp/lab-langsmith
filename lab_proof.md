@@ -2,13 +2,13 @@
 
 ## Submission Summary
 
-- **Chosen domain:** Questions from the text-only, multiple-choice portion of Humanity's Last Exam (HLE), a broad academic benchmark.
-- **Dataset name:** `HLE-Multiple-Choice-Evaluation`
-- **Dataset ID:** Record the ID printed by the notebook after creating/verifying this dataset.
-- **Dataset description:** A 20-example text-only, multiple-choice subset of HLE for testing answer generation against the dataset's reference answers across subject categories.
-- **Target model:** [Model name and configuration]
-- **Experiment:** [LangSmith experiment name]
-- **Experiment link or screenshot:** [Add a public or private-accessible link, or reference a screenshot in this repository.]
+- **Chosen domain:** Multi-hop factual question answering using Google's FRAMES benchmark.
+- **Dataset name:** `FRAMES-Multi-Hop-QA-Evaluation`
+- **Dataset ID:** `dc312e9b-cd59-4b89-9214-3e1ccd0d80d7`
+- **Dataset description:** A 20-example subset of the FRAMES test split for evaluating answers to multi-hop factual questions against reference answers.
+- **Target model:** `gpt-4o-mini`, temperature 0, maximum 512 tokens.
+- **Experiment:** `frames-gpt-4o-mini-20261123-2123-197c6eca`
+- **Experiment link:** [View the LangSmith experiment](https://eu.smith.langchain.com/o/edab2a5d-9667-472c-96d6-b273cacdf453/datasets/dc312e9b-cd59-4b89-9214-3e1ccd0d80d7/compare?selectedSessions=cb28b7ef-282e-40cf-9659-509a81d7ce74)
 
 ## Part 1: Setup & Document Selection
 
@@ -16,22 +16,21 @@
 
 **Domain description**
 
-This lab evaluates whether an AI assistant can answer multiple-choice questions from a small, text-only HLE subset. Each question is one independent evaluation case; the HLE answer is used as the reference answer.
+This lab evaluates whether an AI assistant can answer multi-hop factual questions using a subset of the FRAMES benchmark. Each prompt is an independent evaluation case; the dataset's `Answer` is used as the reference answer.
 
 **Document sources**
 
-- [HLE dataset on Hugging Face](https://huggingface.co/datasets/cais/hle)
-- [Hugging Face dataset viewer API](https://datasets-server.huggingface.co/rows?dataset=cais%2Fhle&config=default&split=test&offset=0&length=100)
+- [Google FRAMES benchmark on Hugging Face](https://huggingface.co/datasets/google/frames-benchmark)
 
-The HLE dataset is gated. A Hugging Face account must be granted access, and a read token must be available locally as `HF_TOKEN` before the notebook can load it. The notebook filters for multiple-choice examples without images and takes the first 20 matching rows.
+The benchmark has 824 rows in its `test` split. The notebook selects 20 examples and maps its `Prompt` and `Answer` fields to LangSmith input and output fields.
 
 **Good-example criteria**
 
-- **Input:** An HLE multiple-choice question with its answer options.
-- **Expected output:** The reference answer supplied by HLE.
-- **Metadata:** HLE subject category, source dataset, split, and answer type.
-- **Good example:** A text-only multiple-choice question with a non-empty reference answer and a valid category.
-- **Excluded example:** An image-based item, a non-multiple-choice item, or a record with missing question, answer, or category.
+- **Input:** A FRAMES `Prompt` containing a multi-hop factual question.
+- **Expected output:** The reference answer supplied in the FRAMES `Answer` field.
+- **Metadata:** Reasoning type, supporting Wikipedia links, source dataset, and split.
+- **Good example:** A non-empty prompt with a reference answer and reasoning metadata.
+- **Excluded example:** A record with a missing prompt or answer.
 
 ### Step 2: Set Up LangSmith Environment
 
@@ -49,49 +48,49 @@ The HLE dataset is gated. A Hugging Face account must be granted access, and a r
 
 | Field | Type | Description |
 |---|---|---|
-| input | object | Contains `question`, the HLE question sent to the model. |
-| output | object | Contains `answer`, the HLE reference answer. |
-| metadata | object | Contains `category`, `source`, `split`, and `answer_type` for filtering and analysis. |
+| input | object | Contains `question`, mapped from the FRAMES `Prompt` field. |
+| output | object | Contains `answer`, mapped from the FRAMES `Answer` field. |
+| metadata | object | Contains `reasoning_types`, `wiki_links`, `source`, and `split` for analysis and provenance. |
 
-**Example count:** 20 (the notebook previously loaded and uploaded 20; rerun the updated upload/verification cell for the correctly named dataset).
+**Configured example count:** 20 selected from the 824-row `test` split. The notebook ran and verified 20 uploaded examples.
 
 **Example quality checks**
 
-- [x] At least 10 examples are included.
-- [x] Inputs are clear and independent.
-- [x] Outputs contain appropriate ground truth where available.
-- [x] Metadata is consistent.
-- [x] Unclear or incomplete examples were removed.
+- [x] At least 10 examples are included (20 selected).
+- [x] Inputs and reference outputs are non-empty.
+- [x] Duplicate prompts are rejected.
+- [x] Reasoning metadata is present on uploaded examples.
+- [ ] No separate manual review/filtering of all source examples was performed.
 
 **Example data**
 
-The examples are extracted from HLE when the notebook runs; the dataset is gated, so raw records are not checked into this repository.
+The examples are extracted from FRAMES when the notebook runs. Raw benchmark records are not checked into this repository.
 
 Representative example:
 
 ```json
 {
-  "input": {"question": "<text-only HLE multiple-choice question>"},
-  "output": {"answer": "<HLE reference answer>"},
+  "input": {"question": "<FRAMES Prompt>"},
+  "output": {"answer": "<FRAMES Answer>"},
   "metadata": {
-    "category": "<HLE subject category>",
-    "source": "cais/hle",
-    "split": "test",
-    "answer_type": "multipleChoice"
+    "reasoning_types": "<FRAMES reasoning types>",
+    "wiki_links": "<supporting Wikipedia links>",
+    "source": "google/frames-benchmark",
+    "split": "test"
   }
 }
 ```
 
 ### Step 4: Create LangSmith Dataset
 
-- **Dataset name:** `HLE-Multiple-Choice-Evaluation`
-- **Dataset ID:** Record after rerunning the updated notebook cell.
-- **Dataset description:** A 20-example text-only, multiple-choice subset of HLE for evaluation across academic subject categories.
-- **Upload method:** The notebook loads HLE, creates a LangSmith dataset, and uploads each question, reference answer, and metadata.
-- **Verification:** The notebook verifies the uploaded count and that examples contain inputs and outputs. Add a LangSmith UI screenshot or dataset URL after rerunning the updated upload cell.
-- **Example count verified:** Pending rerun of the updated upload and verification cell.
+- **Dataset name:** `FRAMES-Multi-Hop-QA-Evaluation`
+- **Dataset ID:** `dc312e9b-cd59-4b89-9214-3e1ccd0d80d7`
+- **Dataset description:** A 20-example subset of FRAMES for evaluating multi-hop question answering against reference answers.
+- **Upload method:** The notebook loads the FRAMES `test` split, creates a LangSmith dataset, and uploads each prompt, reference answer, reasoning type, and source link metadata.
+- **Verification:** The notebook confirmed all 20 uploaded examples have non-empty question and answer fields and reasoning metadata. The experiment is linked above; no UI screenshot is included.
+- **Example count verified:** 20
 
-**Previous dataset note:** An earlier run created a dataset named `Re-Twin-benchmark` using HLE questions. Its name and description do not match its contents; use the correctly named HLE dataset for subsequent evaluation.
+**Previous dataset note:** The earlier HLE run created a separate `hle-mc-benchmark` dataset. It is not the FRAMES dataset; use `FRAMES-Multi-Hop-QA-Evaluation` for subsequent evaluation.
 
 ## Part 3: Evaluation Setup
 
@@ -99,58 +98,53 @@ Representative example:
 
 **Target purpose**
 
-[Describe what the function receives and returns.]
+The traced `target_function` receives an input dictionary with a non-empty `question` string and returns an `answer` generated by the OpenAI chat API. It is decorated with `@traceable(name="frames_target")`.
 
 **Implementation details**
 
-- **Code file:** [Link to the target function code.]
-- **Model:** [Model name]
-- **Temperature:** [Value]
-- **Maximum tokens:** [Value]
-- **Tracing:** [Yes, with `@traceable` / LangSmith wrapping]
-- **Error handling:** [Describe retries or fallback behavior.]
+- **Code file:** [langsmith_custom_dataset_evaluation.ipynb](./langsmith_custom_dataset_evaluation.ipynb)
+- **Model:** `gpt-4o-mini`
+- **Temperature:** 0
+- **Maximum tokens:** 512
+- **Tracing:** Enabled with `@traceable` and LangSmith client configuration.
+- **Error handling:** Invalid/empty inputs and empty model responses raise explicit errors; API failures are allowed to surface without fallback.
 
-**Smoke test**
-
-| Example | Result | Notes |
-|---|---|---|
-| [Example 1] | [Pass / fail] | [Notes] |
-| [Example 2] | [Pass / fail] | [Notes] |
-| [Example 3] | [Pass / fail] | [Notes] |
+**Smoke test:** Three FRAMES questions ran through the target successfully. The calls returned non-empty answers; this verifies execution, not answer correctness.
 
 ### Step 6: Set Up Evaluators
 
 **Built-in correctness evaluator**
 
-- **Type:** [LLM-as-judge or other]
-- **Judge model:** [Model name]
-- **Criteria:** [Define what correct means.]
-- **Output format:** [Score and reasoning fields.]
+- **Type:** LLM-as-judge via `create_llm_as_judge`.
+- **Judge model:** `openai:gpt-4o-mini`.
+- **Criteria:** Factual accuracy, completeness, and whether the answer addresses the question; wording differences alone are not errors.
+- **Output format:** Boolean correctness feedback, normalized to 1.0/0.0 for score analysis, with judge comments where available.
 
 **Additional evaluators**
 
-[Document any evaluators used beyond correctness.]
+None. The optional custom evaluator and cost/performance comparison were not implemented.
 
 ## Part 4: Run Evaluation
 
 ### Step 7: Execute Evaluation Experiment
 
-- **Experiment prefix:** [Name]
-- **Dataset:** [Dataset name]
-- **Target:** [Target function name]
-- **Evaluator(s):** [Names]
-- **Concurrency:** [Value]
-- **Result link or export:** [Link or file path]
+- **Experiment:** `frames-gpt-4o-mini-20261123-2123-197c6eca`
+- **Dataset:** `FRAMES-Multi-Hop-QA-Evaluation` (20 examples)
+- **Target:** `target_function` (`frames_target`)
+- **Evaluator(s):** `correctness_evaluator`
+- **Concurrency:** 2
+- **Result link or export:** [LangSmith experiment](https://eu.smith.langchain.com/o/edab2a5d-9667-472c-96d6-b273cacdf453/datasets/dc312e9b-cd59-4b89-9214-3e1ccd0d80d7/compare?selectedSessions=cb28b7ef-282e-40cf-9659-509a81d7ce74); see [score export](./frames_evaluation_scores.csv) and [metrics](./frames_evaluation_metrics.json).
 
 ### Step 8: Review Results in LangSmith UI
 
-[Add the LangSmith UI screenshot or summarize the aggregate metrics and individual-example review.]
+The notebook printed and reviewed all 20 per-example results, including generated answer, reference answer, judge score, latency, and error status. No UI screenshot is included. There were no failed target runs.
 
 **Initial observations**
 
-- [High-performing pattern]
-- [Low-performing pattern]
-- [Interesting or surprising example]
+- The target answered the record-label parent-company question correctly (example `06554c83-ab08-450b-ae54-30752b70451b`, score 1.0).
+- Several answers failed on multi-hop entity identification or exact requested outputs. For example, the Bronte Tower answer discussed its height but did not give the requested ranking; judge score 0.0.
+- Some answers confidently supplied unsupported intermediate facts, such as the "future wife" example; the judge marked it incorrect.
+- These are observations from this 20-example sample, not conclusions about all FRAMES questions.
 
 ## Part 5: Analysis & Reporting
 
@@ -160,27 +154,37 @@ Representative example:
 
 | Metric | Value |
 |---|---:|
-| Example count | [N] |
-| Mean score | [Value] |
-| Median score | [Value] |
-| Pass rate | [Percentage] |
-| [Additional metric] | [Value] |
+| Example count | 20 |
+| Scored examples | 20 |
+| Mean score | 0.150 |
+| Median score | 0.000 |
+| Pass rate (score >= 0.5) | 15.0% (3/20) |
+| Failed target runs | 0 |
 
 **Performance by category**
 
 | Category | Example count | Mean score | Pass rate | Observation |
 |---|---:|---:|---:|---|
-| [Category] | [N] | [Value] | [Percentage] | [Observation] |
+| Multiple constraints | 5 | 0.200 | 20.0% | Low performance in this small group. |
+| Multiple constraints; temporal reasoning | 2 | 0.000 | 0.0% | No examples passed. |
+| Numerical reasoning; multiple constraints; temporal reasoning | 2 | 0.000 | 0.0% | No examples passed. |
+| Numerical reasoning; tabular reasoning; multiple constraints | 3 | 0.000 | 0.0% | No examples passed. |
+| Numerical reasoning; tabular reasoning; multiple constraints; temporal reasoning | 1 | 0.000 | 0.0% | Single example; not generalizable. |
+| Numerical reasoning; tabular reasoning; post processing; temporal reasoning | 1 | 0.000 | 0.0% | Single example; not generalizable. |
+| Tabular reasoning; multiple constraints | 3 | 0.333 | 33.3% | One of three examples passed. |
+| Tabular reasoning; multiple constraints; temporal reasoning | 2 | 0.500 | 50.0% | One of two examples passed. |
+| Temporal reasoning | 1 | 0.000 | 0.0% | Single example; not generalizable. |
 
 **Error analysis**
 
-- **Most common failure mode:** [Description]
-- **Best-performing example:** [Describe and give a score.]
-- **Worst-performing example:** [Describe and give a score.]
-- **Root-cause hypotheses:** [List possible causes.]
+- **Observed failure modes:** Incorrect entity/fact selection, incomplete answers, and unsupported intermediate claims. The target receives no retrieved Wikipedia text despite the dataset containing supporting `wiki_links`.
+- **Best-performing example:** `06554c83-ab08-450b-ae54-30752b70451b`, score 1.0.
+- **Lowest-scoring example:** `042f3d1a-5dc0-41ac-a1d7-9bfacbb307bb`, score 0.0; it did not provide the requested ranking.
+- **Root-cause hypotheses:** Multi-hop questions require precise intermediate facts, and a parametric-only target can hallucinate or miss time-sensitive details. These hypotheses require testing with retrieval-augmented context.
+- **Limitations:** This is a 20-example subset of the 824-row test split. Scores are LLM-judge outputs and results should not be generalized to the full benchmark.
 
 ### Step 10: Create Evaluation Report
 
 **Evaluation summary**
 
-See [`evaluation_summary.md`](./evaluation_summary.md).
+See [evaluation_summary.md](./evaluation_summary.md), [frames_evaluation_scores.csv](./frames_evaluation_scores.csv), and [frames_evaluation_metrics.json](./frames_evaluation_metrics.json).

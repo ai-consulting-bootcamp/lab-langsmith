@@ -1,0 +1,15 @@
+{
+  "dataset": "FRAMES-Multi-Hop-QA-Evaluation",
+  "experiment": "frames-gpt-4o-mini-20261123-2123-197c6eca",
+  "experiment_url": "https://eu.smith.langchain.com/o/edab2a5d-9667-472c-96d6-b273cacdf453/datasets/dc312e9b-cd59-4b89-9214-3e1ccd0d80d7/compare?selectedSessions=cb28b7ef-282e-40cf-9659-509a81d7ce74",
+  "example_count": 20,
+  "scored_example_count": 20,
+  "mean_score": 0.15,
+  "median_score": 0.0,
+  "pass_rate_at_0_5": 0.15,
+  "failed_run_count": 0,
+  "best_example_id": "06554c83-ab08-450b-ae54-30752b70451b",
+  "best_score": 1.0,
+  "worst_example_id": "042f3d1a-5dc0-41ac-a1d7-9bfacbb307bb",
+  "worst_score": 0.0
+}
