@@ -21,6 +21,7 @@ This lab evaluates whether an AI assistant can answer multi-hop factual question
 **Document sources**
 
 - [Google FRAMES benchmark on Hugging Face](https://huggingface.co/datasets/google/frames-benchmark)
+- The benchmark is described in Krishna et al. (2024), [*Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation*](https://arxiv.org/abs/2409.12941), which introduces FRAMES as an evaluation for retrieval-augmented generation.
 
 The benchmark has 824 rows in its `test` split. The notebook selects 20 examples and maps its `Prompt` and `Answer` fields to LangSmith input and output fields.
 
@@ -188,3 +189,17 @@ The notebook printed and reviewed all 20 per-example results, including generate
 **Evaluation summary**
 
 See [evaluation_summary.md](./evaluation_summary.md), [frames_evaluation_scores.csv](./frames_evaluation_scores.csv), and [frames_evaluation_metrics.json](./frames_evaluation_metrics.json).
+
+## Research Reference
+
+```bibtex
+@misc{krishna2024factfetchreasonunified,
+  title={Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation},
+  author={Satyapriya Krishna and Kalpesh Krishna and Anhad Mohananey and Steven Schwarcz and Adam Stambler and Shyam Upadhyay and Manaal Faruqui},
+  year={2024},
+  eprint={2409.12941},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2409.12941}
+}
+```
