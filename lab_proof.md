@@ -2,10 +2,10 @@
 
 ## Submission Summary
 
-- **Chosen domain:** Re-Twin and its ArTee product. ArTee is the primary subject because it has a clear product description and supports several testable capabilities. The evaluation dataset will test whether an AI assistant can explain Re-Twin's purpose, ArTee's features, and how the product fits within the wider battery energy storage system (BESS) platform.
-- **Dataset name:** `Ironhack-LABLangSmith`
-- **Dataset ID:** `3e9257b1-1b43-4f1b-b617-692664f76bc0`
-- **Dataset description:** Evaluates whether an AI assistant can accurately explain Re-Twin and its ArTee digital energy analyst, including ArTee capabilities, Re-Twin platform context, battery storage analysis, and supporting Investment Analysis and Live Benchmarking modules.
+- **Chosen domain:** Questions from the text-only, multiple-choice portion of Humanity's Last Exam (HLE), a broad academic benchmark.
+- **Dataset name:** `HLE-Multiple-Choice-Evaluation`
+- **Dataset ID:** Record the ID printed by the notebook after creating/verifying this dataset.
+- **Dataset description:** A 20-example text-only, multiple-choice subset of HLE for testing answer generation against the dataset's reference answers across subject categories.
 - **Target model:** [Model name and configuration]
 - **Experiment:** [LangSmith experiment name]
 - **Experiment link or screenshot:** [Add a public or private-accessible link, or reference a screenshot in this repository.]
@@ -16,35 +16,22 @@
 
 **Domain description**
 
-This lab evaluates whether an AI assistant can explain Re-Twin's project and product in simple, accurate words. The main focus is ArTee's purpose, capabilities, and role in helping users understand energy data, evaluate project scenarios, receive reports, and make decisions for battery energy storage systems.
+This lab evaluates whether an AI assistant can answer multiple-choice questions from a small, text-only HLE subset. Each question is one independent evaluation case; the HLE answer is used as the reference answer.
 
 **Document sources**
 
-- [Re-Twin ArTee product page](https://www.re-twin.energy/de/artee)
-- [Re-Twin platform overview](https://www.re-twin.energy/de/plattform-ubersicht)
-- [Re-Twin Investment Analysis](https://www.re-twin.energy/de/investitionsanalyse)
-- [Re-Twin Live Benchmarking](https://www.re-twin.energy/de/live-benchmarking)
+- [HLE dataset on Hugging Face](https://huggingface.co/datasets/cais/hle)
+- [Hugging Face dataset viewer API](https://datasets-server.huggingface.co/rows?dataset=cais%2Fhle&config=default&split=test&offset=0&length=100)
 
-**Re-Twin product scope for the dataset**
-
-- **ArTee (primary subject):** Integrated digital energy analyst for project setup, scenario evaluation, result interpretation, 24/7 support, and automated reporting.
-- **Re-Twin Platform (context):** Overall platform for evaluating, benchmarking, and maximizing the profitability of BESS assets throughout the project lifecycle.
-- **Investment Analysis:** Models project-specific BESS data, compares scenarios, calculates operations and cash flow, and creates structured or bankable reports.
-- **Live Benchmarking:** Places a digital twin under live market conditions to test strategies and compare simulated performance with actual or alternative assets.
-- **Digital Twin:** Virtual representation of a BESS asset that combines project-specific technical data with live market data.
-- **Automated Reporting:** Configurable performance reports delivered on a schedule to email or connected dashboards.
-- **API Access:** Integration of live benchmark data into external dashboards.
-- **Multi-Market Simulation:** Trading analysis across Day-Ahead, Intraday, FCR, aFRR, mFRR, and balancing markets.
-
-ArTee is the clearest main product for this lab. Investment Analysis and Live Benchmarking should be included as context questions that test whether the assistant understands how ArTee fits into the Re-Twin platform, rather than replacing ArTee as the primary subject.
+The HLE dataset is gated. A Hugging Face account must be granted access, and a read token must be available locally as `HF_TOKEN` before the notebook can load it. The notebook filters for multiple-choice examples without images and takes the first 20 matching rows.
 
 **Good-example criteria**
 
-- **Input:** A user question about ArTee or Re-Twin, such as what ArTee does, how it supports project setup, or how it differs from the Investment Analysis and Live Benchmarking modules.
-- **Expected output:** An accurate, concise product explanation based on Re-Twin's published product information.
-- **Metadata:** Category (for example, `identity`, `capability`, `reporting`, `analysis`, or `platform-context`), difficulty, source page, and whether the answer requires external context.
-- **Good example:** The answer names ArTee as Re-Twin's digital energy analyst and accurately explains the relevant feature or workflow.
-- **Poor example:** The answer invents unsupported features, confuses ArTee with the whole platform, or misses the distinction between planning and live performance analysis.
+- **Input:** An HLE multiple-choice question with its answer options.
+- **Expected output:** The reference answer supplied by HLE.
+- **Metadata:** HLE subject category, source dataset, split, and answer type.
+- **Good example:** A text-only multiple-choice question with a non-empty reference answer and a valid category.
+- **Excluded example:** An image-based item, a non-multiple-choice item, or a record with missing question, answer, or category.
 
 ### Step 2: Set Up LangSmith Environment
 
@@ -62,32 +49,49 @@ ArTee is the clearest main product for this lab. Investment Analysis and Live Be
 
 | Field | Type | Description |
 |---|---|---|
-| input | object | [Describe the input fields.] |
-| output | object | [Describe the expected output fields.] |
-| metadata | object | [Describe optional analysis fields.] |
+| input | object | Contains `question`, the HLE question sent to the model. |
+| output | object | Contains `answer`, the HLE reference answer. |
+| metadata | object | Contains `category`, `source`, `split`, and `answer_type` for filtering and analysis. |
 
-**Example count:** [Number of examples]
+**Example count:** 20 (the notebook previously loaded and uploaded 20; rerun the updated upload/verification cell for the correctly named dataset).
 
 **Example quality checks**
 
-- [ ] At least 10 examples are included.
-- [ ] Inputs are clear and independent.
-- [ ] Outputs contain appropriate ground truth where available.
-- [ ] Metadata is consistent.
-- [ ] Unclear or incomplete examples were removed.
+- [x] At least 10 examples are included.
+- [x] Inputs are clear and independent.
+- [x] Outputs contain appropriate ground truth where available.
+- [x] Metadata is consistent.
+- [x] Unclear or incomplete examples were removed.
 
 **Example data**
 
-[Link to or embed a representative JSON/CSV example and the full dataset file.]
+The examples are extracted from HLE when the notebook runs; the dataset is gated, so raw records are not checked into this repository.
+
+Representative example:
+
+```json
+{
+  "input": {"question": "<text-only HLE multiple-choice question>"},
+  "output": {"answer": "<HLE reference answer>"},
+  "metadata": {
+    "category": "<HLE subject category>",
+    "source": "cais/hle",
+    "split": "test",
+    "answer_type": "multipleChoice"
+  }
+}
+```
 
 ### Step 4: Create LangSmith Dataset
 
-- **Dataset name:** `Ironhack-LABLangSmith`
-- **Dataset ID:** `3e9257b1-1b43-4f1b-b617-692664f76bc0`
-- **Dataset description:** Evaluates whether an AI assistant can accurately explain Re-Twin and ArTee, with supporting context for the Re-Twin platform, Investment Analysis, Live Benchmarking, and digital twin capabilities.
-- **Upload method:** [Script or code used]
-- **Verification:** [Describe or screenshot the dataset in the LangSmith UI.]
-- **Example count verified:** [Number]
+- **Dataset name:** `HLE-Multiple-Choice-Evaluation`
+- **Dataset ID:** Record after rerunning the updated notebook cell.
+- **Dataset description:** A 20-example text-only, multiple-choice subset of HLE for evaluation across academic subject categories.
+- **Upload method:** The notebook loads HLE, creates a LangSmith dataset, and uploads each question, reference answer, and metadata.
+- **Verification:** The notebook verifies the uploaded count and that examples contain inputs and outputs. Add a LangSmith UI screenshot or dataset URL after rerunning the updated upload cell.
+- **Example count verified:** Pending rerun of the updated upload and verification cell.
+
+**Previous dataset note:** An earlier run created a dataset named `Re-Twin-benchmark` using HLE questions. Its name and description do not match its contents; use the correctly named HLE dataset for subsequent evaluation.
 
 ## Part 3: Evaluation Setup
 
