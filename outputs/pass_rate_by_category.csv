@@ -1,0 +1,6 @@
+category,correctness_score,rule_score
+policy-boundary,1.0,1.0
+returns,1.0,0.833
+shipping,1.0,1.0
+support,1.0,0.0
+warranty,1.0,0.667

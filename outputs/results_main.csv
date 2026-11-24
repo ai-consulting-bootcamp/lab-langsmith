@@ -1,0 +1,433 @@
+inputs.context,inputs.question,outputs.answer,error,reference.answer,feedback.correctness,feedback.keyword_coverage,execution_time,example_id,id,correctness_score,rule_score
+"# Northstar Outfitters Customer Support Policy (v1)
+
+This fictional policy is the source document for the lab's evaluation dataset. It is intentionally small, self-contained, and versioned so that the reference answers can be audited.
+
+## Returns and exchanges
+
+- Unopened, unused items may be returned within 30 calendar days of delivery for a full refund to the original payment method.
+- Opened items may be returned within 14 calendar days of delivery only if they are defective or damaged on arrival. A photo of the defect is required.
+- Sale items are exchange-only within 14 calendar days; they are not eligible for a cash refund.
+- Personalized items and gift cards are final sale and cannot be returned or exchanged.
+- The customer pays return shipping for a change-of-mind return. Northstar pays return shipping for defective or damaged items.
+- Refunds are issued within 5 business days after the returned item passes inspection. The bank may take an additional 3–5 business days to display the refund.
+
+## Shipping
+
+- Standard shipping costs $6 and usually arrives in 3–5 business days.
+- Express shipping costs $18 and usually arrives in 1–2 business days.
+- Orders over $75 qualify for free standard shipping. Express surcharges still apply.
+- An order may be canceled for a full refund before it ships. After shipment, the customer must use the returns process.
+
+## Warranty and support
+
+- Manufacturing defects are covered for 12 months after delivery. Normal wear, accidental damage, and misuse are not covered.
+- Warranty claims require the order number and a description of the problem; photos or a short video may be requested.
+- Support hours are Monday–Friday, 09:00–17:00 Central European Time. Typical response time is two business days.
+- The policy does not promise Saturday delivery, price matching, or refunds for late carrier delivery.
+",Is accidental damage covered by the warranty?,"No, accidental damage is not covered by the warranty.",,"No. The warranty excludes accidental damage, normal wear, and misuse.",True,False,1.010873,146c415c-b278-46c0-93e5-d475753efa48,01a20e4a-b296-7a30-887a-3cb9b0d4063f,1.0,0.0
+"# Northstar Outfitters Customer Support Policy (v1)
+
+This fictional policy is the source document for the lab's evaluation dataset. It is intentionally small, self-contained, and versioned so that the reference answers can be audited.
+
+## Returns and exchanges
+
+- Unopened, unused items may be returned within 30 calendar days of delivery for a full refund to the original payment method.
+- Opened items may be returned within 14 calendar days of delivery only if they are defective or damaged on arrival. A photo of the defect is required.
+- Sale items are exchange-only within 14 calendar days; they are not eligible for a cash refund.
+- Personalized items and gift cards are final sale and cannot be returned or exchanged.
+- The customer pays return shipping for a change-of-mind return. Northstar pays return shipping for defective or damaged items.
+- Refunds are issued within 5 business days after the returned item passes inspection. The bank may take an additional 3–5 business days to display the refund.
+
+## Shipping
+
+- Standard shipping costs $6 and usually arrives in 3–5 business days.
+- Express shipping costs $18 and usually arrives in 1–2 business days.
+- Orders over $75 qualify for free standard shipping. Express surcharges still apply.
+- An order may be canceled for a full refund before it ships. After shipment, the customer must use the returns process.
+
+## Warranty and support
+
+- Manufacturing defects are covered for 12 months after delivery. Normal wear, accidental damage, and misuse are not covered.
+- Warranty claims require the order number and a description of the problem; photos or a short video may be requested.
+- Support hours are Monday–Friday, 09:00–17:00 Central European Time. Typical response time is two business days.
+- The policy does not promise Saturday delivery, price matching, or refunds for late carrier delivery.
+",Do you offer price matching?,The policy does not state that we offer price matching.,,The policy does not state that Northstar offers price matching.,True,True,1.076812,3b2bcca8-2918-400d-91ff-31deae3b8b76,01a20e4a-b29c-7880-bcdc-75968d889bb1,1.0,1.0
+"# Northstar Outfitters Customer Support Policy (v1)
+
+This fictional policy is the source document for the lab's evaluation dataset. It is intentionally small, self-contained, and versioned so that the reference answers can be audited.
+
+## Returns and exchanges
+
+- Unopened, unused items may be returned within 30 calendar days of delivery for a full refund to the original payment method.
+- Opened items may be returned within 14 calendar days of delivery only if they are defective or damaged on arrival. A photo of the defect is required.
+- Sale items are exchange-only within 14 calendar days; they are not eligible for a cash refund.
+- Personalized items and gift cards are final sale and cannot be returned or exchanged.
+- The customer pays return shipping for a change-of-mind return. Northstar pays return shipping for defective or damaged items.
+- Refunds are issued within 5 business days after the returned item passes inspection. The bank may take an additional 3–5 business days to display the refund.
+
+## Shipping
+
+- Standard shipping costs $6 and usually arrives in 3–5 business days.
+- Express shipping costs $18 and usually arrives in 1–2 business days.
+- Orders over $75 qualify for free standard shipping. Express surcharges still apply.
+- An order may be canceled for a full refund before it ships. After shipment, the customer must use the returns process.
+
+## Warranty and support
+
+- Manufacturing defects are covered for 12 months after delivery. Normal wear, accidental damage, and misuse are not covered.
+- Warranty claims require the order number and a description of the problem; photos or a short video may be requested.
+- Support hours are Monday–Friday, 09:00–17:00 Central European Time. Typical response time is two business days.
+- The policy does not promise Saturday delivery, price matching, or refunds for late carrier delivery.
+",How long is the warranty for manufacturing defects?,The warranty for manufacturing defects is 12 months after delivery.,,Manufacturing defects are covered for 12 months after delivery.,True,True,0.780624,4e013a84-34af-4cf0-b53b-938200a6515d,01a20e4a-b6d1-7064-a86a-b51cf72ffe78,1.0,1.0
+"# Northstar Outfitters Customer Support Policy (v1)
+
+This fictional policy is the source document for the lab's evaluation dataset. It is intentionally small, self-contained, and versioned so that the reference answers can be audited.
+
+## Returns and exchanges
+
+- Unopened, unused items may be returned within 30 calendar days of delivery for a full refund to the original payment method.
+- Opened items may be returned within 14 calendar days of delivery only if they are defective or damaged on arrival. A photo of the defect is required.
+- Sale items are exchange-only within 14 calendar days; they are not eligible for a cash refund.
+- Personalized items and gift cards are final sale and cannot be returned or exchanged.
+- The customer pays return shipping for a change-of-mind return. Northstar pays return shipping for defective or damaged items.
+- Refunds are issued within 5 business days after the returned item passes inspection. The bank may take an additional 3–5 business days to display the refund.
+
+## Shipping
+
+- Standard shipping costs $6 and usually arrives in 3–5 business days.
+- Express shipping costs $18 and usually arrives in 1–2 business days.
+- Orders over $75 qualify for free standard shipping. Express surcharges still apply.
+- An order may be canceled for a full refund before it ships. After shipment, the customer must use the returns process.
+
+## Warranty and support
+
+- Manufacturing defects are covered for 12 months after delivery. Normal wear, accidental damage, and misuse are not covered.
+- Warranty claims require the order number and a description of the problem; photos or a short video may be requested.
+- Support hours are Monday–Friday, 09:00–17:00 Central European Time. Typical response time is two business days.
+- The policy does not promise Saturday delivery, price matching, or refunds for late carrier delivery.
+",What information is needed for a warranty claim?,"For a warranty claim, you need the order number and a description of the problem. Photos or a short video may also be requested.",,A warranty claim requires the order number and a description of the problem; photos or a short video may also be requested.,True,True,1.024669,44b3685b-2c79-4729-93c7-3245a0c91230,01a20e4a-b68a-711d-87c1-4b8b3f1bfad2,1.0,1.0
+"# Northstar Outfitters Customer Support Policy (v1)
+
+This fictional policy is the source document for the lab's evaluation dataset. It is intentionally small, self-contained, and versioned so that the reference answers can be audited.
+
+## Returns and exchanges
+
+- Unopened, unused items may be returned within 30 calendar days of delivery for a full refund to the original payment method.
+- Opened items may be returned within 14 calendar days of delivery only if they are defective or damaged on arrival. A photo of the defect is required.
+- Sale items are exchange-only within 14 calendar days; they are not eligible for a cash refund.
+- Personalized items and gift cards are final sale and cannot be returned or exchanged.
+- The customer pays return shipping for a change-of-mind return. Northstar pays return shipping for defective or damaged items.
+- Refunds are issued within 5 business days after the returned item passes inspection. The bank may take an additional 3–5 business days to display the refund.
+
+## Shipping
+
+- Standard shipping costs $6 and usually arrives in 3–5 business days.
+- Express shipping costs $18 and usually arrives in 1–2 business days.
+- Orders over $75 qualify for free standard shipping. Express surcharges still apply.
+- An order may be canceled for a full refund before it ships. After shipment, the customer must use the returns process.
+
+## Warranty and support
+
+- Manufacturing defects are covered for 12 months after delivery. Normal wear, accidental damage, and misuse are not covered.
+- Warranty claims require the order number and a description of the problem; photos or a short video may be requested.
+- Support hours are Monday–Friday, 09:00–17:00 Central European Time. Typical response time is two business days.
+- The policy does not promise Saturday delivery, price matching, or refunds for late carrier delivery.
+",What does express shipping cost?,Express shipping costs $18 and usually arrives in 1–2 business days.,,Express shipping costs $18 and usually arrives in 1–2 business days.,True,True,0.771766,50c8bd44-1677-4d6f-9934-a270ef42081c,01a20e4a-b9df-77e0-824b-79d1553bdacb,1.0,1.0
+"# Northstar Outfitters Customer Support Policy (v1)
+
+This fictional policy is the source document for the lab's evaluation dataset. It is intentionally small, self-contained, and versioned so that the reference answers can be audited.
+
+## Returns and exchanges
+
+- Unopened, unused items may be returned within 30 calendar days of delivery for a full refund to the original payment method.
+- Opened items may be returned within 14 calendar days of delivery only if they are defective or damaged on arrival. A photo of the defect is required.
+- Sale items are exchange-only within 14 calendar days; they are not eligible for a cash refund.
+- Personalized items and gift cards are final sale and cannot be returned or exchanged.
+- The customer pays return shipping for a change-of-mind return. Northstar pays return shipping for defective or damaged items.
+- Refunds are issued within 5 business days after the returned item passes inspection. The bank may take an additional 3–5 business days to display the refund.
+
+## Shipping
+
+- Standard shipping costs $6 and usually arrives in 3–5 business days.
+- Express shipping costs $18 and usually arrives in 1–2 business days.
+- Orders over $75 qualify for free standard shipping. Express surcharges still apply.
+- An order may be canceled for a full refund before it ships. After shipment, the customer must use the returns process.
+
+## Warranty and support
+
+- Manufacturing defects are covered for 12 months after delivery. Normal wear, accidental damage, and misuse are not covered.
+- Warranty claims require the order number and a description of the problem; photos or a short video may be requested.
+- Support hours are Monday–Friday, 09:00–17:00 Central European Time. Typical response time is two business days.
+- The policy does not promise Saturday delivery, price matching, or refunds for late carrier delivery.
+",Are sale items eligible for a cash refund?,"No, sale items are exchange-only within 14 calendar days and are not eligible for a cash refund.",,No. Sale items are exchange-only within 14 calendar days and are not eligible for a cash refund.,True,True,0.9549,6542136e-8a7e-47c5-afee-2a46d356a8bb,01a20e4a-ba8b-7708-a2ee-21cbf2a089c7,1.0,1.0
+"# Northstar Outfitters Customer Support Policy (v1)
+
+This fictional policy is the source document for the lab's evaluation dataset. It is intentionally small, self-contained, and versioned so that the reference answers can be audited.
+
+## Returns and exchanges
+
+- Unopened, unused items may be returned within 30 calendar days of delivery for a full refund to the original payment method.
+- Opened items may be returned within 14 calendar days of delivery only if they are defective or damaged on arrival. A photo of the defect is required.
+- Sale items are exchange-only within 14 calendar days; they are not eligible for a cash refund.
+- Personalized items and gift cards are final sale and cannot be returned or exchanged.
+- The customer pays return shipping for a change-of-mind return. Northstar pays return shipping for defective or damaged items.
+- Refunds are issued within 5 business days after the returned item passes inspection. The bank may take an additional 3–5 business days to display the refund.
+
+## Shipping
+
+- Standard shipping costs $6 and usually arrives in 3–5 business days.
+- Express shipping costs $18 and usually arrives in 1–2 business days.
+- Orders over $75 qualify for free standard shipping. Express surcharges still apply.
+- An order may be canceled for a full refund before it ships. After shipment, the customer must use the returns process.
+
+## Warranty and support
+
+- Manufacturing defects are covered for 12 months after delivery. Normal wear, accidental damage, and misuse are not covered.
+- Warranty claims require the order number and a description of the problem; photos or a short video may be requested.
+- Support hours are Monday–Friday, 09:00–17:00 Central European Time. Typical response time is two business days.
+- The policy does not promise Saturday delivery, price matching, or refunds for late carrier delivery.
+",I opened an item and changed my mind. Can I return it after 10 days?,"No, you cannot return an opened item after 10 days unless it is defective or damaged on arrival. In that case, you would need to provide a photo of the defect.",,"No. Opened items may be returned within 14 days only when they are defective or damaged on arrival, with a photo of the defect.",True,False,1.110801,850ca95f-2c67-440a-873e-1cb996bef113,01a20e4a-be47-7bb3-add2-34aa5f75b338,1.0,0.0
+"# Northstar Outfitters Customer Support Policy (v1)
+
+This fictional policy is the source document for the lab's evaluation dataset. It is intentionally small, self-contained, and versioned so that the reference answers can be audited.
+
+## Returns and exchanges
+
+- Unopened, unused items may be returned within 30 calendar days of delivery for a full refund to the original payment method.
+- Opened items may be returned within 14 calendar days of delivery only if they are defective or damaged on arrival. A photo of the defect is required.
+- Sale items are exchange-only within 14 calendar days; they are not eligible for a cash refund.
+- Personalized items and gift cards are final sale and cannot be returned or exchanged.
+- The customer pays return shipping for a change-of-mind return. Northstar pays return shipping for defective or damaged items.
+- Refunds are issued within 5 business days after the returned item passes inspection. The bank may take an additional 3–5 business days to display the refund.
+
+## Shipping
+
+- Standard shipping costs $6 and usually arrives in 3–5 business days.
+- Express shipping costs $18 and usually arrives in 1–2 business days.
+- Orders over $75 qualify for free standard shipping. Express surcharges still apply.
+- An order may be canceled for a full refund before it ships. After shipment, the customer must use the returns process.
+
+## Warranty and support
+
+- Manufacturing defects are covered for 12 months after delivery. Normal wear, accidental damage, and misuse are not covered.
+- Warranty claims require the order number and a description of the problem; photos or a short video may be requested.
+- Support hours are Monday–Friday, 09:00–17:00 Central European Time. Typical response time is two business days.
+- The policy does not promise Saturday delivery, price matching, or refunds for late carrier delivery.
+",My order is $100. Is express shipping free?,"No, express shipping is not free. It costs $18 regardless of the order amount. However, standard shipping is free for orders over $75.",,"No. Orders over $75 qualify for free standard shipping, but the $18 express surcharge still applies.",True,True,0.975317,696aabd1-ef38-4286-8f66-a2c3517d39e6,01a20e4a-bce3-7ab9-b238-50d0db6ea756,1.0,1.0
+"# Northstar Outfitters Customer Support Policy (v1)
+
+This fictional policy is the source document for the lab's evaluation dataset. It is intentionally small, self-contained, and versioned so that the reference answers can be audited.
+
+## Returns and exchanges
+
+- Unopened, unused items may be returned within 30 calendar days of delivery for a full refund to the original payment method.
+- Opened items may be returned within 14 calendar days of delivery only if they are defective or damaged on arrival. A photo of the defect is required.
+- Sale items are exchange-only within 14 calendar days; they are not eligible for a cash refund.
+- Personalized items and gift cards are final sale and cannot be returned or exchanged.
+- The customer pays return shipping for a change-of-mind return. Northstar pays return shipping for defective or damaged items.
+- Refunds are issued within 5 business days after the returned item passes inspection. The bank may take an additional 3–5 business days to display the refund.
+
+## Shipping
+
+- Standard shipping costs $6 and usually arrives in 3–5 business days.
+- Express shipping costs $18 and usually arrives in 1–2 business days.
+- Orders over $75 qualify for free standard shipping. Express surcharges still apply.
+- An order may be canceled for a full refund before it ships. After shipment, the customer must use the returns process.
+
+## Warranty and support
+
+- Manufacturing defects are covered for 12 months after delivery. Normal wear, accidental damage, and misuse are not covered.
+- Warranty claims require the order number and a description of the problem; photos or a short video may be requested.
+- Support hours are Monday–Friday, 09:00–17:00 Central European Time. Typical response time is two business days.
+- The policy does not promise Saturday delivery, price matching, or refunds for late carrier delivery.
+",What does standard shipping cost and how long does it take?,Standard shipping costs $6 and usually arrives in 3–5 business days.,,Standard shipping costs $6 and usually arrives in 3–5 business days.,True,True,0.779443,898d7f36-7cb6-454f-ae5d-ebab530578fc,01a20e4a-c0b3-7b50-be4b-93fb908d18dd,1.0,1.0
+"# Northstar Outfitters Customer Support Policy (v1)
+
+This fictional policy is the source document for the lab's evaluation dataset. It is intentionally small, self-contained, and versioned so that the reference answers can be audited.
+
+## Returns and exchanges
+
+- Unopened, unused items may be returned within 30 calendar days of delivery for a full refund to the original payment method.
+- Opened items may be returned within 14 calendar days of delivery only if they are defective or damaged on arrival. A photo of the defect is required.
+- Sale items are exchange-only within 14 calendar days; they are not eligible for a cash refund.
+- Personalized items and gift cards are final sale and cannot be returned or exchanged.
+- The customer pays return shipping for a change-of-mind return. Northstar pays return shipping for defective or damaged items.
+- Refunds are issued within 5 business days after the returned item passes inspection. The bank may take an additional 3–5 business days to display the refund.
+
+## Shipping
+
+- Standard shipping costs $6 and usually arrives in 3–5 business days.
+- Express shipping costs $18 and usually arrives in 1–2 business days.
+- Orders over $75 qualify for free standard shipping. Express surcharges still apply.
+- An order may be canceled for a full refund before it ships. After shipment, the customer must use the returns process.
+
+## Warranty and support
+
+- Manufacturing defects are covered for 12 months after delivery. Normal wear, accidental damage, and misuse are not covered.
+- Warranty claims require the order number and a description of the problem; photos or a short video may be requested.
+- Support hours are Monday–Friday, 09:00–17:00 Central European Time. Typical response time is two business days.
+- The policy does not promise Saturday delivery, price matching, or refunds for late carrier delivery.
+",Can I exchange a personalized item?,"No, personalized items are final sale and cannot be returned or exchanged.",,No. Personalized items are final sale and cannot be returned or exchanged.,True,True,0.947884,99ba6ed7-64bc-40a5-8874-a5ab4da0d8e3,01a20e4a-c29e-7d1f-8976-c8698ecdffd2,1.0,1.0
+"# Northstar Outfitters Customer Support Policy (v1)
+
+This fictional policy is the source document for the lab's evaluation dataset. It is intentionally small, self-contained, and versioned so that the reference answers can be audited.
+
+## Returns and exchanges
+
+- Unopened, unused items may be returned within 30 calendar days of delivery for a full refund to the original payment method.
+- Opened items may be returned within 14 calendar days of delivery only if they are defective or damaged on arrival. A photo of the defect is required.
+- Sale items are exchange-only within 14 calendar days; they are not eligible for a cash refund.
+- Personalized items and gift cards are final sale and cannot be returned or exchanged.
+- The customer pays return shipping for a change-of-mind return. Northstar pays return shipping for defective or damaged items.
+- Refunds are issued within 5 business days after the returned item passes inspection. The bank may take an additional 3–5 business days to display the refund.
+
+## Shipping
+
+- Standard shipping costs $6 and usually arrives in 3–5 business days.
+- Express shipping costs $18 and usually arrives in 1–2 business days.
+- Orders over $75 qualify for free standard shipping. Express surcharges still apply.
+- An order may be canceled for a full refund before it ships. After shipment, the customer must use the returns process.
+
+## Warranty and support
+
+- Manufacturing defects are covered for 12 months after delivery. Normal wear, accidental damage, and misuse are not covered.
+- Warranty claims require the order number and a description of the problem; photos or a short video may be requested.
+- Support hours are Monday–Friday, 09:00–17:00 Central European Time. Typical response time is two business days.
+- The policy does not promise Saturday delivery, price matching, or refunds for late carrier delivery.
+",When is customer support available?,"Customer support is available Monday to Friday, from 09:00 to 17:00 Central European Time.",,"Support is available Monday–Friday, 09:00–17:00 Central European Time.",True,False,0.834318,9f7fbfb1-46ba-41e5-9747-3a0e61fa89e2,01a20e4a-c3bf-7e91-8e4e-5bd203fa1bf5,1.0,0.0
+"# Northstar Outfitters Customer Support Policy (v1)
+
+This fictional policy is the source document for the lab's evaluation dataset. It is intentionally small, self-contained, and versioned so that the reference answers can be audited.
+
+## Returns and exchanges
+
+- Unopened, unused items may be returned within 30 calendar days of delivery for a full refund to the original payment method.
+- Opened items may be returned within 14 calendar days of delivery only if they are defective or damaged on arrival. A photo of the defect is required.
+- Sale items are exchange-only within 14 calendar days; they are not eligible for a cash refund.
+- Personalized items and gift cards are final sale and cannot be returned or exchanged.
+- The customer pays return shipping for a change-of-mind return. Northstar pays return shipping for defective or damaged items.
+- Refunds are issued within 5 business days after the returned item passes inspection. The bank may take an additional 3–5 business days to display the refund.
+
+## Shipping
+
+- Standard shipping costs $6 and usually arrives in 3–5 business days.
+- Express shipping costs $18 and usually arrives in 1–2 business days.
+- Orders over $75 qualify for free standard shipping. Express surcharges still apply.
+- An order may be canceled for a full refund before it ships. After shipment, the customer must use the returns process.
+
+## Warranty and support
+
+- Manufacturing defects are covered for 12 months after delivery. Normal wear, accidental damage, and misuse are not covered.
+- Warranty claims require the order number and a description of the problem; photos or a short video may be requested.
+- Support hours are Monday–Friday, 09:00–17:00 Central European Time. Typical response time is two business days.
+- The policy does not promise Saturday delivery, price matching, or refunds for late carrier delivery.
+",How long can a refund take after inspection?,Refunds are issued within 5 business days after the returned item passes inspection. The bank may take an additional 3–5 business days to display the refund.,,Northstar issues the refund within 5 business days after inspection; the bank may take an additional 3–5 business days to display it.,True,True,1.021385,a0606dfb-7156-4477-9572-f44037ce0d33,01a20e4a-c653-799b-85b4-c5bcdc62e068,1.0,1.0
+"# Northstar Outfitters Customer Support Policy (v1)
+
+This fictional policy is the source document for the lab's evaluation dataset. It is intentionally small, self-contained, and versioned so that the reference answers can be audited.
+
+## Returns and exchanges
+
+- Unopened, unused items may be returned within 30 calendar days of delivery for a full refund to the original payment method.
+- Opened items may be returned within 14 calendar days of delivery only if they are defective or damaged on arrival. A photo of the defect is required.
+- Sale items are exchange-only within 14 calendar days; they are not eligible for a cash refund.
+- Personalized items and gift cards are final sale and cannot be returned or exchanged.
+- The customer pays return shipping for a change-of-mind return. Northstar pays return shipping for defective or damaged items.
+- Refunds are issued within 5 business days after the returned item passes inspection. The bank may take an additional 3–5 business days to display the refund.
+
+## Shipping
+
+- Standard shipping costs $6 and usually arrives in 3–5 business days.
+- Express shipping costs $18 and usually arrives in 1–2 business days.
+- Orders over $75 qualify for free standard shipping. Express surcharges still apply.
+- An order may be canceled for a full refund before it ships. After shipment, the customer must use the returns process.
+
+## Warranty and support
+
+- Manufacturing defects are covered for 12 months after delivery. Normal wear, accidental damage, and misuse are not covered.
+- Warranty claims require the order number and a description of the problem; photos or a short video may be requested.
+- Support hours are Monday–Friday, 09:00–17:00 Central European Time. Typical response time is two business days.
+- The policy does not promise Saturday delivery, price matching, or refunds for late carrier delivery.
+",Can I cancel an order after it has shipped?,"No, an order cannot be canceled for a refund after it has shipped; you must use the returns process instead.",,"Not through cancellation. An order can be canceled for a full refund before it ships; after shipment, use the returns process.",True,True,0.872628,c320295f-304f-45c4-b9d2-8a81175f0b23,01a20e4a-c702-7f91-a5f0-54fa00a92592,1.0,1.0
+"# Northstar Outfitters Customer Support Policy (v1)
+
+This fictional policy is the source document for the lab's evaluation dataset. It is intentionally small, self-contained, and versioned so that the reference answers can be audited.
+
+## Returns and exchanges
+
+- Unopened, unused items may be returned within 30 calendar days of delivery for a full refund to the original payment method.
+- Opened items may be returned within 14 calendar days of delivery only if they are defective or damaged on arrival. A photo of the defect is required.
+- Sale items are exchange-only within 14 calendar days; they are not eligible for a cash refund.
+- Personalized items and gift cards are final sale and cannot be returned or exchanged.
+- The customer pays return shipping for a change-of-mind return. Northstar pays return shipping for defective or damaged items.
+- Refunds are issued within 5 business days after the returned item passes inspection. The bank may take an additional 3–5 business days to display the refund.
+
+## Shipping
+
+- Standard shipping costs $6 and usually arrives in 3–5 business days.
+- Express shipping costs $18 and usually arrives in 1–2 business days.
+- Orders over $75 qualify for free standard shipping. Express surcharges still apply.
+- An order may be canceled for a full refund before it ships. After shipment, the customer must use the returns process.
+
+## Warranty and support
+
+- Manufacturing defects are covered for 12 months after delivery. Normal wear, accidental damage, and misuse are not covered.
+- Warranty claims require the order number and a description of the problem; photos or a short video may be requested.
+- Support hours are Monday–Friday, 09:00–17:00 Central European Time. Typical response time is two business days.
+- The policy does not promise Saturday delivery, price matching, or refunds for late carrier delivery.
+",Does the policy promise Saturday delivery?,"No, the policy does not promise Saturday delivery.",,No. The policy does not promise Saturday delivery.,True,True,0.806553,d402e5a4-256d-465b-b363-22fb5b4db77a,01a20e4a-ca51-76c9-9376-d9c549f220f7,1.0,1.0
+"# Northstar Outfitters Customer Support Policy (v1)
+
+This fictional policy is the source document for the lab's evaluation dataset. It is intentionally small, self-contained, and versioned so that the reference answers can be audited.
+
+## Returns and exchanges
+
+- Unopened, unused items may be returned within 30 calendar days of delivery for a full refund to the original payment method.
+- Opened items may be returned within 14 calendar days of delivery only if they are defective or damaged on arrival. A photo of the defect is required.
+- Sale items are exchange-only within 14 calendar days; they are not eligible for a cash refund.
+- Personalized items and gift cards are final sale and cannot be returned or exchanged.
+- The customer pays return shipping for a change-of-mind return. Northstar pays return shipping for defective or damaged items.
+- Refunds are issued within 5 business days after the returned item passes inspection. The bank may take an additional 3–5 business days to display the refund.
+
+## Shipping
+
+- Standard shipping costs $6 and usually arrives in 3–5 business days.
+- Express shipping costs $18 and usually arrives in 1–2 business days.
+- Orders over $75 qualify for free standard shipping. Express surcharges still apply.
+- An order may be canceled for a full refund before it ships. After shipment, the customer must use the returns process.
+
+## Warranty and support
+
+- Manufacturing defects are covered for 12 months after delivery. Normal wear, accidental damage, and misuse are not covered.
+- Warranty claims require the order number and a description of the problem; photos or a short video may be requested.
+- Support hours are Monday–Friday, 09:00–17:00 Central European Time. Typical response time is two business days.
+- The policy does not promise Saturday delivery, price matching, or refunds for late carrier delivery.
+",Who pays return shipping when the item is defective?,Northstar pays return shipping for defective or damaged items.,,Northstar pays return shipping for defective or damaged items.,True,True,1.938747,d5a6cafc-93df-4f99-ab54-624a8e2aa5a3,01a20e4a-ca6b-7fb2-ad35-a85a8f19e056,1.0,1.0
+"# Northstar Outfitters Customer Support Policy (v1)
+
+This fictional policy is the source document for the lab's evaluation dataset. It is intentionally small, self-contained, and versioned so that the reference answers can be audited.
+
+## Returns and exchanges
+
+- Unopened, unused items may be returned within 30 calendar days of delivery for a full refund to the original payment method.
+- Opened items may be returned within 14 calendar days of delivery only if they are defective or damaged on arrival. A photo of the defect is required.
+- Sale items are exchange-only within 14 calendar days; they are not eligible for a cash refund.
+- Personalized items and gift cards are final sale and cannot be returned or exchanged.
+- The customer pays return shipping for a change-of-mind return. Northstar pays return shipping for defective or damaged items.
+- Refunds are issued within 5 business days after the returned item passes inspection. The bank may take an additional 3–5 business days to display the refund.
+
+## Shipping
+
+- Standard shipping costs $6 and usually arrives in 3–5 business days.
+- Express shipping costs $18 and usually arrives in 1–2 business days.
+- Orders over $75 qualify for free standard shipping. Express surcharges still apply.
+- An order may be canceled for a full refund before it ships. After shipment, the customer must use the returns process.
+
+## Warranty and support
+
+- Manufacturing defects are covered for 12 months after delivery. Normal wear, accidental damage, and misuse are not covered.
+- Warranty claims require the order number and a description of the problem; photos or a short video may be requested.
+- Support hours are Monday–Friday, 09:00–17:00 Central European Time. Typical response time is two business days.
+- The policy does not promise Saturday delivery, price matching, or refunds for late carrier delivery.
+",Can I return an unopened item 20 days after delivery?,"Yes, you can return an unopened item within 30 calendar days of delivery for a full refund to the original payment method. Since 20 days is within that timeframe, your return is eligible.",,"Yes. An unopened, unused item may be returned within 30 calendar days of delivery for a full refund to the original payment method.",True,True,1.459804,eb5c7d61-dc67-4b8e-a467-36152536b6b4,01a20e4a-cd78-7f67-ab8e-0badc49dd81a,1.0,1.0

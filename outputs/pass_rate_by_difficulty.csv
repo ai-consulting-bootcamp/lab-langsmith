@@ -1,0 +1,4 @@
+difficulty,correctness_score,rule_score
+easy,1.0,0.875
+hard,1.0,1.0
+medium,1.0,0.5
