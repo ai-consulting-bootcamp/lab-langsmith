@@ -1,0 +1,3 @@
+config,model,pass_rate,avg_latency,total_cost,cost_per_example,cost_per_correct
+mini,gpt-4o-mini,1.0,0.9989969374999998,0.00138495,8.6559375e-05,8.6559375e-05
+full,gpt-5.4-mini,1.0,1.1138041250000001,0.00786525,0.000491578125,0.000491578125
