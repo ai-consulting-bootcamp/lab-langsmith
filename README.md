@@ -1,23 +1,26 @@
-# Micromanage your agents
+# LAB | Micromanage your agents - custom LangSmith dataset + evaluation
 
-**Track:** Module 5 — Evaluation & strategy · **When:** Week 7, Day 4 · **Status:** Required
+**Domain:** question answering over internal operational-risk policies (fictional Northwind Payments GmbH: incident management and vendor/outsourcing). **Dataset:** `northwind-policy-qa-v1`, 14 question/answer pairs with policy section references, including 2 out-of-scope questions that the assistant should refuse.
 
-This repository contains everything you need for this lab.
+**Approach:** the examples are uploaded as a LangSmith dataset. A traced target function (`@traceable` plus a wrapped OpenAI client) answers from the policy text. `client.evaluate()` then scores each answer with two evaluators: an LLM-as-judge **correctness** check against the reference answer, and a code-based **grounded_citation** check (correct section cited, or "Not covered" for out-of-scope questions).
 
-## Files
+Start with **[lab_proof.md](lab_proof.md)**. LangSmith dataset and experiment links are in lab_proof.md and evaluation_summary.md.
 
-- [`instructions.md`](./instructions.md) — the lab instructions
-- [`rubric.md`](./rubric.md) — how your submission is graded; this is what the AI reviewer checks your PR against
+## How to run
+```
+pip install -r requirements.txt
+cp .env.example .env        # add your OPENAI_API_KEY and LANGSMITH_API_KEY
+python langsmith_eval.py
+```
+The script creates the dataset (or reuses it), tests the target on 2 examples, runs the experiment, and writes the results and reports.
 
-## How to complete this lab
-
-1. **Fork** this repository.
-2. Do the work described in `instructions.md`, committing to your fork.
-3. Open a **pull request** back into this repository.
-4. You'll receive **AI feedback** on your PR based on `rubric.md`. Address any blocking feedback and push updates to the same PR.
-
-## Submission hygiene
-
-- Keep this repository scoped to this lab only — no unrelated projects or personal files.
-- Use clear, descriptive filenames.
-- Remove secrets, API keys, and tokens before committing.
+## File map
+| File | Purpose |
+|---|---|
+| `lab_proof.md` | Reviewer entry point: workflow, one run with evidence, failure/limitation |
+| `evaluation_summary.md` | Short evaluation report (paragraph + metric tables) |
+| `langsmith_eval.py` | Dataset creation, target function, evaluators, experiment, analysis |
+| `dataset_examples.json` | The 14 examples (inputs, reference outputs, metadata) |
+| `docs/` | Source documents the dataset was built from |
+| `results/eval_results.csv` | Per-example outputs, scores and judge reasoning |
+| `.env.example` | Environment variables needed (no secrets) |
