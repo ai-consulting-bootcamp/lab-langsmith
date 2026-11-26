@@ -1,0 +1,4 @@
+requests>=2.31
+python-dotenv>=1.0
+langsmith>=0.2
+openevals>=0.1
