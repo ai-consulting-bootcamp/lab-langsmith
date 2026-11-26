@@ -1,23 +1,31 @@
-# Micromanage your agents
+# Custom dataset & evaluation with LangSmith — EU AI Act / GDPR Q&A for SMEs
 
-**Track:** Module 5 — Evaluation & strategy · **When:** Week 7, Day 4 · **Status:** Required
+**Domain:** questions a small EU business asks about the AI Act and the GDPR. **Dataset:** `ai-act-gdpr-sme-qa-v1`, 12 examples with reference answers written from the Week 7 course materials, tagged by topic and difficulty.
 
-This repository contains everything you need for this lab.
+**Approach:** upload the dataset → traced target function (Gemini, free tier) → LLM-as-judge correctness evaluator (OpenEvals prompt) → `client.evaluate()` → scores by topic and difficulty.
 
-## Files
+**Status:** dataset and pipeline done; scored experiment pending because the free Gemini quota was exhausted on 26/11/2026. Details in [`lab_proof.md`](./lab_proof.md) (start here).
 
-- [`instructions.md`](./instructions.md) — the lab instructions
-- [`rubric.md`](./rubric.md) — how your submission is graded; this is what the AI reviewer checks your PR against
+## File map
 
-## How to complete this lab
+| File | What it is |
+|---|---|
+| `lab_proof.md` | Entry point: code, run, evidence, output, failures |
+| `dataset_documentation.md` | Domain, documents, dataset name and description, data structure, the 12 examples |
+| `langsmith_evaluation.py` | Dataset creation, target, evaluator, experiment and results export |
+| `evaluation_summary.md` | Evaluation summary paragraph (status, method, recommendations) |
+| `requirements.txt` | Python dependencies |
 
-1. **Fork** this repository.
-2. Do the work described in `instructions.md`, committing to your fork.
-3. Open a **pull request** back into this repository.
-4. You'll receive **AI feedback** on your PR based on `rubric.md`. Address any blocking feedback and push updates to the same PR.
+## How to run
 
-## Submission hygiene
+```bash
+pip install -r requirements.txt
+# .env (never committed): GEMINI_API_KEY=..., LANGSMITH_API_KEY=lsv2_..., LANGSMITH_TRACING=true
+# EU LangSmith accounts only: LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com
+python langsmith_evaluation.py
+```
 
-- Keep this repository scoped to this lab only — no unrelated projects or personal files.
-- Use clear, descriptive filenames.
-- Remove secrets, API keys, and tokens before committing.
+Optional: `TARGET_MODEL=gemini-2.5-flash-lite` (PowerShell: `$env:TARGET_MODEL="..."`) to start with another model.
+
+## LangSmith links
+Project: `ai-act-gdpr-qa-week7`. Dataset: `ai-act-gdpr-sme-qa-v1` (Datasets & Experiments in LangSmith). Experiment `gemini-flash-baseline-*`: pending.
